@@ -1,0 +1,167 @@
+countryname,iso3
+United States of America,USA
+Canada,CAN
+Cuba,CUB
+Haiti,HTI
+Dominican Republic,DOM
+Jamaica,JAM
+Trinidad and Tobago,TTO
+Mexico,MEX
+Guatemala,GTM
+Honduras,HND
+El Salvador,SLV
+Nicaragua,NIC
+Costa Rica,CRI
+Panama,PAN
+Colombia,COL
+Venezuela,VEN
+Guyana,GUY
+Surinam,SUR
+Ecuador,ECU
+Peru,PER
+Brazil,BRA
+Bolivia,BOL
+Paraguay,PRY
+Chile,CHL
+Argentina,ARG
+Uruguay,URY
+United Kingdom,GBR
+Ireland,IRL
+Netherlands,NLD
+Belgium,BEL
+Luxembourg,LUX
+France,FRA
+Switzerland,CHE
+Spain,ESP
+Portugal,PRT
+German Federal Republic,DEU
+Poland,POL
+Austria,AUT
+Hungary,HUN
+Czech Republic,CZE
+Slovakia,SVK
+Italy/Sardinia,ITA
+Albania,ALB
+Serbia,SRB
+Montenegro,MNE
+Macedonia (Former Yugoslav Republic of),MKD
+Croatia,HRV
+Bosnia-Herzegovina,BIH
+Kosovo,XXK
+Slovenia,SVN
+Greece,GRC
+Cyprus,CYP
+Bulgaria,BGR
+Moldova,MDA
+Rumania,ROU
+Russia (Soviet Union),RUS
+Estonia,EST
+Latvia,LVA
+Lithuania,LTU
+Ukraine,UKR
+Belarus (Byelorussia),BLR
+Armenia,ARM
+Georgia,GEO
+Azerbaijan,AZE
+Finland,FIN
+Sweden,SWE
+Norway,NOR
+Denmark,DNK
+Cape Verde,CPV
+Guinea-Bissau,GNB
+Equatorial Guinea,GNQ
+Gambia,GMB
+Mali,MLI
+Senegal,SEN
+Benin,BEN
+Mauritania,MRT
+Niger,NER
+Cote D?Ivoire,CIV
+Guinea,GIN
+Burkina Faso (Upper Volta),BFA
+Liberia,LBR
+Sierra Leone,SLE
+Ghana,GHA
+Togo,TGO
+Cameroon,CMR
+Nigeria,NGA
+Gabon,GAB
+Central African Republic,CAF
+Chad,TCD
+Congo,COG
+"Congo, Democratic Republic of (Zaire)",COD
+Uganda,UGA
+Kenya,KEN
+Tanzania/Tanganyika,TZA
+Burundi,BDI
+Rwanda,RWA
+Somalia,SOM
+Djibouti,DJI
+Ethiopia,ETH
+Eritrea,ERI
+Angola,AGO
+Mozambique,MOZ
+Zambia,ZMB
+Zimbabwe (Rhodesia),ZWE
+Malawi,MWI
+South Africa,ZAF
+Namibia,NAM
+Lesotho,LSO
+Botswana,BWA
+Swaziland,SWZ
+Madagascar,MDG
+Comoros,COM
+Mauritius,MUS
+Morocco,MAR
+Algeria,DZA
+Tunisia,TUN
+Libya,LBY
+Sudan,SDN
+Iran (Persia),IRN
+Turkey (Ottoman Empire),TUR
+Iraq,IRQ
+Egypt,EGY
+Syria,SYR
+Lebanon,LBN
+Jordan,JOR
+Israel,ISR
+Saudi Arabia,SAU
+Yemen (Arab Republic of Yemen),YEM
+Kuwait,KWT
+Bahrain,BHR
+Qatar,QAT
+United Arab Emirates,ARE
+Oman,OMN
+Afghanistan,AFG
+Turkmenistan,TKM
+Tajikistan,TJK
+Kyrgyz Republic,KGZ
+Uzbekistan,UZB
+Kazakhstan,KAZ
+China,CHN
+Mongolia,MNG
+Taiwan,TWN
+"Korea, People's Republic of",PRK
+"Korea, Republic of",KOR
+Japan,JPN
+India,IND
+Bhutan,BTN
+Pakistan,PAK
+Bangladesh,BGD
+Myanmar (Burma),MMR
+Sri Lanka (Ceylon),LKA
+Nepal,NPL
+Thailand,THA
+Cambodia (Kampuchea),KHM
+Laos,LAO
+"Vietnam, Democratic Republic of",VNM
+Malaysia,MYS
+Singapore,SGP
+Philippines,PHL
+Indonesia,IDN
+East Timor,TLS
+Australia,AUS
+Papua New Guinea,PNG
+New Zealand,NZL
+Solomon Islands,SLB
+Fiji,FJI
