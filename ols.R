@@ -27,7 +27,18 @@ fit = lm(humanitarian_needs~
            nb_conflict+
            YMHEP+
            lpop+
-           lGDPcap
+           lGDPcap+
+           ltsc0+
+           nc+
+           ncc1+
+           ncc2+
+           ltsnc+
+           ncts0+
+           lpop+
+           lGDPcap*c1+
+           lGDPcap*c2+
+           lGDPcap*ltsc0+
+           ltimeindep
 , data=analysis_set)
 summary(fit)
 
@@ -38,7 +49,18 @@ fit_plm = plm(humanitarian_needs~
                 nb_conflict+
                 YMHEP+
                 lpop+
-                lGDPcap
+                lGDPcap+
+                ltsc0+
+                nc+
+                ncc1+
+                ncc2+
+                ltsnc+
+                ncts0+
+                lpop+
+                lGDPcap*c1+
+                lGDPcap*c2+
+                lGDPcap*ltsc0+
+                ltimeindep
 , data=analysis_set, index=c("iso3", "year"), model="within")
 summary(fit_plm)
 pFtest(fit_plm, fit) # Significant effects
@@ -52,7 +74,18 @@ logit <- glm(humanitarian~
                nb_conflict+
                YMHEP+
                lpop+
-               lGDPcap
+               lGDPcap+
+               ltsc0+
+               nc+
+               ncc1+
+               ncc2+
+               ltsnc+
+               ncts0+
+               lpop+
+               lGDPcap*c1+
+               lGDPcap*c2+
+               lGDPcap*ltsc0+
+               ltimeindep
 , data=analysis_set, family = "binomial")
 summary(logit)
 with(logit, pchisq(null.deviance - deviance, df.null - df.residual, lower.tail = FALSE))
