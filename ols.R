@@ -57,3 +57,6 @@ logit <- glm(humanitarian~
 summary(logit)
 with(logit, pchisq(null.deviance - deviance, df.null - df.residual, lower.tail = FALSE))
 logLik(logit)
+nullhypo <- glm(humanitarian~1, data=analysis_set, family="binomial")
+mcFadden = 1-logLik(logit)/logLik(nullhypo)
+mcFadden
