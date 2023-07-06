@@ -93,3 +93,67 @@ logLik(logit)
 nullhypo <- glm(humanitarian~1, data=analysis_set, family="binomial")
 mcFadden = 1-logLik(logit)/logLik(nullhypo)
 mcFadden
+
+# Write to intermediate data for Python experiments
+analysis_set = transform(analysis_set,
+                         lGDPcap_c1 = lGDPcap*c1,
+                         lGDPcap_c2 = lGDPcap*c2,
+                         lGDPcap_ltsc0 = lGDPcap*ltsc0
+)
+keep = c(
+  "humanitarian",
+  "humanitarian_needs",
+    "conflict",
+    "temp",
+    "nb_conflict",
+    "YMHEP",
+    "lpop",
+    "lGDPcap",
+    "ltsc0",
+    "nc",
+    "ncc1",
+    "ncc2",
+    "ltsnc",
+    "ncts0",
+    "lpop",
+    "lGDPcap_c1",
+    "lGDPcap_c2",
+    "lGDPcap_ltsc0",
+    "ltimeindep"
+)
+to_write = analysis_set[,keep]
+to_write = to_write[complete.cases(to_write),]
+to_write$humanitarian = as.character(to_write$humanitarian*1)
+fwrite(to_write, "intermediate_data/ssp1.csv")
+
+# Crisis type exploration
+crises = fread("supporting_data/crisis_types.csv")
+analysis_set2 = merge(crises, fts_aggregate, all.x=T)
+analysis_set2$humanitarian_needs[which(is.na(analysis_set2$humanitarian_needs))] = 0
+
+c_fit = lm(humanitarian_needs~
+             Physical+
+             Conflict+
+             Displacement+
+             Physical*Conflict+
+             Physical*Displacement+
+             Conflict*Displacement+
+             Physical*Conflict*Displacement,
+           data=analysis_set2)
+summary(c_fit)
+
+analysis_set2$humanitarian = analysis_set2$humanitarian_needs > 0
+describe(analysis_set2$humanitarian)
+c_logit <- glm(humanitarian~
+                 Physical+
+                 Conflict+
+                 Displacement+
+                 Physical*Conflict+
+                 Physical*Displacement+
+                 Conflict*Displacement+
+                 Physical*Conflict*Displacement
+             , data=analysis_set2, family = "binomial")
+summary(c_logit)
+c_nullhypo <- glm(humanitarian~1, data=analysis_set2, family="binomial")
+c_mcFadden = 1-logLik(c_logit)/logLik(c_nullhypo)
+c_mcFadden
