@@ -24,21 +24,14 @@ analysis_set$humanitarian_needs[which(is.na(analysis_set$humanitarian_needs))] =
 
 # Pooled OLS
 fit = lm(humanitarian_needs~
-    AFF_DR+
     AFF_DR_REL+
     CON_HIIK_NP+
     CON_HIIK_SN+
-    EX_EQ_MMI6+
     EX_EQ_MMI6_REL+
-    EX_EQ_MMI8+
     EX_EQ_MMI8_REL+
-    EX_FL+
     EX_FL_REL+
-    EX_TC_SS1+
     EX_TC_SS1_REL+
-    EX_TC_SS3+
     EX_TC_SS3_REL+
-    EX_TS+
     EX_TS_REL+
     POP_DEN
 , data=analysis_set)
@@ -46,21 +39,14 @@ summary(fit)
 
 # FE
 fit_plm = plm(humanitarian_needs~
-                AFF_DR+
                 AFF_DR_REL+
                 CON_HIIK_NP+
                 CON_HIIK_SN+
-                EX_EQ_MMI6+
                 EX_EQ_MMI6_REL+
-                EX_EQ_MMI8+
                 EX_EQ_MMI8_REL+
-                EX_FL+
                 EX_FL_REL+
-                EX_TC_SS1+
                 EX_TC_SS1_REL+
-                EX_TC_SS3+
                 EX_TC_SS3_REL+
-                EX_TS+
                 EX_TS_REL+
                 POP_DEN
 , data=analysis_set, index=c("iso3", "year"), model="within")
@@ -71,21 +57,14 @@ pFtest(fit_plm, fit) # Significant effects
 analysis_set$humanitarian = analysis_set$humanitarian_needs > 0
 describe(analysis_set$humanitarian)
 logit <- glm(humanitarian~
-               AFF_DR+
                AFF_DR_REL+
                CON_HIIK_NP+
                CON_HIIK_SN+
-               EX_EQ_MMI6+
                EX_EQ_MMI6_REL+
-               EX_EQ_MMI8+
                EX_EQ_MMI8_REL+
-               EX_FL+
                EX_FL_REL+
-               EX_TC_SS1+
                EX_TC_SS1_REL+
-               EX_TC_SS3+
                EX_TC_SS3_REL+
-               EX_TS+
                EX_TS_REL+
                POP_DEN
 , data=analysis_set, family = "binomial")
