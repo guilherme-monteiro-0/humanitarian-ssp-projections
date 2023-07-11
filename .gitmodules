@@ -1,0 +1,3 @@
+[submodule "gem-global-active-faults"]
+	path = gem-global-active-faults
+	url = https://github.com/cossatot/gem-global-active-faults.git
