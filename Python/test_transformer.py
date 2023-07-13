@@ -1,21 +1,9 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-
-dataset = pd.read_csv('../intermediate_data/ssp1.csv')
-
-y = dataset.pop('humanitarian_needs').values.astype(float)
-dataset.pop('humanitarian')
-
-X = dataset.values.astype(float)
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
-X_train = torch.tensor(X_train, dtype=torch.float)
-X_test = torch.tensor(X_test, dtype=torch.float)
-y_train = torch.tensor(y_train, dtype=torch.float)
-y_test = torch.tensor(y_test, dtype=torch.float)
+import numpy as np
+from sklearn.model_selection import train_test_split
 
 block_size = 17
 batch_size = 8
@@ -28,15 +16,47 @@ n_embd = 384
 n_head = 6
 n_layer = 6
 dropout = 0.2
-vocab_size = 1
+
+dataset = pd.read_csv('../intermediate_data/ssp1.csv')
+
+y = dataset.pop('humanitarian_needs').values.astype(int)
+dataset.pop('humanitarian')
+
+X = dataset.values.astype(float)
+X *= 1000 # Unique to 3 dec
+X = X.astype(int)
+
+
+chars = sorted(np.unique(
+    np.concatenate([
+        np.unique(X),
+        np.unique(y)
+    ])
+))
+vocab_size = len(chars)
+
+stoi = { ch:i for i,ch in enumerate(chars) }
+itos = { i:ch for i,ch in enumerate(chars) }
+encode = lambda s: [stoi[c] for c in s] # encoder: take a string, output a list of integers
+decode = lambda l: ''.join([itos[i] for i in l]) # decoder: take a list of integers, output a string
+
+# Train and test splits
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
+X_train_data = torch.tensor(np.apply_along_axis(encode, 1, X_train), dtype=torch.long)
+X_test_data = torch.tensor(np.apply_along_axis(encode, 1, X_test), dtype=torch.long)
+y_train_data = torch.tensor(encode(y_train), dtype=torch.long)
+y_test_data = torch.tensor(encode(y_test), dtype=torch.long)
+
 
 def get_batch(split):
     # generate a small batch of data of inputs x and targets y
-    data = X_train if split == 'train' else X_test
-    targets = y_train if split == 'train' else y_test
+    data = X_train_data if split == 'train' else X_test_data
+    targets = y_train_data if split == 'train' else y_test_data
     ix = torch.randint(len(data), (batch_size,))
     x = torch.stack([data[i] for i in ix])
     y = torch.stack([targets[i] for i in ix])
+    y.unsqueeze_(-1)
+    y = y.expand(8, 17)
     x, y = x.to(device), y.to(device)
     return x, y
 
@@ -74,7 +94,7 @@ class Head(nn.Module):
         q = self.query(x) # (B,T,hs)
         # compute attention scores ("affinities")
         wei = q @ k.transpose(-2,-1) * k.shape[-1]**-0.5 # (B, T, hs) @ (B, hs, T) -> (B, T, T)
-        wei = wei.masked_fill(self.tril[:T, :T] == 0, float('-inf')) # (B, T, T)
+        # wei = wei.masked_fill(self.tril[:T, :T] == 0, float('-inf')) # (B, T, T)
         wei = F.softmax(wei, dim=-1) # (B, T, T)
         wei = self.dropout(wei)
         # perform the weighted aggregation of the values
@@ -127,18 +147,17 @@ class Block(nn.Module):
         x = x + self.sa(self.ln1(x))
         x = x + self.ffwd(self.ln2(x))
         return x
-    
+
 class GPTTabularModel(nn.Module):
 
     def __init__(self):
         super().__init__()
         # each token directly reads off the logits for the next token from a lookup table
-        self.embedding_layer = nn.Linear(block_size, n_embd)
+        self.token_embedding_table = nn.Embedding(vocab_size, n_embd)
         self.position_embedding_table = nn.Embedding(block_size, n_embd)
         self.blocks = nn.Sequential(*[Block(n_embd, n_head=n_head) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(n_embd) # final layer norm
         self.lm_head = nn.Linear(n_embd, vocab_size)
-        self.lm_head2 = nn.Linear(block_size, vocab_size)
 
         # better init, not covered in the original GPT video, but important, will cover in followup video
         self.apply(self._init_weights)
@@ -155,20 +174,19 @@ class GPTTabularModel(nn.Module):
         B, T = idx.shape
 
         # idx and targets are both (B,T) tensor of integers
-        tok_emb = self.embedding_layer(idx) # (B,C)
-        tok_emb.unsqueeze_(-1) # (B, C, 1, 1)
-        tok_emb = tok_emb.expand(8, 384, 17).permute((0, 2, 1)) # (B, T, C)
+        tok_emb = self.token_embedding_table(idx) # (B,T,C)
         pos_emb = self.position_embedding_table(torch.arange(T, device=device)) # (T,C)
         x = tok_emb + pos_emb # (B,T,C)
         x = self.blocks(x) # (B,T,C)
         x = self.ln_f(x) # (B,T,C)
-        logits = self.lm_head2(self.lm_head(x).squeeze()) # (B, vocab_size)
+        logits = self.lm_head(x) # (B,T,vocab_size)
 
         if targets is None:
             loss = None
         else:
-            logits = logits.view(B,)
-            targets = targets.view(B)
+            B, T, C = logits.shape
+            logits = logits.view(B*T, C)
+            targets = targets.reshape(B*T)
             loss = F.cross_entropy(logits, targets)
 
         return logits, loss
@@ -216,4 +234,5 @@ for iter in range(max_iters):
 
 # generate from the model
 context = torch.zeros((1, 1), dtype=torch.long, device=device)
-print(m.generate(context, max_new_tokens=500)[0].tolist())
+print(decode(m.generate(context, max_new_tokens=500)[0].tolist()))
+#open('more.txt', 'w').write(decode(m.generate(context, max_new_tokens=10000)[0].tolist()))
