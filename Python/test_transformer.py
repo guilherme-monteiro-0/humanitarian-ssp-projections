@@ -138,6 +138,7 @@ class GPTTabularModel(nn.Module):
         self.blocks = nn.Sequential(*[Block(n_embd, n_head=n_head) for _ in range(n_layer)])
         self.ln_f = nn.LayerNorm(n_embd) # final layer norm
         self.lm_head = nn.Linear(n_embd, vocab_size)
+        self.lm_head2 = nn.Linear(block_size, vocab_size)
 
         # better init, not covered in the original GPT video, but important, will cover in followup video
         self.apply(self._init_weights)
@@ -154,20 +155,20 @@ class GPTTabularModel(nn.Module):
         B, T = idx.shape
 
         # idx and targets are both (B,T) tensor of integers
-        tok_emb = self.embedding_layer(idx) # (B,T,C)
+        tok_emb = self.embedding_layer(idx) # (B,C)
+        tok_emb.unsqueeze_(-1) # (B, C, 1, 1)
+        tok_emb = tok_emb.expand(8, 384, 17).permute((0, 2, 1)) # (B, T, C)
         pos_emb = self.position_embedding_table(torch.arange(T, device=device)) # (T,C)
-        import pdb; pdb.set_trace()
         x = tok_emb + pos_emb # (B,T,C)
         x = self.blocks(x) # (B,T,C)
         x = self.ln_f(x) # (B,T,C)
-        logits = self.lm_head(x) # (B,T,vocab_size)
+        logits = self.lm_head2(self.lm_head(x).squeeze()) # (B, vocab_size)
 
         if targets is None:
             loss = None
         else:
-            B, T, C = logits.shape
-            logits = logits.view(B*T, C)
-            targets = targets.view(B*T)
+            logits = logits.view(B,)
+            targets = targets.view(B)
             loss = F.cross_entropy(logits, targets)
 
         return logits, loss
