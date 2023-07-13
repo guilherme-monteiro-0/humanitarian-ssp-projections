@@ -9,7 +9,7 @@ block_size = 17
 batch_size = 8
 max_iters = 10000
 eval_interval = 500
-learning_rate = 3e-8
+learning_rate = 3e-7
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
 n_embd = 384
@@ -19,13 +19,29 @@ dropout = 0.6
 
 dataset = pd.read_csv('../intermediate_data/ssp1.csv')
 
-y = dataset.pop('humanitarian_needs').values.astype(int)
+y = dataset.pop('humanitarian_needs').values.astype(float)
+y = np.round(y, -6).astype(int) # Nearest million
 dataset.pop('humanitarian')
+y_min = np.min(y)
+y_max = np.max(y)
 
 X = dataset.values.astype(float)
-X *= 1000 # Unique to 3 dec
-X = X.astype(int)
+X = np.round(X, 2) # Unique to 2 decimal places
+X_min = np.min(X)
+X_max = np.max(X)
 
+def scale_X(x):
+    normal_x = (x - X_min) / (X_max - X_min)
+    scaled_to_y = normal_x * (y_max - y_min) + y_min
+    return scaled_to_y
+
+def unscale_X(x):
+    normal_x = (x - y_min) / (y_max - y_min)
+    scaled_to_x = normal_x * (X_max - X_min) + X_min
+    return scaled_to_x
+
+X = scale_X(X)
+X = X.astype(int)
 
 chars = sorted(np.unique(
     np.concatenate([
@@ -34,6 +50,7 @@ chars = sorted(np.unique(
     ])
 ))
 vocab_size = len(chars)
+print("Vocab size: ", vocab_size)
 
 stoi = { ch:i for i,ch in enumerate(chars) }
 itos = { i:ch for i,ch in enumerate(chars) }
@@ -56,7 +73,7 @@ def get_batch(split):
     x = torch.stack([data[i] for i in ix])
     y = torch.stack([targets[i] for i in ix])
     y.unsqueeze_(-1)
-    y = y.expand(8, 17)
+    y = y.expand(batch_size, block_size)
     x, y = x.to(device), y.to(device)
     return x, y
 
@@ -260,7 +277,7 @@ with open('transformer_output.csv', 'w') as csv_file:
     for i in range(0, len(X_test_data)):
         actual = str(y_test[i].tolist())
         context = X_test_data[i].expand(1, block_size)
-        row = ','.join([str(cell / 1000) for cell in X_test[i].tolist()])
-        prediction = decode(m.generate(context, max_new_tokens=1)[0].tolist()).split(',')[-1]
+        row = ','.join([str(unscale_X(cell)) for cell in X_test[i].tolist()])
+        prediction = decode([m.generate(context, max_new_tokens=1)[0].tolist()[-1]])
         row = row + ',' + actual + ',' + prediction + '\n'
         csv_file.write(row)
