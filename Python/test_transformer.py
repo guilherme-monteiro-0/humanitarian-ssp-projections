@@ -7,15 +7,15 @@ from sklearn.model_selection import train_test_split
 
 block_size = 17
 batch_size = 8
-max_iters = 10000
+max_iters = 5000
 eval_interval = 500
-learning_rate = 3e-7
+learning_rate = 3e-6
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
 n_embd = 384
 n_head = 6
 n_layer = 6
-dropout = 0.6
+dropout = 0.2
 
 dataset = pd.read_csv('../intermediate_data/ssp1.csv')
 
@@ -26,7 +26,6 @@ y_min = np.min(y)
 y_max = np.max(y)
 
 X = dataset.values.astype(float)
-X = np.round(X, 2) # Unique to 2 decimal places
 X_min = np.min(X)
 X_max = np.max(X)
 
@@ -41,7 +40,7 @@ def unscale_X(x):
     return scaled_to_x
 
 X = scale_X(X)
-X = X.astype(int)
+X = np.round(X, -6).astype(int)
 
 chars = sorted(np.unique(
     np.concatenate([
