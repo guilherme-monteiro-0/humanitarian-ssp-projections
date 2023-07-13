@@ -7,15 +7,15 @@ from sklearn.model_selection import train_test_split
 
 block_size = 17
 batch_size = 8
-max_iters = 5000
+max_iters = 10000
 eval_interval = 500
-learning_rate = 1e-4
+learning_rate = 3e-8
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
 n_embd = 384
 n_head = 6
 n_layer = 6
-dropout = 0.2
+dropout = 0.6
 
 dataset = pd.read_csv('../intermediate_data/ssp1.csv')
 
@@ -38,7 +38,7 @@ vocab_size = len(chars)
 stoi = { ch:i for i,ch in enumerate(chars) }
 itos = { i:ch for i,ch in enumerate(chars) }
 encode = lambda s: [stoi[c] for c in s] # encoder: take a string, output a list of integers
-decode = lambda l: ''.join([str(itos[i]) for i in l]) # decoder: take a list of integers, output a string
+decode = lambda l: ','.join([str(itos[i]) for i in l]) # decoder: take a list of integers, output a string
 
 # Train and test splits
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
@@ -233,6 +233,34 @@ for iter in range(max_iters):
     optimizer.step()
 
 # generate from the model
-context = torch.zeros((1, 1), dtype=torch.long, device=device)
-print(decode(m.generate(context, max_new_tokens=1)[0].tolist()))
-#open('more.txt', 'w').write(decode(m.generate(context, max_new_tokens=10000)[0].tolist()))
+header = [
+    "conflict",
+    "temp",
+    "nb_conflict",
+    "YMHEP",
+    "lpop",
+    "lGDPcap",
+    "ltsc0",
+    "nc",
+    "ncc1",
+    "ncc2",
+    "ltsnc",
+    "ncts0",
+    "lpop.1",
+    "lGDPcap_c1",
+    "lGDPcap_c2",
+    "lGDPcap_ltsc0",
+    "ltimeindep",
+    "humanitarian_needs_actual",
+    "humanitarian_needs_prediction"
+]
+
+with open('transformer_output.csv', 'w') as csv_file:
+    csv_file.write(','.join(header) + '\n')
+    for i in range(0, len(X_test_data)):
+        actual = str(y_test[i].tolist())
+        context = X_test_data[i].expand(1, block_size)
+        row = ','.join([str(cell / 1000) for cell in X_test[i].tolist()])
+        prediction = decode(m.generate(context, max_new_tokens=1)[0].tolist()).split(',')[-1]
+        row = row + ',' + actual + ',' + prediction + '\n'
+        csv_file.write(row)
