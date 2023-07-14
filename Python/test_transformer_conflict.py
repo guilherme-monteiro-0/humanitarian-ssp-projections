@@ -7,15 +7,16 @@ from sklearn.model_selection import train_test_split
 
 block_size = 16
 batch_size = 8
-max_iters = 5000
+max_iters = 50000
 eval_interval = 500
-learning_rate = 3e-6
+learning_rate = 3e-7
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
 n_embd = 384
 n_head = 6
 n_layer = 6
 dropout = 0.2
+test_size = 0.1
 
 dataset = pd.read_csv('../intermediate_data/ssp1.csv')
 
@@ -48,13 +49,36 @@ itos = { i:ch for i,ch in enumerate(chars) }
 encode = lambda s: [stoi[c] for c in s] # encoder: take a string, output a list of integers
 decode = lambda l: ','.join([str(itos[i]) for i in l]) # decoder: take a list of integers, output a string
 
-logit_clamp_indicies = encode([0, 1, 2])
+cases = [0, 1, 2]
+
+logit_clamp_indicies = encode(cases)
 clamp_mask = torch.zeros(1, vocab_size)
 for lci in logit_clamp_indicies:
     clamp_mask[:,lci] = 1
 
 # Train and test splits
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
+# Even segmentation
+case_dict = {
+    'X_train': list(),
+    'X_test': list(),
+    'y_train': list(),
+    'y_test': list()
+}
+for case in cases:
+    cx = y == case
+    Xc = X[cx]
+    yc = y[cx]
+    X_trainc, X_testc, y_trainc, y_testc = train_test_split(Xc, yc, test_size=test_size)
+    case_dict['X_train'].append(X_trainc)
+    case_dict['X_test'].append(X_testc)
+    case_dict['y_train'].append(y_trainc)
+    case_dict['y_test'].append(y_testc)
+
+X_train = np.concatenate(case_dict['X_train'])
+X_test = np.concatenate(case_dict['X_test'])
+y_train = np.concatenate(case_dict['y_train'])
+y_test = np.concatenate(case_dict['y_test'])
+
 X_train_data = torch.tensor(np.apply_along_axis(encode, 1, X_train), dtype=torch.long)
 X_test_data = torch.tensor(np.apply_along_axis(encode, 1, X_test), dtype=torch.long)
 y_train_data = torch.tensor(encode(y_train), dtype=torch.long)
