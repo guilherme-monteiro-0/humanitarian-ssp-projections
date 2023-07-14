@@ -4,6 +4,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 import numpy as np
 from sklearn.model_selection import train_test_split
+import datetime
 
 block_size = 16
 batch_size = 8
@@ -49,16 +50,16 @@ encode = lambda s: [stoi[c] for c in s] # encoder: take a string, output a list 
 decode = lambda l: ','.join([str(itos[i]) for i in l]) # decoder: take a list of integers, output a string
 
 logit_clamp_indicies = encode([0, 1, 2])
-clamp_mask = torch.zeros(1, vocab_size)
+clamp_mask = torch.zeros(1, vocab_size).to(device)
 for lci in logit_clamp_indicies:
     clamp_mask[:,lci] = 1
 
 # Train and test splits
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
-X_train_data = torch.tensor(np.apply_along_axis(encode, 1, X_train), dtype=torch.long)
-X_test_data = torch.tensor(np.apply_along_axis(encode, 1, X_test), dtype=torch.long)
-y_train_data = torch.tensor(encode(y_train), dtype=torch.long)
-y_test_data = torch.tensor(encode(y_test), dtype=torch.long)
+X_train_data = torch.tensor(np.apply_along_axis(encode, 1, X_train), dtype=torch.long).to(device)
+X_test_data = torch.tensor(np.apply_along_axis(encode, 1, X_test), dtype=torch.long).to(device)
+y_train_data = torch.tensor(encode(y_train), dtype=torch.long).to(device)
+y_test_data = torch.tensor(encode(y_test), dtype=torch.long).to(device)
 
 
 def get_batch(split):
@@ -230,12 +231,15 @@ print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
 # create a PyTorch optimizer
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
 
+startt = datetime.datetime.now()
+
 for iter in range(max_iters):
 
     # every once in a while evaluate the loss on train and val sets
     if iter % eval_interval == 0 or iter == max_iters - 1:
         losses = estimate_loss()
-        print(f"step {iter}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
+        tt = (datetime.datetime.now() - startt).total_seconds()
+        print(f"{device} @ {tt:.2f}s>> step {iter}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
 
     # sample a batch of data
     xb, yb = get_batch('train')
