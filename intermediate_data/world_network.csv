@@ -1,0 +1,544 @@
+from_iso3,from_name,to_iso3,to_name,touching,border_length
+IDN,Indonesia,MYS,Malaysia,TRUE,1494.83122832982
+IDN,Indonesia,TLS,East Timor,TRUE,208.368448479951
+IDN,Indonesia,PNG,Papua New Guinea,TRUE,748.620410425444
+IDN,Indonesia,WB1,World oceans and seas,TRUE,52374.9325922372
+MYS,Malaysia,THA,Thailand,TRUE,432.920988855744
+MYS,Malaysia,BRN,Brunei,TRUE,399.121011919351
+MYS,Malaysia,WB1,World oceans and seas,TRUE,5258.00608145321
+CHL,Chile,BOL,Bolivia,TRUE,825.64333819411
+CHL,Chile,PER,Peru,TRUE,161.604309202707
+CHL,Chile,ARG,Argentina,TRUE,5032.40669495976
+CHL,Chile,WB1,World oceans and seas,TRUE,31333.9848472786
+BOL,Bolivia,PER,Peru,TRUE,953.56259251409
+BOL,Bolivia,ARG,Argentina,TRUE,715.204108765782
+BOL,Bolivia,BRA,Brazil,TRUE,2664.42743598131
+BOL,Bolivia,PRY,Paraguay,TRUE,742.524000557926
+PER,Peru,BRA,Brazil,TRUE,1800.01504466613
+PER,Peru,ECU,Ecuador,TRUE,1291.12392573221
+PER,Peru,COL,Colombia,TRUE,1220.39090787483
+PER,Peru,WB1,World oceans and seas,TRUE,2642.64019352209
+ARG,Argentina,BRA,Brazil,TRUE,985.250810560231
+ARG,Argentina,URY,Uruguay,TRUE,302.767472644122
+ARG,Argentina,PRY,Paraguay,TRUE,1644.68142862549
+ARG,Argentina,WB1,World oceans and seas,TRUE,5918.36398006815
+CYP,Cyprus,WB1,World oceans and seas,TRUE,935.396804186262
+IND,India,CHN,People's Republic of China,TRUE,911.43763411742
+IND,India,PAK,Pakistan,TRUE,2721.49250974021
+IND,India,BTN,Bhutan,TRUE,439.177267921987
+IND,India,MMR,Myanmar,TRUE,1187.81929141369
+IND,India,BGD,Bangladesh,TRUE,2383.03881482239
+IND,India,NPL,Nepal,TRUE,1483.92612567005
+IND,India,WB1,World oceans and seas,TRUE,11015.2891556838
+IND,India,DT2,Aksai Chin 1,TRUE,326.306820591146
+IND,India,DT3,Aksai Chin 2,TRUE,93.0448242877718
+IND,India,DT4,Arunachal Pradesh,TRUE,599.385307093016
+CHN,People's Republic of China,PAK,Pakistan,TRUE,351.412495795338
+CHN,People's Republic of China,PRK,North Korea,TRUE,1004.92362848239
+CHN,People's Republic of China,BTN,Bhutan,TRUE,430.139080735136
+CHN,People's Republic of China,KAZ,Kazakhstan,TRUE,1503.277624148
+CHN,People's Republic of China,TJK,Tajikistan,TRUE,403.694246208245
+CHN,People's Republic of China,MNG,Mongolia,TRUE,4377.77349689156
+CHN,People's Republic of China,RUS,Russia,TRUE,3544.43707982625
+CHN,People's Republic of China,VNM,Vietnam,TRUE,1048.98934815899
+CHN,People's Republic of China,LAO,Laos,TRUE,361.51530290406
+CHN,People's Republic of China,KGZ,Kyrgyzstan,TRUE,838.715710394905
+CHN,People's Republic of China,MMR,Myanmar,TRUE,1699.34051525039
+CHN,People's Republic of China,AFG,Afghanistan,TRUE,84.1195071108526
+CHN,People's Republic of China,NPL,Nepal,TRUE,1111.76029783997
+CHN,People's Republic of China,HKG,Hong Kong,TRUE,18.0109345464922
+CHN,People's Republic of China,WB1,World oceans and seas,TRUE,17606.182974418
+CHN,People's Republic of China,DT2,Aksai Chin 1,TRUE,681.397411880526
+CHN,People's Republic of China,DT3,Aksai Chin 2,TRUE,121.966678064461
+CHN,People's Republic of China,DT4,Arunachal Pradesh,TRUE,945.922062337233
+ISR,Israel,PSE,Palestine,TRUE,346.520195034054
+ISR,Israel,LBN,Lebanon,TRUE,68.6105379125011
+ISR,Israel,SYR,Syria,TRUE,77.8233028665686
+ISR,Israel,JOR,Jordan,TRUE,277.831143051266
+ISR,Israel,EGY,Egypt,TRUE,203.607594364237
+ISR,Israel,WB1,World oceans and seas,TRUE,199.658836010255
+PSE,Palestine,JOR,Jordan,TRUE,111.574706426424
+PSE,Palestine,EGY,Egypt,TRUE,12.3381896716421
+PSE,Palestine,WB1,World oceans and seas,TRUE,40.5436240696027
+LBN,Lebanon,SYR,Syria,TRUE,321.36456988873
+LBN,Lebanon,WB1,World oceans and seas,TRUE,226.345826571692
+ETH,Ethiopia,SSD,South Sudan,TRUE,882.087545379419
+ETH,Ethiopia,SOM,Somalia,TRUE,1618.2885954618
+ETH,Ethiopia,KEN,Kenya,TRUE,788.384332542848
+ETH,Ethiopia,SDN,Sudan,TRUE,712.710901779367
+ETH,Ethiopia,DJI,Djibouti,TRUE,328.622715830246
+ETH,Ethiopia,ERI,Eritrea,TRUE,892.30444054225
+SSD,South Sudan,KEN,Kenya,TRUE,0
+SSD,South Sudan,COD,Democratic Republic of the Congo,TRUE,597.910063886891
+SSD,South Sudan,CAF,Central African Republic,TRUE,708.564512973048
+SSD,South Sudan,SDN,Sudan,TRUE,1733.15340435594
+SSD,South Sudan,UGA,Uganda,TRUE,435.969528225452
+SSD,South Sudan,DT1,Sudanese disputed territory,TRUE,158.501701681652
+SOM,Somalia,KEN,Kenya,TRUE,684.836638343228
+SOM,Somalia,DJI,Djibouti,TRUE,64.226445528409
+SOM,Somalia,WB1,World oceans and seas,TRUE,3191.48893719042
+KEN,Kenya,TZA,Tanzania,TRUE,762.061744662349
+KEN,Kenya,UGA,Uganda,TRUE,746.026847578221
+KEN,Kenya,WB1,World oceans and seas,TRUE,821.908274450925
+PAK,Pakistan,IRN,Iran,TRUE,816.59020007309
+PAK,Pakistan,AFG,Afghanistan,TRUE,2244.69020845556
+PAK,Pakistan,WB1,World oceans and seas,TRUE,1448.46570757895
+MWI,Malawi,TZA,Tanzania,TRUE,452.335157383176
+MWI,Malawi,ZMB,Zambia,TRUE,802.681894788771
+MWI,Malawi,MOZ,Mozambique,TRUE,1460.9253624133
+TZA,Tanzania,COD,Democratic Republic of the Congo,TRUE,473.761664474957
+TZA,Tanzania,ZMB,Zambia,TRUE,321.060137431685
+TZA,Tanzania,MOZ,Mozambique,TRUE,724.753971622368
+TZA,Tanzania,BDI,Burundi,TRUE,413.500751258931
+TZA,Tanzania,RWA,Rwanda,TRUE,216.857880280788
+TZA,Tanzania,UGA,Uganda,TRUE,386.542980717841
+TZA,Tanzania,WB1,World oceans and seas,TRUE,1903.77461132871
+SYR,Syria,TUR,Turkey,TRUE,775.566567405881
+SYR,Syria,IRQ,Iraq,TRUE,598.885317390737
+SYR,Syria,JOR,Jordan,TRUE,358.349347607193
+SYR,Syria,WB1,World oceans and seas,TRUE,175.641728237925
+-99,France,SUR,Suriname,TRUE,420.423691798633
+-99,France,BRA,Brazil,TRUE,516.703846280046
+-99,France,DEU,Germany,TRUE,373.22092923239
+-99,France,LUX,Luxembourg,TRUE,50.7728295300438
+-99,France,BEL,Belgium,TRUE,463.472406161893
+-99,France,ESP,Spain,TRUE,567.69669688214
+-99,France,ITA,Italy,TRUE,403.133413247247
+-99,France,CHE,Switzerland,TRUE,460.268855271049
+-99,France,MCO,Monaco,TRUE,9.53666855768966
+-99,France,AND,Andorra,TRUE,45.8684608210639
+-99,France,WB1,World oceans and seas,TRUE,6286.53668790187
+SUR,Suriname,GUY,Guyana,TRUE,656.046505221641
+SUR,Suriname,BRA,Brazil,TRUE,366.359993244972
+SUR,Suriname,WB1,World oceans and seas,TRUE,607.834102573341
+GUY,Guyana,BRA,Brazil,TRUE,1079.63200408517
+GUY,Guyana,VEN,Venezuela,TRUE,622.305242098772
+GUY,Guyana,WB1,World oceans and seas,TRUE,822.954809310497
+KOR,South Korea,PRK,North Korea,TRUE,203.885568716556
+KOR,South Korea,WB1,World oceans and seas,TRUE,4859.52939627878
+PRK,North Korea,RUS,Russia,TRUE,31.4540282541733
+PRK,North Korea,WB1,World oceans and seas,TRUE,2144.43103015211
+MAR,Morocco,ESP,Spain,TRUE,21.4928830806277
+MAR,Morocco,DZA,Algeria,TRUE,1550.63287026696
+MAR,Morocco,WB1,World oceans and seas,TRUE,2205.33701697545
+CRI,Costa Rica,NIC,Nicaragua,TRUE,288.911264666247
+CRI,Costa Rica,PAN,Panama,TRUE,285.260005406782
+CRI,Costa Rica,WB1,World oceans and seas,TRUE,1449.66456541568
+NIC,Nicaragua,HND,Honduras,TRUE,765.92584621301
+NIC,Nicaragua,WB1,World oceans and seas,TRUE,1369.03383288533
+COG,Republic of the Congo,COD,Democratic Republic of the Congo,TRUE,1468.1591305946
+COG,Republic of the Congo,CAF,Central African Republic,TRUE,426.350156086949
+COG,Republic of the Congo,AGO,Angola,TRUE,173.49571256862
+COG,Republic of the Congo,CMR,Cameroon,TRUE,471.778065991139
+COG,Republic of the Congo,GAB,Gabon,TRUE,1672.02393126073
+COG,Republic of the Congo,WB1,World oceans and seas,TRUE,175.862452017577
+COD,Democratic Republic of the Congo,ZMB,Zambia,TRUE,2034.89212127145
+COD,Democratic Republic of the Congo,CAF,Central African Republic,TRUE,1453.23030896668
+COD,Democratic Republic of the Congo,AGO,Angola,TRUE,2303.20699876684
+COD,Democratic Republic of the Congo,BDI,Burundi,TRUE,218.73782493048
+COD,Democratic Republic of the Congo,RWA,Rwanda,TRUE,202.961088955932
+COD,Democratic Republic of the Congo,UGA,Uganda,TRUE,727.149714942736
+COD,Democratic Republic of the Congo,WB1,World oceans and seas,TRUE,210.64199703229
+BTN,Bhutan,DT4,Arunachal Pradesh,TRUE,150.90147158794
+UKR,Ukraine,BLR,Belarus,TRUE,861.522287599672
+UKR,Ukraine,RUS,Russia,TRUE,1523.55643031631
+UKR,Ukraine,ROU,Romania,TRUE,515.831342560427
+UKR,Ukraine,HUN,Hungary,TRUE,97.7258502087667
+UKR,Ukraine,SVK,Slovakia,TRUE,87.0303238532318
+UKR,Ukraine,POL,Poland,TRUE,412.461418021438
+UKR,Ukraine,MDA,Moldova,TRUE,897.983103213422
+UKR,Ukraine,WB1,World oceans and seas,TRUE,2900.18530929553
+BLR,Belarus,LTU,Lithuania,TRUE,481.905148531637
+BLR,Belarus,RUS,Russia,TRUE,919.55659595367
+BLR,Belarus,LVA,Latvia,TRUE,135.863438685295
+BLR,Belarus,POL,Poland,TRUE,340.088430939794
+NAM,Namibia,ZAF,South Africa,TRUE,940.372798939813
+NAM,Namibia,ZMB,Zambia,TRUE,224.941132757595
+NAM,Namibia,AGO,Angola,TRUE,1331.54950854609
+NAM,Namibia,BWA,Botswana,TRUE,1363.79884938816
+NAM,Namibia,ZWE,Zimbabwe,TRUE,0
+NAM,Namibia,WB1,World oceans and seas,TRUE,1505.45839357416
+ZAF,South Africa,BWA,Botswana,TRUE,1615.27608928773
+ZAF,South Africa,ZWE,Zimbabwe,TRUE,218.300922832869
+ZAF,South Africa,MOZ,Mozambique,TRUE,494.292251794775
+ZAF,South Africa,SWZ,eSwatini,TRUE,428.383295822734
+ZAF,South Africa,LSO,Lesotho,TRUE,784.230719926637
+ZAF,South Africa,WB1,World oceans and seas,TRUE,3064.86453316783
+MAF,Saint Martin,SXM,Sint Maarten,TRUE,10.0203644892506
+MAF,Saint Martin,WB1,World oceans and seas,TRUE,31.6585270353886
+SXM,Sint Maarten,WB1,World oceans and seas,TRUE,14.1689166003576
+OMN,Oman,ARE,United Arab Emirates,TRUE,567.313938536802
+OMN,Oman,SAU,Saudi Arabia,TRUE,656.88697667483
+OMN,Oman,YEM,Yemen,TRUE,290.18427025979
+OMN,Oman,WB1,World oceans and seas,TRUE,2286.82890347993
+UZB,Uzbekistan,KAZ,Kazakhstan,TRUE,2183.29164237858
+UZB,Uzbekistan,TJK,Tajikistan,TRUE,1119.9306358037
+UZB,Uzbekistan,KGZ,Kyrgyzstan,TRUE,1049.34728602413
+UZB,Uzbekistan,AFG,Afghanistan,TRUE,136.742822017587
+UZB,Uzbekistan,TKM,Turkmenistan,TRUE,1595.98065723562
+KAZ,Kazakhstan,RUS,Russia,TRUE,6657.58269293642
+KAZ,Kazakhstan,KGZ,Kyrgyzstan,TRUE,1017.13425036328
+KAZ,Kazakhstan,TKM,Turkmenistan,TRUE,373.273717836246
+KAZ,Kazakhstan,WB2,Caspian sea,TRUE,2095.42847275503
+TJK,Tajikistan,KGZ,Kyrgyzstan,TRUE,837.55831326765
+TJK,Tajikistan,AFG,Afghanistan,TRUE,1170.16016291814
+LTU,Lithuania,RUS,Russia,TRUE,200.494903792697
+LTU,Lithuania,LVA,Latvia,TRUE,435.255046730614
+LTU,Lithuania,POL,Poland,TRUE,87.4731934433062
+LTU,Lithuania,WB1,World oceans and seas,TRUE,212.189254082834
+BRA,Brazil,URY,Uruguay,TRUE,793.092895392688
+BRA,Brazil,COL,Colombia,TRUE,1396.8874471775
+BRA,Brazil,PRY,Paraguay,TRUE,1097.31845401629
+BRA,Brazil,VEN,Venezuela,TRUE,1601.93073490877
+BRA,Brazil,WB1,World oceans and seas,TRUE,18674.6007220996
+URY,Uruguay,WB1,World oceans and seas,TRUE,867.844409997532
+MNG,Mongolia,RUS,Russia,TRUE,2913.03198121839
+RUS,Russia,EST,Estonia,TRUE,283.848982216068
+RUS,Russia,LVA,Latvia,TRUE,212.930764771949
+RUS,Russia,-99,Norway,TRUE,165.097051812747
+RUS,Russia,FIN,Finland,TRUE,1225.50380655329
+RUS,Russia,GEO,Georgia,TRUE,705.054383432968
+RUS,Russia,AZE,Azerbaijan,TRUE,277.690433015504
+RUS,Russia,POL,Poland,TRUE,206.227777470869
+RUS,Russia,WB1,World oceans and seas,TRUE,72381.7668119784
+RUS,Russia,WB2,Caspian sea,TRUE,1307.42860332508
+CZE,Czech Republic,DEU,Germany,TRUE,587.569114669806
+CZE,Czech Republic,SVK,Slovakia,TRUE,205.810096648659
+CZE,Czech Republic,POL,Poland,TRUE,599.294723019536
+CZE,Czech Republic,AUT,Austria,TRUE,336.070737600585
+DEU,Germany,LUX,Luxembourg,TRUE,102.488273274501
+DEU,Germany,BEL,Belgium,TRUE,115.335387035443
+DEU,Germany,DNK,Denmark,TRUE,55.9487144711259
+DEU,Germany,POL,Poland,TRUE,390.388111356249
+DEU,Germany,AUT,Austria,TRUE,653.131881754611
+DEU,Germany,CHE,Switzerland,TRUE,253.664389483764
+DEU,Germany,NLD,Netherlands,TRUE,476.918152343403
+DEU,Germany,WB1,World oceans and seas,TRUE,2664.18766049056
+EST,Estonia,LVA,Latvia,TRUE,256.044405700183
+EST,Estonia,WB1,World oceans and seas,TRUE,1490.37099182103
+LVA,Latvia,WB1,World oceans and seas,TRUE,523.912874644683
+-99,Norway,SWE,Sweden,TRUE,1594.53649840979
+-99,Norway,FIN,Finland,TRUE,678.276853124758
+-99,Norway,WB1,World oceans and seas,TRUE,27511.2090368418
+SWE,Sweden,FIN,Finland,TRUE,483.124372702963
+SWE,Sweden,WB1,World oceans and seas,TRUE,6541.8158328548
+FIN,Finland,WB1,World oceans and seas,TRUE,4199.67824072737
+VNM,Vietnam,KHM,Cambodia,TRUE,966.68942446762
+VNM,Vietnam,LAO,Laos,TRUE,1749.67418138492
+VNM,Vietnam,WB1,World oceans and seas,TRUE,5766.74813713842
+KHM,Cambodia,LAO,Laos,TRUE,431.910202648588
+KHM,Cambodia,THA,Thailand,TRUE,663.40088114394
+KHM,Cambodia,WB1,World oceans and seas,TRUE,793.111396676551
+LUX,Luxembourg,BEL,Belgium,TRUE,109.998721407312
+ARE,United Arab Emirates,SAU,Saudi Arabia,TRUE,457.115187101269
+ARE,United Arab Emirates,WB1,World oceans and seas,TRUE,1245.44784011603
+BEL,Belgium,NLD,Netherlands,TRUE,361.799987284154
+BEL,Belgium,WB1,World oceans and seas,TRUE,94.7142580542036
+GEO,Georgia,AZE,Azerbaijan,TRUE,302.562102985188
+GEO,Georgia,TUR,Turkey,TRUE,235.728243531289
+GEO,Georgia,ARM,Armenia,TRUE,159.676537567325
+GEO,Georgia,WB1,World oceans and seas,TRUE,308.001000896487
+MKD,Republic of Macedonia,ALB,Albania,TRUE,156.700315587111
+MKD,Republic of Macedonia,XXK,Kosovo,TRUE,132.709194358508
+MKD,Republic of Macedonia,GRC,Greece,TRUE,213.641896655536
+MKD,Republic of Macedonia,SRB,Serbia,TRUE,74.718691114337
+MKD,Republic of Macedonia,BGR,Bulgaria,TRUE,141.958378506095
+ALB,Albania,XXK,Kosovo,TRUE,97.7272756169982
+ALB,Albania,GRC,Greece,TRUE,220.750790445586
+ALB,Albania,MNE,Montenegro,TRUE,159.00394039568
+ALB,Albania,WB1,World oceans and seas,TRUE,456.005664989344
+AZE,Azerbaijan,TUR,Turkey,TRUE,7.63174067494456
+AZE,Azerbaijan,ARM,Armenia,TRUE,753.907647180192
+AZE,Azerbaijan,IRN,Iran,TRUE,585.534359037702
+AZE,Azerbaijan,WB2,Caspian sea,TRUE,725.123826689298
+XXK,Kosovo,SRB,Serbia,TRUE,270.435907562553
+XXK,Kosovo,MNE,Montenegro,TRUE,58.4883674798853
+TUR,Turkey,ARM,Armenia,TRUE,258.766075808933
+TUR,Turkey,GRC,Greece,TRUE,180.026202972376
+TUR,Turkey,IRQ,Iraq,TRUE,291.017396815777
+TUR,Turkey,IRN,Iran,TRUE,440.512221460491
+TUR,Turkey,BGR,Bulgaria,TRUE,197.478467165622
+TUR,Turkey,WB1,World oceans and seas,TRUE,5859.93379327479
+ESP,Spain,AND,Andorra,TRUE,50.7395512779646
+ESP,Spain,PRT,Portugal,TRUE,1064.47211465683
+ESP,Spain,GIB,Gibraltar,TRUE,1.76524998900178
+ESP,Spain,WB1,World oceans and seas,TRUE,5005.76436943457
+LAO,Laos,THA,Thailand,TRUE,1616.41285925487
+LAO,Laos,MMR,Myanmar,TRUE,229.065077156933
+ARM,Armenia,IRN,Iran,TRUE,35.3616629406652
+DNK,Denmark,WB1,World oceans and seas,TRUE,4377.84970143392
+LBY,Libya,TUN,Tunisia,TRUE,449.76855085743
+LBY,Libya,SDN,Sudan,TRUE,380.928484532825
+LBY,Libya,TCD,Chad,TRUE,1051.22807961193
+LBY,Libya,DZA,Algeria,TRUE,963.859699258087
+LBY,Libya,NER,Niger,TRUE,346.382413663764
+LBY,Libya,EGY,Egypt,TRUE,1098.36876566669
+LBY,Libya,WB1,World oceans and seas,TRUE,1780.89483716589
+TUN,Tunisia,DZA,Algeria,TRUE,916.023208198014
+TUN,Tunisia,WB1,World oceans and seas,TRUE,1387.35710125091
+ROU,Romania,HUN,Hungary,TRUE,359.197107199973
+ROU,Romania,SRB,Serbia,TRUE,458.804424142655
+ROU,Romania,BGR,Bulgaria,TRUE,583.907520333551
+ROU,Romania,MDA,Moldova,TRUE,426.469102034408
+ROU,Romania,WB1,World oceans and seas,TRUE,468.985683201011
+HUN,Hungary,SVK,Slovakia,TRUE,483.819406066021
+HUN,Hungary,AUT,Austria,TRUE,272.208339045051
+HUN,Hungary,SRB,Serbia,TRUE,131.69466358283
+HUN,Hungary,HRV,Croatia,TRUE,257.961593715589
+HUN,Hungary,SVN,Slovenia,TRUE,67.9206584098854
+SVK,Slovakia,POL,Poland,TRUE,407.973905929187
+SVK,Slovakia,AUT,Austria,TRUE,81.8668273690909
+POL,Poland,WB1,World oceans and seas,TRUE,679.051511661359
+IRL,Ireland,GBR,United Kingdom,TRUE,370.083374145549
+IRL,Ireland,WB1,World oceans and seas,TRUE,3460.42135735571
+GBR,United Kingdom,WB1,World oceans and seas,TRUE,11855.3415937512
+GRC,Greece,BGR,Bulgaria,TRUE,406.256994402421
+GRC,Greece,WB1,World oceans and seas,TRUE,9480.80259967022
+ZMB,Zambia,AGO,Angola,TRUE,1079.52449708544
+ZMB,Zambia,BWA,Botswana,TRUE,0
+ZMB,Zambia,ZWE,Zimbabwe,TRUE,716.41674317979
+ZMB,Zambia,MOZ,Mozambique,TRUE,422.255388361384
+SLE,Sierra Leone,GIN,Guinea,TRUE,627.661266006638
+SLE,Sierra Leone,LBR,Liberia,TRUE,247.171893604321
+SLE,Sierra Leone,WB1,World oceans and seas,TRUE,974.072358539165
+GIN,Guinea,LBR,Liberia,TRUE,464.667170269095
+GIN,Guinea,CIV,Ivory Coast,TRUE,561.666031459407
+GIN,Guinea,MLI,Mali,TRUE,855.944768909759
+GIN,Guinea,SEN,Senegal,TRUE,299.908894228976
+GIN,Guinea,GNB,Guinea-Bissau,TRUE,351.031515714661
+GIN,Guinea,WB1,World oceans and seas,TRUE,877.21229561602
+LBR,Liberia,CIV,Ivory Coast,TRUE,565.538951507213
+LBR,Liberia,WB1,World oceans and seas,TRUE,605.367791997376
+CAF,Central African Republic,SDN,Sudan,TRUE,387.223865654419
+CAF,Central African Republic,TCD,Chad,TRUE,1171.3522869156
+CAF,Central African Republic,CMR,Cameroon,TRUE,788.298764872159
+SDN,Sudan,ERI,Eritrea,TRUE,593.290920319505
+SDN,Sudan,TCD,Chad,TRUE,1291.81188351077
+SDN,Sudan,EGY,Egypt,TRUE,1273.07004091419
+SDN,Sudan,WB1,World oceans and seas,TRUE,733.014106953255
+SDN,Sudan,DT1,Sudanese disputed territory,TRUE,255.099938936708
+DJI,Djibouti,ERI,Eritrea,TRUE,111.746820383471
+DJI,Djibouti,WB1,World oceans and seas,TRUE,318.116830297361
+ERI,Eritrea,WB1,World oceans and seas,TRUE,1418.84309321561
+AUT,Austria,ITA,Italy,TRUE,329.713701051299
+AUT,Austria,CHE,Switzerland,TRUE,137.324342422969
+AUT,Austria,LIE,Liechtenstein,TRUE,27.0802855205775
+AUT,Austria,SVN,Slovenia,TRUE,242.076883810507
+IRQ,Iraq,IRN,Iran,TRUE,1310.18113579048
+IRQ,Iraq,SAU,Saudi Arabia,TRUE,812.734345455158
+IRQ,Iraq,KWT,Kuwait,TRUE,200.777526843242
+IRQ,Iraq,JOR,Jordan,TRUE,180.427968342817
+IRQ,Iraq,WB1,World oceans and seas,TRUE,90.7329201957656
+ITA,Italy,CHE,Switzerland,TRUE,595.994215795572
+ITA,Italy,SVN,Slovenia,TRUE,183.479243592778
+ITA,Italy,SMR,San Marino,TRUE,29.3095434045911
+ITA,Italy,VAT,Vatican City,TRUE,0.427197932384066
+ITA,Italy,WB1,World oceans and seas,TRUE,6023.15100213919
+CHE,Switzerland,LIE,Liechtenstein,TRUE,32.1433923618581
+IRN,Iran,AFG,Afghanistan,TRUE,866.219736590789
+IRN,Iran,TKM,Turkmenistan,TRUE,957.636750505775
+IRN,Iran,WB1,World oceans and seas,TRUE,2661.43585121654
+IRN,Iran,WB2,Caspian sea,TRUE,731.908204893442
+CIV,Ivory Coast,MLI,Mali,TRUE,495.8487505368
+CIV,Ivory Coast,BFA,Burkina Faso,TRUE,510.28676785461
+CIV,Ivory Coast,GHA,Ghana,TRUE,602.267795092089
+CIV,Ivory Coast,WB1,World oceans and seas,TRUE,1272.82222667881
+SRB,Serbia,HRV,Croatia,TRUE,227.747067933809
+SRB,Serbia,BGR,Bulgaria,TRUE,298.74436252656
+SRB,Serbia,MNE,Montenegro,TRUE,140.024275023189
+SRB,Serbia,BIH,Bosnia and Herzegovina,TRUE,290.569506305159
+MLI,Mali,SEN,Senegal,TRUE,400.965470257351
+MLI,Mali,DZA,Algeria,TRUE,1266.10057174544
+MLI,Mali,NER,Niger,TRUE,842.501826493249
+MLI,Mali,BFA,Burkina Faso,TRUE,1211.86002244018
+MLI,Mali,MRT,Mauritania,TRUE,2168.88297315301
+SEN,Senegal,GNB,Guinea-Bissau,TRUE,337.22755173317
+SEN,Senegal,MRT,Mauritania,TRUE,720.800474370934
+SEN,Senegal,GMB,The Gambia,TRUE,730.985271707441
+SEN,Senegal,WB1,World oceans and seas,TRUE,1253.94260814136
+NGA,Nigeria,BEN,Benin,TRUE,735.734992324366
+NGA,Nigeria,TCD,Chad,TRUE,85.1737570614648
+NGA,Nigeria,CMR,Cameroon,TRUE,1584.55753821097
+NGA,Nigeria,NER,Niger,TRUE,1447.40763741948
+NGA,Nigeria,WB1,World oceans and seas,TRUE,2185.16671530795
+BEN,Benin,NER,Niger,TRUE,232.537039234525
+BEN,Benin,BFA,Burkina Faso,TRUE,284.737580511957
+BEN,Benin,TGO,Togo,TRUE,621.840009844993
+BEN,Benin,WB1,World oceans and seas,TRUE,121.379826274569
+AGO,Angola,WB1,World oceans and seas,TRUE,1884.13498378258
+HRV,Croatia,SVN,Slovenia,TRUE,418.222111837343
+HRV,Croatia,MNE,Montenegro,TRUE,17.9113384886569
+HRV,Croatia,BIH,Bosnia and Herzegovina,TRUE,798.985820479133
+HRV,Croatia,WB1,World oceans and seas,TRUE,2731.03360581414
+SVN,Slovenia,WB1,World oceans and seas,TRUE,27.1287554204382
+QAT,Qatar,SAU,Saudi Arabia,TRUE,53.3104208467877
+QAT,Qatar,WB1,World oceans and seas,TRUE,542.063617122725
+SAU,Saudi Arabia,KWT,Kuwait,TRUE,220.803578313599
+SAU,Saudi Arabia,JOR,Jordan,TRUE,727.762169240018
+SAU,Saudi Arabia,YEM,Yemen,TRUE,1222.82847613996
+SAU,Saudi Arabia,WB1,World oceans and seas,TRUE,4017.81023927643
+BWA,Botswana,ZWE,Zimbabwe,TRUE,772.129083455676
+ZWE,Zimbabwe,MOZ,Mozambique,TRUE,1190.7010803386
+BGR,Bulgaria,WB1,World oceans and seas,TRUE,338.258557858864
+THA,Thailand,MMR,Myanmar,TRUE,1832.21495889514
+THA,Thailand,WB1,World oceans and seas,TRUE,3862.99847721162
+HTI,Haiti,DOM,Dominican Republic,TRUE,260.886686075103
+HTI,Haiti,WB1,World oceans and seas,TRUE,1474.06545309056
+DOM,Dominican Republic,WB1,World oceans and seas,TRUE,1292.10630659846
+TCD,Chad,CMR,Cameroon,TRUE,1023.34140266878
+TCD,Chad,NER,Niger,TRUE,1165.08726379113
+KWT,Kuwait,WB1,World oceans and seas,TRUE,482.677415058617
+SLV,El Salvador,GTM,Guatemala,TRUE,156.543813739142
+SLV,El Salvador,HND,Honduras,TRUE,318.812378886114
+SLV,El Salvador,WB1,World oceans and seas,TRUE,457.726500413774
+GTM,Guatemala,HND,Honduras,TRUE,222.64827121505
+GTM,Guatemala,MEX,Mexico,TRUE,894.808016995029
+GTM,Guatemala,BLZ,Belize,TRUE,249.452741933069
+GTM,Guatemala,WB1,World oceans and seas,TRUE,403.962319923268
+TLS,East Timor,WB1,World oceans and seas,TRUE,701.203688616321
+BRN,Brunei,WB1,World oceans and seas,TRUE,184.689059661368
+MCO,Monaco,WB1,World oceans and seas,TRUE,7.07853603254846
+DZA,Algeria,NER,Niger,TRUE,952.212485055009
+DZA,Algeria,MRT,Mauritania,TRUE,461.961725562835
+DZA,Algeria,WB1,World oceans and seas,TRUE,1244.94714448774
+MOZ,Mozambique,SWZ,eSwatini,TRUE,108.211874138514
+MOZ,Mozambique,WB1,World oceans and seas,TRUE,3836.17944993563
+BDI,Burundi,RWA,Rwanda,TRUE,263.434032399534
+RWA,Rwanda,UGA,Uganda,TRUE,138.963574353523
+MMR,Myanmar,BGD,Bangladesh,TRUE,183.031300023114
+MMR,Myanmar,WB1,World oceans and seas,TRUE,6308.69994919324
+MMR,Myanmar,DT4,Arunachal Pradesh,TRUE,80.2112124131442
+BGD,Bangladesh,WB1,World oceans and seas,TRUE,3138.70617823503
+AFG,Afghanistan,TKM,Turkmenistan,TRUE,722.94826117785
+MNE,Montenegro,BIH,Bosnia and Herzegovina,TRUE,206.527804908354
+MNE,Montenegro,WB1,World oceans and seas,TRUE,167.591440500815
+BIH,Bosnia and Herzegovina,WB1,World oceans and seas,TRUE,18.3903394830024
+-99,Guantanamo Bay Naval Base,CUB,Cuba,TRUE,25.1601644048083
+-99,Guantanamo Bay Naval Base,WB1,World oceans and seas,TRUE,45.3073172314623
+CUB,Cuba,WB1,World oceans and seas,TRUE,5706.52980980545
+HND,Honduras,WB1,World oceans and seas,TRUE,1505.772567963
+ECU,Ecuador,COL,Colombia,TRUE,520.936652676498
+ECU,Ecuador,WB1,World oceans and seas,TRUE,2588.65222398155
+COL,Colombia,PAN,Panama,TRUE,272.68069488189
+COL,Colombia,VEN,Venezuela,TRUE,2111.06959007177
+COL,Colombia,WB1,World oceans and seas,TRUE,3548.61469763912
+PRT,Portugal,WB1,World oceans and seas,TRUE,2121.57765709304
+TKM,Turkmenistan,WB2,Caspian sea,TRUE,1886.59258446723
+JOR,Jordan,WB1,World oceans and seas,TRUE,26.9244087485893
+CMR,Cameroon,GAB,Gabon,TRUE,251.068365462913
+CMR,Cameroon,GNQ,Equatorial Guinea,TRUE,180.354774510696
+CMR,Cameroon,WB1,World oceans and seas,TRUE,786.556202738085
+GAB,Gabon,GNQ,Equatorial Guinea,TRUE,308.391410308464
+GAB,Gabon,WB1,World oceans and seas,TRUE,1891.29406603507
+NER,Niger,BFA,Burkina Faso,TRUE,599.975930165083
+BFA,Burkina Faso,TGO,Togo,TRUE,128.635770037428
+BFA,Burkina Faso,GHA,Ghana,TRUE,537.131514410589
+TGO,Togo,GHA,Ghana,TRUE,851.733019570462
+TGO,Togo,WB1,World oceans and seas,TRUE,49.8889048547924
+GHA,Ghana,WB1,World oceans and seas,TRUE,587.884828267351
+GNB,Guinea-Bissau,WB1,World oceans and seas,TRUE,1915.47329567315
+GIB,Gibraltar,WB1,World oceans and seas,TRUE,7.18396456711437
+USA,United States of America,CAN,Canada,TRUE,7928.26969915404
+USA,United States of America,MEX,Mexico,TRUE,2641.15355959534
+USA,United States of America,WB1,World oceans and seas,TRUE,0
+CAN,Canada,WB1,World oceans and seas,TRUE,137213.054663083
+MEX,Mexico,BLZ,Belize,TRUE,153.989019167575
+MEX,Mexico,WB1,World oceans and seas,TRUE,15549.8800321332
+BLZ,Belize,WB1,World oceans and seas,TRUE,782.5047547296
+PAN,Panama,WB1,World oceans and seas,TRUE,3374.33048437129
+VEN,Venezuela,WB1,World oceans and seas,TRUE,5470.8488853037
+PNG,Papua New Guinea,WB1,World oceans and seas,TRUE,11219.3070202864
+EGY,Egypt,WB1,World oceans and seas,TRUE,3791.29147222345
+YEM,Yemen,WB1,World oceans and seas,TRUE,2535.5347271543
+MRT,Mauritania,WB1,World oceans and seas,TRUE,2546.15261177859
+GNQ,Equatorial Guinea,WB1,World oceans and seas,TRUE,493.966357962627
+GMB,The Gambia,WB1,World oceans and seas,TRUE,496.711535785611
+HKG,Hong Kong,WB1,World oceans and seas,TRUE,435.454273196976
+AUS,Australia,WB1,World oceans and seas,TRUE,33873.7934552868
+GRL,Greenland,WB1,World oceans and seas,TRUE,43886.1259314666
+FJI,Fiji,WB1,World oceans and seas,TRUE,2553.54212490366
+NCL,New Caledonia,WB1,World oceans and seas,TRUE,1884.53166136537
+MDG,Madagascar,WB1,World oceans and seas,TRUE,5429.97996417625
+PHL,Philippines,WB1,World oceans and seas,TRUE,17278.6696088301
+LKA,Sri Lanka,WB1,World oceans and seas,TRUE,1982.10520671541
+CUW,Curaçao,WB1,World oceans and seas,TRUE,132.25558774044
+ABW,Aruba,WB1,World oceans and seas,TRUE,71.5307640867244
+BHS,The Bahamas,WB1,World oceans and seas,TRUE,3775.52297324536
+TCA,Turks and Caicos Islands,WB1,World oceans and seas,TRUE,370.034734295824
+JPN,Japan,WB1,World oceans and seas,TRUE,15474.3701550212
+SPM,Saint Pierre and Miquelon,WB1,World oceans and seas,TRUE,133.975631941851
+ISL,Iceland,WB1,World oceans and seas,TRUE,5212.66952854614
+PCN,Pitcairn Islands,WB1,World oceans and seas,TRUE,41.3801600497502
+PYF,French Polynesia,WB1,World oceans and seas,TRUE,2193.44652654319
+ATF,French Southern and Antarctic Lands,WB1,World oceans and seas,TRUE,1554.07594621318
+SYC,Seychelles,WB1,World oceans and seas,TRUE,390.441462486979
+KIR,Kiribati,WB1,World oceans and seas,TRUE,1162.99333311063
+MHL,Marshall Islands,WB1,World oceans and seas,TRUE,405.961672145781
+TTO,Trinidad and Tobago,WB1,World oceans and seas,TRUE,512.256465346749
+GRD,Grenada,WB1,World oceans and seas,TRUE,113.976848004425
+VCT,Saint Vincent and the Grenadines,WB1,World oceans and seas,TRUE,134.754931861599
+BRB,Barbados,WB1,World oceans and seas,TRUE,89.7092734117127
+LCA,Saint Lucia,WB1,World oceans and seas,TRUE,106.590910084142
+DMA,Dominica,WB1,World oceans and seas,TRUE,127.657390519998
+MSR,Montserrat,WB1,World oceans and seas,TRUE,42.0628806414637
+ATG,Antigua and Barbuda,WB1,World oceans and seas,TRUE,178.077007625276
+KNA,Saint Kitts and Nevis,WB1,World oceans and seas,TRUE,106.358960063867
+VIR,United States Virgin Islands,WB1,World oceans and seas,TRUE,182.53461917974
+BLM,Saint-Barthélemy,WB1,World oceans and seas,TRUE,21.0026433450183
+PRI,Puerto Rico,WB1,World oceans and seas,TRUE,652.831208862892
+AIA,Anguilla,WB1,World oceans and seas,TRUE,54.3683932038223
+VGB,British Virgin Islands,WB1,World oceans and seas,TRUE,147.14616997978
+JAM,Jamaica,WB1,World oceans and seas,TRUE,640.474955473141
+CYM,Cayman Islands,WB1,World oceans and seas,TRUE,181.740128888636
+BMU,Bermuda,WB1,World oceans and seas,TRUE,102.218287528491
+HMD,Heard Island and McDonald Islands,WB1,World oceans and seas,TRUE,110.694328914743
+SHN,Saint Helena,WB1,World oceans and seas,TRUE,152.941770885377
+MUS,Mauritius,WB1,World oceans and seas,TRUE,249.658503827929
+COM,Comoros,WB1,World oceans and seas,TRUE,342.265029545593
+STP,São Tomé and Príncipe,WB1,World oceans and seas,TRUE,184.687285741749
+CPV,Cape Verde,WB1,World oceans and seas,TRUE,805.305300158159
+MLT,Malta,WB1,World oceans and seas,TRUE,108.186383078307
+JEY,Jersey,WB1,World oceans and seas,TRUE,53.7822424892886
+GGY,Guernsey,WB1,World oceans and seas,TRUE,61.8351116249015
+IMN,Isle of Man,WB1,World oceans and seas,TRUE,119.74125850892
+FRO,Faroe Islands,WB1,World oceans and seas,TRUE,735.223980355782
+IOT,British Indian Ocean Territory,WB1,World oceans and seas,TRUE,129.578898098221
+SGP,Singapore,WB1,World oceans and seas,TRUE,96.9865962185538
+NFK,Norfolk Island,WB1,World oceans and seas,TRUE,31.266234287498
+COK,Cook Islands,WB1,World oceans and seas,TRUE,190.689391514017
+TON,Tonga,WB1,World oceans and seas,TRUE,345.647557822619
+WLF,Wallis and Futuna,WB1,World oceans and seas,TRUE,79.0947018554797
+WSM,Samoa,WB1,World oceans and seas,TRUE,341.815213783958
+SLB,Solomon Islands,WB1,World oceans and seas,TRUE,4489.7494603866
+TUV,Tuvalu,WB1,World oceans and seas,TRUE,77.46712809231
+MDV,Maldives,WB1,World oceans and seas,TRUE,518.121395669525
+NRU,Nauru,WB1,World oceans and seas,TRUE,19.8274684603079
+FSM,Federated States of Micronesia,WB1,World oceans and seas,TRUE,344.006261518456
+SGS,South Georgia and the South Sandwich Islands,WB1,World oceans and seas,TRUE,932.6189657722
+FLK,Falkland Islands,WB1,World oceans and seas,TRUE,2388.70631242387
+VUT,Vanuatu,WB1,World oceans and seas,TRUE,2262.13755625136
+NIU,Niue,WB1,World oceans and seas,TRUE,62.8528316817015
+ASM,American Samoa,WB1,World oceans and seas,TRUE,116.757836478795
+PLW,Palau,WB1,World oceans and seas,TRUE,274.635945415932
+GUM,Guam,WB1,World oceans and seas,TRUE,129.16010017327
+MNP,Northern Mariana Islands,WB1,World oceans and seas,TRUE,315.544776221471
+BHR,Bahrain,WB1,World oceans and seas,TRUE,135.865019049698
+-99,Clipperton Island,WB1,World oceans and seas,TRUE,8.94322177965749
+MAC,Macau,WB1,World oceans and seas,TRUE,45.2645619923638
+NLD,Netherlands,WB1,World oceans and seas,TRUE,95.6209169213606
+NLD,Netherlands,WB1,World oceans and seas,TRUE,19.3650494415413
+NLD,Netherlands,WB1,World oceans and seas,TRUE,9.88325578270376
+NLD,Netherlands,WB1,World oceans and seas,TRUE,1014.71611531133
+-99,Australian Indian Ocean Territories,WB1,World oceans and seas,TRUE,35.0356082093967
+-99,Australian Indian Ocean Territories,WB1,World oceans and seas,TRUE,53.9348864795257
+UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,12.1636186713908
+UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,6.58222184479352
+UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,5.11076628259539
+UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,3.93467796411211
+UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,11.612973341394
+UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,11.2358682637057
+UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,9.23152262920809
+UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,16.3144081201856
+UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,6.58875482887445
+NZL,New Zealand,WB1,World oceans and seas,TRUE,19.7046871699031
+NZL,New Zealand,WB1,World oceans and seas,TRUE,9990.20487974746
