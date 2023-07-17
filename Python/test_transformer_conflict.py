@@ -6,9 +6,14 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 import datetime
 
-block_size = 16
+dataset = pd.read_csv('../intermediate_data/ssp1_ext.csv')
+
+y = dataset.pop('conflict').values.astype(int)
+X = dataset.values.astype(float)
+
+block_size = X.shape[1]
 batch_size = 8
-max_iters = 5000
+max_iters = 50000
 eval_interval = 1000
 learning_rate = 3e-7
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -19,14 +24,9 @@ n_layer = 6
 dropout = 0.2
 test_size = 0.1
 
-dataset = pd.read_csv('../intermediate_data/ssp1_ext.csv')
-
-y = dataset.pop('conflict').values.astype(int)
-#dataset.pop('humanitarian')
-#dataset.pop('humanitarian_needs')
-
-X = dataset.values.astype(float)
-
+#checkpoint init
+iter_num = 0
+best_val_loss = 1e9
 
 def scale_X(x):
     return np.round(x * 100)
@@ -276,26 +276,7 @@ for iter in range(max_iters):
     optimizer.step()
 
 # generate from the model
-header = [
-    "temp",
-    "nb_conflict",
-    "YMHEP",
-    "lpop",
-    "lGDPcap",
-    "ltsc0",
-    "nc",
-    "ncc1",
-    "ncc2",
-    "ltsnc",
-    "ncts0",
-    "lpop.1",
-    "lGDPcap_c1",
-    "lGDPcap_c2",
-    "lGDPcap_ltsc0",
-    "ltimeindep",
-    "conflict_actual",
-    "conflict_prediction"
-]
+header = dataset.columns.tolist()
 
 with open('transformer_output.csv', 'w') as csv_file:
     csv_file.write(','.join(header) + '\n')
