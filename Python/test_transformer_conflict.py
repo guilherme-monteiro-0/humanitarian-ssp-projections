@@ -8,7 +8,9 @@ import datetime
 
 dataset = pd.read_csv('../intermediate_data/ssp1_ext.csv')
 
-y = dataset.pop('conflict').values.astype(int)
+dep_var = 'conflict'
+
+y = dataset.pop(dep_var).values.astype(int)
 X = dataset.values.astype(float)
 
 block_size = X.shape[1]
@@ -276,7 +278,7 @@ for iter in range(max_iters):
     optimizer.step()
 
 # generate from the model
-header = dataset.columns.tolist()
+header = dataset.columns.tolist() + [dep_var + '_actual', dep_var + '_prediction']
 
 with open('transformer_output.csv', 'w') as csv_file:
     csv_file.write(','.join(header) + '\n')
