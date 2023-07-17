@@ -8,22 +8,22 @@ import datetime
 
 block_size = 16
 batch_size = 8
-max_iters = 50000
-eval_interval = 500
+max_iters = 5000
+eval_interval = 1000
 learning_rate = 3e-7
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-eval_iters = 200
+eval_iters = 500
 n_embd = 384
 n_head = 6
 n_layer = 6
 dropout = 0.2
 test_size = 0.1
 
-dataset = pd.read_csv('../intermediate_data/ssp1.csv')
+dataset = pd.read_csv('../intermediate_data/ssp1_ext.csv')
 
 y = dataset.pop('conflict').values.astype(int)
-dataset.pop('humanitarian')
-dataset.pop('humanitarian_needs')
+#dataset.pop('humanitarian')
+#dataset.pop('humanitarian_needs')
 
 X = dataset.values.astype(float)
 
