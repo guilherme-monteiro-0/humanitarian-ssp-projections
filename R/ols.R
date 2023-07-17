@@ -8,6 +8,36 @@ wd_base = "~/git/"
 setwd(paste0(wd_base, "humanitarian-ssp-projections"))
 
 load("uppsala_replication/PredictionSSP_1.RData")
+
+# Write to intermediate data for Python experiments
+PredictionSSP_1 = transform(PredictionSSP_1,
+                         lGDPcap_c1 = lGDPcap*c1,
+                         lGDPcap_c2 = lGDPcap*c2,
+                         lGDPcap_ltsc0 = lGDPcap*ltsc0
+)
+keep = c(
+  "conflict",
+  "temp",
+  "nb_conflict",
+  "YMHEP",
+  "lpop",
+  "lGDPcap",
+  "ltsc0",
+  "nc",
+  "ncc1",
+  "ncc2",
+  "ltsnc",
+  "ncts0",
+  "lpop",
+  "lGDPcap_c1",
+  "lGDPcap_c2",
+  "lGDPcap_ltsc0",
+  "ltimeindep"
+)
+to_write = PredictionSSP_1[,keep]
+to_write[is.na(to_write)] = -99
+fwrite(to_write, "intermediate_data/ssp1_ext.csv")
+
 load("fts/plans.RData")
 u_iso3 = fread("supporting_data/uppsala_iso3.csv")
 PredictionSSP_1 = merge(PredictionSSP_1, u_iso3, by="countryname")
