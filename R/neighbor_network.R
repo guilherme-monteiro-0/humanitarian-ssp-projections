@@ -92,3 +92,15 @@ world_network <- rbindlist(touching_list)
 save(world_network, land_and_sea, file="./intermediate_data/world_network.RData")
 world_network = subset(world_network, touching)
 fwrite(world_network, "./intermediate_data/world_network.csv")
+
+library(igraph)
+exclude = c("WB1", "-99")
+world_network = subset(world_network, !(from_iso3  %in% exclude) & !(to_iso3  %in% exclude))
+nodes = unique(c(unique(world_network$from_iso3), unique(world_network$to_iso3)))
+links = world_network[,c("from_iso3", "to_iso3")]
+net <- graph_from_data_frame(d=links, vertices=nodes, directed=F) 
+net <- simplify(net, remove.multiple = F, remove.loops = T) 
+plot(net, vertex.shape="none", vertex.label=nodes,
+     vertex.label.color=V(net)$color, vertex.label.font=2, 
+     vertex.label.cex=.6, edge.color="gray70",  edge.width=2)
+
