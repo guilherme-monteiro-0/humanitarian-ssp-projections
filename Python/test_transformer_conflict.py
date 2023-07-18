@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 import datetime
 
-dataset = pd.read_csv('../intermediate_data/ssp1_ext.csv')
+dataset = pd.read_csv('../intermediate_data/ssp1_ext_Gui.csv')
 
 dep_var = 'conflict'
 
@@ -16,13 +16,13 @@ X = dataset.values.astype(float)
 block_size = X.shape[1]
 batch_size = 8
 max_iters = 50000
-eval_interval = 1000
-learning_rate = 3e-7
+eval_interval = 100
+learning_rate = 1e-6
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-eval_iters = 500
+eval_iters = 100
 n_embd = 384
-n_head = 6
-n_layer = 6
+n_head = 2
+n_layer = 2
 dropout = 0.2
 test_size = 0.1
 
