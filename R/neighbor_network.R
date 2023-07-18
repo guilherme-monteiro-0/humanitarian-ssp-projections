@@ -163,3 +163,34 @@ shortest_paths(
   to=which(nodes=="United Kingdom"),
   weights=link_weights
 )$vpath
+
+trip_path = shortest_paths(
+  net,
+  from=which(nodes=="South Africa"),
+  to=which(nodes=="China"),
+  weights=link_weights
+)$vpath[[1]]
+trip = subset(land_and_sea, NAME_EN %in% attributes(trip_path)$names)
+leaflet(data=trip) %>% addTiles() %>% addPolygons(color="red", popup=trip@data$NAME_EN)
+
+# Sea travel penalty
+penalty = 2
+world_network_penalty = world_network
+world_network_penalty$mean_distance_km[which(
+  startsWith(world_network_penalty$from_iso3, "WB") |
+    startsWith(world_network_penalty$to_iso3, "WB")
+  )] = world_network_penalty$mean_distance_km[which(
+    startsWith(world_network_penalty$from_iso3, "WB") |
+      startsWith(world_network_penalty$to_iso3, "WB")
+  )] * penalty
+links = world_network_penalty[,c("from_name", "to_name", "mean_distance_km")]
+net <- graph_from_data_frame(d=links, vertices=nodes, directed=F) 
+link_weights <- E(net)$mean_distance_km
+trip_path = shortest_paths(
+  net,
+  from=which(nodes=="Libya"),
+  to=which(nodes=="Italy"),
+  weights=link_weights
+)$vpath[[1]]
+trip = subset(land_and_sea, NAME_EN %in% attributes(trip_path)$names)
+leaflet(data=trip) %>% addTiles() %>% addPolygons(color="red", popup=trip@data$NAME_EN)
