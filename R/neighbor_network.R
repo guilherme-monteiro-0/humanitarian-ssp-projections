@@ -1,4 +1,4 @@
-list.of.packages <- c("data.table","reshape2", "sp","rgdal","rgeos","maptools", "sf", "leaflet")
+list.of.packages <- c("data.table","reshape2", "sp","rgdal","rgeos","maptools", "sf", "leaflet", "geosphere")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, require, character.only=T)
@@ -55,6 +55,8 @@ water_polygons_spdf@data$NAME_EN = c(
 land_and_sea = rbind(world_spdf, water_polygons_spdf)
 leaflet(data=land_and_sea) %>% addTiles() %>% addPolygons(color="red", popup=land_and_sea@data$NAME_EN)
 
+centroid_list = list()
+
 touching_list = list()
 combinations = combn(c(1:nrow(land_and_sea)), 2)
 
@@ -66,41 +68,78 @@ for(i in 1:ncol(combinations)){
   to_iso3 = land_and_sea@data[to,"ISO_A3"]
   from_name = land_and_sea@data[from,"NAME_EN"]
   to_name = land_and_sea@data[to,"NAME_EN"]
-  setTxtProgressBar(pb, i)
-  touching = gTouches(land_and_sea[from,], land_and_sea[to,])
-  if(touching){
-    border_length = tryCatch({
-      lines <- rgeos::gIntersection(land_and_sea[from,], land_and_sea[to,], byid = TRUE)
-      sp::SpatialLinesLengths(lines)
-    }, error = function(e){ return(0) })
+  from_poly = land_and_sea[from,]
+  to_poly = land_and_sea[to,]
+  if(as.character(from) %in% names(centroid_list)){
+    from_centroid = centroid_list[[as.character(from)]]
   }else{
-    border_length <- 0
+    from_centroid = gCentroid(from_poly)
+    centroid_list[[as.character(from)]] = from_centroid
+  }
+  if(as.character(to) %in% names(centroid_list)){
+    to_centroid = centroid_list[[as.character(to)]]
+  }else{
+    to_centroid = gCentroid(to_poly)
+    centroid_list[[as.character(to)]] = to_centroid
+  }
+  setTxtProgressBar(pb, i)
+  intersecting = gIntersects(from_poly, to_poly)
+  mean_distance_km = distm(from_centroid, to_centroid)[1,1] / 1000
+  if(intersecting){
+    border_length_km = tryCatch({
+      intersection <- rgeos::gIntersection(from_poly, to_poly, byid = TRUE)
+      if(class(intersection) == "SpatialCollections"){
+        lines = intersection@lineobj
+      }
+      if(class(intersection) == "SpatialLines"){
+        lines = intersection
+      }
+      if(class(intersection) == "SpatialPoints"){
+        0
+      }else{
+        sum(sp::SpatialLinesLengths(lines))
+      }
+    }, error = function(e){ return(NA) })
+  }else{
+    border_length_km <- 0
   }
   tmp = data.frame(
     from_iso3,
     from_name,
     to_iso3,
     to_name,
-    touching,
-    border_length
+    intersecting,
+    border_length_km,
+    mean_distance_km
   )
   touching_list[[i]] = tmp
 }
 close(pb)
 
 world_network <- rbindlist(touching_list)
-save(world_network, land_and_sea, file="./intermediate_data/world_network.RData")
-world_network = subset(world_network, touching)
+save(world_network, file="./intermediate_data/world_network.RData")
 fwrite(world_network, "./intermediate_data/world_network.csv")
 
 library(igraph)
-exclude = c("WB1", "-99")
+exclude = c(
+  "-99"
+  ,"WB1"
+  # ,"WB2"
+  # ,"DT1"
+  # ,"DT2"
+  # ,"DT3"
+  # ,"DT4"
+  )
 world_network = subset(world_network, !(from_iso3  %in% exclude) & !(to_iso3  %in% exclude))
 nodes = unique(c(unique(world_network$from_iso3), unique(world_network$to_iso3)))
-links = world_network[,c("from_iso3", "to_iso3")]
+links = world_network[,c("from_iso3", "to_iso3", "mean_distance_km", "border_length_km", "intersecting")]
 net <- graph_from_data_frame(d=links, vertices=nodes, directed=F) 
-net <- simplify(net, remove.multiple = F, remove.loops = T) 
-plot(net, vertex.shape="none", vertex.label=nodes,
-     vertex.label.color=V(net)$color, vertex.label.font=2, 
-     vertex.label.cex=.6, edge.color="gray70",  edge.width=2)
+net <- simplify(net, remove.multiple = F, remove.loops = T)
+link_weights <- (1 / E(net)$mean_distance_km) * 100
+edge_weights = sqrt(E(net)$border_length_km) / 10
+edge_weights[which(E(net)$intersecting & edge_weights < 2)] = 2
+edge_weights[which(edge_weights > 5)] = 5
+l <- layout_with_fr(net, weights = link_weights)
+plot(net, layout=l, vertex.shape="none", vertex.label=nodes, vertex.label.font=2, 
+     vertex.label.cex=.6, edge.color="gray70", edge.width = edge_weights)
 
