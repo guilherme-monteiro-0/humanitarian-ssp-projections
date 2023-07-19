@@ -1,544 +1,2594 @@
-from_iso3,from_name,to_iso3,to_name,touching,border_length
-IDN,Indonesia,MYS,Malaysia,TRUE,1494.83122832982
-IDN,Indonesia,TLS,East Timor,TRUE,208.368448479951
-IDN,Indonesia,PNG,Papua New Guinea,TRUE,748.620410425444
-IDN,Indonesia,WB1,World oceans and seas,TRUE,52374.9325922372
-MYS,Malaysia,THA,Thailand,TRUE,432.920988855744
-MYS,Malaysia,BRN,Brunei,TRUE,399.121011919351
-MYS,Malaysia,WB1,World oceans and seas,TRUE,5258.00608145321
-CHL,Chile,BOL,Bolivia,TRUE,825.64333819411
-CHL,Chile,PER,Peru,TRUE,161.604309202707
-CHL,Chile,ARG,Argentina,TRUE,5032.40669495976
-CHL,Chile,WB1,World oceans and seas,TRUE,31333.9848472786
-BOL,Bolivia,PER,Peru,TRUE,953.56259251409
-BOL,Bolivia,ARG,Argentina,TRUE,715.204108765782
-BOL,Bolivia,BRA,Brazil,TRUE,2664.42743598131
-BOL,Bolivia,PRY,Paraguay,TRUE,742.524000557926
-PER,Peru,BRA,Brazil,TRUE,1800.01504466613
-PER,Peru,ECU,Ecuador,TRUE,1291.12392573221
-PER,Peru,COL,Colombia,TRUE,1220.39090787483
-PER,Peru,WB1,World oceans and seas,TRUE,2642.64019352209
-ARG,Argentina,BRA,Brazil,TRUE,985.250810560231
-ARG,Argentina,URY,Uruguay,TRUE,302.767472644122
-ARG,Argentina,PRY,Paraguay,TRUE,1644.68142862549
-ARG,Argentina,WB1,World oceans and seas,TRUE,5918.36398006815
-CYP,Cyprus,WB1,World oceans and seas,TRUE,935.396804186262
-IND,India,CHN,People's Republic of China,TRUE,911.43763411742
-IND,India,PAK,Pakistan,TRUE,2721.49250974021
-IND,India,BTN,Bhutan,TRUE,439.177267921987
-IND,India,MMR,Myanmar,TRUE,1187.81929141369
-IND,India,BGD,Bangladesh,TRUE,2383.03881482239
-IND,India,NPL,Nepal,TRUE,1483.92612567005
-IND,India,WB1,World oceans and seas,TRUE,11015.2891556838
-IND,India,DT2,Aksai Chin 1,TRUE,326.306820591146
-IND,India,DT3,Aksai Chin 2,TRUE,93.0448242877718
-IND,India,DT4,Arunachal Pradesh,TRUE,599.385307093016
-CHN,People's Republic of China,PAK,Pakistan,TRUE,351.412495795338
-CHN,People's Republic of China,PRK,North Korea,TRUE,1004.92362848239
-CHN,People's Republic of China,BTN,Bhutan,TRUE,430.139080735136
-CHN,People's Republic of China,KAZ,Kazakhstan,TRUE,1503.277624148
-CHN,People's Republic of China,TJK,Tajikistan,TRUE,403.694246208245
-CHN,People's Republic of China,MNG,Mongolia,TRUE,4377.77349689156
-CHN,People's Republic of China,RUS,Russia,TRUE,3544.43707982625
-CHN,People's Republic of China,VNM,Vietnam,TRUE,1048.98934815899
-CHN,People's Republic of China,LAO,Laos,TRUE,361.51530290406
-CHN,People's Republic of China,KGZ,Kyrgyzstan,TRUE,838.715710394905
-CHN,People's Republic of China,MMR,Myanmar,TRUE,1699.34051525039
-CHN,People's Republic of China,AFG,Afghanistan,TRUE,84.1195071108526
-CHN,People's Republic of China,NPL,Nepal,TRUE,1111.76029783997
-CHN,People's Republic of China,HKG,Hong Kong,TRUE,18.0109345464922
-CHN,People's Republic of China,WB1,World oceans and seas,TRUE,17606.182974418
-CHN,People's Republic of China,DT2,Aksai Chin 1,TRUE,681.397411880526
-CHN,People's Republic of China,DT3,Aksai Chin 2,TRUE,121.966678064461
-CHN,People's Republic of China,DT4,Arunachal Pradesh,TRUE,945.922062337233
-ISR,Israel,PSE,Palestine,TRUE,346.520195034054
-ISR,Israel,LBN,Lebanon,TRUE,68.6105379125011
-ISR,Israel,SYR,Syria,TRUE,77.8233028665686
-ISR,Israel,JOR,Jordan,TRUE,277.831143051266
-ISR,Israel,EGY,Egypt,TRUE,203.607594364237
-ISR,Israel,WB1,World oceans and seas,TRUE,199.658836010255
-PSE,Palestine,JOR,Jordan,TRUE,111.574706426424
-PSE,Palestine,EGY,Egypt,TRUE,12.3381896716421
-PSE,Palestine,WB1,World oceans and seas,TRUE,40.5436240696027
-LBN,Lebanon,SYR,Syria,TRUE,321.36456988873
-LBN,Lebanon,WB1,World oceans and seas,TRUE,226.345826571692
-ETH,Ethiopia,SSD,South Sudan,TRUE,882.087545379419
-ETH,Ethiopia,SOM,Somalia,TRUE,1618.2885954618
-ETH,Ethiopia,KEN,Kenya,TRUE,788.384332542848
-ETH,Ethiopia,SDN,Sudan,TRUE,712.710901779367
-ETH,Ethiopia,DJI,Djibouti,TRUE,328.622715830246
-ETH,Ethiopia,ERI,Eritrea,TRUE,892.30444054225
-SSD,South Sudan,KEN,Kenya,TRUE,0
-SSD,South Sudan,COD,Democratic Republic of the Congo,TRUE,597.910063886891
-SSD,South Sudan,CAF,Central African Republic,TRUE,708.564512973048
-SSD,South Sudan,SDN,Sudan,TRUE,1733.15340435594
-SSD,South Sudan,UGA,Uganda,TRUE,435.969528225452
-SSD,South Sudan,DT1,Sudanese disputed territory,TRUE,158.501701681652
-SOM,Somalia,KEN,Kenya,TRUE,684.836638343228
-SOM,Somalia,DJI,Djibouti,TRUE,64.226445528409
-SOM,Somalia,WB1,World oceans and seas,TRUE,3191.48893719042
-KEN,Kenya,TZA,Tanzania,TRUE,762.061744662349
-KEN,Kenya,UGA,Uganda,TRUE,746.026847578221
-KEN,Kenya,WB1,World oceans and seas,TRUE,821.908274450925
-PAK,Pakistan,IRN,Iran,TRUE,816.59020007309
-PAK,Pakistan,AFG,Afghanistan,TRUE,2244.69020845556
-PAK,Pakistan,WB1,World oceans and seas,TRUE,1448.46570757895
-MWI,Malawi,TZA,Tanzania,TRUE,452.335157383176
-MWI,Malawi,ZMB,Zambia,TRUE,802.681894788771
-MWI,Malawi,MOZ,Mozambique,TRUE,1460.9253624133
-TZA,Tanzania,COD,Democratic Republic of the Congo,TRUE,473.761664474957
-TZA,Tanzania,ZMB,Zambia,TRUE,321.060137431685
-TZA,Tanzania,MOZ,Mozambique,TRUE,724.753971622368
-TZA,Tanzania,BDI,Burundi,TRUE,413.500751258931
-TZA,Tanzania,RWA,Rwanda,TRUE,216.857880280788
-TZA,Tanzania,UGA,Uganda,TRUE,386.542980717841
-TZA,Tanzania,WB1,World oceans and seas,TRUE,1903.77461132871
-SYR,Syria,TUR,Turkey,TRUE,775.566567405881
-SYR,Syria,IRQ,Iraq,TRUE,598.885317390737
-SYR,Syria,JOR,Jordan,TRUE,358.349347607193
-SYR,Syria,WB1,World oceans and seas,TRUE,175.641728237925
--99,France,SUR,Suriname,TRUE,420.423691798633
--99,France,BRA,Brazil,TRUE,516.703846280046
--99,France,DEU,Germany,TRUE,373.22092923239
--99,France,LUX,Luxembourg,TRUE,50.7728295300438
--99,France,BEL,Belgium,TRUE,463.472406161893
--99,France,ESP,Spain,TRUE,567.69669688214
--99,France,ITA,Italy,TRUE,403.133413247247
--99,France,CHE,Switzerland,TRUE,460.268855271049
--99,France,MCO,Monaco,TRUE,9.53666855768966
--99,France,AND,Andorra,TRUE,45.8684608210639
--99,France,WB1,World oceans and seas,TRUE,6286.53668790187
-SUR,Suriname,GUY,Guyana,TRUE,656.046505221641
-SUR,Suriname,BRA,Brazil,TRUE,366.359993244972
-SUR,Suriname,WB1,World oceans and seas,TRUE,607.834102573341
-GUY,Guyana,BRA,Brazil,TRUE,1079.63200408517
-GUY,Guyana,VEN,Venezuela,TRUE,622.305242098772
-GUY,Guyana,WB1,World oceans and seas,TRUE,822.954809310497
-KOR,South Korea,PRK,North Korea,TRUE,203.885568716556
-KOR,South Korea,WB1,World oceans and seas,TRUE,4859.52939627878
-PRK,North Korea,RUS,Russia,TRUE,31.4540282541733
-PRK,North Korea,WB1,World oceans and seas,TRUE,2144.43103015211
-MAR,Morocco,ESP,Spain,TRUE,21.4928830806277
-MAR,Morocco,DZA,Algeria,TRUE,1550.63287026696
-MAR,Morocco,WB1,World oceans and seas,TRUE,2205.33701697545
-CRI,Costa Rica,NIC,Nicaragua,TRUE,288.911264666247
-CRI,Costa Rica,PAN,Panama,TRUE,285.260005406782
-CRI,Costa Rica,WB1,World oceans and seas,TRUE,1449.66456541568
-NIC,Nicaragua,HND,Honduras,TRUE,765.92584621301
-NIC,Nicaragua,WB1,World oceans and seas,TRUE,1369.03383288533
-COG,Republic of the Congo,COD,Democratic Republic of the Congo,TRUE,1468.1591305946
-COG,Republic of the Congo,CAF,Central African Republic,TRUE,426.350156086949
-COG,Republic of the Congo,AGO,Angola,TRUE,173.49571256862
-COG,Republic of the Congo,CMR,Cameroon,TRUE,471.778065991139
-COG,Republic of the Congo,GAB,Gabon,TRUE,1672.02393126073
-COG,Republic of the Congo,WB1,World oceans and seas,TRUE,175.862452017577
-COD,Democratic Republic of the Congo,ZMB,Zambia,TRUE,2034.89212127145
-COD,Democratic Republic of the Congo,CAF,Central African Republic,TRUE,1453.23030896668
-COD,Democratic Republic of the Congo,AGO,Angola,TRUE,2303.20699876684
-COD,Democratic Republic of the Congo,BDI,Burundi,TRUE,218.73782493048
-COD,Democratic Republic of the Congo,RWA,Rwanda,TRUE,202.961088955932
-COD,Democratic Republic of the Congo,UGA,Uganda,TRUE,727.149714942736
-COD,Democratic Republic of the Congo,WB1,World oceans and seas,TRUE,210.64199703229
-BTN,Bhutan,DT4,Arunachal Pradesh,TRUE,150.90147158794
-UKR,Ukraine,BLR,Belarus,TRUE,861.522287599672
-UKR,Ukraine,RUS,Russia,TRUE,1523.55643031631
-UKR,Ukraine,ROU,Romania,TRUE,515.831342560427
-UKR,Ukraine,HUN,Hungary,TRUE,97.7258502087667
-UKR,Ukraine,SVK,Slovakia,TRUE,87.0303238532318
-UKR,Ukraine,POL,Poland,TRUE,412.461418021438
-UKR,Ukraine,MDA,Moldova,TRUE,897.983103213422
-UKR,Ukraine,WB1,World oceans and seas,TRUE,2900.18530929553
-BLR,Belarus,LTU,Lithuania,TRUE,481.905148531637
-BLR,Belarus,RUS,Russia,TRUE,919.55659595367
-BLR,Belarus,LVA,Latvia,TRUE,135.863438685295
-BLR,Belarus,POL,Poland,TRUE,340.088430939794
-NAM,Namibia,ZAF,South Africa,TRUE,940.372798939813
-NAM,Namibia,ZMB,Zambia,TRUE,224.941132757595
-NAM,Namibia,AGO,Angola,TRUE,1331.54950854609
-NAM,Namibia,BWA,Botswana,TRUE,1363.79884938816
-NAM,Namibia,ZWE,Zimbabwe,TRUE,0
-NAM,Namibia,WB1,World oceans and seas,TRUE,1505.45839357416
-ZAF,South Africa,BWA,Botswana,TRUE,1615.27608928773
-ZAF,South Africa,ZWE,Zimbabwe,TRUE,218.300922832869
-ZAF,South Africa,MOZ,Mozambique,TRUE,494.292251794775
-ZAF,South Africa,SWZ,eSwatini,TRUE,428.383295822734
-ZAF,South Africa,LSO,Lesotho,TRUE,784.230719926637
-ZAF,South Africa,WB1,World oceans and seas,TRUE,3064.86453316783
-MAF,Saint Martin,SXM,Sint Maarten,TRUE,10.0203644892506
-MAF,Saint Martin,WB1,World oceans and seas,TRUE,31.6585270353886
-SXM,Sint Maarten,WB1,World oceans and seas,TRUE,14.1689166003576
-OMN,Oman,ARE,United Arab Emirates,TRUE,567.313938536802
-OMN,Oman,SAU,Saudi Arabia,TRUE,656.88697667483
-OMN,Oman,YEM,Yemen,TRUE,290.18427025979
-OMN,Oman,WB1,World oceans and seas,TRUE,2286.82890347993
-UZB,Uzbekistan,KAZ,Kazakhstan,TRUE,2183.29164237858
-UZB,Uzbekistan,TJK,Tajikistan,TRUE,1119.9306358037
-UZB,Uzbekistan,KGZ,Kyrgyzstan,TRUE,1049.34728602413
-UZB,Uzbekistan,AFG,Afghanistan,TRUE,136.742822017587
-UZB,Uzbekistan,TKM,Turkmenistan,TRUE,1595.98065723562
-KAZ,Kazakhstan,RUS,Russia,TRUE,6657.58269293642
-KAZ,Kazakhstan,KGZ,Kyrgyzstan,TRUE,1017.13425036328
-KAZ,Kazakhstan,TKM,Turkmenistan,TRUE,373.273717836246
-KAZ,Kazakhstan,WB2,Caspian sea,TRUE,2095.42847275503
-TJK,Tajikistan,KGZ,Kyrgyzstan,TRUE,837.55831326765
-TJK,Tajikistan,AFG,Afghanistan,TRUE,1170.16016291814
-LTU,Lithuania,RUS,Russia,TRUE,200.494903792697
-LTU,Lithuania,LVA,Latvia,TRUE,435.255046730614
-LTU,Lithuania,POL,Poland,TRUE,87.4731934433062
-LTU,Lithuania,WB1,World oceans and seas,TRUE,212.189254082834
-BRA,Brazil,URY,Uruguay,TRUE,793.092895392688
-BRA,Brazil,COL,Colombia,TRUE,1396.8874471775
-BRA,Brazil,PRY,Paraguay,TRUE,1097.31845401629
-BRA,Brazil,VEN,Venezuela,TRUE,1601.93073490877
-BRA,Brazil,WB1,World oceans and seas,TRUE,18674.6007220996
-URY,Uruguay,WB1,World oceans and seas,TRUE,867.844409997532
-MNG,Mongolia,RUS,Russia,TRUE,2913.03198121839
-RUS,Russia,EST,Estonia,TRUE,283.848982216068
-RUS,Russia,LVA,Latvia,TRUE,212.930764771949
-RUS,Russia,-99,Norway,TRUE,165.097051812747
-RUS,Russia,FIN,Finland,TRUE,1225.50380655329
-RUS,Russia,GEO,Georgia,TRUE,705.054383432968
-RUS,Russia,AZE,Azerbaijan,TRUE,277.690433015504
-RUS,Russia,POL,Poland,TRUE,206.227777470869
-RUS,Russia,WB1,World oceans and seas,TRUE,72381.7668119784
-RUS,Russia,WB2,Caspian sea,TRUE,1307.42860332508
-CZE,Czech Republic,DEU,Germany,TRUE,587.569114669806
-CZE,Czech Republic,SVK,Slovakia,TRUE,205.810096648659
-CZE,Czech Republic,POL,Poland,TRUE,599.294723019536
-CZE,Czech Republic,AUT,Austria,TRUE,336.070737600585
-DEU,Germany,LUX,Luxembourg,TRUE,102.488273274501
-DEU,Germany,BEL,Belgium,TRUE,115.335387035443
-DEU,Germany,DNK,Denmark,TRUE,55.9487144711259
-DEU,Germany,POL,Poland,TRUE,390.388111356249
-DEU,Germany,AUT,Austria,TRUE,653.131881754611
-DEU,Germany,CHE,Switzerland,TRUE,253.664389483764
-DEU,Germany,NLD,Netherlands,TRUE,476.918152343403
-DEU,Germany,WB1,World oceans and seas,TRUE,2664.18766049056
-EST,Estonia,LVA,Latvia,TRUE,256.044405700183
-EST,Estonia,WB1,World oceans and seas,TRUE,1490.37099182103
-LVA,Latvia,WB1,World oceans and seas,TRUE,523.912874644683
--99,Norway,SWE,Sweden,TRUE,1594.53649840979
--99,Norway,FIN,Finland,TRUE,678.276853124758
--99,Norway,WB1,World oceans and seas,TRUE,27511.2090368418
-SWE,Sweden,FIN,Finland,TRUE,483.124372702963
-SWE,Sweden,WB1,World oceans and seas,TRUE,6541.8158328548
-FIN,Finland,WB1,World oceans and seas,TRUE,4199.67824072737
-VNM,Vietnam,KHM,Cambodia,TRUE,966.68942446762
-VNM,Vietnam,LAO,Laos,TRUE,1749.67418138492
-VNM,Vietnam,WB1,World oceans and seas,TRUE,5766.74813713842
-KHM,Cambodia,LAO,Laos,TRUE,431.910202648588
-KHM,Cambodia,THA,Thailand,TRUE,663.40088114394
-KHM,Cambodia,WB1,World oceans and seas,TRUE,793.111396676551
-LUX,Luxembourg,BEL,Belgium,TRUE,109.998721407312
-ARE,United Arab Emirates,SAU,Saudi Arabia,TRUE,457.115187101269
-ARE,United Arab Emirates,WB1,World oceans and seas,TRUE,1245.44784011603
-BEL,Belgium,NLD,Netherlands,TRUE,361.799987284154
-BEL,Belgium,WB1,World oceans and seas,TRUE,94.7142580542036
-GEO,Georgia,AZE,Azerbaijan,TRUE,302.562102985188
-GEO,Georgia,TUR,Turkey,TRUE,235.728243531289
-GEO,Georgia,ARM,Armenia,TRUE,159.676537567325
-GEO,Georgia,WB1,World oceans and seas,TRUE,308.001000896487
-MKD,Republic of Macedonia,ALB,Albania,TRUE,156.700315587111
-MKD,Republic of Macedonia,XXK,Kosovo,TRUE,132.709194358508
-MKD,Republic of Macedonia,GRC,Greece,TRUE,213.641896655536
-MKD,Republic of Macedonia,SRB,Serbia,TRUE,74.718691114337
-MKD,Republic of Macedonia,BGR,Bulgaria,TRUE,141.958378506095
-ALB,Albania,XXK,Kosovo,TRUE,97.7272756169982
-ALB,Albania,GRC,Greece,TRUE,220.750790445586
-ALB,Albania,MNE,Montenegro,TRUE,159.00394039568
-ALB,Albania,WB1,World oceans and seas,TRUE,456.005664989344
-AZE,Azerbaijan,TUR,Turkey,TRUE,7.63174067494456
-AZE,Azerbaijan,ARM,Armenia,TRUE,753.907647180192
-AZE,Azerbaijan,IRN,Iran,TRUE,585.534359037702
-AZE,Azerbaijan,WB2,Caspian sea,TRUE,725.123826689298
-XXK,Kosovo,SRB,Serbia,TRUE,270.435907562553
-XXK,Kosovo,MNE,Montenegro,TRUE,58.4883674798853
-TUR,Turkey,ARM,Armenia,TRUE,258.766075808933
-TUR,Turkey,GRC,Greece,TRUE,180.026202972376
-TUR,Turkey,IRQ,Iraq,TRUE,291.017396815777
-TUR,Turkey,IRN,Iran,TRUE,440.512221460491
-TUR,Turkey,BGR,Bulgaria,TRUE,197.478467165622
-TUR,Turkey,WB1,World oceans and seas,TRUE,5859.93379327479
-ESP,Spain,AND,Andorra,TRUE,50.7395512779646
-ESP,Spain,PRT,Portugal,TRUE,1064.47211465683
-ESP,Spain,GIB,Gibraltar,TRUE,1.76524998900178
-ESP,Spain,WB1,World oceans and seas,TRUE,5005.76436943457
-LAO,Laos,THA,Thailand,TRUE,1616.41285925487
-LAO,Laos,MMR,Myanmar,TRUE,229.065077156933
-ARM,Armenia,IRN,Iran,TRUE,35.3616629406652
-DNK,Denmark,WB1,World oceans and seas,TRUE,4377.84970143392
-LBY,Libya,TUN,Tunisia,TRUE,449.76855085743
-LBY,Libya,SDN,Sudan,TRUE,380.928484532825
-LBY,Libya,TCD,Chad,TRUE,1051.22807961193
-LBY,Libya,DZA,Algeria,TRUE,963.859699258087
-LBY,Libya,NER,Niger,TRUE,346.382413663764
-LBY,Libya,EGY,Egypt,TRUE,1098.36876566669
-LBY,Libya,WB1,World oceans and seas,TRUE,1780.89483716589
-TUN,Tunisia,DZA,Algeria,TRUE,916.023208198014
-TUN,Tunisia,WB1,World oceans and seas,TRUE,1387.35710125091
-ROU,Romania,HUN,Hungary,TRUE,359.197107199973
-ROU,Romania,SRB,Serbia,TRUE,458.804424142655
-ROU,Romania,BGR,Bulgaria,TRUE,583.907520333551
-ROU,Romania,MDA,Moldova,TRUE,426.469102034408
-ROU,Romania,WB1,World oceans and seas,TRUE,468.985683201011
-HUN,Hungary,SVK,Slovakia,TRUE,483.819406066021
-HUN,Hungary,AUT,Austria,TRUE,272.208339045051
-HUN,Hungary,SRB,Serbia,TRUE,131.69466358283
-HUN,Hungary,HRV,Croatia,TRUE,257.961593715589
-HUN,Hungary,SVN,Slovenia,TRUE,67.9206584098854
-SVK,Slovakia,POL,Poland,TRUE,407.973905929187
-SVK,Slovakia,AUT,Austria,TRUE,81.8668273690909
-POL,Poland,WB1,World oceans and seas,TRUE,679.051511661359
-IRL,Ireland,GBR,United Kingdom,TRUE,370.083374145549
-IRL,Ireland,WB1,World oceans and seas,TRUE,3460.42135735571
-GBR,United Kingdom,WB1,World oceans and seas,TRUE,11855.3415937512
-GRC,Greece,BGR,Bulgaria,TRUE,406.256994402421
-GRC,Greece,WB1,World oceans and seas,TRUE,9480.80259967022
-ZMB,Zambia,AGO,Angola,TRUE,1079.52449708544
-ZMB,Zambia,BWA,Botswana,TRUE,0
-ZMB,Zambia,ZWE,Zimbabwe,TRUE,716.41674317979
-ZMB,Zambia,MOZ,Mozambique,TRUE,422.255388361384
-SLE,Sierra Leone,GIN,Guinea,TRUE,627.661266006638
-SLE,Sierra Leone,LBR,Liberia,TRUE,247.171893604321
-SLE,Sierra Leone,WB1,World oceans and seas,TRUE,974.072358539165
-GIN,Guinea,LBR,Liberia,TRUE,464.667170269095
-GIN,Guinea,CIV,Ivory Coast,TRUE,561.666031459407
-GIN,Guinea,MLI,Mali,TRUE,855.944768909759
-GIN,Guinea,SEN,Senegal,TRUE,299.908894228976
-GIN,Guinea,GNB,Guinea-Bissau,TRUE,351.031515714661
-GIN,Guinea,WB1,World oceans and seas,TRUE,877.21229561602
-LBR,Liberia,CIV,Ivory Coast,TRUE,565.538951507213
-LBR,Liberia,WB1,World oceans and seas,TRUE,605.367791997376
-CAF,Central African Republic,SDN,Sudan,TRUE,387.223865654419
-CAF,Central African Republic,TCD,Chad,TRUE,1171.3522869156
-CAF,Central African Republic,CMR,Cameroon,TRUE,788.298764872159
-SDN,Sudan,ERI,Eritrea,TRUE,593.290920319505
-SDN,Sudan,TCD,Chad,TRUE,1291.81188351077
-SDN,Sudan,EGY,Egypt,TRUE,1273.07004091419
-SDN,Sudan,WB1,World oceans and seas,TRUE,733.014106953255
-SDN,Sudan,DT1,Sudanese disputed territory,TRUE,255.099938936708
-DJI,Djibouti,ERI,Eritrea,TRUE,111.746820383471
-DJI,Djibouti,WB1,World oceans and seas,TRUE,318.116830297361
-ERI,Eritrea,WB1,World oceans and seas,TRUE,1418.84309321561
-AUT,Austria,ITA,Italy,TRUE,329.713701051299
-AUT,Austria,CHE,Switzerland,TRUE,137.324342422969
-AUT,Austria,LIE,Liechtenstein,TRUE,27.0802855205775
-AUT,Austria,SVN,Slovenia,TRUE,242.076883810507
-IRQ,Iraq,IRN,Iran,TRUE,1310.18113579048
-IRQ,Iraq,SAU,Saudi Arabia,TRUE,812.734345455158
-IRQ,Iraq,KWT,Kuwait,TRUE,200.777526843242
-IRQ,Iraq,JOR,Jordan,TRUE,180.427968342817
-IRQ,Iraq,WB1,World oceans and seas,TRUE,90.7329201957656
-ITA,Italy,CHE,Switzerland,TRUE,595.994215795572
-ITA,Italy,SVN,Slovenia,TRUE,183.479243592778
-ITA,Italy,SMR,San Marino,TRUE,29.3095434045911
-ITA,Italy,VAT,Vatican City,TRUE,0.427197932384066
-ITA,Italy,WB1,World oceans and seas,TRUE,6023.15100213919
-CHE,Switzerland,LIE,Liechtenstein,TRUE,32.1433923618581
-IRN,Iran,AFG,Afghanistan,TRUE,866.219736590789
-IRN,Iran,TKM,Turkmenistan,TRUE,957.636750505775
-IRN,Iran,WB1,World oceans and seas,TRUE,2661.43585121654
-IRN,Iran,WB2,Caspian sea,TRUE,731.908204893442
-CIV,Ivory Coast,MLI,Mali,TRUE,495.8487505368
-CIV,Ivory Coast,BFA,Burkina Faso,TRUE,510.28676785461
-CIV,Ivory Coast,GHA,Ghana,TRUE,602.267795092089
-CIV,Ivory Coast,WB1,World oceans and seas,TRUE,1272.82222667881
-SRB,Serbia,HRV,Croatia,TRUE,227.747067933809
-SRB,Serbia,BGR,Bulgaria,TRUE,298.74436252656
-SRB,Serbia,MNE,Montenegro,TRUE,140.024275023189
-SRB,Serbia,BIH,Bosnia and Herzegovina,TRUE,290.569506305159
-MLI,Mali,SEN,Senegal,TRUE,400.965470257351
-MLI,Mali,DZA,Algeria,TRUE,1266.10057174544
-MLI,Mali,NER,Niger,TRUE,842.501826493249
-MLI,Mali,BFA,Burkina Faso,TRUE,1211.86002244018
-MLI,Mali,MRT,Mauritania,TRUE,2168.88297315301
-SEN,Senegal,GNB,Guinea-Bissau,TRUE,337.22755173317
-SEN,Senegal,MRT,Mauritania,TRUE,720.800474370934
-SEN,Senegal,GMB,The Gambia,TRUE,730.985271707441
-SEN,Senegal,WB1,World oceans and seas,TRUE,1253.94260814136
-NGA,Nigeria,BEN,Benin,TRUE,735.734992324366
-NGA,Nigeria,TCD,Chad,TRUE,85.1737570614648
-NGA,Nigeria,CMR,Cameroon,TRUE,1584.55753821097
-NGA,Nigeria,NER,Niger,TRUE,1447.40763741948
-NGA,Nigeria,WB1,World oceans and seas,TRUE,2185.16671530795
-BEN,Benin,NER,Niger,TRUE,232.537039234525
-BEN,Benin,BFA,Burkina Faso,TRUE,284.737580511957
-BEN,Benin,TGO,Togo,TRUE,621.840009844993
-BEN,Benin,WB1,World oceans and seas,TRUE,121.379826274569
-AGO,Angola,WB1,World oceans and seas,TRUE,1884.13498378258
-HRV,Croatia,SVN,Slovenia,TRUE,418.222111837343
-HRV,Croatia,MNE,Montenegro,TRUE,17.9113384886569
-HRV,Croatia,BIH,Bosnia and Herzegovina,TRUE,798.985820479133
-HRV,Croatia,WB1,World oceans and seas,TRUE,2731.03360581414
-SVN,Slovenia,WB1,World oceans and seas,TRUE,27.1287554204382
-QAT,Qatar,SAU,Saudi Arabia,TRUE,53.3104208467877
-QAT,Qatar,WB1,World oceans and seas,TRUE,542.063617122725
-SAU,Saudi Arabia,KWT,Kuwait,TRUE,220.803578313599
-SAU,Saudi Arabia,JOR,Jordan,TRUE,727.762169240018
-SAU,Saudi Arabia,YEM,Yemen,TRUE,1222.82847613996
-SAU,Saudi Arabia,WB1,World oceans and seas,TRUE,4017.81023927643
-BWA,Botswana,ZWE,Zimbabwe,TRUE,772.129083455676
-ZWE,Zimbabwe,MOZ,Mozambique,TRUE,1190.7010803386
-BGR,Bulgaria,WB1,World oceans and seas,TRUE,338.258557858864
-THA,Thailand,MMR,Myanmar,TRUE,1832.21495889514
-THA,Thailand,WB1,World oceans and seas,TRUE,3862.99847721162
-HTI,Haiti,DOM,Dominican Republic,TRUE,260.886686075103
-HTI,Haiti,WB1,World oceans and seas,TRUE,1474.06545309056
-DOM,Dominican Republic,WB1,World oceans and seas,TRUE,1292.10630659846
-TCD,Chad,CMR,Cameroon,TRUE,1023.34140266878
-TCD,Chad,NER,Niger,TRUE,1165.08726379113
-KWT,Kuwait,WB1,World oceans and seas,TRUE,482.677415058617
-SLV,El Salvador,GTM,Guatemala,TRUE,156.543813739142
-SLV,El Salvador,HND,Honduras,TRUE,318.812378886114
-SLV,El Salvador,WB1,World oceans and seas,TRUE,457.726500413774
-GTM,Guatemala,HND,Honduras,TRUE,222.64827121505
-GTM,Guatemala,MEX,Mexico,TRUE,894.808016995029
-GTM,Guatemala,BLZ,Belize,TRUE,249.452741933069
-GTM,Guatemala,WB1,World oceans and seas,TRUE,403.962319923268
-TLS,East Timor,WB1,World oceans and seas,TRUE,701.203688616321
-BRN,Brunei,WB1,World oceans and seas,TRUE,184.689059661368
-MCO,Monaco,WB1,World oceans and seas,TRUE,7.07853603254846
-DZA,Algeria,NER,Niger,TRUE,952.212485055009
-DZA,Algeria,MRT,Mauritania,TRUE,461.961725562835
-DZA,Algeria,WB1,World oceans and seas,TRUE,1244.94714448774
-MOZ,Mozambique,SWZ,eSwatini,TRUE,108.211874138514
-MOZ,Mozambique,WB1,World oceans and seas,TRUE,3836.17944993563
-BDI,Burundi,RWA,Rwanda,TRUE,263.434032399534
-RWA,Rwanda,UGA,Uganda,TRUE,138.963574353523
-MMR,Myanmar,BGD,Bangladesh,TRUE,183.031300023114
-MMR,Myanmar,WB1,World oceans and seas,TRUE,6308.69994919324
-MMR,Myanmar,DT4,Arunachal Pradesh,TRUE,80.2112124131442
-BGD,Bangladesh,WB1,World oceans and seas,TRUE,3138.70617823503
-AFG,Afghanistan,TKM,Turkmenistan,TRUE,722.94826117785
-MNE,Montenegro,BIH,Bosnia and Herzegovina,TRUE,206.527804908354
-MNE,Montenegro,WB1,World oceans and seas,TRUE,167.591440500815
-BIH,Bosnia and Herzegovina,WB1,World oceans and seas,TRUE,18.3903394830024
--99,Guantanamo Bay Naval Base,CUB,Cuba,TRUE,25.1601644048083
--99,Guantanamo Bay Naval Base,WB1,World oceans and seas,TRUE,45.3073172314623
-CUB,Cuba,WB1,World oceans and seas,TRUE,5706.52980980545
-HND,Honduras,WB1,World oceans and seas,TRUE,1505.772567963
-ECU,Ecuador,COL,Colombia,TRUE,520.936652676498
-ECU,Ecuador,WB1,World oceans and seas,TRUE,2588.65222398155
-COL,Colombia,PAN,Panama,TRUE,272.68069488189
-COL,Colombia,VEN,Venezuela,TRUE,2111.06959007177
-COL,Colombia,WB1,World oceans and seas,TRUE,3548.61469763912
-PRT,Portugal,WB1,World oceans and seas,TRUE,2121.57765709304
-TKM,Turkmenistan,WB2,Caspian sea,TRUE,1886.59258446723
-JOR,Jordan,WB1,World oceans and seas,TRUE,26.9244087485893
-CMR,Cameroon,GAB,Gabon,TRUE,251.068365462913
-CMR,Cameroon,GNQ,Equatorial Guinea,TRUE,180.354774510696
-CMR,Cameroon,WB1,World oceans and seas,TRUE,786.556202738085
-GAB,Gabon,GNQ,Equatorial Guinea,TRUE,308.391410308464
-GAB,Gabon,WB1,World oceans and seas,TRUE,1891.29406603507
-NER,Niger,BFA,Burkina Faso,TRUE,599.975930165083
-BFA,Burkina Faso,TGO,Togo,TRUE,128.635770037428
-BFA,Burkina Faso,GHA,Ghana,TRUE,537.131514410589
-TGO,Togo,GHA,Ghana,TRUE,851.733019570462
-TGO,Togo,WB1,World oceans and seas,TRUE,49.8889048547924
-GHA,Ghana,WB1,World oceans and seas,TRUE,587.884828267351
-GNB,Guinea-Bissau,WB1,World oceans and seas,TRUE,1915.47329567315
-GIB,Gibraltar,WB1,World oceans and seas,TRUE,7.18396456711437
-USA,United States of America,CAN,Canada,TRUE,7928.26969915404
-USA,United States of America,MEX,Mexico,TRUE,2641.15355959534
-USA,United States of America,WB1,World oceans and seas,TRUE,0
-CAN,Canada,WB1,World oceans and seas,TRUE,137213.054663083
-MEX,Mexico,BLZ,Belize,TRUE,153.989019167575
-MEX,Mexico,WB1,World oceans and seas,TRUE,15549.8800321332
-BLZ,Belize,WB1,World oceans and seas,TRUE,782.5047547296
-PAN,Panama,WB1,World oceans and seas,TRUE,3374.33048437129
-VEN,Venezuela,WB1,World oceans and seas,TRUE,5470.8488853037
-PNG,Papua New Guinea,WB1,World oceans and seas,TRUE,11219.3070202864
-EGY,Egypt,WB1,World oceans and seas,TRUE,3791.29147222345
-YEM,Yemen,WB1,World oceans and seas,TRUE,2535.5347271543
-MRT,Mauritania,WB1,World oceans and seas,TRUE,2546.15261177859
-GNQ,Equatorial Guinea,WB1,World oceans and seas,TRUE,493.966357962627
-GMB,The Gambia,WB1,World oceans and seas,TRUE,496.711535785611
-HKG,Hong Kong,WB1,World oceans and seas,TRUE,435.454273196976
-AUS,Australia,WB1,World oceans and seas,TRUE,33873.7934552868
-GRL,Greenland,WB1,World oceans and seas,TRUE,43886.1259314666
-FJI,Fiji,WB1,World oceans and seas,TRUE,2553.54212490366
-NCL,New Caledonia,WB1,World oceans and seas,TRUE,1884.53166136537
-MDG,Madagascar,WB1,World oceans and seas,TRUE,5429.97996417625
-PHL,Philippines,WB1,World oceans and seas,TRUE,17278.6696088301
-LKA,Sri Lanka,WB1,World oceans and seas,TRUE,1982.10520671541
-CUW,Curaçao,WB1,World oceans and seas,TRUE,132.25558774044
-ABW,Aruba,WB1,World oceans and seas,TRUE,71.5307640867244
-BHS,The Bahamas,WB1,World oceans and seas,TRUE,3775.52297324536
-TCA,Turks and Caicos Islands,WB1,World oceans and seas,TRUE,370.034734295824
-JPN,Japan,WB1,World oceans and seas,TRUE,15474.3701550212
-SPM,Saint Pierre and Miquelon,WB1,World oceans and seas,TRUE,133.975631941851
-ISL,Iceland,WB1,World oceans and seas,TRUE,5212.66952854614
-PCN,Pitcairn Islands,WB1,World oceans and seas,TRUE,41.3801600497502
-PYF,French Polynesia,WB1,World oceans and seas,TRUE,2193.44652654319
-ATF,French Southern and Antarctic Lands,WB1,World oceans and seas,TRUE,1554.07594621318
-SYC,Seychelles,WB1,World oceans and seas,TRUE,390.441462486979
-KIR,Kiribati,WB1,World oceans and seas,TRUE,1162.99333311063
-MHL,Marshall Islands,WB1,World oceans and seas,TRUE,405.961672145781
-TTO,Trinidad and Tobago,WB1,World oceans and seas,TRUE,512.256465346749
-GRD,Grenada,WB1,World oceans and seas,TRUE,113.976848004425
-VCT,Saint Vincent and the Grenadines,WB1,World oceans and seas,TRUE,134.754931861599
-BRB,Barbados,WB1,World oceans and seas,TRUE,89.7092734117127
-LCA,Saint Lucia,WB1,World oceans and seas,TRUE,106.590910084142
-DMA,Dominica,WB1,World oceans and seas,TRUE,127.657390519998
-MSR,Montserrat,WB1,World oceans and seas,TRUE,42.0628806414637
-ATG,Antigua and Barbuda,WB1,World oceans and seas,TRUE,178.077007625276
-KNA,Saint Kitts and Nevis,WB1,World oceans and seas,TRUE,106.358960063867
-VIR,United States Virgin Islands,WB1,World oceans and seas,TRUE,182.53461917974
-BLM,Saint-Barthélemy,WB1,World oceans and seas,TRUE,21.0026433450183
-PRI,Puerto Rico,WB1,World oceans and seas,TRUE,652.831208862892
-AIA,Anguilla,WB1,World oceans and seas,TRUE,54.3683932038223
-VGB,British Virgin Islands,WB1,World oceans and seas,TRUE,147.14616997978
-JAM,Jamaica,WB1,World oceans and seas,TRUE,640.474955473141
-CYM,Cayman Islands,WB1,World oceans and seas,TRUE,181.740128888636
-BMU,Bermuda,WB1,World oceans and seas,TRUE,102.218287528491
-HMD,Heard Island and McDonald Islands,WB1,World oceans and seas,TRUE,110.694328914743
-SHN,Saint Helena,WB1,World oceans and seas,TRUE,152.941770885377
-MUS,Mauritius,WB1,World oceans and seas,TRUE,249.658503827929
-COM,Comoros,WB1,World oceans and seas,TRUE,342.265029545593
-STP,São Tomé and Príncipe,WB1,World oceans and seas,TRUE,184.687285741749
-CPV,Cape Verde,WB1,World oceans and seas,TRUE,805.305300158159
-MLT,Malta,WB1,World oceans and seas,TRUE,108.186383078307
-JEY,Jersey,WB1,World oceans and seas,TRUE,53.7822424892886
-GGY,Guernsey,WB1,World oceans and seas,TRUE,61.8351116249015
-IMN,Isle of Man,WB1,World oceans and seas,TRUE,119.74125850892
-FRO,Faroe Islands,WB1,World oceans and seas,TRUE,735.223980355782
-IOT,British Indian Ocean Territory,WB1,World oceans and seas,TRUE,129.578898098221
-SGP,Singapore,WB1,World oceans and seas,TRUE,96.9865962185538
-NFK,Norfolk Island,WB1,World oceans and seas,TRUE,31.266234287498
-COK,Cook Islands,WB1,World oceans and seas,TRUE,190.689391514017
-TON,Tonga,WB1,World oceans and seas,TRUE,345.647557822619
-WLF,Wallis and Futuna,WB1,World oceans and seas,TRUE,79.0947018554797
-WSM,Samoa,WB1,World oceans and seas,TRUE,341.815213783958
-SLB,Solomon Islands,WB1,World oceans and seas,TRUE,4489.7494603866
-TUV,Tuvalu,WB1,World oceans and seas,TRUE,77.46712809231
-MDV,Maldives,WB1,World oceans and seas,TRUE,518.121395669525
-NRU,Nauru,WB1,World oceans and seas,TRUE,19.8274684603079
-FSM,Federated States of Micronesia,WB1,World oceans and seas,TRUE,344.006261518456
-SGS,South Georgia and the South Sandwich Islands,WB1,World oceans and seas,TRUE,932.6189657722
-FLK,Falkland Islands,WB1,World oceans and seas,TRUE,2388.70631242387
-VUT,Vanuatu,WB1,World oceans and seas,TRUE,2262.13755625136
-NIU,Niue,WB1,World oceans and seas,TRUE,62.8528316817015
-ASM,American Samoa,WB1,World oceans and seas,TRUE,116.757836478795
-PLW,Palau,WB1,World oceans and seas,TRUE,274.635945415932
-GUM,Guam,WB1,World oceans and seas,TRUE,129.16010017327
-MNP,Northern Mariana Islands,WB1,World oceans and seas,TRUE,315.544776221471
-BHR,Bahrain,WB1,World oceans and seas,TRUE,135.865019049698
--99,Clipperton Island,WB1,World oceans and seas,TRUE,8.94322177965749
-MAC,Macau,WB1,World oceans and seas,TRUE,45.2645619923638
-NLD,Netherlands,WB1,World oceans and seas,TRUE,95.6209169213606
-NLD,Netherlands,WB1,World oceans and seas,TRUE,19.3650494415413
-NLD,Netherlands,WB1,World oceans and seas,TRUE,9.88325578270376
-NLD,Netherlands,WB1,World oceans and seas,TRUE,1014.71611531133
--99,Australian Indian Ocean Territories,WB1,World oceans and seas,TRUE,35.0356082093967
--99,Australian Indian Ocean Territories,WB1,World oceans and seas,TRUE,53.9348864795257
-UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,12.1636186713908
-UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,6.58222184479352
-UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,5.11076628259539
-UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,3.93467796411211
-UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,11.612973341394
-UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,11.2358682637057
-UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,9.23152262920809
-UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,16.3144081201856
-UMI,United States Minor Outlying Islands,WB1,World oceans and seas,TRUE,6.58875482887445
-NZL,New Zealand,WB1,World oceans and seas,TRUE,19.7046871699031
-NZL,New Zealand,WB1,World oceans and seas,TRUE,9990.20487974746
+from_iso3,from_name,to_iso3,to_name,mean_distance_km
+IDN,Indonesia,MYS,Malaysia,1073.34145359802
+IDN,Indonesia,TMP,Timor-Leste,1198.2466818938
+IDN,Indonesia,PNG,Papua New Guinea,3138.16239297216
+IDN,Indonesia,WB202,Water body 202,1242.66783234855
+IDN,Indonesia,WB203,Water body 203,2275.45433653661
+IDN,Indonesia,WB223,Water body 223,2143.16381207864
+IDN,Indonesia,WB224,Water body 224,301.727206513347
+IDN,Indonesia,WB225,Water body 225,969.964940892336
+IDN,Indonesia,WB226,Water body 226,371.239760136258
+IDN,Indonesia,WB227,Water body 227,362.34613821168
+IDN,Indonesia,WB229,Water body 229,1798.08368456371
+IDN,Indonesia,WB256,Water body 256,2208.48704718368
+IDN,Indonesia,WB257,Water body 257,809.34912705918
+IDN,Indonesia,WB259,Water body 259,2120.96711703268
+MYS,Malaysia,THA,Thailand,1573.8129109896
+MYS,Malaysia,BRN,Brunei Darussalam,564.003554341293
+MYS,Malaysia,WB256,Water body 256,1229.96506487934
+MYS,Malaysia,WB257,Water body 257,839.328919581177
+CHL,Chile,BOL,Bolivia,2421.39934786001
+CHL,Chile,PER,Peru,3181.16242879929
+CHL,Chile,ARG,Argentina,612.197014476458
+CHL,Chile,WB066,Water body 66,2414.21498858744
+CHL,Chile,WB067,Water body 67,1817.32442807363
+CHL,Chile,WB068,Water body 68,1842.72739743679
+CHL,Chile,WB069,Water body 69,2412.24390064681
+CHL,Chile,WB070,Water body 70,1818.06707487499
+CHL,Chile,WB071,Water body 71,1812.44029610173
+CHL,Chile,WB072,Water body 72,1886.47113570274
+CHL,Chile,WB073,Water body 73,1862.63381610495
+CHL,Chile,WB074,Water body 74,1866.83040217751
+CHL,Chile,WB096,Water body 96,1576.82975132192
+CHL,Chile,WB097,Water body 97,1810.50442379311
+CHL,Chile,WB098,Water body 98,1813.59001124696
+CHL,Chile,WB099,Water body 99,1756.98897021297
+CHL,Chile,WB100,Water body 100,1571.97115223063
+CHL,Chile,WB101,Water body 101,1807.89848764671
+CHL,Chile,WB102,Water body 102,1653.64147915641
+CHL,Chile,WB103,Water body 103,1701.99546298845
+CHL,Chile,WB124,Water body 124,944.802520070442
+CHL,Chile,WB125,Water body 125,854.781810896902
+CHL,Chile,WB126,Water body 126,852.760098886739
+CHL,Chile,WB145,Water body 145,4200.44626270017
+CHL,Chile,WB147,Water body 147,1123.37496343457
+CHL,Chile,WB148,Water body 148,882.870380351592
+CHL,Chile,WB149,Water body 149,386.82351916915
+CHL,Chile,WB171,Water body 171,4655.58018336256
+CHL,Chile,WB172,Water body 172,3135.0279807636
+CHL,Chile,WB173,Water body 173,1925.39182979932
+CHL,Chile,WB174,Water body 174,1712.77995000844
+BOL,Bolivia,PER,Peru,1342.6000465515
+BOL,Bolivia,ARG,Argentina,2070.30158644478
+BOL,Bolivia,BRA,Brazil,1414.13014306948
+BOL,Bolivia,PRY,Paraguay,976.386227326196
+PER,Peru,BRA,Brazil,2340.39978787226
+PER,Peru,ECU,Ecuador,983.497033085836
+PER,Peru,COL,Colombia,1451.73382393493
+PER,Peru,WB174,Water body 174,1493.5951789077
+PER,Peru,WB192,Water body 192,1054.81930412591
+PER,Peru,WB193,Water body 193,988.338485755856
+PER,Peru,WB215,Water body 215,1288.27294804404
+ARG,Argentina,BRA,Brazil,2987.20989127482
+ARG,Argentina,URY,Uruguay,892.445467157775
+ARG,Argentina,PRY,Paraguay,1499.07793782096
+ARG,Argentina,WB069,Water body 69,2598.55016224825
+ARG,Argentina,WB100,Water body 100,1634.15219520085
+ARG,Argentina,WB127,Water body 127,890.725139695182
+ARG,Argentina,WB150,Water body 150,830.130329770331
+CYP,Cyprus,WB348,Water body 348,602.64219233405
+IND,India,CHN,China,2822.5038939988
+IND,India,PAK,Pakistan,1269.52490128008
+IND,India,BTN,Bhutan,1235.16219310386
+IND,India,MMR,Myanmar,1786.47070827905
+IND,India,BGD,Bangladesh,1128.51361948779
+IND,India,NPL,Nepal,765.769796962824
+IND,India,WB254,Water body 254,2041.01440313099
+IND,India,WB256,Water body 256,2886.67622734858
+IND,India,WB283,Water body 283,1289.11091550357
+IND,India,WB284,Water body 284,1220.91687787771
+IND,India,WB287,Water body 287,1881.8179817516
+IND,India,WB315,Water body 315,1620.04846691641
+IND,India,WB316,Water body 316,756.402020736578
+IND,India,WB317,Water body 317,950.16620012374
+IND,India,WB318,Water body 318,778.617043290156
+IND,India,WB319,Water body 319,834.236400035916
+IND,India,DT2,Aksai Chin 1,1360.13024950084
+IND,India,DT3,Aksai Chin 2,1118.00168451322
+IND,India,DT4,Arunachal Pradesh,1627.15547894726
+CHN,China,PAK,Pakistan,3289.77939229839
+CHN,China,PRK,"Korea, Democratic People's Republic of",2063.24221203732
+CHN,China,BTN,Bhutan,1628.42914334294
+CHN,China,KAZ,Kazakhstan,3248.5749556559
+CHN,China,TJK,Tajikistan,2905.60981989598
+CHN,China,MNG,Mongolia,1146.9325972389
+CHN,China,RUS,Russian Federation,2877.18247384262
+CHN,China,VNM,Vietnam,2214.75284966134
+CHN,China,LAO,Lao People's Democratic Republic,1996.97938413641
+CHN,China,KGZ,Kyrgyz Republic,2594.25559426525
+CHN,China,MMR,Myanmar,1849.91087854402
+CHN,China,AFG,Afghanistan,3448.05143917994
+CHN,China,NPL,Nepal,2092.12994031572
+CHN,China,HKG,"Hong Kong (SAR, China)",1848.72309921856
+CHN,China,WB321,Water body 321,1914.50891446167
+CHN,China,WB324,Water body 324,1704.99731539762
+CHN,China,WB325,Water body 325,2207.66666654815
+CHN,China,WB326,Water body 326,1844.74955677555
+CHN,China,WB352,Water body 352,1857.70341541785
+CHN,China,WB353,Water body 353,1846.26849328474
+CHN,China,WB354,Water body 354,1855.51038706461
+CHN,China,WB386,Water body 386,1632.76678953468
+CHN,China,DT2,Aksai Chin 1,2246.17410253057
+CHN,China,DT3,Aksai Chin 2,2290.09797968632
+CHN,China,DT4,Arunachal Pradesh,1297.73104959208
+ISR,Israel,PSE,West Bank and Gaza,67.5877814515171
+ISR,Israel,LBN,Lebanon,298.67347196782
+ISR,Israel,SYR,Syrian Arab Republic,523.340551952647
+ISR,Israel,JOR,Jordan,173.732458215356
+ISR,Israel,EGY,"Egypt, Arab Republic of",731.487530875614
+ISR,Israel,WB347,Water body 347,377.775089933204
+ISR,Israel,WB348,Water body 348,809.679012405873
+PSE,West Bank and Gaza,JOR,Jordan,166.802045677175
+PSE,West Bank and Gaza,EGY,"Egypt, Arab Republic of",793.859131390865
+PSE,West Bank and Gaza,WB348,Water body 348,810.454907427747
+LBN,Lebanon,SYR,Syrian Arab Republic,268.178772112729
+LBN,Lebanon,WB348,Water body 348,836.511255476647
+ETH,Ethiopia,SSD,South Sudan,1033.33630336235
+ETH,Ethiopia,SOM,Somalia,745.878831130841
+ETH,Ethiopia,KEN,Kenya,916.434156015706
+ETH,Ethiopia,SDN,Sudan,1330.59321529501
+ETH,Ethiopia,DJI,Djibouti,474.590389554426
+ETH,Ethiopia,ERI,Eritrea,749.430124984922
+SSD,South Sudan,KEN,Kenya,1118.59074668661
+SSD,South Sudan,ZAR,"Congo, Democratic Republic of",1345.62043475562
+SSD,South Sudan,CAF,Central African Republic,1092.64897458261
+SSD,South Sudan,SDN,Sudan,969.093005119466
+SSD,South Sudan,UGA,Uganda,700.455409621549
+SSD,South Sudan,DT1,Sudanese disputed territory,347.347540497453
+SOM,Somalia,KEN,Kenya,1080.357821542
+SOM,Somalia,DJI,Djibouti,725.311975888482
+SOM,Somalia,WB220,Water body 220,1196.94322501365
+SOM,Somalia,WB252,Water body 252,563.375397966632
+SOM,Somalia,WB280,Water body 280,840.003851594819
+KEN,Kenya,TZA,Tanzania,823.754748788247
+KEN,Kenya,UGA,Uganda,614.574777635972
+KEN,Kenya,WB220,Water body 220,1171.45327938161
+PAK,Pakistan,IRN,"Iran, Islamic Republic of",1462.60605188989
+PAK,Pakistan,AFG,Afghanistan,534.012483770473
+PAK,Pakistan,WB315,Water body 315,1085.57410670369
+MWI,Malawi,TZA,Tanzania,769.994732258911
+MWI,Malawi,ZMB,Zambia,706.373293433519
+MWI,Malawi,MOZ,Mozambique,468.055069244951
+TZA,Tanzania,ZAR,"Congo, Democratic Republic of",1294.76623288734
+TZA,Tanzania,ZMB,Zambia,1107.6350416626
+TZA,Tanzania,MOZ,Mozambique,1218.84914681929
+TZA,Tanzania,BDI,Burundi,635.721621281815
+TZA,Tanzania,RWA,Rwanda,720.722027119424
+TZA,Tanzania,UGA,Uganda,878.105658552636
+TZA,Tanzania,WB198,Water body 198,1525.4584148706
+TZA,Tanzania,WB220,Water body 220,1361.65931043366
+SYR,Syrian Arab Republic,TUR,Turkey,537.817627127793
+SYR,Syrian Arab Republic,IRQ,Iraq,532.491984356956
+SYR,Syrian Arab Republic,JOR,Jordan,447.050772131019
+SYR,Syrian Arab Republic,WB348,Water body 348,1078.30053837768
+FRA,France,SUR,Suriname,6730.29171314157
+FRA,France,BRA,Brazil,7790.04571545724
+FRA,France,DEU,Germany,1408.85015677887
+FRA,France,LUX,Luxembourg,1084.30728540785
+FRA,France,BEL,Belgium,1097.43780975116
+FRA,France,ESP,Spain,229.568475037704
+FRA,France,ITA,Italy,1219.38488969944
+FRA,France,CHE,Switzerland,1011.02920879631
+FRA,France,MCO,Monaco,845.861298030182
+FRA,France,ADO,Andorra,357.772277609235
+FRA,France,WB181,Water body 181,9839.02156926202
+FRA,France,WB198,Water body 198,7956.71989657994
+FRA,France,WB246,Water body 246,6478.1724870094
+FRA,France,WB248,Water body 248,5824.37567130005
+FRA,France,WB276,Water body 276,6490.71725116718
+FRA,France,WB371,Water body 371,805.161822243458
+FRA,France,WB373,Water body 373,359.812791377162
+FRA,France,WB375,Water body 375,986.231367167134
+FRA,France,WB415,Water body 415,983.945276512333
+FRA,France,WB421,Water body 421,1260.52139873185
+SUR,Suriname,GUY,Guyana,348.396244053788
+SUR,Suriname,BRA,Brazil,1678.36412173933
+SUR,Suriname,WB245,Water body 245,401.665562820925
+SUR,Suriname,WB246,Water body 246,256.229479405598
+SUR,Suriname,WB248,Water body 248,1307.74879385151
+GUY,Guyana,BRA,Brazil,1841.73007619497
+GUY,Guyana,VEN,"Venezuela, Republica Bolivariana de",836.701252596487
+GUY,Guyana,WB245,Water body 245,415.668239237299
+KOR,"Korea, Republic of",PRK,"Korea, Democratic People's Republic of",422.95179559092
+KOR,"Korea, Republic of",WB352,Water body 352,643.146936349556
+KOR,"Korea, Republic of",WB355,Water body 355,899.378925587395
+KOR,"Korea, Republic of",WB386,Water body 386,529.854279408637
+KOR,"Korea, Republic of",WB387,Water body 387,149.071733860782
+KOR,"Korea, Republic of",WB389,Water body 389,856.134386419818
+PRK,"Korea, Democratic People's Republic of",RUS,Russian Federation,3177.25788545176
+PRK,"Korea, Democratic People's Republic of",WB386,Water body 386,472.614438912268
+PRK,"Korea, Democratic People's Republic of",WB387,Water body 387,364.585394392317
+PRK,"Korea, Democratic People's Republic of",WB389,Water body 389,777.509917261532
+MAR,Morocco,ESP,Spain,960.139681966221
+MAR,Morocco,DZA,Algeria,954.990158478713
+MAR,Morocco,WB344,Water body 344,608.277791514959
+CRI,Costa Rica,NIC,Nicaragua,330.654660814389
+CRI,Costa Rica,PAN,Panama,475.66190890219
+CRI,Costa Rica,WB241,Water body 241,608.820316024213
+CRI,Costa Rica,WB268,Water body 268,418.09837206175
+CRI,Costa Rica,WB269,Water body 269,745.856711436019
+NIC,Nicaragua,HND,Honduras,278.193659880968
+NIC,Nicaragua,WB268,Water body 268,380.566176910652
+NIC,Nicaragua,WB269,Water body 269,681.341525452779
+COG,"Congo, Rep. of",ZAR,"Congo, Democratic Republic of",964.302983328513
+COG,"Congo, Rep. of",CAF,Central African Republic,1005.13796150902
+COG,"Congo, Rep. of",AGO,Angola,1292.27090062938
+COG,"Congo, Rep. of",CMR,Cameroon,773.160119877678
+COG,"Congo, Rep. of",GAB,Gabon,382.63649435242
+COG,"Congo, Rep. of",WB219,Water body 219,1141.55455487828
+ZAR,"Congo, Democratic Republic of",ZMB,Zambia,1255.28285458133
+ZAR,"Congo, Democratic Republic of",CAF,Central African Republic,1102.71206996364
+ZAR,"Congo, Democratic Republic of",AGO,Angola,1239.72103739238
+ZAR,"Congo, Democratic Republic of",BDI,Burundi,694.504853606553
+ZAR,"Congo, Democratic Republic of",RWA,Rwanda,704.638230655404
+ZAR,"Congo, Democratic Republic of",UGA,Uganda,1073.88354260455
+ZAR,"Congo, Democratic Republic of",WB219,Water body 219,1997.98337934231
+BTN,Bhutan,DT4,Arunachal Pradesh,396.624060751697
+UKR,Ukraine,BLR,Belarus,555.941879022388
+UKR,Ukraine,RUS,Russian Federation,4165.09002792112
+UKR,Ukraine,ROM,Romania,596.559868719689
+UKR,Ukraine,HUN,Hungary,915.220222392502
+UKR,Ukraine,SVK,Slovak Republic,873.438091127338
+UKR,Ukraine,POL,Poland,916.760047969148
+UKR,Ukraine,MDA,Moldova,295.943707092518
+UKR,Ukraine,WB377,Water body 377,1002.90542331418
+UKR,Ukraine,WB384,Water body 384,886.441187369182
+UKR,Ukraine,WB430,Water body 430,351.589062874533
+UKR,Ukraine,WB431,Water body 431,565.871865750202
+UKR,Ukraine,WB432,Water body 432,450.50818526811
+UKR,Ukraine,WB433,Water body 433,542.045835251522
+UKR,Ukraine,WB434,Water body 434,460.593182182214
+UKR,Ukraine,WB435,Water body 435,567.542949888675
+UKR,Ukraine,WB436,Water body 436,536.937489066512
+BLR,Belarus,LTU,Lithuania,335.026811039023
+BLR,Belarus,RUS,Russian Federation,3988.43455586937
+BLR,Belarus,LVA,Latvia,419.674421711814
+BLR,Belarus,POL,Poland,602.572613570484
+NAM,Namibia,ZAF,South Africa,1097.47299473785
+NAM,Namibia,ZMB,Zambia,1473.60447086802
+NAM,Namibia,AGO,Angola,1089.24049770372
+NAM,Namibia,BWA,Botswana,679.497612901967
+NAM,Namibia,ZWE,Zimbabwe,1362.18101133321
+NAM,Namibia,WB154,Water body 154,1352.33525990364
+NAM,Namibia,WB178,Water body 178,1050.77643616374
+NAM,Namibia,WB197,Water body 197,1497.80019228931
+ZAF,South Africa,BWA,Botswana,766.004200454468
+ZAF,South Africa,ZWE,Zimbabwe,1208.49546490306
+ZAF,South Africa,MOZ,Mozambique,1681.33704579386
+ZAF,South Africa,SWZ,eSwatini,685.442939088667
+ZAF,South Africa,LSO,Lesotho,311.877122214485
+ZAF,South Africa,WB109,Water body 109,2833.22932347431
+ZAF,South Africa,WB154,Water body 154,1603.70734970319
+ZAF,South Africa,WB155,Water body 155,754.018223097018
+ZAF,South Africa,WB156,Water body 156,811.408893383846
+ZAF,South Africa,WB157,Water body 157,660.697865507515
+ZAF,South Africa,WB179,Water body 179,1107.35558085958
+MAF,Saint-Martin (Fr.),SXM,Sint Maarten (Neth.),4.3936909603881
+MAF,Saint-Martin (Fr.),WB276,Water body 276,454.522605011408
+SXM,Sint Maarten (Neth.),WB276,Water body 276,450.688480748151
+OMN,Oman,ARE,United Arab Emirates,409.823083608613
+OMN,Oman,SAU,Saudi Arabia,1251.89567369051
+OMN,Oman,YEM,"Yemen, Republic of",1038.20401434151
+OMN,Oman,WB280,Water body 280,1182.05109660861
+OMN,Oman,WB282,Water body 282,1081.89468111911
+OMN,Oman,WB315,Water body 315,787.876673139792
+UZB,Uzbekistan,KAZ,Kazakhstan,782.568327179934
+UZB,Uzbekistan,TJK,Tajikistan,760.328261406675
+UZB,Uzbekistan,KGZ,Kyrgyz Republic,950.270858839099
+UZB,Uzbekistan,AFG,Afghanistan,914.467118279716
+UZB,Uzbekistan,TKM,Turkmenistan,433.435741424446
+KAZ,Kazakhstan,RUS,Russian Federation,2392.34034342903
+KAZ,Kazakhstan,KGZ,Kyrgyz Republic,938.612482778632
+KAZ,Kazakhstan,TKM,Turkmenistan,1188.6136645914
+KAZ,Kazakhstan,WB651,Caspian sea,1478.28123209614
+TJK,Tajikistan,KGZ,Kyrgyz Republic,443.36977798149
+TJK,Tajikistan,AFG,Afghanistan,688.333712357946
+LTU,Lithuania,RUS,Russian Federation,4059.52682400409
+LTU,Lithuania,LVA,Latvia,181.263299776712
+LTU,Lithuania,POL,Poland,463.502496360566
+LTU,Lithuania,WB474,Water body 474,443.997695957431
+BRA,Brazil,URY,Uruguay,2456.49026102389
+BRA,Brazil,COL,Colombia,2747.08664467095
+BRA,Brazil,PRY,Paraguay,1488.32933032013
+BRA,Brazil,VEN,"Venezuela, Republica Bolivariana de",2453.89244756982
+BRA,Brazil,WB151,Water body 151,2522.20015463426
+BRA,Brazil,WB175,Water body 175,1946.47131469097
+BRA,Brazil,WB176,Water body 176,3063.60188445138
+BRA,Brazil,WB194,Water body 194,1761.8831507276
+BRA,Brazil,WB195,Water body 195,2857.27191911091
+BRA,Brazil,WB216,Water body 216,1680.69614240658
+BRA,Brazil,WB217,Water body 217,2983.20058636378
+BRA,Brazil,WB248,Water body 248,1983.12598387473
+BRA,Brazil,WB249,Water body 249,3349.09690905513
+URY,Uruguay,WB150,Water body 150,274.518394041619
+URY,Uruguay,WB151,Water body 151,1149.7899579209
+MNG,Mongolia,RUS,Russian Federation,1735.66112736035
+RUS,Russian Federation,EST,Estonia,3748.47777721841
+RUS,Russian Federation,LVA,Latvia,3901.95580251428
+RUS,Russian Federation,NOR,Norway,3562.32274069899
+RUS,Russian Federation,FIN,Finland,3367.77190935921
+RUS,Russian Federation,GEO,Georgia,4095.8022800068
+RUS,Russian Federation,AZE,Azerbaijan,4052.4007157817
+RUS,Russian Federation,POL,Poland,4519.35385015723
+RUS,Russian Federation,WB384,Water body 384,4317.5924731164
+RUS,Russian Federation,WB389,Water body 389,3587.34966979614
+RUS,Russian Federation,WB436,Water body 436,4083.21890778542
+RUS,Russian Federation,WB437,Water body 437,3153.72761998854
+RUS,Russian Federation,WB438,Water body 438,2597.4809651023
+RUS,Russian Federation,WB439,Water body 439,2555.39257751772
+RUS,Russian Federation,WB440,Water body 440,2506.26778189636
+RUS,Russian Federation,WB441,Water body 441,2490.45795097545
+RUS,Russian Federation,WB442,Water body 442,2947.68918871758
+RUS,Russian Federation,WB443,Water body 443,3655.6363258126
+RUS,Russian Federation,WB474,Water body 474,3930.96198512244
+RUS,Russian Federation,WB476,Water body 476,2563.85325483693
+RUS,Russian Federation,WB477,Water body 477,3041.0163207167
+RUS,Russian Federation,WB478,Water body 478,3727.23145783372
+RUS,Russian Federation,WB479,Water body 479,3681.90166097986
+RUS,Russian Federation,WB480,Water body 480,3510.19411282612
+RUS,Russian Federation,WB481,Water body 481,4013.94012500883
+RUS,Russian Federation,WB482,Water body 482,3356.91994525119
+RUS,Russian Federation,WB483,Water body 483,3999.99743107064
+RUS,Russian Federation,WB549,Water body 549,2939.45479217684
+RUS,Russian Federation,WB551,Water body 551,3040.6944711505
+RUS,Russian Federation,WB555,Water body 555,2082.33469447377
+RUS,Russian Federation,WB556,Water body 556,2463.24669794775
+RUS,Russian Federation,WB557,Water body 557,2079.55182533397
+RUS,Russian Federation,WB558,Water body 558,2171.36371784026
+RUS,Russian Federation,WB559,Water body 559,2091.1466090442
+RUS,Russian Federation,WB560,Water body 560,1338.51803621122
+RUS,Russian Federation,WB561,Water body 561,1822.44010545122
+RUS,Russian Federation,WB562,Water body 562,1302.69342022658
+RUS,Russian Federation,WB563,Water body 563,1304.78922347783
+RUS,Russian Federation,WB564,Water body 564,1499.85149297609
+RUS,Russian Federation,WB565,Water body 565,2089.21522863544
+RUS,Russian Federation,WB566,Water body 566,2086.14290110339
+RUS,Russian Federation,WB567,Water body 567,1215.48534442758
+RUS,Russian Federation,WB568,Water body 568,1373.73126827258
+RUS,Russian Federation,WB569,Water body 569,1305.53708918196
+RUS,Russian Federation,WB570,Water body 570,1909.84257124432
+RUS,Russian Federation,WB571,Water body 571,2720.72530948039
+RUS,Russian Federation,WB572,Water body 572,2320.53598620504
+RUS,Russian Federation,WB573,Water body 573,3223.29351469623
+RUS,Russian Federation,WB574,Water body 574,3871.90095117869
+RUS,Russian Federation,WB611,Water body 611,2472.32547043532
+RUS,Russian Federation,WB612,Water body 612,2045.17504499196
+RUS,Russian Federation,WB613,Water body 613,1584.36157985138
+RUS,Russian Federation,WB614,Water body 614,1785.39692032407
+RUS,Russian Federation,WB615,Water body 615,1847.68377419835
+RUS,Russian Federation,WB616,Water body 616,1326.60788001957
+RUS,Russian Federation,WB617,Water body 617,1532.1878912648
+RUS,Russian Federation,WB618,Water body 618,1877.50223869325
+RUS,Russian Federation,WB619,Water body 619,2152.68907853154
+RUS,Russian Federation,WB620,Water body 620,2123.30003067363
+RUS,Russian Federation,WB621,Water body 621,1748.87671066013
+RUS,Russian Federation,WB622,Water body 622,2593.0320836928
+RUS,Russian Federation,WB623,Water body 623,2325.60330546211
+RUS,Russian Federation,WB624,Water body 624,2338.15222169539
+RUS,Russian Federation,WB643,Water body 643,2841.18695940139
+RUS,Russian Federation,WB644,Water body 644,2726.63491469343
+RUS,Russian Federation,WB645,Water body 645,2645.71719171049
+RUS,Russian Federation,WB646,Water body 646,2628.44528409607
+RUS,Russian Federation,WB651,Caspian sea,3756.92649408536
+CZE,Czech Republic,DEU,Germany,382.326188042456
+CZE,Czech Republic,SVK,Slovak Republic,324.261459972682
+CZE,Czech Republic,POL,Poland,391.192567677527
+CZE,Czech Republic,AUT,Austria,254.142419254191
+DEU,Germany,LUX,Luxembourg,340.442664327613
+DEU,Germany,BEL,Belgium,407.396272825882
+DEU,Germany,DNK,Denmark,541.23049750476
+DEU,Germany,POL,Poland,634.034699526991
+DEU,Germany,AUT,Austria,476.867978410825
+DEU,Germany,CHE,Switzerland,504.550117451648
+DEU,Germany,NLD,Netherlands,355.95751038553
+DEU,Germany,WB419,Water body 419,347.146369481679
+DEU,Germany,WB421,Water body 421,522.139463223029
+DEU,Germany,WB422,Water body 422,398.305439609848
+DEU,Germany,WB423,Water body 423,377.607463783552
+DEU,Germany,WB424,Water body 424,358.297821999786
+DEU,Germany,WB425,Water body 425,358.933575368209
+DEU,Germany,WB428,Water body 428,420.452604899642
+DEU,Germany,WB429,Water body 429,404.10637022082
+DEU,Germany,WB468,Water body 468,786.611263435639
+DEU,Germany,WB473,Water body 473,403.86598733905
+EST,Estonia,LVA,Latvia,206.018174233689
+EST,Estonia,WB474,Water body 474,260.493578576896
+LVA,Latvia,WB474,Water body 474,330.724613332594
+NOR,Norway,SWE,Sweden,673.715059697797
+NOR,Norway,FIN,Finland,677.501736900195
+NOR,Norway,WB081,Water body 81,14130.9967420632
+NOR,Norway,WB468,Water body 468,1310.16620598372
+NOR,Norway,WB469,Water body 469,657.591728971444
+NOR,Norway,WB545,Water body 545,997.445927908602
+NOR,Norway,WB546,Water body 546,330.746037250587
+NOR,Norway,WB547,Water body 547,125.038947031637
+NOR,Norway,WB548,Water body 548,115.258574210314
+NOR,Norway,WB551,Water body 551,523.45637511943
+NOR,Norway,WB554,Water body 554,114.540115299373
+NOR,Norway,WB608,Water body 608,869.254263607208
+NOR,Norway,WB609,Water body 609,1199.77856696259
+NOR,Norway,WB610,Water body 610,922.793746347401
+SWE,Sweden,FIN,Finland,507.426784738557
+SWE,Sweden,WB468,Water body 468,804.919744155266
+SWE,Sweden,WB470,Water body 470,150.99076009358
+SWE,Sweden,WB471,Water body 471,62.5431752321425
+SWE,Sweden,WB472,Water body 472,58.8971780115816
+SWE,Sweden,WB474,Water body 474,480.551228351319
+SWE,Sweden,WB550,Water body 550,344.146569151172
+SWE,Sweden,WB552,Water body 552,85.771323030698
+SWE,Sweden,WB553,Water body 553,89.4812563949548
+FIN,Finland,WB474,Water body 474,668.323236695067
+FIN,Finland,WB475,Water body 475,257.50314872789
+FIN,Finland,WB550,Water body 550,180.214710936536
+VNM,Vietnam,KHM,Cambodia,459.811703947873
+VNM,Vietnam,LAO,Lao People's Democratic Republic,341.181396435814
+VNM,Vietnam,WB256,Water body 256,1558.84763725446
+VNM,Vietnam,WB285,Water body 285,827.880978441129
+VNM,Vietnam,WB286,Water body 286,774.53548024529
+VNM,Vietnam,WB288,Water body 288,143.330235188501
+VNM,Vietnam,WB289,Water body 289,157.702918931044
+VNM,Vietnam,WB290,Water body 290,1174.12123786682
+VNM,Vietnam,WB321,Water body 321,321.981083431742
+KHM,Cambodia,LAO,Lao People's Democratic Republic,652.394766410557
+KHM,Cambodia,THA,Thailand,498.003928052009
+KHM,Cambodia,WB285,Water body 285,418.512362610789
+LUX,Luxembourg,BEL,Belgium,140.807877680914
+ARE,United Arab Emirates,SAU,Saudi Arabia,993.478528546146
+ARE,United Arab Emirates,WB314,Water body 314,292.698303176099
+ARE,United Arab Emirates,WB315,Water body 315,986.840543148867
+BEL,Belgium,NLD,Netherlands,192.917806999788
+BEL,Belgium,WB421,Water body 421,254.845915861418
+GEO,Georgia,AZE,Azerbaijan,397.432526684456
+GEO,Georgia,TUR,Turkey,785.146075937503
+GEO,Georgia,ARM,Armenia,240.60320235912
+GEO,Georgia,WB384,Water body 384,424.58391377571
+MKD,North Macedonia,ALB,Albania,145.33708346698
+MKD,North Macedonia,XXK,Kosovo,127.632952083776
+MKD,North Macedonia,GRC,Greece,303.01925375515
+MKD,North Macedonia,SRB,Serbia,300.744261674565
+MKD,North Macedonia,BGR,Bulgaria,319.677954158081
+ALB,Albania,XXK,Kosovo,172.846087257457
+ALB,Albania,GRC,Greece,340.495091696796
+ALB,Albania,MNE,Montenegro,194.638229611047
+ALB,Albania,WB377,Water body 377,566.06678862909
+AZE,Azerbaijan,TUR,Turkey,1069.55001693859
+AZE,Azerbaijan,ARM,Armenia,221.912597533016
+AZE,Azerbaijan,IRN,"Iran, Islamic Republic of",1047.23747343605
+AZE,Azerbaijan,WB651,Caspian sea,318.738900283287
+XXK,Kosovo,SRB,Serbia,183.272693024644
+XXK,Kosovo,MNE,Montenegro,136.099495299989
+TUR,Turkey,ARM,Armenia,848.368276362034
+TUR,Turkey,GRC,Greece,1054.55858852606
+TUR,Turkey,IRQ,Iraq,1020.76473762242
+TUR,Turkey,IRN,"Iran, Islamic Republic of",1866.39131770887
+TUR,Turkey,BGR,Bulgaria,933.024077345102
+TUR,Turkey,WB348,Water body 348,945.400048671192
+TUR,Turkey,WB349,Water body 349,516.098246659787
+TUR,Turkey,WB377,Water body 377,741.66821240113
+TUR,Turkey,WB380,Water body 380,532.381667625246
+TUR,Turkey,WB381,Water body 381,445.500914315725
+TUR,Turkey,WB382,Water body 382,348.302459801159
+TUR,Turkey,WB383,Water body 383,297.75673090396
+TUR,Turkey,WB384,Water body 384,486.663611696684
+TUR,Turkey,WB385,Water body 385,272.18029117776
+ESP,Spain,ADO,Andorra,506.031412554112
+ESP,Spain,PRT,Portugal,428.141716300198
+ESP,Spain,GIB,Gibraltar (UK),478.430198889202
+ESP,Spain,WB343,Water body 343,2311.07053455608
+ESP,Spain,WB344,Water body 344,1194.79370639607
+ESP,Spain,WB371,Water body 371,734.070853806577
+ESP,Spain,WB372,Water body 372,417.866648450442
+ESP,Spain,WB374,Water body 374,316.017064204531
+ESP,Spain,WB375,Water body 375,1034.6762895172
+LAO,Lao People's Democratic Republic,THA,Thailand,474.87153331011
+LAO,Lao People's Democratic Republic,MMR,Myanmar,814.500872462356
+ARM,Armenia,IRN,"Iran, Islamic Republic of",1196.75252985937
+DNK,Denmark,WB468,Water body 468,305.366176293539
+LBY,Libya,TUN,Tunisia,1128.46777892733
+LBY,Libya,SDN,Sudan,1734.29770486795
+LBY,Libya,TCD,Chad,1296.81821314355
+LBY,Libya,DZA,Algeria,1520.2189725063
+LBY,Libya,NER,Niger,1385.76499808804
+LBY,Libya,EGY,"Egypt, Arab Republic of",1179.86815142289
+LBY,Libya,WB345,Water body 345,847.006771945268
+LBY,Libya,WB348,Water body 348,1133.49006258123
+TUN,Tunisia,DZA,Algeria,932.986637893583
+TUN,Tunisia,WB345,Water body 345,475.082173249102
+TUN,Tunisia,WB375,Water body 375,608.548314576644
+ROM,Romania,HUN,Hungary,451.942150821497
+ROM,Romania,SRB,Serbia,376.108531287231
+ROM,Romania,BGR,Bulgaria,343.347953552857
+ROM,Romania,MDA,Moldova,306.366180760058
+ROM,Romania,WB377,Water body 377,601.053980007458
+HUN,Hungary,SVK,Slovak Republic,171.533010742886
+HUN,Hungary,AUT,Austria,400.394492490071
+HUN,Hungary,SRB,Serbia,344.507202073931
+HUN,Hungary,HRV,Croatia,328.539367080316
+HUN,Hungary,SVN,Slovenia,370.048906141311
+SVK,Slovak Republic,POL,Poland,380.461417433079
+SVK,Slovak Republic,AUT,Austria,416.996985724516
+POL,Poland,WB428,Water body 428,402.698123833027
+POL,Poland,WB468,Water body 468,1046.74224900027
+POL,Poland,WB474,Water body 474,773.697465625124
+IRL,Ireland,GBR,United Kingdom,363.825271855633
+IRL,Ireland,WB415,Water body 415,463.093905299823
+IRL,Ireland,WB416,Water body 416,136.537876267875
+IRL,Ireland,WB464,Water body 464,642.106016621052
+GBR,United Kingdom,WB415,Water body 415,750.045179109977
+GBR,United Kingdom,WB417,Water body 417,180.640836850429
+GBR,United Kingdom,WB418,Water body 418,185.755951968153
+GBR,United Kingdom,WB421,Water body 421,437.110695762346
+GBR,United Kingdom,WB464,Water body 464,669.409661092381
+GBR,United Kingdom,WB465,Water body 465,23.585225455361
+GBR,United Kingdom,WB466,Water body 466,11.4257905095344
+GBR,United Kingdom,WB467,Water body 467,6.93950710862732
+GRC,Greece,BGR,Bulgaria,453.957596907394
+GRC,Greece,WB348,Water body 348,675.020983549387
+GRC,Greece,WB377,Water body 377,364.594934222589
+ZMB,Zambia,AGO,Angola,1118.52127856255
+ZMB,Zambia,BWA,Botswana,1053.48097036584
+ZMB,Zambia,ZWE,Zimbabwe,652.281148630542
+ZMB,Zambia,MOZ,Mozambique,933.910458790272
+SLE,Sierra Leone,GIN,Guinea,227.157906362669
+SLE,Sierra Leone,LBR,Liberia,359.331139457944
+SLE,Sierra Leone,WB250,Water body 250,590.359150126405
+GIN,Guinea,LBR,Liberia,475.324338926099
+GIN,Guinea,CIV,Côte d'Ivoire,667.390086904557
+GIN,Guinea,MLI,Mali,1106.28234598432
+GIN,Guinea,SEN,Senegal,580.037338972197
+GIN,Guinea,GNB,Guinea-Bissau,474.45375319868
+GIN,Guinea,WB250,Water body 250,775.380915395742
+GIN,Guinea,WB279,Water body 279,667.09489089344
+LBR,Liberia,CIV,Côte d'Ivoire,434.328178686582
+LBR,Liberia,WB250,Water body 250,345.950273439309
+CAF,Central African Republic,SDN,Sudan,1470.86162516136
+CAF,Central African Republic,TCD,Chad,989.866845511186
+CAF,Central African Republic,CMR,Cameroon,860.790268394926
+SDN,Sudan,ERI,Eritrea,957.306930476871
+SDN,Sudan,TCD,Chad,1213.88178755935
+SDN,Sudan,EGY,"Egypt, Arab Republic of",1159.34112957422
+SDN,Sudan,WB280,Water body 280,1955.644428332
+SDN,Sudan,WB281,Water body 281,940.906711022807
+SDN,Sudan,WB313,Water body 313,1054.61620856803
+SDN,Sudan,DT1,Sudanese disputed territory,711.69088272491
+DJI,Djibouti,ERI,Eritrea,566.373182252734
+DJI,Djibouti,WB280,Water body 280,607.841910100214
+ERI,Eritrea,WB280,Water body 280,1000.93467418022
+AUT,Austria,ITA,Italy,557.308660388575
+AUT,Austria,CHE,Switzerland,456.61025541969
+AUT,Austria,LIE,Liechtenstein,350.212435544142
+AUT,Austria,SVN,Slovenia,171.339308972715
+IRQ,Iraq,IRN,"Iran, Islamic Republic of",987.360055724782
+IRQ,Iraq,SAU,Saudi Arabia,991.344982195504
+IRQ,Iraq,KWT,Kuwait,550.263888987528
+IRQ,Iraq,JOR,Jordan,687.234633224944
+IRQ,Iraq,WB350,Water body 350,779.870467445417
+ITA,Italy,CHE,Switzerland,540.176274026565
+ITA,Italy,SVN,Slovenia,429.270793270926
+ITA,Italy,SMR,San Marino,131.246828609044
+ITA,Italy,VAT,Vatican City,103.011038175879
+ITA,Italy,WB345,Water body 345,989.309409227578
+ITA,Italy,WB375,Water body 375,474.415468393686
+ITA,Italy,WB376,Water body 376,267.14337333968
+ITA,Italy,WB377,Water body 377,1242.70894634648
+ITA,Italy,WB378,Water body 378,578.763244991611
+ITA,Italy,WB379,Water body 379,583.47881477224
+ITA,Italy,WB420,Water body 420,310.38924507223
+ITA,Italy,WB426,Water body 426,280.827285307123
+CHE,Switzerland,LIE,Liechtenstein,107.692810395128
+IRN,"Iran, Islamic Republic of",AFG,Afghanistan,1102.17196014652
+IRN,"Iran, Islamic Republic of",TKM,Turkmenistan,859.641309846422
+IRN,"Iran, Islamic Republic of",WB314,Water body 314,781.078961143321
+IRN,"Iran, Islamic Republic of",WB315,Water body 315,1521.98613760723
+IRN,"Iran, Islamic Republic of",WB350,Water body 350,610.165503068814
+IRN,"Iran, Islamic Republic of",WB351,Water body 351,632.521669894932
+IRN,"Iran, Islamic Republic of",WB651,Caspian sea,1065.20739220588
+CIV,Côte d'Ivoire,MLI,Mali,1097.24391049502
+CIV,Côte d'Ivoire,BFA,Burkina Faso,662.071114333113
+CIV,Côte d'Ivoire,GHA,Ghana,481.421578414922
+CIV,Côte d'Ivoire,WB250,Water body 250,692.106786809887
+SRB,Serbia,HRV,Croatia,360.836007221427
+SRB,Serbia,BGR,Bulgaria,392.709057714182
+SRB,Serbia,MNE,Montenegro,202.94442068774
+SRB,Serbia,BIH,Bosnia and Herzegovina,241.230852338527
+MLI,Mali,SEN,Senegal,1216.11161236765
+MLI,Mali,DZA,Algeria,1354.38129163399
+MLI,Mali,NER,Niger,1373.29123238617
+MLI,Mali,BFA,Burkina Faso,593.385222732135
+MLI,Mali,MRT,Mauritania,786.253608699625
+SEN,Senegal,GNB,Guinea-Bissau,264.723951010986
+SEN,Senegal,MRT,Mauritania,785.525168698262
+SEN,Senegal,GMB,"Gambia, The",142.613047004226
+SEN,Senegal,WB279,Water body 279,311.894531709235
+NGA,Nigeria,BEN,Benin,632.533042495629
+NGA,Nigeria,TCD,Chad,1310.78311703355
+NGA,Nigeria,CMR,Cameroon,669.997464900721
+NGA,Nigeria,NER,Niger,876.782228477002
+NGA,Nigeria,WB251,Water body 251,854.869800502146
+BEN,Benin,NER,Niger,1150.17625156286
+BEN,Benin,BFA,Burkina Faso,532.710427780319
+BEN,Benin,TGO,Togo,194.313152999981
+BEN,Benin,WB251,Water body 251,793.941020898483
+AGO,Angola,WB197,Water body 197,1217.62658600433
+AGO,Angola,WB219,Water body 219,1533.16728757881
+HRV,Croatia,SVN,Slovenia,170.225906136076
+HRV,Croatia,MNE,Montenegro,340.977778942267
+HRV,Croatia,BIH,Bosnia and Herzegovina,147.712508318521
+HRV,Croatia,WB376,Water body 376,232.396192707909
+HRV,Croatia,WB377,Water body 377,978.865791686488
+HRV,Croatia,WB420,Water body 420,264.198002135597
+HRV,Croatia,WB427,Water body 427,157.741492969941
+SVN,Slovenia,WB420,Water body 420,151.419982099239
+QAT,Qatar,SAU,Saudi Arabia,685.562408812444
+QAT,Qatar,WB314,Water body 314,115.987483136286
+SAU,Saudi Arabia,KWT,Kuwait,653.188260676542
+SAU,Saudi Arabia,JOR,Jordan,1099.27873491824
+SAU,Saudi Arabia,YEM,"Yemen, Republic of",964.021958110863
+SAU,Saudi Arabia,WB280,Water body 280,1241.14192048896
+SAU,Saudi Arabia,WB312,Water body 312,949.322012080574
+SAU,Saudi Arabia,WB313,Water body 313,717.108209985906
+SAU,Saudi Arabia,WB314,Water body 314,797.918084834027
+SAU,Saudi Arabia,WB347,Water body 347,1115.57741423408
+SAU,Saudi Arabia,WB350,Water body 350,729.160058073228
+BWA,Botswana,ZWE,Zimbabwe,722.620804904757
+ZWE,Zimbabwe,MOZ,Mozambique,631.499325383353
+BGR,Bulgaria,WB377,Water body 377,272.044633541231
+THA,Thailand,MMR,Myanmar,822.663947424701
+THA,Thailand,WB256,Water body 256,1176.07670858356
+THA,Thailand,WB285,Water body 285,494.5227819085
+THA,Thailand,WB287,Water body 287,792.347379878413
+HTI,Haiti,DOM,Dominican Republic,231.200013238432
+HTI,Haiti,WB269,Water body 269,840.953709995723
+HTI,Haiti,WB304,Water body 304,951.715930062007
+HTI,Haiti,WB305,Water body 305,91.3400048100662
+HTI,Haiti,WB306,Water body 306,1112.98534520383
+HTI,Haiti,WB308,Water body 308,125.759039505079
+DOM,Dominican Republic,WB276,Water body 276,1012.07924348594
+DOM,Dominican Republic,WB306,Water body 306,907.298355807247
+DOM,Dominican Republic,WB307,Water body 307,213.871751714619
+DOM,Dominican Republic,WB308,Water body 308,174.226178639193
+TCD,Chad,CMR,Cameroon,1246.73489004813
+TCD,Chad,NER,Niger,1015.69789345811
+KWT,Kuwait,WB350,Water body 350,250.310760810296
+SLV,El Salvador,GTM,Guatemala,269.727652145201
+SLV,El Salvador,HND,Honduras,270.436437624717
+SLV,El Salvador,WB267,Water body 267,1197.79438064335
+SLV,El Salvador,WB268,Water body 268,333.045591157383
+GTM,Guatemala,HND,Honduras,412.714711810295
+GTM,Guatemala,MEX,Mexico,1567.08575178615
+GTM,Guatemala,BLZ,Belize,244.27217692888
+GTM,Guatemala,WB267,Water body 267,1073.56613445796
+GTM,Guatemala,WB269,Water body 269,1241.78237922661
+TMP,Timor-Leste,WB202,Water body 202,1139.06658066101
+TMP,Timor-Leste,WB203,Water body 203,1105.19661826517
+TMP,Timor-Leste,WB224,Water body 224,1007.34588699752
+TMP,Timor-Leste,WB229,Water body 229,957.940357952929
+BRN,Brunei Darussalam,WB257,Water body 257,276.188797443441
+MCO,Monaco,WB375,Water body 375,475.583037105993
+DZA,Algeria,NER,Niger,1374.00466152401
+DZA,Algeria,MRT,Mauritania,1581.7222196596
+DZA,Algeria,WB311,Water body 311,1818.15790026462
+DZA,Algeria,WB344,Water body 344,1548.17229407903
+DZA,Algeria,WB346,Water body 346,898.565945833294
+DZA,Algeria,WB375,Water body 375,1369.32956003493
+MOZ,Mozambique,SWZ,eSwatini,1110.7931595005
+MOZ,Mozambique,WB179,Water body 179,781.364960828054
+MOZ,Mozambique,WB180,Water body 180,1145.33386003568
+MOZ,Mozambique,WB198,Water body 198,1292.35442052453
+BDI,Burundi,RWA,Rwanda,150.980517338499
+RWA,Rwanda,UGA,Uganda,452.606237514008
+MMR,Myanmar,BGD,Bangladesh,707.780022486427
+MMR,Myanmar,WB287,Water body 287,927.35969062566
+MMR,Myanmar,WB320,Water body 320,526.556775029629
+MMR,Myanmar,DT4,Arunachal Pradesh,799.797358989825
+BGD,Bangladesh,WB317,Water body 317,528.428092655493
+BGD,Bangladesh,WB320,Water body 320,463.124201646559
+BGD,Bangladesh,WB322,Water body 322,152.598686231866
+BGD,Bangladesh,WB323,Water body 323,196.052473897937
+AFG,Afghanistan,TKM,Turkmenistan,834.118150587392
+MNE,Montenegro,BIH,Bosnia and Herzegovina,194.310345129177
+MNE,Montenegro,WB377,Water body 377,669.180008484677
+BIH,Bosnia and Herzegovina,WB376,Water body 376,229.883348888083
+USA1,Guantanamo Bay (US),CUB,Cuba,445.529756787526
+USA1,Guantanamo Bay (US),WB304,Water body 304,672.274937848416
+CUB,Cuba,WB304,Water body 304,230.240772544756
+HND,Honduras,WB268,Water body 268,457.383118036153
+HND,Honduras,WB269,Water body 269,833.983284181141
+ECU,Ecuador,COL,Colombia,865.218023276283
+ECU,Ecuador,WB214,Water body 214,2277.07067793481
+ECU,Ecuador,WB215,Water body 215,790.914410832504
+ECU,Ecuador,WB239,Water body 239,2343.67093136903
+ECU,Ecuador,WB241,Water body 241,884.314574567377
+COL,Colombia,PAN,Panama,930.376189557916
+COL,Colombia,VEN,"Venezuela, Republica Bolivariana de",844.752888671865
+COL,Colombia,WB241,Water body 241,1229.60204901149
+COL,Colombia,WB242,Water body 242,691.139787123742
+COL,Colombia,WB269,Water body 269,1311.72263898359
+COL,Colombia,WB273,Water body 273,924.207058200253
+COL,Colombia,WB276,Water body 276,1613.23211239382
+PRT,Portugal,WB344,Water body 344,886.796277008338
+PRT,Portugal,WB370,Water body 370,1571.37436435548
+PRT,Portugal,WB371,Water body 371,348.206865411765
+TKM,Turkmenistan,WB651,Caspian sea,784.286104391894
+JOR,Jordan,WB347,Water body 347,435.918682456208
+CMR,Cameroon,GAB,Gabon,702.882232500033
+CMR,Cameroon,GNQ,Equatorial Guinea,515.348277143404
+CMR,Cameroon,WB251,Water body 251,975.372792085345
+GAB,Gabon,GNQ,Equatorial Guinea,301.480733166534
+GAB,Gabon,WB219,Water body 219,820.083525631386
+GAB,Gabon,WB251,Water body 251,898.559206891554
+NER,Niger,BFA,Burkina Faso,1327.04842650179
+BFA,Burkina Faso,TGO,Togo,509.82689506693
+BFA,Burkina Faso,GHA,Ghana,480.983947821424
+TGO,Togo,GHA,Ghana,248.27270838706
+TGO,Togo,WB251,Water body 251,743.221858559999
+GHA,Ghana,WB250,Water body 250,1115.00176286449
+GHA,Ghana,WB251,Water body 251,848.830347509472
+GNB,Guinea-Bissau,WB279,Water body 279,192.952535043051
+GIB,Gibraltar (UK),WB344,Water body 344,798.572274063279
+USA,United States of America,CAN,Canada,1973.90585731548
+USA,United States of America,MEX,Mexico,2573.41887585543
+USA,United States of America,WB295,Water body 295,5827.08718767435
+USA,United States of America,WB296,Water body 296,4461.61949600136
+USA,United States of America,WB300,Water body 300,3028.0373187733
+USA,United States of America,WB304,Water body 304,3817.59200420814
+USA,United States of America,WB330,Water body 330,5210.13511202642
+USA,United States of America,WB333,Water body 333,1800.23488977543
+USA,United States of America,WB336,Water body 336,2571.45402031495
+USA,United States of America,WB337,Water body 337,2424.40781959679
+USA,United States of America,WB338,Water body 338,2591.66713334266
+USA,United States of America,WB339,Water body 339,3529.30950467238
+USA,United States of America,WB340,Water body 340,2960.92364786156
+USA,United States of America,WB361,Water body 361,1189.47993785163
+USA,United States of America,WB362,Water body 362,3280.70063313713
+USA,United States of America,WB363,Water body 363,3157.00592154998
+USA,United States of America,WB364,Water body 364,3200.26631014375
+USA,United States of America,WB365,Water body 365,3216.16784170435
+USA,United States of America,WB366,Water body 366,3209.01036638106
+USA,United States of America,WB367,Water body 367,2947.14228719177
+USA,United States of America,WB368,Water body 368,4047.72404375735
+USA,United States of America,WB392,Water body 392,4306.37290553702
+USA,United States of America,WB395,Water body 395,957.330733637924
+USA,United States of America,WB444,Water body 444,5516.45906002362
+USA,United States of America,WB445,Water body 445,4136.5934241478
+USA,United States of America,WB446,Water body 446,3687.08458730459
+USA,United States of America,WB447,Water body 447,3707.2690769256
+USA,United States of America,WB448,Water body 448,3583.08088342369
+USA,United States of America,WB449,Water body 449,3588.35540384828
+USA,United States of America,WB450,Water body 450,3463.19946305362
+USA,United States of America,WB451,Water body 451,2900.14022117967
+USA,United States of America,WB452,Water body 452,3589.93670872424
+USA,United States of America,WB453,Water body 453,3578.67408659676
+USA,United States of America,WB454,Water body 454,3572.73408582427
+USA,United States of America,WB455,Water body 455,2187.93524042225
+USA,United States of America,WB483,Water body 483,4106.59624769869
+USA,United States of America,WB484,Water body 484,3814.90509884104
+USA,United States of America,WB485,Water body 485,3539.34460624149
+USA,United States of America,WB486,Water body 486,3664.30262749809
+USA,United States of America,WB487,Water body 487,3676.01774736947
+USA,United States of America,WB488,Water body 488,3616.67630103461
+USA,United States of America,WB489,Water body 489,3052.17208915728
+CAN,Canada,WB367,Water body 367,2382.24156568752
+CAN,Canada,WB368,Water body 368,3360.97161950016
+CAN,Canada,WB394,Water body 394,2662.96588808096
+CAN,Canada,WB395,Water body 395,2292.42402593551
+CAN,Canada,WB396,Water body 396,2045.53394492065
+CAN,Canada,WB397,Water body 397,2075.61918720989
+CAN,Canada,WB398,Water body 398,2177.55934057612
+CAN,Canada,WB399,Water body 399,1424.7575177373
+CAN,Canada,WB400,Water body 400,2364.94331571516
+CAN,Canada,WB401,Water body 401,2800.51081474594
+CAN,Canada,WB402,Water body 402,2738.19519272165
+CAN,Canada,WB403,Water body 403,2780.05694055653
+CAN,Canada,WB404,Water body 404,2800.04122216454
+CAN,Canada,WB405,Water body 405,2833.77123692675
+CAN,Canada,WB406,Water body 406,2429.71591392689
+CAN,Canada,WB407,Water body 407,3102.10130963568
+CAN,Canada,WB408,Water body 408,3080.13185159819
+CAN,Canada,WB409,Water body 409,3077.89081049124
+CAN,Canada,WB410,Water body 410,3070.38298267167
+CAN,Canada,WB411,Water body 411,3026.60455516873
+CAN,Canada,WB412,Water body 412,3507.20392968623
+CAN,Canada,WB413,Water body 413,3180.85099616426
+CAN,Canada,WB455,Water body 455,2356.17105587419
+CAN,Canada,WB456,Water body 456,2010.45053702982
+CAN,Canada,WB457,Water body 457,1995.64154519046
+CAN,Canada,WB458,Water body 458,377.479529749945
+CAN,Canada,WB459,Water body 459,871.906477601814
+CAN,Canada,WB460,Water body 460,1384.82953120095
+CAN,Canada,WB461,Water body 461,2050.8760384823
+CAN,Canada,WB489,Water body 489,1925.86104660539
+CAN,Canada,WB490,Water body 490,1322.72454472379
+CAN,Canada,WB491,Water body 491,788.822213057249
+CAN,Canada,WB492,Water body 492,1245.10971740091
+CAN,Canada,WB493,Water body 493,441.170396832619
+CAN,Canada,WB494,Water body 494,782.421879663022
+CAN,Canada,WB495,Water body 495,968.158808211706
+CAN,Canada,WB496,Water body 496,507.921393752338
+CAN,Canada,WB497,Water body 497,520.737617483456
+CAN,Canada,WB498,Water body 498,625.898783889141
+CAN,Canada,WB499,Water body 499,653.29170664527
+CAN,Canada,WB500,Water body 500,884.621806201613
+CAN,Canada,WB501,Water body 501,870.365578204743
+CAN,Canada,WB502,Water body 502,1236.80105105767
+CAN,Canada,WB503,Water body 503,1578.31315910913
+CAN,Canada,WB504,Water body 504,1032.00792957331
+CAN,Canada,WB505,Water body 505,877.062294888072
+CAN,Canada,WB506,Water body 506,874.186484633145
+CAN,Canada,WB507,Water body 507,1367.39764471622
+CAN,Canada,WB508,Water body 508,1560.21506814827
+CAN,Canada,WB509,Water body 509,1529.36014636234
+CAN,Canada,WB510,Water body 510,1504.22954542345
+CAN,Canada,WB511,Water body 511,1490.3086459721
+CAN,Canada,WB512,Water body 512,1473.96213661726
+CAN,Canada,WB513,Water body 513,1454.66756145317
+CAN,Canada,WB514,Water body 514,1450.05906067613
+CAN,Canada,WB515,Water body 515,1438.12003986512
+CAN,Canada,WB516,Water body 516,1432.23974946955
+CAN,Canada,WB517,Water body 517,1413.35146998747
+CAN,Canada,WB518,Water body 518,1333.98662311267
+CAN,Canada,WB519,Water body 519,1268.68795140045
+CAN,Canada,WB520,Water body 520,1236.49566634848
+CAN,Canada,WB521,Water body 521,1212.21366612211
+CAN,Canada,WB522,Water body 522,1197.71174614703
+CAN,Canada,WB523,Water body 523,1189.77072110245
+CAN,Canada,WB524,Water body 524,1183.95845644129
+CAN,Canada,WB525,Water body 525,1566.14193187732
+CAN,Canada,WB526,Water body 526,1900.84878013919
+CAN,Canada,WB527,Water body 527,1381.54592274654
+CAN,Canada,WB528,Water body 528,1380.4361509559
+CAN,Canada,WB529,Water body 529,1420.37753436942
+CAN,Canada,WB530,Water body 530,1628.3406971664
+CAN,Canada,WB531,Water body 531,1634.95096884306
+CAN,Canada,WB532,Water body 532,1712.84542702718
+CAN,Canada,WB533,Water body 533,1717.47566495369
+CAN,Canada,WB534,Water body 534,1718.10845377091
+CAN,Canada,WB578,Water body 578,1907.55165621632
+CAN,Canada,WB579,Water body 579,1652.6990626338
+CAN,Canada,WB580,Water body 580,1561.84719897149
+CAN,Canada,WB581,Water body 581,1721.10316411696
+CAN,Canada,WB582,Water body 582,1937.53986104817
+CAN,Canada,WB583,Water body 583,2183.27577582909
+CAN,Canada,WB584,Water body 584,1212.47725002775
+CAN,Canada,WB585,Water body 585,1212.1272398634
+CAN,Canada,WB586,Water body 586,1379.31728231227
+CAN,Canada,WB587,Water body 587,1321.73972087338
+CAN,Canada,WB588,Water body 588,1278.65997152751
+CAN,Canada,WB589,Water body 589,1212.12524382259
+CAN,Canada,WB590,Water body 590,1665.082540568
+CAN,Canada,WB591,Water body 591,1772.91684908364
+CAN,Canada,WB592,Water body 592,1544.57666506535
+CAN,Canada,WB593,Water body 593,1239.21929077663
+CAN,Canada,WB594,Water body 594,2230.78520201289
+CAN,Canada,WB595,Water body 595,2248.38488501738
+CAN,Canada,WB596,Water body 596,2258.49804859602
+CAN,Canada,WB598,Water body 598,2270.07275031903
+CAN,Canada,WB630,Water body 630,2697.0806399006
+CAN,Canada,WB631,Water body 631,2799.02027655686
+CAN,Canada,WB632,Water body 632,2271.7087756678
+CAN,Canada,WB633,Water body 633,2253.69298863751
+CAN,Canada,WB634,Water body 634,2233.26051298156
+CAN,Canada,WB635,Water body 635,2251.92675471047
+CAN,Canada,WB636,Water body 636,2301.95487592346
+CAN,Canada,WB637,Water body 637,2852.8714245688
+MEX,Mexico,BLZ,Belize,1622.74914471312
+MEX,Mexico,WB266,Water body 266,1056.18443152194
+MEX,Mexico,WB267,Water body 267,1252.10707085594
+MEX,Mexico,WB298,Water body 298,1519.08232427553
+MEX,Mexico,WB299,Water body 299,558.267922945119
+MEX,Mexico,WB300,Water body 300,900.057804592278
+MEX,Mexico,WB301,Water body 301,565.047900763172
+MEX,Mexico,WB302,Water body 302,563.879369360623
+MEX,Mexico,WB303,Water body 303,561.451341582533
+MEX,Mexico,WB304,Water body 304,2218.50096584948
+MEX,Mexico,WB333,Water body 333,2005.58987597587
+MEX,Mexico,WB334,Water body 334,1196.28156299173
+MEX,Mexico,WB335,Water body 335,828.795202653601
+BLZ,Belize,WB269,Water body 269,1097.99147811212
+BLZ,Belize,WB304,Water body 304,1032.09326025969
+PAN,Panama,WB240,Water body 240,131.089814204655
+PAN,Panama,WB241,Water body 241,631.044953656337
+PAN,Panama,WB242,Water body 242,340.646202429188
+PAN,Panama,WB243,Water body 243,254.589696524107
+PAN,Panama,WB244,Water body 244,216.404137427389
+PAN,Panama,WB269,Water body 269,649.75074506622
+PAN,Panama,WB274,Water body 274,200.323943077793
+PAN,Panama,WB275,Water body 275,138.034360402827
+VEN,"Venezuela, Republica Bolivariana de",WB245,Water body 245,1058.6655182805
+VEN,"Venezuela, Republica Bolivariana de",WB247,Water body 247,600.303214596984
+VEN,"Venezuela, Republica Bolivariana de",WB270,Water body 270,694.499569228051
+VEN,"Venezuela, Republica Bolivariana de",WB271,Water body 271,697.332600917704
+VEN,"Venezuela, Republica Bolivariana de",WB272,Water body 272,712.403403935626
+VEN,"Venezuela, Republica Bolivariana de",WB276,Water body 276,861.153267865679
+PNG,Papua New Guinea,WB203,Water body 203,1237.1839563253
+PNG,Papua New Guinea,WB206,Water body 206,1183.99555726214
+PNG,Papua New Guinea,WB207,Water body 207,482.793955782492
+PNG,Papua New Guinea,WB228,Water body 228,284.442475505517
+PNG,Papua New Guinea,WB229,Water body 229,1341.24896940257
+PNG,Papua New Guinea,WB230,Water body 230,980.407556215462
+PNG,Papua New Guinea,WB231,Water body 231,218.722281505707
+PNG,Papua New Guinea,WB232,Water body 232,332.364063215789
+PNG,Papua New Guinea,WB233,Water body 233,343.249650465931
+EGY,"Egypt, Arab Republic of",WB312,Water body 312,551.484405116801
+EGY,"Egypt, Arab Republic of",WB313,Water body 313,1014.30615835355
+EGY,"Egypt, Arab Republic of",WB347,Water body 347,464.368861599405
+EGY,"Egypt, Arab Republic of",WB348,Water body 348,863.571889197358
+YEM,"Yemen, Republic of",WB280,Water body 280,281.758239368101
+YEM,"Yemen, Republic of",WB282,Water body 282,1687.92102528411
+MRT,Mauritania,WB279,Water body 279,1087.9774165105
+MRT,Mauritania,WB311,Water body 311,625.070509066962
+GNQ,Equatorial Guinea,WB219,Water body 219,887.235052762885
+GNQ,Equatorial Guinea,WB251,Water body 251,665.808032001533
+GMB,"Gambia, The",WB279,Water body 279,170.416359595969
+HKG,"Hong Kong (SAR, China)",WB325,Water body 325,520.361214000987
+AUS,Australia,WB089,Water body 89,3918.75644697616
+AUS,Australia,WB138,Water body 138,1667.12812151098
+AUS,Australia,WB139,Water body 139,1677.62149977348
+AUS,Australia,WB140,Water body 140,2452.21293228234
+AUS,Australia,WB162,Water body 162,2116.4546150854
+AUS,Australia,WB163,Water body 163,983.694499449491
+AUS,Australia,WB164,Water body 164,2303.08752620254
+AUS,Australia,WB184,Water body 184,2274.29231800865
+AUS,Australia,WB185,Water body 185,2212.05765506299
+AUS,Australia,WB202,Water body 202,2320.53444231759
+AUS,Australia,WB203,Water body 203,1525.53503446661
+AUS,Australia,WB204,Water body 204,1551.40957397194
+AUS,Australia,WB205,Water body 205,1527.87698901579
+AUS,Australia,WB206,Water body 206,2387.38787283789
+GRL,Greenland (Den.),WB462,Water body 462,1854.65955027307
+GRL,Greenland (Den.),WB526,Water body 526,1014.94028552166
+GRL,Greenland (Den.),WB535,Water body 535,532.264336227276
+GRL,Greenland (Den.),WB536,Water body 536,547.594845373064
+GRL,Greenland (Den.),WB537,Water body 537,1021.60529391891
+GRL,Greenland (Den.),WB538,Water body 538,1159.58180880804
+GRL,Greenland (Den.),WB539,Water body 539,1280.33483762746
+GRL,Greenland (Den.),WB540,Water body 540,1280.80028504984
+GRL,Greenland (Den.),WB541,Water body 541,719.742139240911
+GRL,Greenland (Den.),WB542,Water body 542,1333.17955175944
+GRL,Greenland (Den.),WB543,Water body 543,1056.36254832159
+GRL,Greenland (Den.),WB544,Water body 544,578.825777758627
+GRL,Greenland (Den.),WB591,Water body 591,1068.99705855706
+GRL,Greenland (Den.),WB597,Water body 597,695.73023520533
+GRL,Greenland (Den.),WB598,Water body 598,858.84668133071
+GRL,Greenland (Den.),WB599,Water body 599,842.809919974526
+GRL,Greenland (Den.),WB600,Water body 600,850.419610385612
+GRL,Greenland (Den.),WB601,Water body 601,510.826033017364
+GRL,Greenland (Den.),WB602,Water body 602,484.109735012477
+GRL,Greenland (Den.),WB603,Water body 603,614.201788852817
+GRL,Greenland (Den.),WB604,Water body 604,825.868106805089
+GRL,Greenland (Den.),WB605,Water body 605,805.526284263495
+GRL,Greenland (Den.),WB606,Water body 606,671.084390823389
+GRL,Greenland (Den.),WB607,Water body 607,909.041446029328
+GRL,Greenland (Den.),WB637,Water body 637,1311.55448842496
+GRL,Greenland (Den.),WB638,Water body 638,1295.12017317566
+GRL,Greenland (Den.),WB639,Water body 639,1310.86058473547
+GRL,Greenland (Den.),WB640,Water body 640,1318.00359837581
+FJI,Fiji,WB168,Water body 168,2732.77449478057
+FJI,Fiji,WB186,Water body 186,977.240489472552
+FJI,Fiji,WB187,Water body 187,2779.08739784608
+FJI,Fiji,WB208,Water body 208,922.807695268277
+FJI,Fiji,WB209,Water body 209,1683.04311460376
+NCL,New Caledonia (Fr.),WB186,Water body 186,567.740510903609
+MDG,Madagascar,WB180,Water body 180,432.289167821638
+MDG,Madagascar,WB198,Water body 198,680.164714504105
+PHL,Philippines,WB257,Water body 257,969.976347477626
+PHL,Philippines,WB258,Water body 258,411.410835093495
+PHL,Philippines,WB259,Water body 259,1569.21990911776
+PHL,Philippines,WB290,Water body 290,693.769050728404
+PHL,Philippines,WB291,Water body 291,1331.78023227067
+PHL,Philippines,WB292,Water body 292,401.726692584624
+PHL,Philippines,WB325,Water body 325,1162.4939460422
+LKA,Sri Lanka,WB254,Water body 254,357.207974577357
+LKA,Sri Lanka,WB255,Water body 255,166.078348630172
+LKA,Sri Lanka,WB284,Water body 284,798.889993792148
+CUW,Curaçao (Neth.),WB276,Water body 276,731.549636901268
+ABW,Aruba (Neth.),WB276,Water body 276,828.293598441734
+BHS,"Bahamas, The",WB304,Water body 304,463.224489130157
+TCA,Turks and Caicos Islands (UK),WB304,Water body 304,931.081986377273
+TCA,Turks and Caicos Islands (UK),WB306,Water body 306,944.363100090604
+JPN,Japan,WB325,Water body 325,2532.20947938812
+JPN,Japan,WB327,Water body 327,1693.07532372386
+JPN,Japan,WB328,Water body 328,2202.69818835525
+JPN,Japan,WB355,Water body 355,753.006878833767
+JPN,Japan,WB388,Water body 388,915.198123031101
+JPN,Japan,WB389,Water body 389,328.444057976832
+JPN,Japan,WB390,Water body 390,1344.81889495927
+JPN,Japan,WB437,Water body 437,1204.88049843307
+SPM,Saint-Pierre-et-Miquelon (Fr.),WB401,Water body 401,304.656412901129
+ISL,Iceland,WB543,Water body 543,387.881120867467
+ISL,Iceland,WB545,Water body 545,534.180410863004
+PCN,Pitcairn Islands (UK),WB170,Water body 170,696.658402895927
+PCN,Pitcairn Islands (UK),WB171,Water body 171,1192.14678389239
+PYF,French Polynesia (Fr.),WB143,Water body 143,1979.1616334494
+PYF,French Polynesia (Fr.),WB169,Water body 169,1164.09912857038
+PYF,French Polynesia (Fr.),WB170,Water body 170,1335.28971297515
+PYF,French Polynesia (Fr.),WB188,Water body 188,877.828921262627
+PYF,French Polynesia (Fr.),WB189,Water body 189,1098.39499965853
+PYF,French Polynesia (Fr.),WB212,Water body 212,1615.60956323419
+ATF,French Southern and Antarctic Lands (Fr.),WB109,Water body 109,1738.80374119381
+ATF,French Southern and Antarctic Lands (Fr.),WB110,Water body 110,441.046570203946
+ATF,French Southern and Antarctic Lands (Fr.),WB135,Water body 135,1341.9505680876
+ATF,French Southern and Antarctic Lands (Fr.),WB180,Water body 180,3606.13687274544
+ATF,French Southern and Antarctic Lands (Fr.),WB198,Water body 198,4464.45568721734
+ATF,French Southern and Antarctic Lands (Fr.),WB199,Water body 199,3982.07029849278
+SYC,Seychelles,WB198,Water body 198,940.482862318589
+SYC,Seychelles,WB220,Water body 220,594.630871770365
+SYC,Seychelles,WB221,Water body 221,1231.8676827884
+KIR,Kiribati,WB188,Water body 188,11276.0839961032
+KIR,Kiribati,WB210,Water body 210,13294.6028645364
+KIR,Kiribati,WB211,Water body 211,11297.385453996
+KIR,Kiribati,WB234,Water body 234,15289.6309461036
+KIR,Kiribati,WB236,Water body 236,11286.38528724
+KIR,Kiribati,WB261,Water body 261,15273.7396378209
+MHL,Marshall Islands,WB261,Water body 261,305.84905957724
+MHL,Marshall Islands,WB294,Water body 294,713.157863935896
+TTO,Trinidad and Tobago,WB276,Water body 276,413.532915488726
+GRD,Grenada,WB276,Water body 276,223.870921244807
+VCT,Saint Vincent and the Grenadines,WB276,Water body 276,163.872822380579
+BRB,Barbados,WB276,Water body 276,329.198972468026
+LCA,Saint Lucia,WB276,Water body 276,163.915466502853
+DMA,Dominica,WB276,Water body 276,199.27934417376
+MSR,Montserrat (UK),WB276,Water body 276,303.744113276631
+ATG,Antigua and Barbuda,WB276,Water body 276,370.102353456744
+KNA,Saint Kitts and Nevis,WB276,Water body 276,361.856061799528
+VIR,U.S. Virgin Islands (US),WB276,Water body 276,504.593449189395
+VIR,U.S. Virgin Islands (US),WB306,Water body 306,561.696486626161
+BLM,Saint-Barthélemy (Fr.),WB276,Water body 276,432.964889025089
+PRI,Puerto Rico (US),WB276,Water body 276,631.839183027043
+PRI,Puerto Rico (US),WB306,Water body 306,626.457528994258
+AIA,Anguilla (UK),WB276,Water body 276,470.813334900986
+AIA,Anguilla (UK),WB306,Water body 306,493.808566142212
+VGB,British Virgin Islands (UK),WB306,Water body 306,495.753362881202
+JAM,Jamaica,WB269,Water body 269,462.777805119665
+JAM,Jamaica,WB304,Water body 304,636.493738918705
+CYM,Cayman Islands (UK),WB304,Water body 304,379.417658705127
+BMU,Bermuda (UK),WB341,Water body 341,189.462900692791
+HMD,Heard Island and McDonald Islands (Aus.),WB111,Water body 111,657.464425055659
+SHN,"Saint Helena, Ascension and Tristan da Cunha (UK)",WB130,Water body 130,1732.08167385078
+SHN,"Saint Helena, Ascension and Tristan da Cunha (UK)",WB196,Water body 196,1268.85758489258
+SHN,"Saint Helena, Ascension and Tristan da Cunha (UK)",WB218,Water body 218,2261.94096508216
+MUS,Mauritius,WB181,Water body 181,594.141667723259
+MUS,Mauritius,WB199,Water body 199,921.005904824786
+COM,Comoros,WB198,Water body 198,373.097905090196
+STP,São Tomé and Príncipe,WB251,Water body 251,362.328769636354
+CPV,Cabo Verde,WB278,Water body 278,424.302400891987
+MLT,Malta,WB345,Water body 345,202.059109828368
+JEY,Jersey (UK),WB415,Water body 415,600.048369879499
+GGY,Guernsey (UK),WB415,Water body 415,569.766480253035
+IMY,Isle of Man (UK),WB415,Water body 415,684.063492345632
+IMY,Isle of Man (UK),WB464,Water body 464,604.480444659757
+FRO,Faroe Islands (Den.),WB464,Water body 464,385.069161553065
+IOT,British Indian Ocean Territory (UK),WB221,Water body 221,1070.34305004289
+IOT,British Indian Ocean Territory (UK),WB222,Water body 222,1006.97344311369
+SGP,Singapore,WB256,Water body 256,683.957348071885
+NFK,Norfolk Island (Aus.),WB165,Water body 165,403.841202032146
+COK,Cook Islands (NZ),WB169,Water body 169,670.905162648076
+COK,Cook Islands (NZ),WB187,Water body 187,1476.74258633909
+COK,Cook Islands (NZ),WB188,Water body 188,932.508041649174
+COK,Cook Islands (NZ),WB211,Water body 211,1806.94505587821
+TON,Tonga,WB168,Water body 168,483.663386729542
+TON,Tonga,WB187,Water body 187,835.855916852803
+WLF,Wallis-et-Futuna (Fr.),WB187,Water body 187,656.701596287632
+WSM,Samoa,WB187,Water body 187,129.339453089598
+SLB,Solomon Islands,WB206,Water body 206,858.638411315425
+SLB,Solomon Islands,WB208,Water body 208,1337.35288638959
+SLB,Solomon Islands,WB230,Water body 230,829.055343495071
+SLB,Solomon Islands,WB234,Water body 234,1347.17045258102
+TUV,Tuvalu,WB208,Water body 208,1040.1488284535
+TUV,Tuvalu,WB234,Water body 234,906.992956998841
+MDV,Maldives,WB222,Water body 222,1257.37424728434
+MDV,Maldives,WB254,Water body 254,860.7358942963
+NRU,Nauru,WB234,Water body 234,630.938741790067
+FSM,"Micronesia, Federated States of",WB260,Water body 260,370.424314540334
+FSM,"Micronesia, Federated States of",WB261,Water body 261,1764.45913836687
+FSM,"Micronesia, Federated States of",WB291,Water body 291,2332.33210733533
+SGS,South Georgia and South Sandwich Islands (UK),WB075,Water body 75,707.668175640623
+SGS,South Georgia and South Sandwich Islands (UK),WB076,Water body 76,60.1923183562046
+SGS,South Georgia and South Sandwich Islands (UK),WB077,Water body 77,103.426475642894
+SGS,South Georgia and South Sandwich Islands (UK),WB078,Water body 78,16.0986733905075
+SGS,South Georgia and South Sandwich Islands (UK),WB079,Water body 79,691.158851871734
+SGS,South Georgia and South Sandwich Islands (UK),WB104,Water body 104,846.018075377684
+FLK,Falkland Islands (UK)/Islas Malvinas,WB100,Water body 100,246.451638788142
+VUT,Vanuatu,WB186,Water body 186,784.817367855926
+VUT,Vanuatu,WB208,Water body 208,463.240938132381
+NIU,Niue (NZ),WB168,Water body 168,399.895062454056
+ASM,American Samoa (US),WB187,Water body 187,105.636320114414
+PLW,Palau,WB259,Water body 259,309.012406830258
+GUM,Guam (US),WB293,Water body 293,890.216609814555
+MNP,Northern Mariana Islands (US),WB293,Water body 293,851.050644579862
+MNP,Northern Mariana Islands (US),WB328,Water body 328,1042.37694310051
+BHR,Bahrain,WB314,Water body 314,172.13339055785
+FRA1,Clipperton Island (Fr.),WB265,Water body 265,918.375763125841
+MAC,"Macau (SAR, China)",WB325,Water body 325,576.982752472414
+BES,Bonaire (Neth.),WB276,Water body 276,660.829824472326
+BES,Sint Eustatius (Neth.),WB276,Water body 276,388.834698441232
+BES,Saba (Neth.),WB276,Water body 276,408.968537206818
+NLD,Netherlands,WB421,Water body 421,166.198336859304
+CCK,Cocos (Keeling) Islands (Aus.),WB201,Water body 201,273.939278434792
+CXR,Christmas Island (Aus.),WB201,Water body 201,798.152019479456
+UMI,Johnston Atoll (US),WB262,Water body 262,391.263216816626
+UMI,Jarvis Island (US),WB211,Water body 211,903.813723888333
+UMI,Baker Island (US),WB235,Water body 235,772.331329942828
+UMI,Howland Island (US),WB235,Water body 235,748.530966675375
+UMI,Wake Island (US),WB329,Water body 329,576.263286547527
+UMI,Midway Islands (US),WB330,Water body 330,715.19971548518
+USA2,Navassa Island (US),WB304,Water body 304,781.233883012572
+UMI,Palmyra Atoll (US),WB235,Water body 235,1000.99421399941
+UMI,Kingman Reef (US),WB235,Water body 235,977.548471597249
+TKL,Tokelau (NZ),WB187,Water body 187,508.875083153278
+TKL,Tokelau (NZ),WB210,Water body 210,502.496986641214
+NZL,New Zealand,WB116,Water body 116,875.633345563916
+NZL,New Zealand,WB117,Water body 117,515.637038692464
+NZL,New Zealand,WB118,Water body 118,530.114681962088
+NZL,New Zealand,WB119,Water body 119,1475.91028685961
+NZL,New Zealand,WB141,Water body 141,159.552315566168
+NZL,New Zealand,WB142,Water body 142,1935.00347433331
+NZL,New Zealand,WB165,Water body 165,1141.98967805405
+NZL,New Zealand,WB166,Water body 166,670.224150341111
+NZL,New Zealand,WB167,Water body 167,669.236560313087
+WB001,Water body 1,WB002,Water body 2,157.094155706995
+WB001,Water body 1,WB021,Water body 21,1004.97735602249
+WB001,Water body 1,WB022,Water body 22,1041.01185603137
+WB002,Water body 2,WB003,Water body 3,157.094155706995
+WB002,Water body 2,WB021,Water body 21,1041.01185603137
+WB002,Water body 2,WB022,Water body 22,1004.97735602249
+WB002,Water body 2,WB023,Water body 23,1041.01185603137
+WB003,Water body 3,WB004,Water body 4,157.094155706995
+WB003,Water body 3,WB022,Water body 22,1041.01185603137
+WB003,Water body 3,WB023,Water body 23,1004.97735602249
+WB003,Water body 3,WB024,Water body 24,1041.01185603137
+WB004,Water body 4,WB005,Water body 5,157.094155706995
+WB004,Water body 4,WB023,Water body 23,1041.01185603137
+WB004,Water body 4,WB024,Water body 24,1004.97735602249
+WB004,Water body 4,WB025,Water body 25,1041.01185603137
+WB005,Water body 5,WB006,Water body 6,157.094155706995
+WB005,Water body 5,WB024,Water body 24,1041.01185603137
+WB005,Water body 5,WB025,Water body 25,1004.97735602249
+WB005,Water body 5,WB026,Water body 26,1041.01185603137
+WB006,Water body 6,WB007,Water body 7,157.094155706995
+WB006,Water body 6,WB025,Water body 25,1041.01185603137
+WB006,Water body 6,WB026,Water body 26,1004.97735602249
+WB006,Water body 6,WB027,Water body 27,1041.01185603137
+WB007,Water body 7,WB008,Water body 8,157.094155706995
+WB007,Water body 7,WB026,Water body 26,1041.01185603137
+WB007,Water body 7,WB027,Water body 27,1004.97735602249
+WB007,Water body 7,WB028,Water body 28,1041.01185603137
+WB008,Water body 8,WB009,Water body 9,157.094155706995
+WB008,Water body 8,WB027,Water body 27,1041.01185603137
+WB008,Water body 8,WB028,Water body 28,1004.97735602249
+WB008,Water body 8,WB029,Water body 29,1041.01185603137
+WB009,Water body 9,WB010,Water body 10,157.094155706995
+WB009,Water body 9,WB028,Water body 28,1041.01185603137
+WB009,Water body 9,WB029,Water body 29,1004.97735602249
+WB009,Water body 9,WB030,Water body 30,1041.01185603137
+WB010,Water body 10,WB011,Water body 11,157.094155706995
+WB010,Water body 10,WB029,Water body 29,1041.01185603137
+WB010,Water body 10,WB030,Water body 30,1004.97735602249
+WB010,Water body 10,WB031,Water body 31,1041.01185603137
+WB011,Water body 11,WB012,Water body 12,157.094155706995
+WB011,Water body 11,WB030,Water body 30,1041.01185603137
+WB011,Water body 11,WB031,Water body 31,1004.97735602249
+WB011,Water body 11,WB032,Water body 32,1041.01185603137
+WB012,Water body 12,WB013,Water body 13,157.094155706995
+WB012,Water body 12,WB031,Water body 31,1041.01185603137
+WB012,Water body 12,WB032,Water body 32,1004.97735602249
+WB012,Water body 12,WB033,Water body 33,1041.01185603137
+WB013,Water body 13,WB014,Water body 14,157.094155706995
+WB013,Water body 13,WB032,Water body 32,1041.01185603137
+WB013,Water body 13,WB033,Water body 33,1004.97735602249
+WB013,Water body 13,WB034,Water body 34,1041.01185603137
+WB014,Water body 14,WB015,Water body 15,157.094155706995
+WB014,Water body 14,WB033,Water body 33,1041.01185603137
+WB014,Water body 14,WB034,Water body 34,1004.97735602249
+WB014,Water body 14,WB035,Water body 35,1041.01185603137
+WB015,Water body 15,WB016,Water body 16,157.094155706995
+WB015,Water body 15,WB034,Water body 34,1041.01185603137
+WB015,Water body 15,WB035,Water body 35,1004.97735602249
+WB015,Water body 15,WB036,Water body 36,1041.01185603137
+WB016,Water body 16,WB017,Water body 17,157.094155706995
+WB016,Water body 16,WB035,Water body 35,1041.01185603137
+WB016,Water body 16,WB036,Water body 36,1004.97735602249
+WB016,Water body 16,WB037,Water body 37,1041.01185603137
+WB017,Water body 17,WB018,Water body 18,157.094155706995
+WB017,Water body 17,WB036,Water body 36,1041.01185603137
+WB017,Water body 17,WB037,Water body 37,1004.97735602249
+WB017,Water body 17,WB038,Water body 38,1041.01185603137
+WB018,Water body 18,WB019,Water body 19,157.094155706995
+WB018,Water body 18,WB037,Water body 37,1041.01185603137
+WB018,Water body 18,WB038,Water body 38,1004.97735602249
+WB018,Water body 18,WB039,Water body 39,1041.01185603137
+WB019,Water body 19,WB020,Water body 20,157.094155706995
+WB019,Water body 19,WB038,Water body 38,1041.01185603137
+WB019,Water body 19,WB039,Water body 39,1004.97735602249
+WB019,Water body 19,WB040,Water body 40,1041.01185603137
+WB020,Water body 20,WB039,Water body 39,1041.01185603137
+WB020,Water body 20,WB040,Water body 40,1004.97735602249
+WB021,Water body 21,WB022,Water body 22,467.43037052056
+WB021,Water body 21,WB041,Water body 41,1004.25938914897
+WB021,Water body 21,WB042,Water body 42,1169.69004637264
+WB022,Water body 22,WB023,Water body 23,467.43037052056
+WB022,Water body 22,WB041,Water body 41,1169.69004637264
+WB022,Water body 22,WB042,Water body 42,1004.25938914897
+WB022,Water body 22,WB043,Water body 43,1169.69004637264
+WB023,Water body 23,WB024,Water body 24,467.43037052056
+WB023,Water body 23,WB042,Water body 42,1169.69004637264
+WB023,Water body 23,WB043,Water body 43,1004.25938914897
+WB023,Water body 23,WB044,Water body 44,1169.69004637264
+WB024,Water body 24,WB025,Water body 25,467.43037052056
+WB024,Water body 24,WB043,Water body 43,1169.69004637264
+WB024,Water body 24,WB044,Water body 44,1004.25938914897
+WB024,Water body 24,WB045,Water body 45,1169.69004637264
+WB025,Water body 25,WB026,Water body 26,467.43037052056
+WB025,Water body 25,WB044,Water body 44,1169.69004637264
+WB025,Water body 25,WB045,Water body 45,1004.25938914897
+WB025,Water body 25,WB046,Water body 46,1169.69004637264
+WB026,Water body 26,WB027,Water body 27,467.43037052056
+WB026,Water body 26,WB045,Water body 45,1169.69004637264
+WB026,Water body 26,WB046,Water body 46,1004.25938914897
+WB026,Water body 26,WB047,Water body 47,1169.69004637264
+WB027,Water body 27,WB028,Water body 28,467.43037052056
+WB027,Water body 27,WB046,Water body 46,1169.69004637264
+WB027,Water body 27,WB047,Water body 47,1004.25938914897
+WB027,Water body 27,WB048,Water body 48,1169.69004637264
+WB028,Water body 28,WB029,Water body 29,467.43037052056
+WB028,Water body 28,WB047,Water body 47,1169.69004637264
+WB028,Water body 28,WB048,Water body 48,1004.25938914897
+WB028,Water body 28,WB049,Water body 49,1169.69004637264
+WB029,Water body 29,WB030,Water body 30,467.43037052056
+WB029,Water body 29,WB048,Water body 48,1169.69004637264
+WB029,Water body 29,WB049,Water body 49,1004.25938914897
+WB029,Water body 29,WB050,Water body 50,1169.69004637264
+WB030,Water body 30,WB031,Water body 31,467.43037052056
+WB030,Water body 30,WB049,Water body 49,1169.69004637264
+WB030,Water body 30,WB050,Water body 50,1004.25938914897
+WB030,Water body 30,WB051,Water body 51,1169.69004637264
+WB031,Water body 31,WB032,Water body 32,467.43037052056
+WB031,Water body 31,WB050,Water body 50,1169.69004637264
+WB031,Water body 31,WB051,Water body 51,1004.25938914897
+WB031,Water body 31,WB052,Water body 52,1169.69004637264
+WB032,Water body 32,WB033,Water body 33,467.43037052056
+WB032,Water body 32,WB051,Water body 51,1169.69004637264
+WB032,Water body 32,WB052,Water body 52,1004.25938914897
+WB032,Water body 32,WB053,Water body 53,1169.69004637264
+WB033,Water body 33,WB034,Water body 34,467.43037052056
+WB033,Water body 33,WB052,Water body 52,1169.69004637264
+WB033,Water body 33,WB053,Water body 53,1004.25938914897
+WB033,Water body 33,WB054,Water body 54,1169.69004637264
+WB034,Water body 34,WB035,Water body 35,467.43037052056
+WB034,Water body 34,WB053,Water body 53,1169.69004637264
+WB034,Water body 34,WB054,Water body 54,1004.25938914897
+WB034,Water body 34,WB055,Water body 55,1169.69004637264
+WB035,Water body 35,WB036,Water body 36,467.43037052056
+WB035,Water body 35,WB054,Water body 54,1169.69004637264
+WB035,Water body 35,WB055,Water body 55,1004.25938914897
+WB035,Water body 35,WB056,Water body 56,1169.69004637264
+WB036,Water body 36,WB037,Water body 37,467.43037052056
+WB036,Water body 36,WB055,Water body 55,1169.69004637264
+WB036,Water body 36,WB056,Water body 56,1004.25938914897
+WB036,Water body 36,WB057,Water body 57,1169.69004637264
+WB037,Water body 37,WB038,Water body 38,467.43037052056
+WB037,Water body 37,WB056,Water body 56,1169.69004637264
+WB037,Water body 37,WB057,Water body 57,1004.25938914897
+WB037,Water body 37,WB058,Water body 58,1169.69004637264
+WB038,Water body 38,WB039,Water body 39,467.43037052056
+WB038,Water body 38,WB057,Water body 57,1169.69004637264
+WB038,Water body 38,WB058,Water body 58,1004.25938914897
+WB038,Water body 38,WB059,Water body 59,1169.69004637264
+WB039,Water body 39,WB040,Water body 40,467.43037052056
+WB039,Water body 39,WB058,Water body 58,1169.69004637264
+WB039,Water body 39,WB059,Water body 59,1004.25938914897
+WB039,Water body 39,WB060,Water body 60,1169.69004637264
+WB040,Water body 40,WB059,Water body 59,1169.69004637264
+WB040,Water body 40,WB060,Water body 60,1004.25938914897
+WB041,Water body 41,WB042,Water body 42,766.302116379981
+WB041,Water body 41,WB061,Water body 61,1003.14281679539
+WB041,Water body 41,WB062,Water body 62,1345.87395838615
+WB042,Water body 42,WB043,Water body 43,766.302116379981
+WB042,Water body 42,WB061,Water body 61,1345.87395838615
+WB042,Water body 42,WB062,Water body 62,1003.14281679539
+WB042,Water body 42,WB063,Water body 63,1345.87395838615
+WB043,Water body 43,WB044,Water body 44,766.302116379981
+WB043,Water body 43,WB062,Water body 62,1345.87395838615
+WB043,Water body 43,WB063,Water body 63,1003.14281679539
+WB043,Water body 43,WB064,Water body 64,1345.87395838615
+WB044,Water body 44,WB045,Water body 45,766.302116379981
+WB044,Water body 44,WB063,Water body 63,1345.87395838615
+WB044,Water body 44,WB064,Water body 64,1003.14281679539
+WB044,Water body 44,WB065,Water body 65,1345.87395838615
+WB045,Water body 45,WB046,Water body 46,766.302116379981
+WB045,Water body 45,WB064,Water body 64,1345.87395838615
+WB045,Water body 45,WB065,Water body 65,1003.14281679539
+WB045,Water body 45,WB066,Water body 66,1342.88857600952
+WB046,Water body 46,WB047,Water body 47,766.302116379981
+WB046,Water body 46,WB065,Water body 65,1345.87395838615
+WB046,Water body 46,WB066,Water body 66,1000.26419192115
+WB046,Water body 46,WB069,Water body 69,1334.37516515094
+WB047,Water body 47,WB048,Water body 48,766.302116379981
+WB047,Water body 47,WB066,Water body 66,1344.11539401542
+WB047,Water body 47,WB069,Water body 69,980.064030625764
+WB047,Water body 47,WB075,Water body 75,1340.05333760811
+WB048,Water body 48,WB049,Water body 49,766.302116379981
+WB048,Water body 48,WB069,Water body 69,1319.39698047597
+WB048,Water body 48,WB075,Water body 75,998.080932010215
+WB048,Water body 48,WB079,Water body 79,1345.85536275222
+WB049,Water body 49,WB050,Water body 50,766.302116379981
+WB049,Water body 49,WB075,Water body 75,1343.3531984724
+WB049,Water body 49,WB079,Water body 79,1003.06113984076
+WB049,Water body 49,WB080,Water body 80,1345.87395838615
+WB050,Water body 50,WB051,Water body 51,766.302116379981
+WB050,Water body 50,WB079,Water body 79,1345.75790570279
+WB050,Water body 50,WB080,Water body 80,1003.14281679539
+WB050,Water body 50,WB081,Water body 81,1345.86498666148
+WB051,Water body 51,WB052,Water body 52,766.302116379981
+WB051,Water body 51,WB080,Water body 80,1345.87395838615
+WB051,Water body 51,WB081,Water body 81,1003.12137833624
+WB051,Water body 51,WB082,Water body 82,1345.87395838615
+WB052,Water body 52,WB053,Water body 53,766.302116379981
+WB052,Water body 52,WB081,Water body 81,1345.84758803781
+WB052,Water body 52,WB082,Water body 82,1003.14281679539
+WB052,Water body 52,WB083,Water body 83,1345.87395838615
+WB053,Water body 53,WB054,Water body 54,766.302116379981
+WB053,Water body 53,WB082,Water body 82,1345.87395838615
+WB053,Water body 53,WB083,Water body 83,1003.14281679539
+WB053,Water body 53,WB084,Water body 84,1345.87395838615
+WB054,Water body 54,WB055,Water body 55,766.302116379981
+WB054,Water body 54,WB083,Water body 83,1345.87395838615
+WB054,Water body 54,WB084,Water body 84,1003.14281679539
+WB054,Water body 54,WB085,Water body 85,1345.87395838615
+WB055,Water body 55,WB056,Water body 56,766.302116379981
+WB055,Water body 55,WB084,Water body 84,1345.87395838615
+WB055,Water body 55,WB085,Water body 85,1003.14281679539
+WB055,Water body 55,WB086,Water body 86,1345.87395838615
+WB056,Water body 56,WB057,Water body 57,766.302116379981
+WB056,Water body 56,WB085,Water body 85,1345.87395838615
+WB056,Water body 56,WB086,Water body 86,1003.14281679539
+WB056,Water body 56,WB087,Water body 87,1345.87395838615
+WB057,Water body 57,WB058,Water body 58,766.302116379981
+WB057,Water body 57,WB086,Water body 86,1345.87395838615
+WB057,Water body 57,WB087,Water body 87,1003.14281679539
+WB057,Water body 57,WB088,Water body 88,1345.87395838615
+WB058,Water body 58,WB059,Water body 59,766.302116379981
+WB058,Water body 58,WB087,Water body 87,1345.87395838615
+WB058,Water body 58,WB088,Water body 88,1003.14281679539
+WB058,Water body 58,WB089,Water body 89,1345.81757225581
+WB059,Water body 59,WB060,Water body 60,766.302116379981
+WB059,Water body 59,WB088,Water body 88,1345.87395838615
+WB059,Water body 59,WB089,Water body 89,1003.09854893964
+WB059,Water body 59,WB090,Water body 90,1345.87395838615
+WB060,Water body 60,WB089,Water body 89,1345.85736735967
+WB060,Water body 60,WB090,Water body 90,1003.14281679539
+WB061,Water body 61,WB062,Water body 62,1046.37061048784
+WB061,Water body 61,WB091,Water body 91,1001.73877263688
+WB061,Water body 61,WB092,Water body 92,1539.50480169858
+WB062,Water body 62,WB063,Water body 63,1046.37061048784
+WB062,Water body 62,WB091,Water body 91,1539.50480169858
+WB062,Water body 62,WB092,Water body 92,1001.73877263688
+WB062,Water body 62,WB093,Water body 93,1539.50480169858
+WB063,Water body 63,WB064,Water body 64,1046.37061048784
+WB063,Water body 63,WB092,Water body 92,1539.50480169858
+WB063,Water body 63,WB093,Water body 93,1001.73877263688
+WB063,Water body 63,WB094,Water body 94,1539.50480169858
+WB064,Water body 64,WB065,Water body 65,1046.37061048784
+WB064,Water body 64,WB093,Water body 93,1539.50480169858
+WB064,Water body 64,WB094,Water body 94,1001.73877263688
+WB064,Water body 64,WB095,Water body 95,1539.50480169858
+WB065,Water body 65,WB066,Water body 66,1044.91699249943
+WB065,Water body 65,WB094,Water body 94,1539.50480169858
+WB065,Water body 65,WB095,Water body 95,1001.73877263688
+WB065,Water body 65,WB096,Water body 96,1473.98282617698
+WB066,Water body 66,WB068,Water body 68,789.918170529556
+WB066,Water body 66,WB069,Water body 69,1057.1025409962
+WB066,Water body 66,WB072,Water body 72,697.262579818915
+WB066,Water body 66,WB073,Water body 73,713.922985419939
+WB066,Water body 66,WB074,Water body 74,710.393166487738
+WB066,Water body 66,WB095,Water body 95,1540.15484948697
+WB066,Water body 66,WB096,Water body 96,992.537745667405
+WB066,Water body 66,WB097,Water body 97,728.018676055463
+WB066,Water body 66,WB098,Water body 98,719.643247765514
+WB067,Water body 67,WB096,Water body 96,807.052728913454
+WB068,Water body 68,WB100,Water body 100,831.70447318528
+WB068,Water body 68,WB101,Water body 101,88.533902780009
+WB069,Water body 69,WB075,Water body 75,1026.91904319846
+WB069,Water body 69,WB100,Water body 100,999.996886839399
+WB069,Water body 69,WB104,Water body 104,1539.65281908711
+WB070,Water body 70,WB100,Water body 100,847.386555391495
+WB071,Water body 71,WB100,Water body 100,855.895661846798
+WB075,Water body 75,WB079,Water body 79,1048.65933602844
+WB075,Water body 75,WB100,Water body 100,1421.95032045288
+WB075,Water body 75,WB104,Water body 104,1003.78941141786
+WB076,Water body 76,WB079,Water body 79,747.38398901709
+WB076,Water body 76,WB104,Water body 104,791.62217031545
+WB076,Water body 76,WB105,Water body 105,825.417804744601
+WB077,Water body 77,WB104,Water body 104,742.593168737962
+WB078,Water body 78,WB079,Water body 79,691.031689450083
+WB079,Water body 79,WB080,Water body 80,1046.27439721502
+WB079,Water body 79,WB104,Water body 104,1536.75856004805
+WB079,Water body 79,WB105,Water body 105,1001.82045691878
+WB079,Water body 79,WB106,Water body 106,1539.47658309818
+WB080,Water body 80,WB081,Water body 81,1046.38296760999
+WB080,Water body 80,WB105,Water body 105,1539.50480169858
+WB080,Water body 80,WB106,Water body 106,1001.73877263688
+WB080,Water body 80,WB107,Water body 107,1539.50480169858
+WB081,Water body 81,WB082,Water body 82,1046.35251552005
+WB081,Water body 81,WB106,Water body 106,1539.52931869675
+WB081,Water body 81,WB107,Water body 107,1001.76021132959
+WB081,Water body 81,WB108,Water body 108,1539.50347052929
+WB082,Water body 82,WB083,Water body 83,1046.37061048784
+WB082,Water body 82,WB107,Water body 107,1539.50480169858
+WB082,Water body 82,WB108,Water body 108,1001.73877263688
+WB082,Water body 82,WB109,Water body 109,1539.45287053549
+WB083,Water body 83,WB084,Water body 84,1046.37061048784
+WB083,Water body 83,WB108,Water body 108,1539.50480169858
+WB083,Water body 83,WB109,Water body 109,1001.61769148997
+WB083,Water body 83,WB110,Water body 110,1537.7100682076
+WB084,Water body 84,WB085,Water body 85,1046.37061048784
+WB084,Water body 84,WB109,Water body 109,1539.37853010929
+WB084,Water body 84,WB110,Water body 110,1001.61976962396
+WB084,Water body 84,WB111,Water body 111,1539.72104419953
+WB085,Water body 85,WB086,Water body 86,1046.37061048784
+WB085,Water body 85,WB110,Water body 110,1541.12195644564
+WB085,Water body 85,WB111,Water body 111,1001.86929909259
+WB085,Water body 85,WB112,Water body 112,1539.50480169858
+WB086,Water body 86,WB087,Water body 87,1046.37061048784
+WB086,Water body 86,WB111,Water body 111,1539.48065946074
+WB086,Water body 86,WB112,Water body 112,1001.73877263688
+WB086,Water body 86,WB113,Water body 113,1539.50480169858
+WB087,Water body 87,WB088,Water body 88,1046.37061048784
+WB087,Water body 87,WB112,Water body 112,1539.50480169858
+WB087,Water body 87,WB113,Water body 113,1001.73877263688
+WB087,Water body 87,WB114,Water body 114,1539.50480169858
+WB088,Water body 88,WB089,Water body 89,1046.3298614505
+WB088,Water body 88,WB113,Water body 113,1539.50480169858
+WB088,Water body 88,WB114,Water body 114,1001.73877263688
+WB088,Water body 88,WB115,Water body 115,1539.50480169858
+WB089,Water body 89,WB090,Water body 90,1046.39951241359
+WB089,Water body 89,WB114,Water body 114,1539.49918013189
+WB089,Water body 89,WB115,Water body 115,1001.78304171441
+WB089,Water body 89,WB116,Water body 116,1526.98510530962
+WB090,Water body 90,WB115,Water body 115,1539.50480169858
+WB090,Water body 90,WB116,Water body 116,979.142252750782
+WB091,Water body 91,WB092,Water body 92,1300.74692451351
+WB091,Water body 91,WB119,Water body 119,1000.40205512429
+WB091,Water body 91,WB120,Water body 120,1729.07651724603
+WB092,Water body 92,WB093,Water body 93,1300.74692451351
+WB092,Water body 92,WB119,Water body 119,1729.02142746252
+WB092,Water body 92,WB120,Water body 120,1000.18616984077
+WB092,Water body 92,WB121,Water body 121,1729.07651724603
+WB093,Water body 93,WB094,Water body 94,1300.74692451351
+WB093,Water body 93,WB120,Water body 120,1729.07651724603
+WB093,Water body 93,WB121,Water body 121,1000.18616984077
+WB093,Water body 93,WB122,Water body 122,1729.07651724603
+WB094,Water body 94,WB095,Water body 95,1300.74692451351
+WB094,Water body 94,WB121,Water body 121,1729.07651724603
+WB094,Water body 94,WB122,Water body 122,1000.18616984077
+WB094,Water body 94,WB123,Water body 123,1729.07651724603
+WB095,Water body 95,WB096,Water body 96,1218.17133740138
+WB095,Water body 95,WB122,Water body 122,1729.07651724603
+WB095,Water body 95,WB123,Water body 123,1000.18616984077
+WB095,Water body 95,WB124,Water body 124,1681.93986004663
+WB096,Water body 96,WB100,Water body 100,1516.83795597076
+WB096,Water body 96,WB102,Water body 102,797.096712732721
+WB096,Water body 96,WB103,Water body 103,825.661069307001
+WB096,Water body 96,WB123,Water body 123,1665.70681302806
+WB096,Water body 96,WB124,Water body 124,1010.52463660895
+WB096,Water body 96,WB125,Water body 125,780.23538179227
+WB096,Water body 96,WB126,Water body 126,784.448931769662
+WB099,Water body 99,WB103,Water body 103,60.8290600517109
+WB100,Water body 100,WB104,Water body 104,1156.48112210221
+WB100,Water body 100,WB127,Water body 127,923.411542166032
+WB100,Water body 100,WB128,Water body 128,1622.9839966738
+WB104,Water body 104,WB105,Water body 105,1299.45181112167
+WB104,Water body 104,WB127,Water body 127,1383.47248745341
+WB104,Water body 104,WB128,Water body 128,1003.20940104545
+WB104,Water body 104,WB129,Water body 129,1729.69307765629
+WB105,Water body 105,WB106,Water body 106,1300.74692451351
+WB105,Water body 105,WB128,Water body 128,1729.07651724603
+WB105,Water body 105,WB129,Water body 129,1000.18616984077
+WB105,Water body 105,WB130,Water body 130,1729.07686268861
+WB106,Water body 106,WB107,Water body 107,1300.74692451351
+WB106,Water body 106,WB129,Water body 129,1729.07651724603
+WB106,Water body 106,WB130,Water body 130,1000.16656289062
+WB106,Water body 106,WB131,Water body 131,1729.07651724603
+WB107,Water body 107,WB108,Water body 108,1300.74692451351
+WB107,Water body 107,WB130,Water body 130,1729.05027331954
+WB107,Water body 107,WB131,Water body 131,1000.18616984077
+WB107,Water body 107,WB132,Water body 132,1729.07651724603
+WB108,Water body 108,WB109,Water body 109,1300.78695185954
+WB108,Water body 108,WB131,Water body 131,1729.07651724603
+WB108,Water body 108,WB132,Water body 132,1000.18616984077
+WB108,Water body 108,WB133,Water body 133,1729.07651724603
+WB109,Water body 109,WB110,Water body 110,1298.16209245786
+WB109,Water body 109,WB132,Water body 132,1729.18255510592
+WB109,Water body 109,WB133,Water body 133,1000.30725397335
+WB109,Water body 109,WB134,Water body 134,1729.08608829328
+WB110,Water body 110,WB111,Water body 111,1303.4255627649
+WB110,Water body 110,WB133,Water body 133,1726.9215431404
+WB110,Water body 110,WB134,Water body 134,1000.31146181577
+WB110,Water body 110,WB135,Water body 135,1731.35040654464
+WB111,Water body 111,WB112,Water body 112,1300.58629010536
+WB111,Water body 111,WB134,Water body 134,1729.17021608315
+WB111,Water body 111,WB135,Water body 135,1000.04458592465
+WB111,Water body 111,WB136,Water body 136,1728.85822627065
+WB112,Water body 112,WB113,Water body 113,1300.74692451351
+WB112,Water body 112,WB135,Water body 135,1729.06040761631
+WB112,Water body 112,WB136,Water body 136,1000.18616984077
+WB112,Water body 112,WB137,Water body 137,1729.07651724603
+WB113,Water body 113,WB114,Water body 114,1300.74692451351
+WB113,Water body 113,WB136,Water body 136,1729.07651724603
+WB113,Water body 113,WB137,Water body 137,1000.18616984077
+WB113,Water body 113,WB138,Water body 138,1680.60602155585
+WB114,Water body 114,WB115,Water body 115,1300.74692451351
+WB114,Water body 114,WB137,Water body 137,1729.07651724603
+WB114,Water body 114,WB138,Water body 138,971.600748803709
+WB114,Water body 114,WB140,Water body 140,1766.069349551
+WB115,Water body 115,WB116,Water body 116,1304.03009881652
+WB115,Water body 115,WB138,Water body 138,1739.41654186224
+WB115,Water body 115,WB140,Water body 140,969.504762055186
+WB115,Water body 115,WB141,Water body 141,1697.65975810807
+WB116,Water body 116,WB140,Water body 140,1665.61717456475
+WB116,Water body 116,WB141,Water body 141,1016.56838680354
+WB117,Water body 117,WB141,Water body 141,593.316087688311
+WB118,Water body 118,WB141,Water body 141,605.056409190944
+WB119,Water body 119,WB120,Water body 120,1522.91958318828
+WB119,Water body 119,WB142,Water body 142,998.416126529017
+WB119,Water body 119,WB143,Water body 143,1899.55982454207
+WB120,Water body 120,WB121,Water body 121,1523.15935891822
+WB120,Water body 120,WB142,Water body 142,1899.89781694426
+WB120,Water body 120,WB143,Water body 143,998.627252428476
+WB120,Water body 120,WB144,Water body 144,1899.91296767539
+WB121,Water body 121,WB122,Water body 122,1523.15935891822
+WB121,Water body 121,WB143,Water body 143,1899.92252756319
+WB121,Water body 121,WB144,Water body 144,998.637540635029
+WB121,Water body 121,WB145,Water body 145,1897.55654050893
+WB122,Water body 122,WB123,Water body 123,1523.15935891822
+WB122,Water body 122,WB144,Water body 144,1899.91296767539
+WB122,Water body 122,WB145,Water body 145,996.285810570768
+WB122,Water body 122,WB146,Water body 146,1899.91296767539
+WB123,Water body 123,WB124,Water body 124,1464.22988042795
+WB123,Water body 123,WB145,Water body 145,1899.45953551633
+WB123,Water body 123,WB146,Water body 146,998.637540635029
+WB123,Water body 123,WB147,Water body 147,1898.15480337063
+WB124,Water body 124,WB146,Water body 146,1849.66472883313
+WB124,Water body 124,WB147,Water body 147,1005.4216906153
+WB127,Water body 127,WB128,Water body 128,1161.02033554988
+WB127,Water body 127,WB150,Water body 150,743.637432100487
+WB127,Water body 127,WB151,Water body 151,1710.71914120546
+WB128,Water body 128,WB129,Water body 129,1523.15935891822
+WB128,Water body 128,WB150,Water body 150,1130.38768382849
+WB128,Water body 128,WB151,Water body 151,962.44061054576
+WB128,Water body 128,WB152,Water body 152,1899.91296767539
+WB129,Water body 129,WB130,Water body 130,1523.17496524031
+WB129,Water body 129,WB151,Water body 151,1787.29436551895
+WB129,Water body 129,WB152,Water body 152,998.637540635029
+WB129,Water body 129,WB153,Water body 153,1899.91296767539
+WB130,Water body 130,WB131,Water body 131,1523.13974027061
+WB130,Water body 130,WB152,Water body 152,1899.93748198095
+WB130,Water body 130,WB153,Water body 153,998.65714789627
+WB130,Water body 130,WB154,Water body 154,1865.29240009853
+WB131,Water body 131,WB132,Water body 132,1523.15935891822
+WB131,Water body 131,WB153,Water body 153,1899.91296767539
+WB131,Water body 131,WB154,Water body 154,982.382925234359
+WB131,Water body 131,WB157,Water body 157,2065.08906061178
+WB132,Water body 132,WB133,Water body 133,1523.15935891822
+WB132,Water body 132,WB154,Water body 154,1914.78952752578
+WB132,Water body 132,WB157,Water body 157,882.671354862673
+WB132,Water body 132,WB158,Water body 158,1899.91296767539
+WB133,Water body 133,WB134,Water body 134,1523.15935891822
+WB133,Water body 133,WB157,Water body 157,1557.03184532815
+WB133,Water body 133,WB158,Water body 158,998.637540635029
+WB133,Water body 133,WB159,Water body 159,1899.91296767539
+WB134,Water body 134,WB135,Water body 135,1523.169866121
+WB134,Water body 134,WB158,Water body 158,1899.91296767539
+WB134,Water body 134,WB159,Water body 159,998.637540635029
+WB134,Water body 134,WB160,Water body 160,1899.91296767539
+WB135,Water body 135,WB136,Water body 136,1523.14658292031
+WB135,Water body 135,WB159,Water body 159,1899.92834909963
+WB135,Water body 135,WB160,Water body 160,998.648627370831
+WB135,Water body 135,WB161,Water body 161,1899.90731776265
+WB136,Water body 136,WB137,Water body 137,1523.15935891822
+WB136,Water body 136,WB160,Water body 160,1899.91296767539
+WB136,Water body 136,WB161,Water body 161,998.637540635029
+WB136,Water body 136,WB162,Water body 162,1615.62856227496
+WB137,Water body 137,WB138,Water body 138,1481.8299832377
+WB137,Water body 137,WB161,Water body 161,1899.91296767539
+WB137,Water body 137,WB162,Water body 162,925.865123143165
+WB137,Water body 137,WB163,Water body 163,1458.54699372881
+WB138,Water body 138,WB140,Water body 140,1631.61775800041
+WB138,Water body 138,WB162,Water body 162,2038.66492631325
+WB138,Water body 138,WB163,Water body 163,775.018855810306
+WB139,Water body 139,WB140,Water body 140,886.014543094871
+WB140,Water body 140,WB141,Water body 141,1407.22296127039
+WB140,Water body 140,WB164,Water body 164,1023.06389813365
+WB140,Water body 140,WB165,Water body 165,1843.32273530057
+WB141,Water body 141,WB164,Water body 164,1542.82375186745
+WB141,Water body 141,WB165,Water body 165,1001.1974045512
+WB141,Water body 141,WB166,Water body 166,580.021009292814
+WB141,Water body 141,WB167,Water body 167,584.76412394094
+WB142,Water body 142,WB143,Water body 143,1708.07316135682
+WB142,Water body 142,WB168,Water body 168,997.09928003165
+WB142,Water body 142,WB169,Water body 169,2041.88813272715
+WB143,Water body 143,WB144,Water body 144,1708.12735283735
+WB143,Water body 143,WB168,Water body 168,2041.63080941445
+WB143,Water body 143,WB169,Water body 169,997.238803998537
+WB143,Water body 143,WB170,Water body 170,2041.2349021947
+WB144,Water body 144,WB145,Water body 145,1706.73420784341
+WB144,Water body 144,WB169,Water body 169,2041.82733364925
+WB144,Water body 144,WB170,Water body 170,993.93245841947
+WB144,Water body 144,WB171,Water body 171,2041.61572099807
+WB145,Water body 145,WB146,Water body 146,1709.09824904713
+WB145,Water body 145,WB170,Water body 170,2038.829581808
+WB145,Water body 145,WB171,Water body 171,997.290757368711
+WB145,Water body 145,WB172,Water body 172,2043.93623402734
+WB146,Water body 146,WB147,Water body 147,1705.88653952854
+WB146,Water body 146,WB171,Water body 171,2039.61039611815
+WB146,Water body 146,WB172,Water body 172,997.243996970402
+WB146,Water body 146,WB173,Water body 173,2041.87183324126
+WB147,Water body 147,WB148,Water body 148,916.414358241682
+WB147,Water body 147,WB149,Water body 149,899.438715243197
+WB147,Water body 147,WB172,Water body 172,2039.82087436202
+WB147,Water body 147,WB173,Water body 173,997.192303601945
+WB147,Water body 147,WB174,Water body 174,1411.39760108468
+WB148,Water body 148,WB173,Water body 173,1233.09514880563
+WB148,Water body 148,WB174,Water body 174,831.674811843663
+WB150,Water body 150,WB151,Water body 151,1192.67821281843
+WB151,Water body 151,WB152,Water body 152,1596.10509245825
+WB151,Water body 151,WB175,Water body 175,950.785710545375
+WB151,Water body 151,WB176,Water body 176,1962.26879853302
+WB152,Water body 152,WB153,Water body 153,1708.10867483825
+WB152,Water body 152,WB175,Water body 175,1599.39565027698
+WB152,Water body 152,WB176,Water body 176,997.243145402568
+WB152,Water body 152,WB177,Water body 177,2041.87163795063
+WB153,Water body 153,WB154,Water body 154,1676.18327050809
+WB153,Water body 153,WB176,Water body 176,2041.87052284321
+WB153,Water body 153,WB177,Water body 177,997.24389952176
+WB153,Water body 153,WB178,Water body 178,1857.63092377259
+WB154,Water body 154,WB155,Water body 155,896.954649635233
+WB154,Water body 154,WB156,Water body 156,896.273647137905
+WB154,Water body 154,WB157,Water body 157,2032.08368388468
+WB154,Water body 154,WB177,Water body 177,2021.20974699477
+WB154,Water body 154,WB178,Water body 178,999.309056009915
+WB157,Water body 157,WB158,Water body 158,1399.88729516368
+WB157,Water body 157,WB179,Water body 179,1064.72669599929
+WB157,Water body 157,WB180,Water body 180,1817.08177439935
+WB158,Water body 158,WB159,Water body 159,1708.10867483825
+WB158,Water body 158,WB179,Water body 179,1272.64969905136
+WB158,Water body 158,WB180,Water body 180,960.715403850414
+WB158,Water body 158,WB181,Water body 181,2042.97860788677
+WB159,Water body 159,WB160,Water body 160,1708.10867483825
+WB159,Water body 159,WB180,Water body 180,2041.52754703424
+WB159,Water body 159,WB181,Water body 181,996.766253802993
+WB159,Water body 159,WB182,Water body 182,2041.87163795063
+WB160,Water body 160,WB161,Water body 161,1708.10867483825
+WB160,Water body 160,WB181,Water body 181,2040.24242559978
+WB160,Water body 160,WB182,Water body 182,997.24389952176
+WB160,Water body 160,WB183,Water body 183,2041.87163795063
+WB161,Water body 161,WB162,Water body 162,1430.43559163377
+WB161,Water body 161,WB182,Water body 182,2041.87163795063
+WB161,Water body 161,WB183,Water body 183,997.24389952176
+WB161,Water body 161,WB184,Water body 184,1731.8013920203
+WB162,Water body 162,WB163,Water body 163,1627.7230095671
+WB162,Water body 162,WB183,Water body 183,1854.799874947
+WB162,Water body 162,WB184,Water body 184,1203.68760886447
+WB164,Water body 164,WB165,Water body 165,1319.59749242983
+WB164,Water body 164,WB185,Water body 185,1098.30967122698
+WB164,Water body 164,WB186,Water body 186,1728.20222858748
+WB165,Water body 165,WB185,Water body 185,1829.4514968186
+WB165,Water body 165,WB186,Water body 186,997.166746597319
+WB168,Water body 168,WB169,Water body 169,1850.86732468415
+WB168,Water body 168,WB187,Water body 187,996.475934699439
+WB168,Water body 168,WB188,Water body 188,2147.69603160023
+WB169,Water body 169,WB170,Water body 170,1852.13115789474
+WB169,Water body 169,WB187,Water body 187,2147.58271688807
+WB169,Water body 169,WB188,Water body 188,996.522078424215
+WB169,Water body 169,WB189,Water body 189,2145.17793936493
+WB170,Water body 170,WB171,Water body 171,1850.49672392107
+WB170,Water body 170,WB188,Water body 188,2151.01996374411
+WB170,Water body 170,WB189,Water body 189,996.082769213263
+WB170,Water body 170,WB190,Water body 190,2148.04686782946
+WB171,Water body 171,WB172,Water body 172,1849.67597918766
+WB171,Water body 171,WB189,Water body 189,2149.26807339237
+WB171,Water body 171,WB190,Water body 190,998.449306675428
+WB171,Water body 171,WB191,Water body 191,2147.78400018181
+WB172,Water body 172,WB173,Water body 173,1851.00749847428
+WB172,Water body 172,WB190,Water body 190,2147.91068586453
+WB172,Water body 172,WB191,Water body 191,996.140088691858
+WB172,Water body 172,WB192,Water body 192,1960.99843290025
+WB173,Water body 173,WB174,Water body 174,1010.97378175787
+WB173,Water body 173,WB191,Water body 191,2147.91022079586
+WB173,Water body 173,WB192,Water body 192,971.300733016658
+WB173,Water body 173,WB193,Water body 193,1117.62969672867
+WB174,Water body 174,WB192,Water body 192,1538.37029510534
+WB174,Water body 174,WB193,Water body 193,514.031153516769
+WB175,Water body 175,WB176,Water body 176,1410.19825051597
+WB175,Water body 175,WB194,Water body 194,1047.41876514834
+WB175,Water body 175,WB195,Water body 195,1837.68636952247
+WB176,Water body 176,WB177,Water body 177,1851.00686447973
+WB176,Water body 176,WB194,Water body 194,1385.24488384189
+WB176,Water body 176,WB195,Water body 195,994.489438191152
+WB176,Water body 176,WB196,Water body 196,2147.89904758165
+WB177,Water body 177,WB178,Water body 178,1646.68995138697
+WB177,Water body 177,WB195,Water body 195,2144.79518771534
+WB177,Water body 177,WB196,Water body 196,996.157896817648
+WB177,Water body 177,WB197,Water body 197,1911.27680846108
+WB178,Water body 178,WB196,Water body 196,1978.54311313682
+WB178,Water body 178,WB197,Water body 197,1034.48861263572
+WB179,Water body 179,WB180,Water body 180,1019.85638630416
+WB180,Water body 180,WB181,Water body 181,1873.72443839787
+WB180,Water body 180,WB198,Water body 198,1084.95502724433
+WB180,Water body 180,WB199,Water body 199,2184.27341504277
+WB181,Water body 181,WB182,Water body 182,1849.3494680682
+WB181,Water body 181,WB198,Water body 198,1996.73153692692
+WB181,Water body 181,WB199,Water body 199,996.618041970975
+WB181,Water body 181,WB200,Water body 200,2146.62530142004
+WB182,Water body 182,WB183,Water body 183,1851.00774820093
+WB182,Water body 182,WB199,Water body 199,2147.90490908527
+WB182,Water body 182,WB200,Water body 200,996.140186140478
+WB182,Water body 182,WB201,Water body 201,2147.87164470019
+WB183,Water body 183,WB184,Water body 184,1404.57842843839
+WB183,Water body 183,WB200,Water body 200,2147.91059253878
+WB183,Water body 183,WB201,Water body 201,996.122448638845
+WB183,Water body 183,WB202,Water body 202,2107.2372963159
+WB184,Water body 184,WB201,Water body 201,1703.24243659421
+WB184,Water body 184,WB202,Water body 202,1006.50679727525
+WB185,Water body 185,WB186,Water body 186,1561.9201056585
+WB185,Water body 185,WB206,Water body 206,981.920318489171
+WB185,Water body 185,WB208,Water body 208,1860.57698747856
+WB186,Water body 186,WB206,Water body 206,2119.08994889118
+WB186,Water body 186,WB208,Water body 208,1003.03088151495
+WB186,Water body 186,WB209,Water body 209,995.230622043035
+WB187,Water body 187,WB188,Water body 188,1947.43189524428
+WB187,Water body 187,WB210,Water body 210,995.24585841197
+WB187,Water body 187,WB211,Water body 211,2212.77994154219
+WB188,Water body 188,WB189,Water body 189,1947.38248830467
+WB188,Water body 188,WB210,Water body 210,2212.86127868425
+WB188,Water body 188,WB211,Water body 211,995.068843977497
+WB188,Water body 188,WB212,Water body 212,2213.66823157943
+WB189,Water body 189,WB190,Water body 190,1949.34237405717
+WB189,Water body 189,WB211,Water body 211,2213.70720552222
+WB189,Water body 189,WB212,Water body 212,998.916893750911
+WB189,Water body 189,WB213,Water body 213,2215.82105377292
+WB190,Water body 190,WB191,Water body 191,1948.30170323286
+WB190,Water body 190,WB212,Water body 212,2213.2724136673
+WB190,Water body 190,WB213,Water body 213,995.432622475944
+WB190,Water body 190,WB214,Water body 214,2210.09866103291
+WB191,Water body 191,WB192,Water body 192,1755.45806969472
+WB191,Water body 191,WB213,Water body 213,2213.33717550079
+WB191,Water body 191,WB214,Water body 214,994.01099690333
+WB191,Water body 191,WB215,Water body 215,1811.1382678267
+WB192,Water body 192,WB193,Water body 193,1266.57658784879
+WB192,Water body 192,WB214,Water body 214,2063.35783065942
+WB192,Water body 192,WB215,Water body 215,1054.87695089292
+WB194,Water body 194,WB195,Water body 195,1133.91582160574
+WB195,Water body 195,WB196,Water body 196,1945.57904144239
+WB195,Water body 195,WB217,Water body 217,1003.91059688766
+WB195,Water body 195,WB218,Water body 218,2211.67858875694
+WB196,Water body 196,WB197,Water body 197,1664.90102520687
+WB196,Water body 196,WB217,Water body 217,2196.52867709363
+WB196,Water body 196,WB218,Water body 218,995.432011361657
+WB196,Water body 196,WB219,Water body 219,1881.00385730858
+WB197,Water body 197,WB218,Water body 218,1956.56797705318
+WB197,Water body 197,WB219,Water body 219,948.809168384556
+WB198,Water body 198,WB199,Water body 199,1751.64913897148
+WB198,Water body 198,WB220,Water body 220,943.431001120578
+WB198,Water body 198,WB221,Water body 221,2022.19532799889
+WB199,Water body 199,WB200,Water body 200,1948.29645702517
+WB199,Water body 199,WB220,Water body 220,2008.34304552343
+WB199,Water body 199,WB221,Water body 221,995.438493060662
+WB199,Water body 199,WB222,Water body 222,2213.35832196643
+WB200,Water body 200,WB201,Water body 201,1948.26633202798
+WB200,Water body 200,WB221,Water body 221,2213.24249954448
+WB200,Water body 200,WB222,Water body 222,995.436429011331
+WB200,Water body 200,WB223,Water body 223,2116.33978669787
+WB201,Water body 201,WB202,Water body 202,1897.13267051522
+WB201,Water body 201,WB222,Water body 222,2213.29199374834
+WB201,Water body 201,WB223,Water body 223,971.427090012942
+WB201,Water body 201,WB224,Water body 224,2252.00751785018
+WB202,Water body 202,WB203,Water body 203,2059.04922421146
+WB202,Water body 202,WB204,Water body 204,1034.09788353332
+WB202,Water body 202,WB205,Water body 205,1032.09269170378
+WB202,Water body 202,WB223,Water body 223,2234.5047408282
+WB202,Water body 202,WB224,Water body 224,948.10467337951
+WB203,Water body 203,WB206,Water body 206,1951.62528715193
+WB203,Water body 203,WB228,Water body 228,976.278984974748
+WB203,Water body 203,WB229,Water body 229,869.665371607556
+WB203,Water body 203,WB231,Water body 231,1131.43459423074
+WB206,Water body 206,WB208,Water body 208,1909.39908813369
+WB206,Water body 206,WB228,Water body 228,1202.80875801606
+WB206,Water body 206,WB230,Water body 230,1033.41710166899
+WB206,Water body 206,WB231,Water body 231,1060.35511417303
+WB206,Water body 206,WB232,Water body 232,872.528486790974
+WB206,Water body 206,WB233,Water body 233,855.316789966882
+WB206,Water body 206,WB234,Water body 234,2183.02480275135
+WB207,Water body 207,WB230,Water body 230,776.234536112086
+WB208,Water body 208,WB230,Water body 230,2148.5437566453
+WB208,Water body 208,WB234,Water body 234,993.757788648543
+WB210,Water body 210,WB211,Water body 211,1997.57201949016
+WB210,Water body 210,WB235,Water body 235,995.189888653435
+WB210,Water body 210,WB236,Water body 236,2235.5973332617
+WB211,Water body 211,WB212,Water body 212,1997.68704388747
+WB211,Water body 211,WB235,Water body 235,2235.45376235299
+WB211,Water body 211,WB236,Water body 236,995.253890603954
+WB211,Water body 211,WB237,Water body 237,2235.43176224082
+WB212,Water body 212,WB213,Water body 213,1997.43362382771
+WB212,Water body 212,WB236,Water body 236,2235.41445737586
+WB212,Water body 212,WB237,Water body 237,995.07857428492
+WB212,Water body 212,WB238,Water body 238,2235.27502103909
+WB213,Water body 213,WB214,Water body 214,1994.6374793094
+WB213,Water body 213,WB237,Water body 237,2235.44202793195
+WB213,Water body 213,WB238,Water body 238,995.189005088048
+WB213,Water body 213,WB239,Water body 239,2235.28946558366
+WB214,Water body 214,WB215,Water body 215,1542.28435392883
+WB214,Water body 214,WB238,Water body 238,2233.46232502497
+WB214,Water body 214,WB239,Water body 239,996.74617026142
+WB214,Water body 214,WB241,Water body 241,1930.00201600009
+WB215,Water body 215,WB239,Water body 239,1844.62060628357
+WB215,Water body 215,WB241,Water body 241,1013.38823243036
+WB216,Water body 216,WB217,Water body 217,1604.30382102537
+WB216,Water body 216,WB248,Water body 248,789.206302117666
+WB216,Water body 216,WB249,Water body 249,1693.79279695101
+WB217,Water body 217,WB218,Water body 218,1975.12117372484
+WB217,Water body 217,WB248,Water body 248,2180.29054514822
+WB217,Water body 217,WB249,Water body 249,988.825677953202
+WB217,Water body 217,WB250,Water body 250,2039.28646773263
+WB218,Water body 218,WB219,Water body 219,1638.56000060217
+WB218,Water body 218,WB249,Water body 249,2235.457175144
+WB218,Water body 218,WB250,Water body 250,890.707258040833
+WB218,Water body 218,WB251,Water body 251,1698.21433477937
+WB219,Water body 219,WB250,Water body 250,2003.10704850776
+WB219,Water body 219,WB251,Water body 251,858.713990047193
+WB220,Water body 220,WB221,Water body 221,1775.4929206948
+WB220,Water body 220,WB252,Water body 252,993.939391957406
+WB220,Water body 220,WB253,Water body 253,2049.38780438653
+WB221,Water body 221,WB222,Water body 222,1997.48120420617
+WB221,Water body 221,WB252,Water body 252,1673.27892002468
+WB221,Water body 221,WB253,Water body 253,995.185578639153
+WB221,Water body 221,WB254,Water body 254,2233.92145772537
+WB222,Water body 222,WB223,Water body 223,1902.67783169913
+WB222,Water body 222,WB253,Water body 253,2235.46370940281
+WB222,Water body 222,WB254,Water body 254,984.435854764086
+WB222,Water body 222,WB256,Water body 256,2213.48332005101
+WB223,Water body 223,WB224,Water body 224,2158.96785569374
+WB223,Water body 223,WB254,Water body 254,2155.82063776992
+WB223,Water body 223,WB256,Water body 256,1051.6165692155
+WB223,Water body 223,WB257,Water body 257,2377.18994083568
+WB224,Water body 224,WB229,Water body 229,1742.29826178952
+WB224,Water body 224,WB256,Water body 256,2362.75248761094
+WB224,Water body 224,WB257,Water body 257,1109.7825377766
+WB224,Water body 224,WB259,Water body 259,2209.73278311363
+WB225,Water body 225,WB229,Water body 229,850.610501231209
+WB226,Water body 226,WB257,Water body 257,639.451089337464
+WB227,Water body 227,WB257,Water body 257,629.103487719175
+WB228,Water body 228,WB231,Water body 231,167.091262665065
+WB229,Water body 229,WB230,Water body 230,2273.81390556265
+WB229,Water body 229,WB257,Water body 257,2081.00667336317
+WB229,Water body 229,WB259,Water body 259,1006.82517745401
+WB229,Water body 229,WB260,Water body 260,2401.40276589726
+WB230,Water body 230,WB234,Water body 234,1910.70675180915
+WB230,Water body 230,WB259,Water body 259,2289.33981342671
+WB230,Water body 230,WB260,Water body 260,968.14964160303
+WB230,Water body 230,WB261,Water body 261,2143.36809134963
+WB234,Water body 234,WB260,Water body 260,2235.48290095715
+WB234,Water body 234,WB261,Water body 261,995.218050999695
+WB235,Water body 235,WB236,Water body 236,1997.70901440612
+WB235,Water body 235,WB262,Water body 262,995.432729525116
+WB235,Water body 235,WB263,Water body 263,2213.34138250051
+WB236,Water body 236,WB237,Water body 237,1997.42183140168
+WB236,Water body 236,WB262,Water body 262,2213.43051810724
+WB236,Water body 236,WB263,Water body 263,995.365170090478
+WB236,Water body 236,WB264,Water body 264,2213.18067192745
+WB237,Water body 237,WB238,Water body 238,1997.56402664107
+WB237,Water body 237,WB263,Water body 263,2213.33717550079
+WB237,Water body 237,WB264,Water body 264,995.432622475944
+WB237,Water body 237,WB265,Water body 265,2213.33561414132
+WB238,Water body 238,WB239,Water body 239,1997.32955588711
+WB238,Water body 238,WB264,Water body 264,2213.33717550079
+WB238,Water body 238,WB265,Water body 265,995.433525258402
+WB238,Water body 238,WB267,Water body 267,2098.12895699921
+WB239,Water body 239,WB241,Water body 241,1648.82272235054
+WB239,Water body 239,WB265,Water body 265,2213.0738849006
+WB239,Water body 239,WB267,Water body 267,936.18603253931
+WB239,Water body 239,WB268,Water body 268,1412.84351956028
+WB240,Water body 240,WB269,Water body 269,636.872128412039
+WB240,Water body 240,WB274,Water body 274,70.038155441658
+WB241,Water body 241,WB267,Water body 267,1967.73760020609
+WB241,Water body 241,WB268,Water body 268,821.197322243341
+WB241,Water body 241,WB275,Water body 275,764.913619610184
+WB242,Water body 242,WB269,Water body 269,643.282154335071
+WB243,Water body 243,WB269,Water body 269,584.317231282457
+WB244,Water body 244,WB269,Water body 269,671.482791628717
+WB245,Water body 245,WB248,Water body 248,1415.88708008041
+WB245,Water body 245,WB276,Water body 276,949.232288158379
+WB245,Water body 245,WB277,Water body 277,1421.42096346628
+WB246,Water body 246,WB248,Water body 248,1102.58595123372
+WB247,Water body 247,WB276,Water body 276,566.244645039254
+WB248,Water body 248,WB249,Water body 249,1902.46269536201
+WB248,Water body 248,WB276,Water body 276,2257.45228561875
+WB248,Water body 248,WB277,Water body 277,972.441076662697
+WB248,Water body 248,WB278,Water body 278,2115.76765931667
+WB249,Water body 249,WB250,Water body 250,1865.89400208477
+WB249,Water body 249,WB277,Water body 277,2213.33819916348
+WB249,Water body 249,WB278,Water body 278,994.877384940913
+WB249,Water body 249,WB279,Water body 279,1443.29669489741
+WB250,Water body 250,WB251,Water body 251,1632.64796189106
+WB250,Water body 250,WB278,Water body 278,2152.81283311691
+WB250,Water body 250,WB279,Water body 279,1230.11265047357
+WB252,Water body 252,WB253,Water body 253,1410.9128498106
+WB252,Water body 252,WB280,Water body 280,1108.65542469805
+WB252,Water body 252,WB282,Water body 282,1774.56971786584
+WB253,Water body 253,WB254,Water body 254,2001.40336782855
+WB253,Water body 253,WB280,Water body 280,1926.73285177072
+WB253,Water body 253,WB282,Water body 282,994.159427970157
+WB253,Water body 253,WB283,Water body 283,1459.24237854576
+WB254,Water body 254,WB256,Water body 256,1956.23899162155
+WB254,Water body 254,WB282,Water body 282,2214.28572635552
+WB254,Water body 254,WB283,Water body 283,1214.13665378394
+WB254,Water body 254,WB284,Water body 284,1085.90444396414
+WB254,Water body 254,WB287,Water body 287,1717.63669352813
+WB255,Water body 255,WB284,Water body 284,661.959326390038
+WB256,Water body 256,WB257,Water body 257,2051.07185730399
+WB256,Water body 256,WB284,Water body 284,1755.86231954255
+WB256,Water body 256,WB285,Water body 285,736.810752037107
+WB256,Water body 256,WB286,Water body 286,1085.96192821584
+WB256,Water body 256,WB287,Water body 287,1065.09338220834
+WB256,Water body 256,WB290,Water body 290,2214.60974750086
+WB257,Water body 257,WB259,Water body 259,1994.8862583997
+WB257,Water body 257,WB286,Water body 286,1214.75242169987
+WB257,Water body 257,WB290,Water body 290,939.07907663528
+WB258,Water body 258,WB290,Water body 290,1069.41243281674
+WB259,Water body 259,WB260,Water body 260,1983.73812279111
+WB259,Water body 259,WB291,Water body 291,994.47703942897
+WB259,Water body 259,WB293,Water body 293,2200.80637220986
+WB260,Water body 260,WB261,Water body 261,1997.6990244568
+WB260,Water body 260,WB291,Water body 291,2212.90633856804
+WB260,Water body 260,WB293,Water body 293,997.512601814148
+WB260,Water body 260,WB294,Water body 294,2213.45143463467
+WB261,Water body 261,WB293,Water body 293,2214.81638374328
+WB261,Water body 261,WB294,Water body 294,995.434268305006
+WB262,Water body 262,WB263,Water body 263,1948.30192363548
+WB262,Water body 262,WB295,Water body 295,996.139863470154
+WB262,Water body 262,WB296,Water body 296,2151.69191842916
+WB263,Water body 263,WB264,Water body 264,1948.30170323286
+WB263,Water body 263,WB295,Water body 295,2147.9102980119
+WB263,Water body 263,WB296,Water body 296,998.4044441313
+WB263,Water body 263,WB297,Water body 297,2147.91059253878
+WB264,Water body 264,WB265,Water body 265,1948.29952555804
+WB264,Water body 264,WB296,Water body 296,2146.01053265517
+WB264,Water body 264,WB297,Water body 297,996.140186140478
+WB264,Water body 264,WB298,Water body 298,2117.96685237373
+WB265,Water body 265,WB267,Water body 267,1854.66513835182
+WB265,Water body 265,WB297,Water body 297,2147.90828378015
+WB265,Water body 265,WB298,Water body 298,988.268028195854
+WB265,Water body 265,WB299,Water body 299,1359.13465986688
+WB266,Water body 266,WB300,Water body 300,547.394173844733
+WB267,Water body 267,WB268,Water body 268,1325.98644102941
+WB267,Water body 267,WB298,Water body 298,2120.6821011053
+WB267,Water body 267,WB299,Water body 299,1104.95632479376
+WB269,Water body 269,WB276,Water body 276,1773.18965058139
+WB269,Water body 269,WB304,Water body 304,972.113250595684
+WB269,Water body 269,WB305,Water body 305,776.824350741094
+WB269,Water body 269,WB308,Water body 308,859.287602526563
+WB270,Water body 270,WB276,Water body 276,1151.57922843636
+WB271,Water body 271,WB276,Water body 276,1147.04480727958
+WB272,Water body 272,WB276,Water body 276,1139.22998944079
+WB273,Water body 273,WB276,Water body 276,1051.67158048852
+WB276,Water body 276,WB277,Water body 277,1891.21168735062
+WB276,Water body 276,WB305,Water body 305,1197.60208263547
+WB276,Water body 276,WB306,Water body 306,960.073699621495
+WB276,Water body 276,WB307,Water body 307,800.817098365141
+WB276,Water body 276,WB308,Water body 308,1104.42615042984
+WB276,Water body 276,WB309,Water body 309,2071.51050163624
+WB277,Water body 277,WB278,Water body 278,1947.65672694861
+WB277,Water body 277,WB306,Water body 306,2134.06598455582
+WB277,Water body 277,WB309,Water body 309,996.140186140478
+WB277,Water body 277,WB310,Water body 310,2147.91059253878
+WB278,Water body 278,WB279,Water body 279,1125.96778603972
+WB278,Water body 278,WB309,Water body 309,2147.60999424613
+WB278,Water body 278,WB310,Water body 310,996.686842342004
+WB278,Water body 278,WB311,Water body 311,1718.7522015351
+WB279,Water body 279,WB310,Water body 310,1553.15523153374
+WB279,Water body 279,WB311,Water body 311,1275.05316517615
+WB280,Water body 280,WB282,Water body 282,1641.54904359333
+WB280,Water body 280,WB313,Water body 313,1364.79531511842
+WB281,Water body 281,WB313,Water body 313,372.943812906403
+WB282,Water body 282,WB283,Water body 283,1143.6858083876
+WB282,Water body 282,WB315,Water body 315,903.780871128551
+WB282,Water body 282,WB318,Water body 318,1222.52234882319
+WB283,Water body 283,WB315,Water body 315,1465.9450500488
+WB283,Water body 283,WB318,Water body 318,827.880536598854
+WB283,Water body 283,WB319,Water body 319,619.171246944506
+WB284,Water body 284,WB287,Water body 287,947.851136963305
+WB284,Water body 284,WB317,Water body 317,755.338854398063
+WB284,Water body 284,WB320,Water body 320,999.062810384973
+WB286,Water body 286,WB290,Water body 290,1132.21421616272
+WB287,Water body 287,WB317,Water body 317,973.725640078612
+WB287,Water body 287,WB320,Water body 320,783.204267794585
+WB288,Water body 288,WB290,Water body 290,1090.49821546641
+WB288,Water body 288,WB321,Water body 321,230.824160247716
+WB288,Water body 288,WB325,Water body 325,1314.5920570949
+WB289,Water body 289,WB321,Water body 321,171.392673697148
+WB290,Water body 290,WB291,Water body 291,1974.53003060916
+WB290,Water body 290,WB292,Water body 292,1088.12325299948
+WB290,Water body 290,WB321,Water body 321,1223.63026356367
+WB290,Water body 290,WB325,Water body 325,924.31121359158
+WB290,Water body 290,WB327,Water body 327,2166.4929395531
+WB291,Water body 291,WB293,Water body 293,1946.94645762993
+WB291,Water body 291,WB325,Water body 325,1910.2576535559
+WB291,Water body 291,WB327,Water body 327,995.316936565282
+WB291,Water body 291,WB328,Water body 328,2149.02641949777
+WB293,Water body 293,WB294,Water body 294,1948.87886739248
+WB293,Water body 293,WB327,Water body 327,2145.66824818088
+WB293,Water body 293,WB328,Water body 328,996.212633770459
+WB293,Water body 293,WB329,Water body 329,2147.45559227436
+WB294,Water body 294,WB328,Water body 328,2147.78450875746
+WB294,Water body 294,WB329,Water body 329,996.139122518552
+WB295,Water body 295,WB296,Water body 296,1853.9913229219
+WB295,Water body 295,WB330,Water body 330,997.245572785383
+WB295,Water body 295,WB331,Water body 331,2041.8720935953
+WB296,Water body 296,WB297,Water body 297,1847.75354389969
+WB296,Water body 296,WB330,Water body 330,2043.25911079983
+WB296,Water body 296,WB331,Water body 331,994.989355269598
+WB296,Water body 296,WB332,Water body 332,2038.02055461714
+WB297,Water body 297,WB298,Water body 298,1822.45428410099
+WB297,Water body 297,WB331,Water body 331,2041.87163795063
+WB297,Water body 297,WB332,Water body 332,997.24389952176
+WB297,Water body 297,WB333,Water body 333,1656.41834563416
+WB298,Water body 298,WB299,Water body 299,1130.06106563171
+WB298,Water body 298,WB301,Water body 301,987.502430688424
+WB298,Water body 298,WB302,Water body 302,984.621096733045
+WB298,Water body 298,WB303,Water body 303,983.73431380678
+WB298,Water body 298,WB332,Water body 332,2022.10733187205
+WB298,Water body 298,WB333,Water body 333,1027.84129133271
+WB298,Water body 298,WB334,Water body 334,882.989487251651
+WB298,Water body 298,WB335,Water body 335,900.778633652895
+WB300,Water body 300,WB304,Water body 304,1326.09110519077
+WB300,Water body 300,WB336,Water body 336,578.498218920878
+WB300,Water body 300,WB337,Water body 337,612.935406102615
+WB300,Water body 300,WB340,Water body 340,952.25302489883
+WB304,Water body 304,WB306,Water body 306,1855.24901132852
+WB304,Water body 304,WB336,Water body 336,1381.25581864542
+WB304,Water body 304,WB339,Water body 339,1034.02501540623
+WB304,Water body 304,WB340,Water body 340,856.670104391904
+WB304,Water body 304,WB341,Water body 341,2006.7283558112
+WB305,Water body 305,WB308,Water body 308,98.537986879609
+WB306,Water body 306,WB309,Water body 309,1825.55181752732
+WB306,Water body 306,WB339,Water body 339,1615.51004532582
+WB306,Water body 306,WB341,Water body 341,977.885923405904
+WB306,Water body 306,WB342,Water body 342,2010.70185910885
+WB309,Water body 309,WB310,Water body 310,1851.00774820093
+WB309,Water body 309,WB341,Water body 341,2041.86464867388
+WB309,Water body 309,WB342,Water body 342,997.24389952176
+WB309,Water body 309,WB343,Water body 343,2041.82386426987
+WB310,Water body 310,WB311,Water body 311,1245.45985763864
+WB310,Water body 310,WB342,Water body 342,2041.87163795063
+WB310,Water body 310,WB343,Water body 343,997.277492576035
+WB310,Water body 310,WB344,Water body 344,1780.82981021735
+WB311,Water body 311,WB343,Water body 343,1453.60924644209
+WB311,Water body 311,WB344,Water body 344,954.046736729439
+WB312,Water body 312,WB313,Water body 313,546.419912779466
+WB312,Water body 312,WB347,Water body 347,285.8732138295
+WB314,Water body 314,WB315,Water body 315,1244.78947114835
+WB314,Water body 314,WB350,Water body 350,378.080803443071
+WB315,Water body 315,WB318,Water body 318,939.358362361405
+WB315,Water body 315,WB351,Water body 351,956.094673485044
+WB316,Water body 316,WB318,Water body 318,219.592149359949
+WB317,Water body 317,WB320,Water body 320,402.49068364615
+WB317,Water body 317,WB322,Water body 322,388.268872042134
+WB317,Water body 317,WB323,Water body 323,355.452056727939
+WB321,Water body 321,WB325,Water body 325,1279.19843396617
+WB324,Water body 324,WB325,Water body 325,1150.02516259586
+WB325,Water body 325,WB327,Water body 327,1643.42303864336
+WB325,Water body 325,WB352,Water body 352,1215.2984368314
+WB325,Water body 325,WB353,Water body 353,637.53506567566
+WB325,Water body 325,WB354,Water body 354,635.946266687484
+WB325,Water body 325,WB355,Water body 355,1922.83467295745
+WB326,Water body 326,WB353,Water body 353,7.37759680949354
+WB327,Water body 327,WB328,Water body 328,1851.44800261058
+WB327,Water body 327,WB352,Water body 352,1550.82725709386
+WB327,Water body 327,WB355,Water body 355,959.098282850194
+WB327,Water body 327,WB356,Water body 356,2041.61409257151
+WB328,Water body 328,WB329,Water body 329,1849.78566871454
+WB328,Water body 328,WB355,Water body 355,2003.74355125557
+WB328,Water body 328,WB356,Water body 356,995.149259074828
+WB328,Water body 328,WB357,Water body 357,2039.80747897002
+WB329,Water body 329,WB356,Water body 356,2041.87201556117
+WB329,Water body 329,WB357,Water body 357,997.243159798465
+WB330,Water body 330,WB331,Water body 331,1708.10707234559
+WB330,Water body 330,WB358,Water body 358,998.636650284959
+WB330,Water body 330,WB359,Water body 359,1899.91120543513
+WB331,Water body 331,WB332,Water body 332,1708.10867483825
+WB331,Water body 331,WB358,Water body 358,1899.91296767539
+WB331,Water body 331,WB359,Water body 359,998.637540635029
+WB331,Water body 331,WB360,Water body 360,1899.91296767539
+WB332,Water body 332,WB333,Water body 333,1308.90035036776
+WB332,Water body 332,WB359,Water body 359,1899.91296767539
+WB332,Water body 332,WB360,Water body 360,998.637540635029
+WB332,Water body 332,WB361,Water body 361,1311.78777294401
+WB333,Water body 333,WB360,Water body 360,1626.73309333116
+WB333,Water body 333,WB361,Water body 361,1027.21283105628
+WB336,Water body 336,WB340,Water body 340,658.536762672992
+WB338,Water body 338,WB340,Water body 340,395.722012619364
+WB339,Water body 339,WB341,Water body 341,1240.67839816901
+WB339,Water body 339,WB362,Water body 362,812.256765239355
+WB339,Water body 339,WB363,Water body 363,574.896830510108
+WB339,Water body 339,WB364,Water body 364,569.780198216142
+WB339,Water body 339,WB365,Water body 365,569.298027923134
+WB339,Water body 339,WB366,Water body 366,590.125802493397
+WB339,Water body 339,WB368,Water body 368,1586.0361601566
+WB341,Water body 341,WB342,Water body 342,1708.10279834252
+WB341,Water body 341,WB362,Water body 362,1234.46753822887
+WB341,Water body 341,WB368,Water body 368,980.363741343202
+WB341,Water body 341,WB369,Water body 369,1899.90999802992
+WB342,Water body 342,WB343,Water body 343,1708.03796817732
+WB342,Water body 342,WB368,Water body 368,1857.95813210536
+WB342,Water body 342,WB369,Water body 369,998.637540635029
+WB342,Water body 342,WB370,Water body 370,1900.12830939932
+WB343,Water body 343,WB344,Water body 344,1353.50810456535
+WB343,Water body 343,WB369,Water body 369,1899.83823774774
+WB343,Water body 343,WB370,Water body 370,998.997828569551
+WB343,Water body 343,WB371,Water body 371,1685.1247671921
+WB344,Water body 344,WB346,Water body 346,1241.46118659079
+WB344,Water body 344,WB370,Water body 370,1566.67110064858
+WB344,Water body 344,WB371,Water body 371,958.113272536992
+WB344,Water body 344,WB372,Water body 372,1131.62817518159
+WB344,Water body 344,WB375,Water body 375,2060.92339310693
+WB345,Water body 345,WB348,Water body 348,1120.94868248732
+WB345,Water body 345,WB375,Water body 375,821.192319683886
+WB345,Water body 345,WB377,Water body 377,1283.7246066653
+WB346,Water body 346,WB372,Water body 372,178.120686516602
+WB346,Water body 346,WB375,Water body 375,838.344511170897
+WB348,Water body 348,WB375,Water body 375,1759.63675471606
+WB348,Water body 348,WB377,Water body 377,751.471902568161
+WB348,Water body 348,WB380,Water body 380,413.568515931125
+WB348,Water body 348,WB381,Water body 381,501.063343133528
+WB348,Water body 348,WB382,Water body 382,672.563593589216
+WB348,Water body 348,WB383,Water body 383,798.090320164453
+WB349,Water body 349,WB381,Water body 381,75.5003308530124
+WB352,Water body 352,WB355,Water body 355,1129.76813668639
+WB352,Water body 352,WB386,Water body 386,708.232597116668
+WB352,Water body 352,WB387,Water body 387,620.376877085261
+WB355,Water body 355,WB356,Water body 356,1687.85221062041
+WB355,Water body 355,WB386,Water body 386,1419.88590441396
+WB355,Water body 355,WB387,Water body 387,1045.36493661223
+WB355,Water body 355,WB389,Water body 389,1009.81071510957
+WB355,Water body 355,WB390,Water body 390,1908.29524105594
+WB356,Water body 356,WB357,Water body 357,1708.10867483825
+WB356,Water body 356,WB389,Water body 389,1785.54131704815
+WB356,Water body 356,WB390,Water body 390,995.920513532701
+WB356,Water body 356,WB391,Water body 391,1899.91296767539
+WB357,Water body 357,WB390,Water body 390,1893.48252609919
+WB357,Water body 357,WB391,Water body 391,998.637540635029
+WB358,Water body 358,WB359,Water body 359,1523.15935891822
+WB358,Water body 358,WB392,Water body 392,1003.31087890163
+WB358,Water body 358,WB393,Water body 393,1729.07651724603
+WB359,Water body 359,WB360,Water body 360,1523.15935891822
+WB359,Water body 359,WB392,Water body 392,1729.30023145681
+WB359,Water body 359,WB393,Water body 393,1000.18616984077
+WB359,Water body 359,WB394,Water body 394,1687.03992757349
+WB360,Water body 360,WB361,Water body 361,882.377552533786
+WB360,Water body 360,WB393,Water body 393,1729.07651724603
+WB360,Water body 360,WB394,Water body 394,982.655574179799
+WB360,Water body 360,WB395,Water body 395,1120.08552420217
+WB361,Water body 361,WB394,Water body 394,1361.28190576222
+WB361,Water body 361,WB395,Water body 395,838.141428151479
+WB362,Water body 362,WB368,Water body 368,995.418786144751
+WB367,Water body 367,WB400,Water body 400,115.718778609174
+WB368,Water body 368,WB369,Water body 369,1488.04955290784
+WB368,Water body 368,WB401,Water body 401,949.031362196945
+WB368,Water body 368,WB402,Water body 402,629.999904100997
+WB368,Water body 368,WB403,Water body 403,610.915284843989
+WB368,Water body 368,WB404,Water body 404,588.072437827206
+WB368,Water body 368,WB405,Water body 405,574.69539161516
+WB368,Water body 368,WB412,Water body 412,1720.85241342006
+WB369,Water body 369,WB370,Water body 370,1523.16610253003
+WB369,Water body 369,WB401,Water body 401,1459.93185197272
+WB369,Water body 369,WB412,Water body 412,1002.34216484879
+WB369,Water body 369,WB414,Water body 414,1729.07651724603
+WB370,Water body 370,WB371,Water body 371,1243.43005628973
+WB370,Water body 370,WB412,Water body 412,1723.96115621082
+WB370,Water body 370,WB414,Water body 414,999.79229892144
+WB370,Water body 370,WB415,Water body 415,1628.77331699688
+WB371,Water body 371,WB414,Water body 414,1491.73742166401
+WB371,Water body 371,WB415,Water body 415,934.588953225152
+WB372,Water body 372,WB375,Water body 375,929.35945297379
+WB373,Water body 373,WB415,Water body 415,880.389189193459
+WB374,Water body 374,WB375,Water body 375,734.991649104262
+WB375,Water body 375,WB377,Water body 377,1564.22725101837
+WB375,Water body 375,WB378,Water body 378,822.892311722189
+WB375,Water body 375,WB379,Water body 379,823.2108114072
+WB376,Water body 376,WB377,Water body 377,987.956566101601
+WB376,Water body 376,WB420,Water body 420,316.430065099436
+WB376,Water body 376,WB426,Water body 426,349.679587806154
+WB376,Water body 376,WB427,Water body 427,249.193476551834
+WB377,Water body 377,WB384,Water body 384,998.329914128174
+WB377,Water body 377,WB430,Water body 430,701.583331236341
+WB377,Water body 377,WB431,Water body 431,901.296527302915
+WB377,Water body 377,WB432,Water body 432,744.260941057582
+WB377,Water body 377,WB433,Water body 433,878.438419855874
+WB377,Water body 377,WB435,Water body 435,907.439022883331
+WB383,Water body 383,WB385,Water body 385,102.475753781854
+WB384,Water body 384,WB431,Water body 431,320.611326993626
+WB384,Water body 384,WB435,Water body 435,318.906380944769
+WB384,Water body 384,WB436,Water body 436,402.960483706408
+WB386,Water body 386,WB387,Water body 387,380.811275012089
+WB388,Water body 388,WB390,Water body 390,919.206531867083
+WB388,Water body 388,WB437,Water body 437,415.430416882823
+WB388,Water body 388,WB443,Water body 443,882.853351961675
+WB389,Water body 389,WB390,Water body 390,1421.52652812775
+WB389,Water body 389,WB437,Water body 437,964.32099185279
+WB390,Water body 390,WB391,Water body 391,1517.65203725075
+WB390,Water body 390,WB437,Water body 437,1265.51104082346
+WB390,Water body 390,WB443,Water body 443,992.877655038823
+WB390,Water body 390,WB444,Water body 444,1725.78776640813
+WB391,Water body 391,WB443,Water body 443,1737.45261952576
+WB391,Water body 391,WB444,Water body 444,999.652249076788
+WB392,Water body 392,WB393,Water body 393,1298.94087104373
+WB392,Water body 392,WB445,Water body 445,994.527803436142
+WB392,Water body 392,WB451,Water body 451,1556.57370750422
+WB393,Water body 393,WB394,Water body 394,1265.47952086644
+WB393,Water body 393,WB445,Water body 445,1565.0258975326
+WB393,Water body 393,WB451,Water body 451,814.263945858442
+WB393,Water body 393,WB455,Water body 455,1224.77633689655
+WB394,Water body 394,WB395,Water body 395,827.304822503391
+WB394,Water body 394,WB396,Water body 396,722.327535441777
+WB394,Water body 394,WB397,Water body 397,699.18482315402
+WB394,Water body 394,WB398,Water body 398,694.908765614733
+WB394,Water body 394,WB451,Water body 451,1311.96354176819
+WB394,Water body 394,WB455,Water body 455,834.813123566297
+WB394,Water body 394,WB456,Water body 456,672.06359015795
+WB394,Water body 394,WB457,Water body 457,683.589630026686
+WB399,Water body 399,WB459,Water body 459,723.163018003263
+WB400,Water body 400,WB401,Water body 401,1094.5647253436
+WB401,Water body 401,WB412,Water body 412,1072.74960215187
+WB401,Water body 401,WB413,Water body 413,434.155025550414
+WB401,Water body 401,WB461,Water body 461,1228.3645962377
+WB401,Water body 401,WB462,Water body 462,1436.72003873576
+WB406,Water body 406,WB461,Water body 461,653.399501088487
+WB407,Water body 407,WB412,Water body 412,683.186836078499
+WB408,Water body 408,WB412,Water body 412,669.398867776558
+WB409,Water body 409,WB412,Water body 412,668.403857814651
+WB410,Water body 410,WB412,Water body 412,675.064855735855
+WB411,Water body 411,WB412,Water body 412,659.639835131692
+WB412,Water body 412,WB414,Water body 414,1293.80858663012
+WB412,Water body 412,WB461,Water body 461,1507.42336327828
+WB412,Water body 412,WB462,Water body 462,961.454578612
+WB412,Water body 412,WB463,Water body 463,1533.38032346171
+WB414,Water body 414,WB415,Water body 415,1205.35036602444
+WB414,Water body 414,WB462,Water body 462,1514.54002991734
+WB414,Water body 414,WB463,Water body 463,1001.73877263688
+WB414,Water body 414,WB464,Water body 464,1535.32258014245
+WB415,Water body 415,WB421,Water body 421,1032.19172865257
+WB415,Water body 415,WB463,Water body 463,1493.86869904749
+WB415,Water body 415,WB464,Water body 464,1073.24568860228
+WB415,Water body 415,WB465,Water body 465,740.671160405593
+WB415,Water body 415,WB466,Water body 466,747.80217903684
+WB415,Water body 415,WB467,Water body 467,756.401531984265
+WB416,Water body 416,WB464,Water body 464,512.826648622328
+WB417,Water body 417,WB421,Water body 421,256.622011428189
+WB418,Water body 418,WB421,Water body 421,257.657927813009
+WB418,Water body 418,WB464,Water body 464,805.43570942592
+WB418,Water body 418,WB468,Water body 468,582.438470689976
+WB419,Water body 419,WB468,Water body 468,514.417516818542
+WB421,Water body 421,WB464,Water body 464,1052.80057947141
+WB421,Water body 421,WB468,Water body 468,586.729863914561
+WB422,Water body 422,WB468,Water body 468,579.364979085134
+WB423,Water body 423,WB468,Water body 468,545.162553736882
+WB424,Water body 424,WB468,Water body 468,473.351026256231
+WB425,Water body 425,WB468,Water body 468,452.044259011777
+WB428,Water body 428,WB468,Water body 468,650.290541848823
+WB428,Water body 428,WB473,Water body 473,68.7828094204726
+WB429,Water body 429,WB468,Water body 468,589.668906224095
+WB431,Water body 431,WB435,Water body 435,6.2070502562772
+WB434,Water body 434,WB436,Water body 436,136.292641833922
+WB437,Water body 437,WB443,Water body 443,857.702136285328
+WB437,Water body 437,WB476,Water body 476,898.644110605722
+WB438,Water body 438,WB476,Water body 476,244.745260355501
+WB439,Water body 439,WB476,Water body 476,312.612903582122
+WB440,Water body 440,WB476,Water body 476,301.452290592594
+WB441,Water body 441,WB476,Water body 476,348.811157655306
+WB442,Water body 442,WB443,Water body 443,728.855791150713
+WB442,Water body 442,WB476,Water body 476,448.492651809966
+WB442,Water body 442,WB477,Water body 477,763.336965758693
+WB443,Water body 443,WB444,Water body 444,1316.43586177419
+WB443,Water body 443,WB476,Water body 476,1095.8093897958
+WB443,Water body 443,WB477,Water body 477,902.868957742592
+WB443,Water body 443,WB478,Water body 478,793.303318283623
+WB443,Water body 443,WB481,Water body 481,1557.54814129711
+WB444,Water body 444,WB478,Water body 478,858.31772982578
+WB444,Water body 444,WB481,Water body 481,905.276383779218
+WB445,Water body 445,WB450,Water body 450,684.871036253491
+WB445,Water body 445,WB451,Water body 451,1247.94530273054
+WB445,Water body 445,WB452,Water body 452,596.316258953699
+WB445,Water body 445,WB453,Water body 453,567.473938613812
+WB445,Water body 445,WB454,Water body 454,564.596395234788
+WB445,Water body 445,WB483,Water body 483,1051.72693847372
+WB446,Water body 446,WB483,Water body 483,644.68470988641
+WB447,Water body 447,WB483,Water body 483,635.879548625876
+WB448,Water body 448,WB453,Water body 453,31.1192569499136
+WB449,Water body 449,WB451,Water body 451,714.586257854487
+WB451,Water body 451,WB455,Water body 455,733.730359082136
+WB458,Water body 458,WB459,Water body 459,508.561125912631
+WB458,Water body 458,WB493,Water body 493,388.727152887767
+WB458,Water body 458,WB504,Water body 504,919.020036859545
+WB459,Water body 459,WB461,Water body 461,1265.23676868606
+WB459,Water body 459,WB493,Water body 493,634.262437117713
+WB459,Water body 459,WB504,Water body 504,820.940787080228
+WB459,Water body 459,WB528,Water body 528,740.028777351309
+WB460,Water body 460,WB461,Water body 461,667.091614216389
+WB461,Water body 461,WB462,Water body 462,918.36355475824
+WB461,Water body 461,WB504,Water body 504,1270.21870975621
+WB461,Water body 461,WB525,Water body 525,580.778782195037
+WB461,Water body 461,WB526,Water body 526,931.735712351871
+WB461,Water body 461,WB528,Water body 528,715.1854866431
+WB461,Water body 461,WB529,Water body 529,676.978970048994
+WB461,Water body 461,WB530,Water body 530,523.296684504763
+WB461,Water body 461,WB531,Water body 531,522.2183706499
+WB461,Water body 461,WB532,Water body 532,473.71203514814
+WB461,Water body 461,WB533,Water body 533,472.616631178223
+WB461,Water body 461,WB534,Water body 534,488.582352796096
+WB461,Water body 461,WB537,Water body 537,852.211868110764
+WB462,Water body 462,WB463,Water body 463,1046.7492941351
+WB462,Water body 462,WB526,Water body 526,1346.60301593551
+WB462,Water body 462,WB537,Water body 537,994.072602815268
+WB462,Water body 462,WB538,Water body 538,780.241067906466
+WB462,Water body 462,WB539,Water body 539,600.66167995166
+WB462,Water body 462,WB540,Water body 540,602.334614102113
+WB462,Water body 462,WB542,Water body 542,638.811664621522
+WB462,Water body 462,WB543,Water body 543,1348.39927631903
+WB463,Water body 463,WB464,Water body 464,1007.56069717226
+WB463,Water body 463,WB538,Water body 538,887.375355272024
+WB463,Water body 463,WB543,Water body 543,910.134961371508
+WB463,Water body 463,WB545,Water body 545,1367.55282011066
+WB464,Water body 464,WB468,Water body 468,934.913034234288
+WB464,Water body 464,WB543,Water body 543,1200.01942983865
+WB464,Water body 464,WB545,Water body 545,975.140480971496
+WB464,Water body 464,WB546,Water body 546,1325.61894743768
+WB468,Water body 468,WB474,Water body 474,876.011236802422
+WB468,Water body 468,WB545,Water body 545,1330.45675043045
+WB468,Water body 468,WB546,Water body 546,1153.0182518644
+WB469,Water body 469,WB546,Water body 546,549.89864702516
+WB470,Water body 470,WB474,Water body 474,335.025763151838
+WB471,Water body 471,WB474,Water body 474,440.471442135467
+WB472,Water body 472,WB474,Water body 474,463.815392876059
+WB474,Water body 474,WB550,Water body 550,617.706459823369
+WB474,Water body 474,WB552,Water body 552,471.322140908645
+WB474,Water body 474,WB553,Water body 553,471.514921680461
+WB475,Water body 475,WB550,Water body 550,151.109346646992
+WB476,Water body 476,WB477,Water body 477,673.746688724795
+WB477,Water body 477,WB482,Water body 482,790.470996681735
+WB478,Water body 478,WB481,Water body 481,766.876809164378
+WB479,Water body 479,WB481,Water body 481,665.340303426984
+WB480,Water body 480,WB481,Water body 481,594.694187707402
+WB481,Water body 481,WB574,Water body 574,819.577497605364
+WB483,Water body 483,WB485,Water body 485,816.281287114586
+WB483,Water body 483,WB486,Water body 486,446.432064896606
+WB483,Water body 483,WB487,Water body 487,443.269816315792
+WB483,Water body 483,WB488,Water body 488,600.078484544028
+WB483,Water body 483,WB575,Water body 575,960.911427691337
+WB483,Water body 483,WB576,Water body 576,1129.63000616186
+WB484,Water body 484,WB485,Water body 485,380.784264088453
+WB485,Water body 485,WB489,Water body 489,619.216882742217
+WB485,Water body 485,WB575,Water body 575,819.539696984635
+WB485,Water body 485,WB576,Water body 576,587.168216866862
+WB485,Water body 485,WB577,Water body 577,787.777809348758
+WB489,Water body 489,WB490,Water body 490,629.994837062205
+WB489,Water body 489,WB576,Water body 576,842.711363235048
+WB489,Water body 489,WB577,Water body 577,638.764284464405
+WB489,Water body 489,WB578,Water body 578,909.86422423533
+WB490,Water body 490,WB494,Water body 494,544.428578263022
+WB490,Water body 490,WB495,Water body 495,769.435907026582
+WB490,Water body 490,WB500,Water body 500,464.147665642092
+WB490,Water body 490,WB501,Water body 501,496.241468389459
+WB490,Water body 490,WB577,Water body 577,895.004071289386
+WB490,Water body 490,WB578,Water body 578,823.62726598513
+WB491,Water body 491,WB494,Water body 494,24.4802025014563
+WB492,Water body 492,WB502,Water body 502,14.6833938848962
+WB492,Water body 492,WB578,Water body 578,664.60237231569
+WB492,Water body 492,WB588,Water body 588,41.9103474647572
+WB493,Water body 493,WB504,Water body 504,595.363398775672
+WB495,Water body 495,WB504,Water body 504,814.990288047995
+WB495,Water body 495,WB505,Water body 505,373.733730309175
+WB495,Water body 495,WB506,Water body 506,375.454765165431
+WB495,Water body 495,WB520,Water body 520,368.742278551307
+WB495,Water body 495,WB521,Water body 521,357.287991746081
+WB495,Water body 495,WB522,Water body 522,348.674401476938
+WB495,Water body 495,WB523,Water body 523,345.330868889781
+WB495,Water body 495,WB524,Water body 524,342.522774890412
+WB495,Water body 495,WB581,Water body 581,753.791175941482
+WB495,Water body 495,WB584,Water body 584,257.452436926219
+WB495,Water body 495,WB585,Water body 585,256.117129241392
+WB495,Water body 495,WB589,Water body 589,265.248215911293
+WB496,Water body 496,WB504,Water body 504,526.509666445594
+WB497,Water body 497,WB504,Water body 504,511.977127021775
+WB498,Water body 498,WB504,Water body 504,457.02205605363
+WB499,Water body 499,WB504,Water body 504,421.755840711322
+WB502,Water body 502,WB578,Water body 578,671.850931752161
+WB502,Water body 502,WB588,Water body 588,43.7628517912029
+WB503,Water body 503,WB526,Water body 526,639.771857800681
+WB503,Water body 503,WB591,Water body 591,503.842286910675
+WB503,Water body 503,WB597,Water body 597,392.662308987316
+WB504,Water body 504,WB527,Water body 527,539.994218637167
+WB504,Water body 504,WB528,Water body 528,569.650742328646
+WB507,Water body 507,WB527,Water body 527,23.8525629455569
+WB508,Water body 508,WB526,Water body 526,553.705947486172
+WB509,Water body 509,WB591,Water body 591,454.492882151381
+WB509,Water body 509,WB592,Water body 592,17.8456683492067
+WB510,Water body 510,WB591,Water body 591,426.161130767231
+WB511,Water body 511,WB591,Water body 591,425.236374884486
+WB512,Water body 512,WB591,Water body 591,418.057699842703
+WB513,Water body 513,WB591,Water body 591,438.533279610177
+WB514,Water body 514,WB591,Water body 591,415.149638603894
+WB515,Water body 515,WB591,Water body 591,418.552518548396
+WB516,Water body 516,WB591,Water body 591,414.937227968441
+WB517,Water body 517,WB591,Water body 591,428.382090584442
+WB518,Water body 518,WB591,Water body 591,453.534471374111
+WB519,Water body 519,WB591,Water body 591,515.555158047091
+WB526,Water body 526,WB536,Water body 536,471.074647648619
+WB526,Water body 526,WB537,Water body 537,396.355566305227
+WB526,Water body 526,WB541,Water body 541,329.945723163512
+WB526,Water body 526,WB591,Water body 591,1089.60365743855
+WB526,Water body 526,WB597,Water body 597,706.796723937888
+WB526,Water body 526,WB601,Water body 601,518.101990355205
+WB535,Water body 535,WB536,Water body 536,84.2478608934352
+WB536,Water body 536,WB602,Water body 602,129.858525800334
+WB538,Water body 538,WB543,Water body 543,616.191307020496
+WB543,Water body 543,WB545,Water body 545,762.012997744983
+WB543,Water body 543,WB603,Water body 603,983.348629017251
+WB543,Water body 543,WB607,Water body 607,1240.37388362447
+WB544,Water body 544,WB603,Water body 603,383.896561730669
+WB545,Water body 545,WB546,Water body 546,681.289477295903
+WB545,Water body 545,WB603,Water body 603,940.308896853286
+WB545,Water body 545,WB607,Water body 607,986.38933270864
+WB545,Water body 545,WB608,Water body 608,1124.77028949321
+WB546,Water body 546,WB551,Water body 551,838.140669955084
+WB546,Water body 546,WB554,Water body 554,442.797451147061
+WB546,Water body 546,WB607,Water body 607,1081.56365747501
+WB546,Water body 546,WB608,Water body 608,918.738890425241
+WB546,Water body 546,WB610,Water body 610,1126.19964461188
+WB547,Water body 547,WB551,Water body 551,398.670421924637
+WB548,Water body 548,WB551,Water body 551,408.566428225679
+WB548,Water body 548,WB554,Water body 554,9.88462555366868
+WB549,Water body 549,WB556,Water body 556,564.187629696077
+WB551,Water body 551,WB556,Water body 556,647.319802285305
+WB551,Water body 551,WB608,Water body 608,839.444250231669
+WB551,Water body 551,WB610,Water body 610,593.251157611056
+WB551,Water body 551,WB611,Water body 611,817.045421097979
+WB555,Water body 555,WB561,Water body 561,360.402569260874
+WB556,Water body 556,WB561,Water body 561,657.744439667773
+WB556,Water body 556,WB565,Water body 565,425.507368211658
+WB556,Water body 556,WB566,Water body 566,423.532240239712
+WB556,Water body 556,WB610,Water body 610,935.879172706735
+WB556,Water body 556,WB611,Water body 611,794.657302122592
+WB557,Water body 557,WB561,Water body 561,327.122816767014
+WB558,Water body 558,WB611,Water body 611,540.878801467123
+WB559,Water body 559,WB566,Water body 566,5.14835383460625
+WB560,Water body 560,WB569,Water body 569,307.004773178063
+WB561,Water body 561,WB612,Water body 612,708.528158566246
+WB562,Water body 562,WB569,Water body 569,235.181617092499
+WB563,Water body 563,WB569,Water body 569,232.596437709512
+WB564,Water body 564,WB569,Water body 569,275.858691114087
+WB567,Water body 567,WB614,Water body 614,638.369855547612
+WB568,Water body 568,WB614,Water body 614,620.674302152068
+WB569,Water body 569,WB614,Water body 614,914.71594550666
+WB570,Water body 570,WB619,Water body 619,572.380562809951
+WB570,Water body 570,WB620,Water body 620,213.530583282877
+WB570,Water body 570,WB621,Water body 621,201.365814878263
+WB571,Water body 571,WB573,Water body 573,507.768544326163
+WB571,Water body 571,WB622,Water body 622,604.001487395451
+WB571,Water body 571,WB625,Water body 625,721.285143073551
+WB572,Water body 572,WB622,Water body 622,574.458923258848
+WB572,Water body 572,WB623,Water body 623,31.418962080945
+WB572,Water body 572,WB624,Water body 624,33.0367470693244
+WB573,Water body 573,WB622,Water body 622,848.839981416573
+WB573,Water body 573,WB625,Water body 625,638.324186948033
+WB575,Water body 575,WB576,Water body 576,467.43037052056
+WB575,Water body 575,WB626,Water body 626,1004.97735602249
+WB575,Water body 575,WB627,Water body 627,1041.01185603137
+WB576,Water body 576,WB577,Water body 577,467.43037052056
+WB576,Water body 576,WB626,Water body 626,1041.01185603137
+WB576,Water body 576,WB627,Water body 627,1004.97735602249
+WB576,Water body 576,WB628,Water body 628,1041.01185603137
+WB577,Water body 577,WB578,Water body 578,458.807023197784
+WB577,Water body 577,WB627,Water body 627,1041.01185603137
+WB577,Water body 577,WB628,Water body 628,1004.97735602249
+WB577,Water body 577,WB629,Water body 629,1041.01185603137
+WB578,Water body 578,WB581,Water body 581,430.209188444734
+WB578,Water body 578,WB586,Water body 586,528.794124261844
+WB578,Water body 578,WB587,Water body 587,585.841579376661
+WB578,Water body 578,WB588,Water body 588,629.321969651112
+WB578,Water body 578,WB628,Water body 628,947.733139181715
+WB578,Water body 578,WB629,Water body 629,911.149632237171
+WB578,Water body 578,WB630,Water body 630,953.288406072058
+WB579,Water body 579,WB581,Water body 581,237.371152927618
+WB580,Water body 580,WB581,Water body 581,298.638344732646
+WB581,Water body 581,WB591,Water body 591,546.084255596899
+WB581,Water body 581,WB593,Water body 593,610.686025034944
+WB581,Water body 581,WB629,Water body 629,1004.43671168723
+WB581,Water body 581,WB630,Water body 630,977.273284146384
+WB582,Water body 582,WB591,Water body 591,390.940242903922
+WB583,Water body 583,WB591,Water body 591,599.771660071739
+WB583,Water body 583,WB630,Water body 630,537.208104962992
+WB583,Water body 583,WB634,Water body 634,77.7630410275274
+WB590,Water body 590,WB591,Water body 591,298.197916734932
+WB591,Water body 591,WB597,Water body 597,469.111081038238
+WB591,Water body 591,WB598,Water body 598,501.371684217743
+WB591,Water body 591,WB630,Water body 630,1115.82653906826
+WB591,Water body 591,WB634,Water body 634,602.4503765448
+WB591,Water body 591,WB635,Water body 635,587.56882934322
+WB591,Water body 591,WB636,Water body 636,597.84424422902
+WB594,Water body 594,WB634,Water body 634,14.7892294060228
+WB595,Water body 595,WB598,Water body 598,79.9564317628436
+WB596,Water body 596,WB598,Water body 598,86.0727048498344
+WB598,Water body 598,WB637,Water body 637,713.286328928083
+WB599,Water body 599,WB637,Water body 637,562.916066911985
+WB600,Water body 600,WB637,Water body 637,579.864150844672
+WB603,Water body 603,WB607,Water body 607,332.702591294678
+WB604,Water body 604,WB607,Water body 607,511.965626039849
+WB605,Water body 605,WB639,Water body 639,606.778018104168
+WB606,Water body 606,WB607,Water body 607,285.987834619563
+WB607,Water body 607,WB608,Water body 608,454.362240874856
+WB607,Water body 607,WB640,Water body 640,1022.58306305872
+WB607,Water body 607,WB641,Water body 641,1044.40742483646
+WB608,Water body 608,WB610,Water body 610,499.837698326465
+WB608,Water body 608,WB640,Water body 640,1071.54080726578
+WB608,Water body 608,WB641,Water body 641,1026.0186995329
+WB608,Water body 608,WB642,Water body 642,1063.97087295747
+WB609,Water body 609,WB610,Water body 610,424.823121233795
+WB610,Water body 610,WB611,Water body 611,456.921501729242
+WB610,Water body 610,WB641,Water body 641,1067.18038843952
+WB610,Water body 610,WB642,Water body 642,1029.80463820404
+WB610,Water body 610,WB643,Water body 643,1065.77531605007
+WB611,Water body 611,WB612,Water body 612,475.936380190645
+WB611,Water body 611,WB642,Water body 642,1038.17993234312
+WB611,Water body 611,WB643,Water body 643,1004.76982290254
+WB611,Water body 611,WB644,Water body 644,1045.78987537218
+WB612,Water body 612,WB614,Water body 614,429.415119327317
+WB612,Water body 612,WB643,Water body 643,1016.54094112622
+WB612,Water body 612,WB644,Water body 644,984.044426572421
+WB612,Water body 612,WB645,Water body 645,1012.02267713884
+WB613,Water body 613,WB614,Water body 614,533.843305627123
+WB614,Water body 614,WB615,Water body 615,455.616693641161
+WB614,Water body 614,WB617,Water body 617,308.864928712694
+WB614,Water body 614,WB644,Water body 644,980.316650818981
+WB614,Water body 614,WB645,Water body 645,939.992384837764
+WB614,Water body 614,WB646,Water body 646,983.262546948322
+WB615,Water body 615,WB618,Water body 618,463.890064611439
+WB615,Water body 615,WB645,Water body 645,814.246515834599
+WB615,Water body 615,WB646,Water body 646,781.335022515863
+WB615,Water body 615,WB647,Water body 647,818.673063707569
+WB616,Water body 616,WB618,Water body 618,551.963596118794
+WB618,Water body 618,WB619,Water body 619,425.788475896966
+WB618,Water body 618,WB646,Water body 646,948.122456473022
+WB618,Water body 618,WB647,Water body 647,904.210500126685
+WB618,Water body 618,WB648,Water body 648,938.4535125752
+WB619,Water body 619,WB622,Water body 622,471.424292733349
+WB619,Water body 619,WB647,Water body 647,1002.1339155347
+WB619,Water body 619,WB648,Water body 648,966.678812640376
+WB619,Water body 619,WB649,Water body 649,1004.18620990913
+WB622,Water body 622,WB625,Water body 625,461.352013455692
+WB622,Water body 622,WB648,Water body 648,1029.84004162594
+WB622,Water body 622,WB649,Water body 649,992.997156392461
+WB622,Water body 622,WB650,Water body 650,1028.49546712786
+WB625,Water body 625,WB649,Water body 649,1041.01185603137
+WB625,Water body 625,WB650,Water body 650,1004.97735602249
+WB626,Water body 626,WB627,Water body 627,157.094155706995
+WB627,Water body 627,WB628,Water body 628,157.094155706995
+WB628,Water body 628,WB629,Water body 629,157.094155706995
+WB629,Water body 629,WB630,Water body 630,155.922743548434
+WB630,Water body 630,WB631,Water body 631,162.452977885032
+WB630,Water body 630,WB632,Water body 632,452.832008060112
+WB630,Water body 630,WB633,Water body 633,475.431078996359
+WB630,Water body 630,WB634,Water body 634,515.245803913605
+WB631,Water body 631,WB637,Water body 637,136.980764452301
+WB637,Water body 637,WB638,Water body 638,129.553506398113
+WB638,Water body 638,WB639,Water body 639,134.329003171927
+WB639,Water body 639,WB640,Water body 640,157.864648756107
+WB640,Water body 640,WB641,Water body 641,154.234751118805
+WB641,Water body 641,WB642,Water body 642,157.094155706995
+WB642,Water body 642,WB643,Water body 643,156.71031481382
+WB643,Water body 643,WB644,Water body 644,156.095215470414
+WB644,Water body 644,WB645,Water body 645,155.869305223983
+WB645,Water body 645,WB646,Water body 646,156.673541968631
+WB646,Water body 646,WB647,Water body 647,156.318447795112
+WB647,Water body 647,WB648,Water body 648,157.094155706995
+WB648,Water body 648,WB649,Water body 649,157.094155706995
+WB649,Water body 649,WB650,Water body 650,157.094155706995
