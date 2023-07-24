@@ -50,32 +50,35 @@ unhcr_pop_agg = unhcr_pop_agg[order(unhcr_pop_agg$Region, unhcr_pop_agg$year),]
 unhcr_pop_agg <- unhcr_pop_agg %>%                           
   group_by(Region) %>%
   dplyr::mutate(
-    displaced_persons_t1 = lag(displaced_persons, n = 1, default = 0),
-    displaced_persons_t2 = lag(displaced_persons, n = 2, default = 0),
-    displaced_persons_t3 = lag(displaced_persons, n = 3, default = 0),
+    displaced_persons_t1 = lag(displaced_persons, n = 1, default = 0)
   )
 lagged_vars = c(
-  "displaced_persons_t1",
-  "displaced_persons_t2",
-  "displaced_persons_t3"
+  "displaced_persons_t1"
 )
 
-# Calculate mean lagged displacement for orders of neighbors
-# Possible future idea: Also create country "bigrams" to increase data
+# Calculate mean lagged vars for orders of neighbors
 orders = c(1:3)
 lags = c(1:3)
+ivs = c("pop", "gdp", "urban")
+iv_func = list(
+  "pop"=function(x, w){return(sum(x,na.rm=T))},
+  "gdp"=function(x, w){return(sum(x,na.rm=T))},
+  "urban"=function(x, w){return(weighted.mean(x, w,na.rm=T))}
+)
 spatial_lagged_vars = c()
 for(order in orders){
   for(lag in lags){
-    var_name = paste0("mean_displaced_persons_t",lag,"_o",order)
-    unhcr_pop_agg[,var_name] = 0
-    spatial_lagged_vars = c(spatial_lagged_vars, var_name)
+    for(iv in ivs){
+      var_name = paste0(iv,"_t",lag,"_o",order)
+      unhcr_pop_agg[,var_name] = 0
+      spatial_lagged_vars = c(spatial_lagged_vars, var_name)
+    }
   }
 }
-pb = txtProgressBar(max=nrow(unhcr_pop_agg), style=3)
-for(i in 1:nrow(unhcr_pop_agg)){
+pb = txtProgressBar(max=nrow(iiasa), style=3)
+for(i in 1:nrow(iiasa)){
   setTxtProgressBar(pb, i)
-  row = unhcr_pop_agg[i,]
+  row = iiasa[i,]
   row_year = row$year
   row_iso = row$Region
   neighborhood_o1_iso3s = attributes(neighborhood(net, nodes=which(nodes==row_iso), order=1)[[1]])$names
