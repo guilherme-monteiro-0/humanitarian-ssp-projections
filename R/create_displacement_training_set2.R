@@ -45,22 +45,47 @@ pop_grid = expand.grid(Region=unique(unhcr_pop_agg$Region), year=unique(unhcr_po
 unhcr_pop_agg = merge(unhcr_pop_agg, pop_grid, all=T)
 unhcr_pop_agg$displaced_persons[which(is.na(unhcr_pop_agg$displaced_persons))] = 0
 
-unhcr_pop_agg = unhcr_pop_agg[order(unhcr_pop_agg$Region, unhcr_pop_agg$year),]
+missing_isos = setdiff(unique(iiasa$Region), nodes)
+iiasa = subset(iiasa, !Region %in% missing_isos)
+iiasa_grid = expand.grid(Region=unique(iiasa$Region), year=unique(iiasa$year), Scenario=unique(iiasa$Scenario))
+iiasa = merge(iiasa, iiasa_grid, by=c("Region", "year", "Scenario"), all=T)
+iiasa[is.na(iiasa)] = 0
+iiasa = iiasa[order(iiasa$Scenario, iiasa$Region, iiasa$year),]
 
-unhcr_pop_agg <- unhcr_pop_agg %>%                           
-  group_by(Region) %>%
+iiasa <- iiasa %>%                           
+  group_by(Scenario, Region) %>%
   dplyr::mutate(
-    displaced_persons_t1 = lag(displaced_persons, n = 1, default = 0)
+    pop_t1 = lag(pop, n = 1, default = 0),
+    pop_t2 = lag(pop, n = 2, default = 0),
+    pop_t3 = lag(pop, n = 3, default = 0),
+    gdp_t1 = lag(gdp, n = 1, default = 0),
+    gdp_t2 = lag(gdp, n = 2, default = 0),
+    gdp_t3 = lag(gdp, n = 3, default = 0),
+    urban_t1 = lag(urban, n = 1, default = 0),
+    urban_t2 = lag(urban, n = 2, default = 0),
+    urban_t3 = lag(urban, n = 3, default = 0),
   )
 lagged_vars = c(
-  "displaced_persons_t1"
+  "pop_t1",
+  "pop_t2",
+  "pop_t3",
+  "gdp_t1",
+  "gdp_t2",
+  "gdp_t3",
+  "urban_t1",
+  "urban_t2",
+  "urban_t3"
 )
+
+iiasa = subset(iiasa, Scenario=="SSP1")
+iiasa$Scenario = NULL
+iiasa$Region = as.character(iiasa$Region)
 
 # Calculate mean lagged vars for orders of neighbors
 orders = c(1:3)
 lags = c(1:3)
 ivs = c("pop", "gdp", "urban")
-iv_func = list(
+iv_funcs = list(
   "pop"=function(x, w){return(sum(x,na.rm=T))},
   "gdp"=function(x, w){return(sum(x,na.rm=T))},
   "urban"=function(x, w){return(weighted.mean(x, w,na.rm=T))}
@@ -84,23 +109,31 @@ for(i in 1:nrow(iiasa)){
   neighborhood_o1_iso3s = attributes(neighborhood(net, nodes=which(nodes==row_iso), order=1)[[1]])$names
   neighborhood_o2_iso3s = attributes(neighborhood(net, nodes=which(nodes==row_iso), order=2)[[1]])$names
   neighborhood_o3_iso3s = attributes(neighborhood(net, nodes=which(nodes==row_iso), order=3)[[1]])$names
-  neighborhood_o3_subset = unhcr_pop_agg[which((unhcr_pop_agg$Region %in% neighborhood_o3_iso3s) & unhcr_pop_agg$year == row_year),]
+  neighborhood_o3_subset = iiasa[which((iiasa$Region %in% neighborhood_o3_iso3s) & iiasa$year == row_year),]
   neighborhood_o2_subset = neighborhood_o3_subset[which((neighborhood_o3_subset$Region %in% neighborhood_o2_iso3s)),]
   neighborhood_o1_subset = neighborhood_o2_subset[which((neighborhood_o2_subset$Region %in% neighborhood_o1_iso3s)),]
   for(order in orders){
     for(lag in lags){
-      var_name = paste0("mean_displaced_persons_t",lag,"_o",order)
-      source_name = paste0("displaced_persons_t",lag)
-      neighborhood_name = paste0("neighborhood_o",order,"_subset")
-      neighborhood_subset = get(neighborhood_name)
-      unhcr_pop_agg[i,var_name] = sum(neighborhood_subset[,source_name], na.rm=T) / nrow(neighborhood_subset)
+      for(iv in ivs){
+        iv_func = iv_funcs[[iv]]
+        var_name = paste0(iv,"_t",lag,"_o",order)
+        source_name = paste0(iv,"_t",lag)
+        weight_source_name = paste0("pop_t",lag)
+        neighborhood_name = paste0("neighborhood_o",order,"_subset")
+        neighborhood_subset = get(neighborhood_name)
+        weights = neighborhood_subset[,weight_source_name]
+        if(sum(weights)==0){
+          weights[,weight_source_name] = 1
+        }
+        iiasa[i,var_name] = iv_func(neighborhood_subset[,source_name], weights)
+      }
     }
   }
 }
 close(pb)
 
-training = merge(unhcr_pop_agg, iiasa, by=c("year", "Region"), all=T)
-training = subset(training, Scenario=="SSP1" & year <= 2022)
+training = merge(iiasa, unhcr_pop_agg, by=c("year", "Region"), all.x=T)
+training = subset(training, year <= 2022)
 training = training[,c(
   "displaced_persons",
   lagged_vars,
@@ -112,4 +145,4 @@ training = training[,c(
   "urban"
 )]
 training$displaced_persons[which(is.na(training$displaced_persons))] = 0
-fwrite(training, "intermediate_data/iiasa_unhcr_displaced.csv")
+fwrite(training, "intermediate_data/iiasa_unhcr_displaced2.csv")
