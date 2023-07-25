@@ -211,7 +211,7 @@ pb = txtProgressBar(max=nrow(iiasa), style=3)
 progress <- function(n) setTxtProgressBar(pb, n)
 opts <- list(progress = progress)
 
-iiasa_spatial = foreach(chunk_n=1:nrow(iiasa), .combine = rbind, .options.snow = opts) %dopar% {
+iiasa_spatial = foreach(i=1:nrow(iiasa), .combine = rbind, .options.snow = opts) %dopar% {
   row = iiasa[i,]
   row_year = row$year
   row_iso = row$Region
