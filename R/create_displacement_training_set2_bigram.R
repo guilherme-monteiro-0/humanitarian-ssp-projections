@@ -186,7 +186,6 @@ for(order in orders){
   for(lag in lags){
     for(iv in ivs){
       var_name = paste0(iv,"_t",lag,"_o",order)
-      unhcr_pop_agg[,var_name] = 0
       spatial_lagged_vars = c(spatial_lagged_vars, var_name)
     }
   }
