@@ -77,9 +77,8 @@ lagged_vars = c(
   "urban_t3"
 )
 
-iiasa = subset(iiasa, Scenario=="SSP1")
-iiasa$Scenario = NULL
 iiasa$Region = as.character(iiasa$Region)
+iiasa$Scenario = as.character(iiasa$Scenario)
 
 # Calculate mean lagged vars for orders of neighbors
 orders = c(1:3)
@@ -125,10 +124,11 @@ iiasa_spatial = foreach(i=1:nrow(iiasa), .combine = rbind, .options.snow = opts)
   row = iiasa[i,]
   row_year = row$year
   row_iso = row$Region
+  row_scenario = row$Scenario
   neighborhood_o1_iso3s = attributes(igraph::neighborhood(net, nodes=which(nodes==row_iso), order=1)[[1]])$names
   neighborhood_o2_iso3s = attributes(igraph::neighborhood(net, nodes=which(nodes==row_iso), order=2)[[1]])$names
   neighborhood_o3_iso3s = attributes(igraph::neighborhood(net, nodes=which(nodes==row_iso), order=3)[[1]])$names
-  neighborhood_o3_subset = iiasa[which((iiasa$Region %in% neighborhood_o3_iso3s) & iiasa$year == row_year),]
+  neighborhood_o3_subset = iiasa[which((iiasa$Region %in% neighborhood_o3_iso3s) & iiasa$year == row_year & iiasa$Scenario == row_scenario),]
   neighborhood_o2_subset = neighborhood_o3_subset[which((neighborhood_o3_subset$Region %in% neighborhood_o2_iso3s)),]
   neighborhood_o1_subset = neighborhood_o2_subset[which((neighborhood_o2_subset$Region %in% neighborhood_o1_iso3s)),]
   for(order in orders){
@@ -142,7 +142,7 @@ iiasa_spatial = foreach(i=1:nrow(iiasa), .combine = rbind, .options.snow = opts)
         neighborhood_subset = get(neighborhood_name)
         weights = neighborhood_subset[,weight_source_name]
         if(sum(weights)==0){
-          weights = rep(1, nrow(neighborhood_subset))
+          weights[,weight_source_name] = 1
         }
         row[,var_name] = iv_func(neighborhood_subset[,source_name], weights)
       }
@@ -153,10 +153,10 @@ iiasa_spatial = foreach(i=1:nrow(iiasa), .combine = rbind, .options.snow = opts)
 close(pb)
 stopCluster(parallelCluster)
 
-training = merge(iiasa_spatial, unhcr_pop_agg, by=c("year", "Region"), all.x=T)
-training = subset(training, year <= 2022)
-training = training[,c(
+forecasting = merge(iiasa_spatial, unhcr_pop_agg, by=c("year", "Region"), all.x=T)
+forecasting = forecasting[,c(
   "displaced_persons",
+  "Scenario",
   lagged_vars,
   spatial_lagged_vars,
   "Region",
@@ -165,5 +165,4 @@ training = training[,c(
   "gdp",
   "urban"
 )]
-training$displaced_persons[which(is.na(training$displaced_persons))] = 0
-fwrite(training, "intermediate_data/iiasa_unhcr_displaced2.csv")
+fwrite(forecasting, "intermediate_data/large/iiasa_unhcr_displaced2_forecasting.csv")
