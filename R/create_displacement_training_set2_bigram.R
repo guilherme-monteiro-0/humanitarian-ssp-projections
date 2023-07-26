@@ -40,6 +40,8 @@ net <- graph_from_data_frame(d=links, vertices=nodes, directed=F)
 link_weights <- E(net)$mean_distance_km
 
 country_nodes = nodes[which(!startsWith(nodes, "WB"))]
+country_nodes = country_nodes[which(country_nodes %in% unique(unhcr_pop_agg$Region))]
+country_nodes = country_nodes[which(country_nodes %in% unique(iiasa$Region))]
 all_combinations = combn(country_nodes, 2)
 country_bigrams_list = list()
 country_bigram_index = 1
