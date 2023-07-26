@@ -1,4 +1,4 @@
-list.of.packages <- c("data.table", "reshape2", "igraph", "dplyr")
+list.of.packages <- c("data.table", "reshape2", "igraph", "dplyr", "foreach", "doSNOW","snow", "doParallel")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, require, character.only=T)
@@ -100,15 +100,34 @@ for(order in orders){
     }
   }
 }
+
+
+# Detect the number of cores to use and set up cluster
+nCores <- detectCores() - 2
+parallelCluster <- makeCluster(nCores,type = "SOCK",methods = FALSE) # Make a parallel cluster
+setDefaultCluster(parallelCluster)
+registerDoSNOW(parallelCluster)
+
+# Tie R exit to the shutdown of cluster nodes
+on.exit({
+  try({
+    cat("Attempting to stop cluster\n")
+    stopImplicitCluster()        # package: `doParallel`
+    stopCluster(parallelCluster) # package: `parallel`
+  })
+})
+
 pb = txtProgressBar(max=nrow(iiasa), style=3)
-for(i in 1:nrow(iiasa)){
-  setTxtProgressBar(pb, i)
+progress <- function(n) setTxtProgressBar(pb, n)
+opts <- list(progress = progress)
+
+iiasa_spatial = foreach(i=1:nrow(iiasa), .combine = rbind, .options.snow = opts) %dopar% {
   row = iiasa[i,]
   row_year = row$year
   row_iso = row$Region
-  neighborhood_o1_iso3s = attributes(neighborhood(net, nodes=which(nodes==row_iso), order=1)[[1]])$names
-  neighborhood_o2_iso3s = attributes(neighborhood(net, nodes=which(nodes==row_iso), order=2)[[1]])$names
-  neighborhood_o3_iso3s = attributes(neighborhood(net, nodes=which(nodes==row_iso), order=3)[[1]])$names
+  neighborhood_o1_iso3s = attributes(igraph::neighborhood(net, nodes=which(nodes==row_iso), order=1)[[1]])$names
+  neighborhood_o2_iso3s = attributes(igraph::neighborhood(net, nodes=which(nodes==row_iso), order=2)[[1]])$names
+  neighborhood_o3_iso3s = attributes(igraph::neighborhood(net, nodes=which(nodes==row_iso), order=3)[[1]])$names
   neighborhood_o3_subset = iiasa[which((iiasa$Region %in% neighborhood_o3_iso3s) & iiasa$year == row_year),]
   neighborhood_o2_subset = neighborhood_o3_subset[which((neighborhood_o3_subset$Region %in% neighborhood_o2_iso3s)),]
   neighborhood_o1_subset = neighborhood_o2_subset[which((neighborhood_o2_subset$Region %in% neighborhood_o1_iso3s)),]
@@ -123,16 +142,17 @@ for(i in 1:nrow(iiasa)){
         neighborhood_subset = get(neighborhood_name)
         weights = neighborhood_subset[,weight_source_name]
         if(sum(weights)==0){
-          weights[,weight_source_name] = 1
+          weights = rep(1, nrow(neighborhood_subset))
         }
-        iiasa[i,var_name] = iv_func(neighborhood_subset[,source_name], weights)
+        row[,var_name] = iv_func(neighborhood_subset[,source_name], weights)
       }
     }
   }
+  return(row)
 }
 close(pb)
 
-training = merge(iiasa, unhcr_pop_agg, by=c("year", "Region"), all.x=T)
+training = merge(iiasa_spatial, unhcr_pop_agg, by=c("year", "Region"), all.x=T)
 training = subset(training, year <= 2022)
 training = training[,c(
   "displaced_persons",
