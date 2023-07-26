@@ -142,7 +142,7 @@ iiasa_spatial = foreach(i=1:nrow(iiasa), .combine = rbind, .options.snow = opts)
         neighborhood_subset = get(neighborhood_name)
         weights = neighborhood_subset[,weight_source_name]
         if(sum(weights)==0){
-          weights[,weight_source_name] = 1
+          weights[weights==0]=1
         }
         row[,var_name] = iv_func(neighborhood_subset[,source_name], weights)
       }
