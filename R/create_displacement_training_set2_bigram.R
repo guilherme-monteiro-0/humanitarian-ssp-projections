@@ -245,7 +245,7 @@ iiasa_spatial = foreach(i=1:nrow(iiasa), .combine = rbind, .options.snow = opts)
         neighborhood_subset = get(neighborhood_name)
         weights = neighborhood_subset[,weight_source_name]
         if(sum(weights)==0){
-          weights[,weight_source_name] = 1
+          weights = rep(1, nrow(neighborhood_subset))
         }
         row[,var_name] = iv_func(neighborhood_subset[,source_name], weights)
       }
@@ -270,4 +270,4 @@ training = training[,c(
   "urban"
 )]
 training$displaced_persons[which(is.na(training$displaced_persons))] = 0
-fwrite(training, "intermediate_data/iiasa_unhcr_displaced2_bigram.csv")
+fwrite(training, "intermediate_data/large/iiasa_unhcr_displaced2_bigram.csv")
