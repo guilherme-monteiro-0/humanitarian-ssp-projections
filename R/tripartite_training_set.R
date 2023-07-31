@@ -63,12 +63,14 @@ gc()
 conflict_iso3 = fread("./supporting_data/uppsala_iso3.csv")
 conflict = merge(conflict, conflict_iso3)
 keep = c(
-  "conflict",
+  "c0",
   "temp",
   "iso3",
   "year"
 )
 conflict = conflict[,keep]
+setnames(conflict, "c0", "conflict")
+conflict$conflict[which(is.na(conflict))] = 0
 training_set = merge(training_set, conflict, by=c("iso3", "year"))
 
 load("./fts/plans.RData")
