@@ -24,14 +24,16 @@ conflict = subset(conflict, year<=2013)
 conflict$conflict[which(conflict$conflict==2)] = 1
 
 worldclim = fread("./WorldClim/ACCESS-CM2/processed/historical.csv")
+worldclim = subset(worldclim, year<=2013)
 setnames(worldclim,"ISO_A3", "iso3")
-conflict = merge(conflict, worldclim)
+conflict = merge(worldclim, conflict, all.x=T)
+conflict$conflict[which(is.na(conflict$conflict))] = 0
 conflict = conflict[,c(
-  "conflict",
-  "prec",
-  "tmin",
-  "tmax",
-  "iso3",
-  "year"
+  "conflict"
+  ,"prec"
+  ,"tmin"
+  ,"tmax"
+  ,"iso3"
+  ,"year"
 )]
 fwrite(conflict,"intermediate_data/conflict_clim.csv")

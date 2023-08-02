@@ -36,15 +36,14 @@ worldclim_hist = merge(worldclim_hist, worldclim_grid, all=T)
 worldclim = rbindlist(list(worldclim_hist, worldclim_future), use.names=T)
 
 worldclim = merge(worldclim, conflict, all.x=T)
-diff.isos = setdiff(worldclim$iso3, conflict$iso3)
-worldclim = subset(worldclim, !iso3 %in% diff.isos)
+# worldclim$scenario = paste(worldclim$scenario, worldclim$year, sep="|")
 worldclim = worldclim[,c(
-  "conflict",
-  "scenario",
-  "prec",
-  "tmin",
-  "tmax",
-  "iso3",
-  "year"
+  "conflict"
+  ,"scenario"
+  ,"prec"
+  ,"tmin"
+  ,"tmax"
+  ,"iso3"
+  ,"year"
 )]
 fwrite(worldclim,"intermediate_data/conflict_clim_forecasting.csv")
