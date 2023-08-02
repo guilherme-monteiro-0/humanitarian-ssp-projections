@@ -55,6 +55,9 @@ conflict_w = conflict_w[order(conflict_w$iso3, conflict_w$year),]
 conflict_w <- conflict_w %>%                           
   group_by(iso3) %>%
   dplyr::mutate(
+    # conflict_t1 = lag(conflict, n = 1, default = 0),
+    # conflict_t2 = lag(conflict, n = 2, default = 0),
+    # conflict_t3 = lag(conflict, n = 3, default = 0),
     Pop_t1 = lag(Pop, n = 1, default = 0),
     Pop_t2 = lag(Pop, n = 2, default = 0),
     Pop_t3 = lag(Pop, n = 3, default = 0),

@@ -160,3 +160,5 @@ cython_debug/
 #.idea/
 
 intermediate_data/large
+WorldClim/ACCESS-CM2/historical/*
+WorldClim/ACCESS-CM2/future/*
