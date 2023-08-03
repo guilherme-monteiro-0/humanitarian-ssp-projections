@@ -50,26 +50,29 @@ tifs = list.files(path="./WorldClim/ACCESS-CM2/future/", pattern="*.tif", full.n
 pb = txtProgressBar(max=length(tifs), style=3)
 progress <- function(n) setTxtProgressBar(pb, n)
 opts <- list(progress = progress)
-tif_data = foreach(i=1:length(tifs), .combine = rbind, .options.snow = opts) %dopar% {
+tif_data = foreach(i=1:length(tifs), .combine = rbind, .options.snow = opts, .packages="foreach") %dopar% {
   tif = tifs[i]
   varname = substr(tif, 42, 45)
   year = as.numeric(substr(tif, 70, 73))
   scenario = substr(tif,58,61)
-  tif_raster = raster::raster(tif)
-  values_df = data.table::data.table(
-    ISO_A3=countries$ISO_A3[raster::values(countries_raster)],
-    value=raster::values(tif_raster),
-    variable=varname
-  )[,.(value=data_funcs(value, variable)), by=.(ISO_A3, variable)]
-  values_df$year = year
-  values_df$scenario = scenario
-  return(values_df)
+  all_month_values_df = foreach(month=1:12, .combine=rbind) %do% {
+    tif_raster = raster::raster(tif, band=month)
+    values_df = data.table::data.table(
+      ISO_A3=countries$ISO_A3[raster::values(countries_raster)],
+      value=raster::values(tif_raster),
+      variable=varname
+    )[,.(value=data_funcs(value, variable)), by=.(ISO_A3, variable)]
+    values_df$year = year
+    values_df$scenario = scenario
+    values_df$month = month
+    return(values_df)
+  }
+  return(all_month_values_df)
 }
 close(pb)
 stopCluster(parallelCluster)
 
 tif_data = tif_data[which(!is.na(tif_data$ISO_A3)),]
-too_small = c("CYM", "MNP", "BES", "TON")
-tif_data = tif_data[which(!tif_data$ISO_A3 %in% too_small),]
-tif_data = dcast(tif_data, scenario+ISO_A3+year~variable)
+tif_data = dcast(tif_data, scenario+ISO_A3+year~variable+month)
+tif_data = subset(tif_data, !is.nan(prec_1))
 fwrite(tif_data, "./WorldClim/ACCESS-CM2/processed/future.csv")

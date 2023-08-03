@@ -84,16 +84,9 @@ for(historical_zip in historical_zips){
 
 stopCluster(parallelCluster)
 
-worldclim_hist_monthly = rbindlist(data_list)
-worldclim_hist = worldclim_hist_monthly[,.(value=data_funcs(value, variable)), by=.(ISO_A3, variable, year)]
+worldclim_hist = rbindlist(data_list)
+worldclim_hist$month = as.numeric(worldclim_hist$month)
 worldclim_hist = worldclim_hist[which(!is.na(worldclim_hist$ISO_A3)),]
-too_small = c("CYM", "MNP", "BES", "TON")
-worldclim_hist = worldclim_hist[which(!worldclim_hist$ISO_A3 %in% too_small),]
-worldclim_hist = dcast(worldclim_hist, ISO_A3+year~variable)
+worldclim_hist = dcast(worldclim_hist, ISO_A3+year~variable+month)
+worldclim_hist = subset(worldclim_hist, !is.nan(prec_1))
 fwrite(worldclim_hist, "./WorldClim/ACCESS-CM2/processed/historical.csv")
-
-gbr = subset(worldclim_hist, ISO_A3=="GBR")
-gbr$year = as.numeric(gbr$year)
-library(ggplot2)
-ggplot(gbr, aes(x=year, y=tmax)) + geom_point() + theme_bw() +
-  labs(y="Annual temperature", x="Year", title="UK maximum annual temperature")
