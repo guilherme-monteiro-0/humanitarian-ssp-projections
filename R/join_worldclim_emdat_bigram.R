@@ -40,7 +40,15 @@ keep = c(
   "climate_affected_persons"
 )
 emdat_agg_w = emdat_agg_w[,keep]
-
+load("./intermediate_data/iiasa.RData")
+iiasa = subset(iiasa,Scenario=="SSP1")
+setnames(iiasa,"Region","iso3")
+iiasa = iiasa[,c("iso3","year","pop")]
+emdat_agg_w = merge(emdat_agg_w, iiasa)
+emdat_agg_w$climate_affected_persons = emdat_agg_w$climate_affected_persons /
+  (emdat_agg_w$pop * 1e6)
+emdat_agg_w$climate_affected_persons[which(emdat_agg_w$climate_affected_persons > 1)] = 1
+emdat_agg_w$pop = NULL
 
 climate_worldclim = merge(emdat_agg_w, worldclim, all.y=T)
 climate_worldclim[is.na(climate_worldclim)] = 0
