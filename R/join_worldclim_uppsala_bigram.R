@@ -170,7 +170,7 @@ country_bigrams_conflict$conflict = pmax(
   na.rm=T
 )
 country_bigrams_conflict$gdp = rowSums(
-  country_bigrams_conflict[,c("gdp.from", "gdp.from")],
+  country_bigrams_conflict[,c("gdp.from", "gdp.to")],
   na.rm=T
 )
 country_bigrams_conflict$prec_1 = rowMeans(
@@ -344,7 +344,7 @@ conflict = conflict[,c(
   "conflict"
   ,"gdpgrowth"
   ,paste("prec",c(1:12),sep="_")
-  ,paste("tmin",c(1:12),sep="_")
+  # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")
   ,"iso3"
   ,"year"

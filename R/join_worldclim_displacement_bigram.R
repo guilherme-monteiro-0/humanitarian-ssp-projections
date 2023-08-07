@@ -19,7 +19,7 @@ displacement_worldclim = displacement_worldclim[,c(
   "displaced_persons"
   ,"gdpgrowth"
   ,paste("prec",c(1:12),sep="_")
-  ,paste("tmin",c(1:12),sep="_")
+  # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")
   ,"iso3"
   ,"year"
@@ -41,7 +41,7 @@ displacement_worldclim_forecasting = displacement_worldclim_forecasting[,c(
   ,"scenario"
   ,"gdpgrowth"
   ,paste("prec",c(1:12),sep="_")
-  ,paste("tmin",c(1:12),sep="_")
+  # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")
   ,"iso3"
   ,"year"

@@ -125,7 +125,7 @@ conflict = conflict[,c(
   # ,"Pop"
   # ,"YMHEP"
   ,paste("prec",c(1:12),sep="_")
-  ,paste("tmin",c(1:12),sep="_")
+  # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")
   ,"iso3"
   ,"year"

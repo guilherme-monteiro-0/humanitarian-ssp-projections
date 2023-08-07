@@ -34,47 +34,16 @@ keep = c(
 displacement = displacement[,keep, with=F]
 forecasting_set = merge(displacement, centroids, by="iso3")
 
-load("./INFORM/interpolated_inform.RData")
-climate = inform
-rm(inform)
-names(climate) = c("iso3", "variable", "year", "scenario", "value")
-climate_h = subset(climate, scenario=="Historical")
-
-climate_ssp1 = subset(climate, scenario=="RCP45-SSP1")
-climate_ssp1 = rbind(climate_h, climate_ssp1)
-climate_ssp1$scenario = "ssp1"
-
-climate_ssp2 = subset(climate, scenario=="RCP45-SSP2")
-climate_ssp2 = rbind(climate_h, climate_ssp2)
-climate_ssp2$scenario = "ssp2"
-
-climate_ssp3 = subset(climate, scenario=="RCP85-SSP3")
-climate_ssp3 = rbind(climate_h, climate_ssp3)
-climate_ssp3$scenario = "ssp3"
-
-climate_ssp5 = subset(climate, scenario=="RCP85-SSP5")
-climate_ssp5 = rbind(climate_h, climate_ssp5)
-climate_ssp5$scenario = "ssp5"
-climate = rbindlist(
-  list(
-    climate_ssp1, climate_ssp2, climate_ssp3, climate_ssp5
-  )
-)
-
-climate_w = dcast(climate, iso3+year+scenario~variable)
-climate_w$climate_affected_persons = rowSums(
-  climate_w[,c(
-    "AFF_DR", "EX_EQ_MMI6", "EX_EQ_MMI8", "EX_TC_SS3", "EX_TC_SS1", "EX_TS", "EX_FL"
-  )], na.rm=T
-)
+climate = fread("~/git/saint/outputs/regression_climate_worldclim_forecast.csv")
+climate$climate_disasters[which(climate$year>=2014)] = climate$y_hat[which(climate$year>=2014)]
 keep = c(
-  "climate_affected_persons",
+  "climate_disasters",
   "scenario",
   "iso3",
   "year"
 )
-climate_w = climate_w[,keep]
-forecasting_set = merge(forecasting_set, climate_w, by=c("scenario", "iso3", "year"))
+climate = climate[,keep,with=F]
+forecasting_set = merge(forecasting_set, climate, by=c("scenario", "iso3", "year"))
 
 conflict = fread("~/git/saint/outputs/binary_conflict_clim_bigram_forecast.csv")
 conflict$conflict[which(conflict$year>=2014)] = conflict$y_hat[which(conflict$year>=2014)]
@@ -83,7 +52,7 @@ conflict = conflict[,keep, with=F]
 forecasting_set = merge(forecasting_set, conflict, by=c("scenario","iso3", "year"))
 
 load("./fts/plans.RData")
-fts_plans = subset(fts_plans,!is.na(location_iso3) & original_requirements > 0)
+fts_plans = subset(fts_plans,!is.na(location_iso3))
 fts_aggregate = fts_plans[,.(humanitarian_needs=sum(original_requirements,na.rm=T)),by=.(year,location_iso3)]
 setnames(fts_aggregate,"location_iso3", "iso3")
 forecasting_set = merge(forecasting_set, fts_aggregate, by=c("iso3", "year"), all.x=T)
@@ -114,7 +83,7 @@ forecasting_set = forecasting_set[,c(
   "scenario",
   # "pop",
   "displaced_persons",
-  # "climate_affected_persons",
+  "climate_disasters",
   "conflict",
   "iso3",
   "lat",
