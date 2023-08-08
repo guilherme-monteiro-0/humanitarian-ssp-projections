@@ -86,8 +86,8 @@ forecasting_set = forecasting_set[,c(
   "climate_disasters",
   "conflict",
   "iso3",
-  "lat",
-  "lon",
+  # "lat",
+  # "lon",
   "year"
 )]
 fwrite(forecasting_set, "./intermediate_data/tripartite_bigram_forecasting.csv")

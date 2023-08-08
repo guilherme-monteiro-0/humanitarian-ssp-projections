@@ -130,7 +130,7 @@ conflict = conflict[,c(
   ,"iso3"
   ,"year"
 )]
-training = fread("intermediate_data/conflict_clim.csv")
+training = fread("intermediate_data/conflict_clim_bigram.csv")
 out_of_set = setdiff(conflict$iso3, training$iso3)
 conflict = subset(conflict, !iso3 %in% out_of_set)
 fwrite(conflict,"intermediate_data/large/conflict_clim_forecasting.csv")

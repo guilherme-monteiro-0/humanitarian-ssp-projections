@@ -1,4 +1,4 @@
-list.of.packages <- c("data.table", "reshape2")
+list.of.packages <- c("data.table", "reshape2", "sp", "geosphere")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, require, character.only=T)
@@ -40,15 +40,17 @@ keep = c(
   "climate_disasters"
 )
 emdat_agg_w = emdat_agg_w[,keep]
-# load("./intermediate_data/iiasa.RData")
-# iiasa = subset(iiasa,Scenario=="SSP1")
-# setnames(iiasa,"Region","iso3")
-# iiasa = iiasa[,c("iso3","year","pop")]
-# emdat_agg_w = merge(emdat_agg_w, iiasa)
-# emdat_agg_w$climate_affected_persons = emdat_agg_w$climate_affected_persons /
-#   (emdat_agg_w$pop * 1e6)
-# emdat_agg_w$climate_affected_persons[which(emdat_agg_w$climate_affected_persons > 1)] = 1
-# emdat_agg_w$pop = NULL
+
+load("intermediate_data/land_and_sea.RData")
+area_list = list()
+for(iso3 in land_and_sea$ISO_A3){
+  poly = land_and_sea[which(land_and_sea$ISO_A3==iso3),]
+  area_sqkm = (areaPolygon(poly) / 1e6)
+  tmp = data.frame(iso3, area_sqkm)
+  area_list[[iso3]] = tmp
+}
+land_areas = rbindlist(area_list)
+emdat_agg_w = merge(emdat_agg_w, land_areas)
 
 # Bigrams
 load(file="./intermediate_data/world_network.RData")
@@ -102,10 +104,10 @@ country_bigrams_emdat = merge(
 setnames(
   country_bigrams_emdat,
   c(
-    "climate_disasters"
+    "climate_disasters", "area_sqkm"
   ),
   c(
-    "climate_disasters.from"
+    "climate_disasters.from", "area_sqkm.from"
   )
 )
 country_bigrams_emdat = merge(
@@ -118,10 +120,10 @@ country_bigrams_emdat = merge(
 setnames(
   country_bigrams_emdat,
   c(
-    "climate_disasters"
+    "climate_disasters", "area_sqkm"
   ),
   c(
-    "climate_disasters.to"
+    "climate_disasters.to", "area_sqkm.to"
   )
 )
 country_bigrams_emdat = country_bigrams_emdat[complete.cases(country_bigrams_emdat),]
@@ -129,9 +131,14 @@ country_bigrams_emdat$climate_disasters = rowSums(
   country_bigrams_emdat[,c("climate_disasters.from", "climate_disasters.to")],
   na.rm=T
 )
+country_bigrams_emdat$area_sqkm = rowSums(
+  country_bigrams_emdat[,c("area_sqkm.from", "area_sqkm.to")],
+  na.rm=T
+)
 
 country_bigrams_emdat[,c(
-  "climate_disasters.from", "climate_disasters.to", "from", "to"
+  "climate_disasters.from", "climate_disasters.to", "from", "to",
+  "area_sqkm.from", "area_sqkm.to"
 )] = NULL
 emdat_agg_w = rbindlist(list(emdat_agg_w, country_bigrams_emdat), fill=T)
 
@@ -139,6 +146,7 @@ climate_worldclim = merge(emdat_agg_w, worldclim, all.y=T)
 climate_worldclim[is.na(climate_worldclim)] = 0
 climate_worldclim = climate_worldclim[,c(
   "climate_disasters"
+  ,"area_sqkm"
   ,paste("prec",c(1:12),sep="_")
   # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")
@@ -157,6 +165,7 @@ climate_worldclim_forecasting[is.na(climate_worldclim_forecasting)] = 0
 climate_worldclim_forecasting = climate_worldclim_forecasting[,c(
   "climate_disasters"
   ,"scenario"
+  ,"area_sqkm"
   ,paste("prec",c(1:12),sep="_")
   # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")

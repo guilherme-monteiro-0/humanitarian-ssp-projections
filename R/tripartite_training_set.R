@@ -212,8 +212,8 @@ training_set = training_set[,c(
   "climate_disasters",
   "conflict",
   "iso3",
-  "lat",
-  "lon",
+  # "lat",
+  # "lon",
   "year"
 )]
 
