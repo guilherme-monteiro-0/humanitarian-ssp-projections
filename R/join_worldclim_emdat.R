@@ -146,7 +146,7 @@ climate_worldclim = merge(emdat_agg_w, worldclim, all.y=T)
 climate_worldclim[is.na(climate_worldclim)] = 0
 climate_worldclim = climate_worldclim[,c(
   "climate_disasters"
-  ,"area_sqkm"
+  # ,"area_sqkm"
   ,paste("prec",c(1:12),sep="_")
   # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")
@@ -165,7 +165,7 @@ climate_worldclim_forecasting[is.na(climate_worldclim_forecasting)] = 0
 climate_worldclim_forecasting = climate_worldclim_forecasting[,c(
   "climate_disasters"
   ,"scenario"
-  ,"area_sqkm"
+  # ,"area_sqkm"
   ,paste("prec",c(1:12),sep="_")
   # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")

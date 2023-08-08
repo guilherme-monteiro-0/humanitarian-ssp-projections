@@ -34,6 +34,12 @@ keep = c(
 displacement = displacement[,keep, with=F]
 forecasting_set = merge(displacement, centroids, by="iso3")
 
+load("intermediate_data/iiasa.RData")
+setnames(iiasa,c("Scenario","Region"),c("scenario", "iso3"))
+iiasa$scenario = tolower(iiasa$scenario)
+iiasa = iiasa[,c("scenario","iso3", "year", "pop")]
+forecasting_set = merge(forecasting_set, iiasa, by=c("scenario","iso3", "year"))
+
 climate = fread("~/git/saint/outputs/regression_climate_worldclim_forecast.csv")
 climate$climate_disasters[which(climate$year>=2014)] = climate$y_hat[which(climate$year>=2014)]
 keep = c(

@@ -33,6 +33,13 @@ keep = c(
 displacement = displacement[,keep, with=F]
 training_set = merge(displacement, centroids, by="iso3")
 
+load("intermediate_data/iiasa.RData")
+setnames(iiasa,c("Scenario","Region"),c("scenario", "iso3"))
+iiasa$scenario = tolower(iiasa$scenario)
+iiasa = subset(iiasa, scenario=="ssp1")
+iiasa = iiasa[,c("iso3", "year", "pop")]
+training_set = merge(training_set, iiasa, by=c("iso3", "year"))
+
 climate = fread("~/git/saint/outputs/regression_climate_worldclim_forecast.csv")
 climate$climate_disasters[which(climate$year>=2014)] = climate$y_hat[which(climate$year>=2014)]
 climate = subset(climate, scenario=="ssp1")
@@ -52,13 +59,16 @@ conflict = conflict[,keep, with=F]
 training_set = merge(training_set, conflict, by=c("iso3", "year"))
 
 load("./fts/plans.RData")
-fts_plans = subset(fts_plans,!is.na(location_iso3))
+fts_plans = subset(fts_plans,!is.na(location_iso3) & original_requirements > 0)
 fts_aggregate = fts_plans[,.(humanitarian_needs=sum(original_requirements,na.rm=T)),by=.(year,location_iso3)]
 setnames(fts_aggregate,"location_iso3", "iso3")
 training_set = merge(training_set, fts_aggregate, by=c("iso3", "year"))
+# training_set$humanitarian_needs[which(is.na(training_set$humanitarian_needs))] = 0
+# training_set = subset(training_set, year>=1999)
 
 training_set = training_set[,c(
   "humanitarian_needs",
+  "pop",
   "displaced_persons",
   "climate_disasters",
   "conflict",
@@ -122,13 +132,13 @@ setnames(
   c(
     "humanitarian_needs", "displaced_persons", 
     "climate_disasters",
-    # "pop", 
+    "pop",
     "conflict", "lat", "lon"
   ),
   c(
     "humanitarian_needs.from", "displaced_persons.from",
     "climate_disasters.from",
-    # "pop.from",
+    "pop.from",
     "conflict.from", "lat.from", "lon.from"
   )
 )
@@ -144,21 +154,21 @@ setnames(
   c(
     "humanitarian_needs", "displaced_persons", 
     "climate_disasters",
-    # "pop",
+    "pop",
     "conflict", "lat", "lon"
   ),
   c(
     "humanitarian_needs.to", "displaced_persons.to", 
     "climate_disasters.to",
-    # "pop.to",
+    "pop.to",
     "conflict.to", "lat.to", "lon.to"
   )
 )
 country_bigrams_training_set = country_bigrams_training_set[complete.cases(country_bigrams_training_set),]
-# country_bigrams_training_set$pop = rowSums(
-#   country_bigrams_training_set[,c("pop.from", "pop.to")],
-#   na.rm=T
-# )
+country_bigrams_training_set$pop = rowSums(
+  country_bigrams_training_set[,c("pop.from", "pop.to")],
+  na.rm=T
+)
 country_bigrams_training_set$humanitarian_needs = rowSums(
   country_bigrams_training_set[,c("humanitarian_needs.from", "humanitarian_needs.to")],
   na.rm=T
@@ -186,7 +196,7 @@ country_bigrams_training_set$lon = rowMeans(
 
 
 country_bigrams_training_set[,c(
-  # "pop.from", "pop.to",
+  "pop.from", "pop.to",
   "humanitarian_needs.from", "humanitarian_needs.to",
   "displaced_persons.from", "displaced_persons.to",
   "climate_disasters.from", "climate_disasters.to",
