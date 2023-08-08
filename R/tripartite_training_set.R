@@ -59,7 +59,7 @@ conflict = conflict[,keep, with=F]
 training_set = merge(training_set, conflict, by=c("iso3", "year"))
 
 load("./fts/plans.RData")
-fts_plans = subset(fts_plans,!is.na(location_iso3) & original_requirements > 0)
+fts_plans = subset(fts_plans,!is.na(location_iso3))
 fts_aggregate = fts_plans[,.(humanitarian_needs=sum(original_requirements,na.rm=T)),by=.(year,location_iso3)]
 setnames(fts_aggregate,"location_iso3", "iso3")
 training_set = merge(training_set, fts_aggregate, by=c("iso3", "year"))
