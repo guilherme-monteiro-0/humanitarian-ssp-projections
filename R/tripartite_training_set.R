@@ -1,5 +1,6 @@
 list.of.packages <- c("data.table", "reshape2", "igraph", "dplyr", "foreach", "doSNOW","snow", "doParallel",
-                      "sp","rgdal","rgeos","maptools", "sf", "leaflet", "geosphere", "s2")
+                      "sp","rgdal","rgeos","maptools", "sf", "leaflet", "geosphere", "s2",
+                      "countrycode")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, require, character.only=T)
@@ -58,13 +59,43 @@ keep = c("iso3", "year", "conflict")
 conflict = conflict[,keep, with=F]
 training_set = merge(training_set, conflict, by=c("iso3", "year"))
 
-load("./fts/plans.RData")
-fts_plans = subset(fts_plans,!is.na(location_iso3))
-fts_aggregate = fts_plans[,.(humanitarian_needs=sum(original_requirements,na.rm=T)),by=.(year,location_iso3)]
-setnames(fts_aggregate,"location_iso3", "iso3")
-training_set = merge(training_set, fts_aggregate, by=c("iso3", "year"))
+# load("./fts/plans.RData")
+# fts_plans = subset(fts_plans,!is.na(location_iso3))
+# fts_aggregate = fts_plans[,.(humanitarian_needs=sum(original_requirements,na.rm=T)),by=.(year,location_iso3)]
+# setnames(fts_aggregate,"location_iso3", "iso3")
+# training_set = merge(training_set, fts_aggregate, by=c("iso3", "year"))
 # training_set$humanitarian_needs[which(is.na(training_set$humanitarian_needs))] = 0
 # training_set = subset(training_set, year>=1999)
+
+iati = fread("./IATI/humanitarian_iati.csv")
+names(iati) = c(
+  "year",
+  "x_recipient_code",
+  "transaction_type",
+  "value",
+  "activities",
+  "publishers"
+)
+# iati_isos = unique(iati[,c("x_recipient_code")])
+# iati_isos$iso3 = countrycode(iati_isos$x_recipient_code, origin="iso2c", destination="iso3c")
+# already_iso3 = countrycode(iati_isos$x_recipient_code, origin="iso3c", destination="iso3c")
+# iati_isos$iso3[which(is.na(iati_isos$iso3))] = already_iso3[which(is.na(iati_isos$iso3))]
+# fwrite(iati_isos, "IATI/isos.csv")
+iati_isos = fread("IATI/isos.csv")
+iati = merge(iati, iati_isos)
+iati = subset(iati, transaction_type %in% c("Disbursement", "Expenditure"))
+iati = iati[,.(value=sum(value, na.rm=T), activities=sum(activities), publishers=sum(publishers)), by=.(
+  year, iso3
+)]
+iati_years = iati[,.(activities=sum(activities), publishers=sum(publishers)), by=.(year)]
+iati = subset(iati, year > 1970 & year < 2023 & value > 0)
+iati$value = iati$value / iati$publishers
+max(iati$publishers)
+iati = iati[,c("iso3","year","value")]
+setnames(iati, "value", "humanitarian_needs")
+training_set = merge(training_set, iati, by=c("iso3", "year"), all.x=T)
+training_set$humanitarian_needs[which(is.na(training_set$humanitarian_needs))] = 0
+training_set = subset(training_set, year > 1997 & year < 2023)
 
 training_set = training_set[,c(
   "humanitarian_needs",
