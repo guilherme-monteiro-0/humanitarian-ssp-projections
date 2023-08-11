@@ -23,7 +23,7 @@ centroids$iso3[which(centroids$iso3=="ROM")] = "ROU"
 centroids$iso3[which(centroids$iso3=="TMP")] = "TLS"
 
 displacement = fread("~/git/saint/outputs/regression_displacement_worldclim_forecast.csv")
-displacement$displaced_persons[which(displacement$year>=2023)] = displacement$y_hat[which(displacement$year>=2023)]
+displacement$displaced_persons = displacement$y_hat
 displacement$displaced_persons[which(displacement$displaced_persons<0)] = 0
 keep = c(
   "displaced_persons",
@@ -41,7 +41,7 @@ iiasa = iiasa[,c("scenario","iso3", "year", "pop")]
 forecasting_set = merge(forecasting_set, iiasa, by=c("scenario","iso3", "year"))
 
 climate = fread("~/git/saint/outputs/regression_climate_worldclim_forecast.csv")
-climate$climate_disasters[which(climate$year>=2014)] = climate$y_hat[which(climate$year>=2014)]
+climate$climate_disasters = climate$y_hat
 keep = c(
   "climate_disasters",
   "scenario",
@@ -52,7 +52,7 @@ climate = climate[,keep,with=F]
 forecasting_set = merge(forecasting_set, climate, by=c("scenario", "iso3", "year"))
 
 conflict = fread("~/git/saint/outputs/binary_conflict_clim_bigram_forecast.csv")
-conflict$conflict[which(conflict$year>=2014)] = conflict$y_hat[which(conflict$year>=2014)]
+conflict$conflict = conflict$y_hat
 keep = c("scenario", "iso3", "year", "conflict")
 conflict = conflict[,keep, with=F]
 forecasting_set = merge(forecasting_set, conflict, by=c("scenario","iso3", "year"))
@@ -63,29 +63,34 @@ forecasting_set = merge(forecasting_set, conflict, by=c("scenario","iso3", "year
 # setnames(fts_aggregate,"location_iso3", "iso3")
 # forecasting_set = merge(forecasting_set, fts_aggregate, by=c("iso3", "year"), all.x=T)
 # forecasting_set$humanitarian_needs[which(is.na(forecasting_set$humanitarian_needs))] = 0
-iati = fread("./IATI/humanitarian_iati.csv")
-names(iati) = c(
-  "year",
-  "x_recipient_code",
-  "transaction_type",
-  "value",
-  "activities",
-  "publishers"
-)
-iati_isos = fread("IATI/isos.csv")
-iati = merge(iati, iati_isos)
-iati = subset(iati, transaction_type %in% c("Disbursement", "Expenditure"))
-iati = iati[,.(value=sum(value, na.rm=T), activities=sum(activities), publishers=sum(publishers)), by=.(
-  year, iso3
-)]
-iati_years = iati[,.(activities=sum(activities), publishers=sum(publishers)), by=.(year)]
-iati = subset(iati, year > 1970 & year < 2023 & value > 0)
-iati$value = iati$value / iati$publishers
-iati = iati[,c("iso3","year","value")]
-setnames(iati, "value", "humanitarian_needs")
-forecasting_set = merge(forecasting_set, iati, by=c("iso3", "year"), all.x=T)
+# iati = fread("./IATI/humanitarian_iati.csv")
+# names(iati) = c(
+#   "year",
+#   "x_recipient_code",
+#   "transaction_type",
+#   "value",
+#   "activities",
+#   "publishers"
+# )
+# iati_isos = fread("IATI/isos.csv")
+# iati = merge(iati, iati_isos)
+# iati = subset(iati, transaction_type %in% c("Disbursement", "Expenditure"))
+# iati = iati[,.(value=sum(value, na.rm=T), activities=sum(activities), publishers=sum(publishers)), by=.(
+#   year, iso3
+# )]
+# iati_years = iati[,.(activities=sum(activities), publishers=sum(publishers)), by=.(year)]
+# iati = subset(iati, year > 1970 & year < 2023 & value > 0)
+# iati$value = iati$value / iati$publishers
+# iati = iati[,c("iso3","year","value")]
+# setnames(iati, "value", "humanitarian_needs")
+# forecasting_set = merge(forecasting_set, iati, by=c("iso3", "year"), all.x=T)
+# forecasting_set$humanitarian_needs[which(is.na(forecasting_set$humanitarian_needs))] = 0
+# forecasting_set = subset(forecasting_set, year > 1997)
+pin = fread("intermediate_data/pin.csv")
+setnames(pin, "value", "humanitarian_needs")
+forecasting_set = merge(forecasting_set, pin, by=c("iso3", "year"), all.x=T)
 forecasting_set$humanitarian_needs[which(is.na(forecasting_set$humanitarian_needs))] = 0
-forecasting_set = subset(forecasting_set, year > 1997)
+forecasting_set = subset(forecasting_set, year > 2017)
 
 forecasting_set = forecasting_set[order(forecasting_set$scenario, forecasting_set$iso3, forecasting_set$year),]
 # forecasting_set$pop = forecasting_set$pop * 1e6
