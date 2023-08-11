@@ -1,0 +1,287 @@
+RRP,Country,iso3,type,year,Funds Received (From all agencies),Original reqs.,Current reqs.,Coverage,Notes,Source,# Agencies in Plan,RRP & Year,Country concat,ISO concat
+Afghanistan Regional RRP,"Iran, Islamic Republic of",IRN,RRP,2021,"33,425,098",,"135,856,299",25%,,UNHCR RFT,16,Afghanistan Regional RRP 2021,"Iran, Islamic Republic of",IRN
+Afghanistan Regional RRP,Pakistan,PAK,RRP,2021,"51,783,885",,"132,560,000",39%,,UNHCR RFT,32,Afghanistan Regional RRP 2021,"Pakistan;Iran, Islamic Republic of",PAK;IRN
+Afghanistan Regional RRP,Regional,,RRP,2021,"84,906,220",,,#N/A,,UNHCR RFT,,Afghanistan Regional RRP 2021,"Regional;Pakistan;Iran, Islamic Republic of",PAK;IRN
+Afghanistan Regional RRP,Tajikistan,TJK,RRP,2021,"4,222,467",,"24,326,327",17%,,UNHCR RFT,9,Afghanistan Regional RRP 2021,"Tajikistan;Regional;Pakistan;Iran, Islamic Republic of",TJK;PAK;IRN
+Afghanistan Regional RRP,Uzbekistan,UZB,RRP,2021,"134,000",,"6,467,656",2%,,UNHCR RFT,6,Afghanistan Regional RRP 2021,"Uzbekistan;Tajikistan;Regional;Pakistan;Iran, Islamic Republic of",UZB;TJK;PAK;IRN
+Afghanistan Regional RRP,"Iran, Islamic Republic of",IRN,RRP,2022,"122,885,767",,"258,735,082",47%,,UNHCR RFT,16,Afghanistan Regional RRP 2022,"Iran, Islamic Republic of",IRN
+Afghanistan Regional RRP,Pakistan,PAK,RRP,2022,"192,643,170",,"310,442,000",62%,,UNHCR RFT,32,Afghanistan Regional RRP 2022,"Pakistan;Iran, Islamic Republic of",PAK;IRN
+Afghanistan Regional RRP,Regional,,RRP,2022,"1,997,148",,,#N/A,,UNHCR RFT,,Afghanistan Regional RRP 2022,"Regional;Pakistan;Iran, Islamic Republic of",PAK;IRN
+Afghanistan Regional RRP,Tajikistan,TJK,RRP,2022,"5,278,999",,"40,457,486",13%,,UNHCR RFT,9,Afghanistan Regional RRP 2022,"Tajikistan;Regional;Pakistan;Iran, Islamic Republic of",TJK;PAK;IRN
+Afghanistan Regional RRP,Turkmenistan,TKM,RRP,2022,,,"3,149,935",0%,,UNHCR RFT,3,Afghanistan Regional RRP 2022,"Turkmenistan;Tajikistan;Regional;Pakistan;Iran, Islamic Republic of",TKM;TJK;PAK;IRN
+Afghanistan Regional RRP,Uzbekistan,UZB,RRP,2022,"3,033,194",,"10,631,036",29%,,UNHCR RFT,4,Afghanistan Regional RRP 2022,"Uzbekistan;Turkmenistan;Tajikistan;Regional;Pakistan;Iran, Islamic Republic of",UZB;TKM;TJK;PAK;IRN
+Afghanistan Regional RRP,"Iran, Islamic Republic of",IRN,RRP,2023,"7,232,166",,,#N/A,,UNHCR RFT,,Afghanistan Regional RRP 2023,"Iran, Islamic Republic of",IRN
+Afghanistan Regional RRP,"Iran, Islamic Republic of",IRN,RRP,2024,"3,300,000",,,#N/A,,UNHCR RFT,,Afghanistan Regional RRP 2024,"Iran, Islamic Republic of",IRN
+Burundi Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2015,"14,271,115",,"19,713,080",72%,,UNHCR RFT,11,Burundi Regional RRP 2015,"Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Regional,,RRP,2015,"5,636,378",,,#N/A,,UNHCR RFT,1,Burundi Regional RRP 2015,"Regional;Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Rwanda,RWA,RRP,2015,"43,362,437",,"111,428,334",39%,,UNHCR RFT,28,Burundi Regional RRP 2015,"Rwanda;Regional;Congo, The Democratic Republic of the",RWA;COD
+Burundi Regional RRP,"Tanzania, United Republic of",TZA,RRP,2015,"56,185,815",,"154,029,586",36%,,UNHCR RFT,36,Burundi Regional RRP 2015,"Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",TZA;RWA;COD
+Burundi Regional RRP,Uganda,UGA,RRP,2015,"6,385,546",,"21,382,948",30%,,UNHCR RFT,25,Burundi Regional RRP 2015,"Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",UGA;TZA;RWA;COD
+Burundi Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2016,"3,709,582",,"25,018,903",15%,,UNHCR RFT,5,Burundi Regional RRP 2016,"Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Regional,,RRP,2016,"3,695,553",,,#N/A,,UNHCR RFT,,Burundi Regional RRP 2016,"Regional;Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Rwanda,RWA,RRP,2016,"38,871,988",,"95,201,989",41%,,UNHCR RFT,21,Burundi Regional RRP 2016,"Rwanda;Regional;Congo, The Democratic Republic of the",RWA;COD
+Burundi Regional RRP,"Tanzania, United Republic of",TZA,RRP,2016,"107,268,625",,"176,601,614",61%,,UNHCR RFT,24,Burundi Regional RRP 2016,"Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",TZA;RWA;COD
+Burundi Regional RRP,Uganda,UGA,RRP,2016,"8,868,801",,"27,051,139",33%,,UNHCR RFT,8,Burundi Regional RRP 2016,"Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",UGA;TZA;RWA;COD
+Burundi Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2017,"3,067,546",,"37,704,393",8%,,UNHCR RFT,5,Burundi Regional RRP 2017,"Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Regional,,RRP,2017,"553,159",,,#N/A,,UNHCR RFT,,Burundi Regional RRP 2017,"Regional;Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Rwanda,RWA,RRP,2017,"18,874,662",,"85,205,772",22%,,UNHCR RFT,17,Burundi Regional RRP 2017,"Rwanda;Regional;Congo, The Democratic Republic of the",RWA;COD
+Burundi Regional RRP,"Tanzania, United Republic of",TZA,RRP,2017,"61,724,079",,"232,769,378",27%,,UNHCR RFT,20,Burundi Regional RRP 2017,"Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",TZA;RWA;COD
+Burundi Regional RRP,Uganda,UGA,RRP,2017,"4,779,076",,"73,629,983",6%,,UNHCR RFT,10,Burundi Regional RRP 2017,"Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",UGA;TZA;RWA;COD
+Burundi Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2018,"9,542,239",,"33,952,986",28%,,UNHCR RFT,5,Burundi Regional RRP 2018,"Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Regional,,RRP,2018,"1,384,140",,"2,055,976",67%,,UNHCR RFT,1,Burundi Regional RRP 2018,"Regional;Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Rwanda,RWA,RRP,2018,"26,149,929",,"74,285,960",35%,,UNHCR RFT,9,Burundi Regional RRP 2018,"Rwanda;Regional;Congo, The Democratic Republic of the",RWA;COD
+Burundi Regional RRP,"Tanzania, United Republic of",TZA,RRP,2018,"83,817,825",,"234,038,148",36%,,UNHCR RFT,23,Burundi Regional RRP 2018,"Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",TZA;RWA;COD
+Burundi Regional RRP,Uganda,UGA,RRP,2018,"10,090,956",,"46,863,835",22%,,UNHCR RFT,9,Burundi Regional RRP 2018,"Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",UGA;TZA;RWA;COD
+Burundi Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2019,"7,463,601",,"34,655,023",22%,,UNHCR RFT,7,Burundi Regional RRP 2019,"Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Regional,,RRP,2019,"1,488,489",,"1,394,423",107%,,UNHCR RFT,1,Burundi Regional RRP 2019,"Regional;Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Rwanda,RWA,RRP,2019,"23,908,934",,"73,545,852",33%,,UNHCR RFT,13,Burundi Regional RRP 2019,"Rwanda;Regional;Congo, The Democratic Republic of the",RWA;COD
+Burundi Regional RRP,"Tanzania, United Republic of",TZA,RRP,2019,"44,061,061",,"157,079,765",28%,,UNHCR RFT,25,Burundi Regional RRP 2019,"Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",TZA;RWA;COD
+Burundi Regional RRP,Uganda,UGA,RRP,2019,"3,823,252",,"26,242,545",15%,,UNHCR RFT,11,Burundi Regional RRP 2019,"Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",UGA;TZA;RWA;COD
+Burundi Regional RRP,Zambia,ZMB,RRP,2019,"200,330",,,#N/A,,UNHCR RFT,,Burundi Regional RRP 2019,"Zambia;Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",ZMB;UGA;TZA;RWA;COD
+Burundi Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2020,"15,242,311",,"30,787,724",50%,,UNHCR RFT,7,Burundi Regional RRP 2020,"Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Regional,,RRP,2020,"2,685,884",,,#N/A,,UNHCR RFT,,Burundi Regional RRP 2020,"Regional;Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Rwanda,RWA,RRP,2020,"19,361,031",,"77,947,513",25%,,UNHCR RFT,12,Burundi Regional RRP 2020,"Rwanda;Regional;Congo, The Democratic Republic of the",RWA;COD
+Burundi Regional RRP,"Tanzania, United Republic of",TZA,RRP,2020,"56,603,322",,"160,868,456",35%,,UNHCR RFT,25,Burundi Regional RRP 2020,"Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",TZA;RWA;COD
+Burundi Regional RRP,Uganda,UGA,RRP,2020,"24,987,848",,"28,771,513",87%,,UNHCR RFT,12,Burundi Regional RRP 2020,"Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",UGA;TZA;RWA;COD
+Burundi Regional RRP,Zambia,ZMB,RRP,2020,"141,629",,,#N/A,,UNHCR RFT,,Burundi Regional RRP 2020,"Zambia;Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",ZMB;UGA;TZA;RWA;COD
+Burundi Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2021,"9,665,212",,"31,923,508",30%,,UNHCR RFT,5,Burundi Regional RRP 2021,"Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Regional,,RRP,2021,"1,788,581",,,#N/A,,UNHCR RFT,,Burundi Regional RRP 2021,"Regional;Congo, The Democratic Republic of the",COD
+Burundi Regional RRP,Rwanda,RWA,RRP,2021,"16,330,134",,"61,729,523",26%,,UNHCR RFT,14,Burundi Regional RRP 2021,"Rwanda;Regional;Congo, The Democratic Republic of the",RWA;COD
+Burundi Regional RRP,"Tanzania, United Republic of",TZA,RRP,2021,"37,609,148",,"101,692,513",37%,,UNHCR RFT,13,Burundi Regional RRP 2021,"Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",TZA;RWA;COD
+Burundi Regional RRP,Uganda,UGA,RRP,2021,"9,195,116",,"27,246,644",34%,,UNHCR RFT,15,Burundi Regional RRP 2021,"Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo, The Democratic Republic of the",UGA;TZA;RWA;COD
+CAR Regional RRP,Cameroon,CMR,RRP,2014,"50,731,697",,"111,134,636",46%,,UNHCR RFT,24,CAR Regional RRP 2014,Cameroon,CMR
+CAR Regional RRP,Chad,TCD,RRP,2014,"29,646,642",,"37,385,546",79%,,UNHCR RFT,12,CAR Regional RRP 2014,Chad;Cameroon,TCD;CMR
+CAR Regional RRP,Congo,COG,RRP,2014,"5,902,123",,"20,255,442",29%,,UNHCR RFT,7,CAR Regional RRP 2014,Congo;Chad;Cameroon,COG;TCD;CMR
+CAR Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2014,"16,348,007",,"40,931,785",40%,,UNHCR RFT,9,CAR Regional RRP 2014,"Congo, The Democratic Republic of the;Congo;Chad;Cameroon",COD;COG;TCD;CMR
+CAR Regional RRP,Regional,,RRP,2014,"24,313,042",,,#N/A,,UNHCR RFT,,CAR Regional RRP 2014,"Regional;Congo, The Democratic Republic of the;Congo;Chad;Cameroon",COD;COG;TCD;CMR
+CAR Regional RRP,Cameroon,CMR,RRP,2015,"58,529,274",,"145,304,541",40%,,UNHCR RFT,15,CAR Regional RRP 2015,Cameroon,CMR
+CAR Regional RRP,Chad,TCD,RRP,2015,"9,494,990",,"72,852,958",13%,,UNHCR RFT,7,CAR Regional RRP 2015,Chad;Cameroon,TCD;CMR
+CAR Regional RRP,Congo,COG,RRP,2015,"943,755",,"26,000,000",4%,,UNHCR RFT,7,CAR Regional RRP 2015,Congo;Chad;Cameroon,COG;TCD;CMR
+CAR Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2015,"7,335,593",,"87,036,389",8%,,UNHCR RFT,7,CAR Regional RRP 2015,"Congo, The Democratic Republic of the;Congo;Chad;Cameroon",COD;COG;TCD;CMR
+CAR Regional RRP,Regional,,RRP,2015,"16,525,767",,,#N/A,,UNHCR RFT,,CAR Regional RRP 2015,"Regional;Congo, The Democratic Republic of the;Congo;Chad;Cameroon",COD;COG;TCD;CMR
+CAR Regional RRP,Cameroon,CMR,RRP,2016,"43,750,617",,"128,590,682",34%,,UNHCR RFT,19,CAR Regional RRP 2016,Cameroon,CMR
+CAR Regional RRP,Chad,TCD,RRP,2016,"23,757,789",,"90,847,414",26%,,UNHCR RFT,8,CAR Regional RRP 2016,Chad;Cameroon,TCD;CMR
+CAR Regional RRP,Congo,COG,RRP,2016,"17,134,361",,"95,722,221",18%,,UNHCR RFT,4,CAR Regional RRP 2016,Congo;Chad;Cameroon,COG;TCD;CMR
+CAR Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2016,"20,459,150",,"28,338,464",72%,,UNHCR RFT,6,CAR Regional RRP 2016,"Congo, The Democratic Republic of the;Congo;Chad;Cameroon",COD;COG;TCD;CMR
+CAR Regional RRP,Regional,,RRP,2016,"8,843,530",,,#N/A,,UNHCR RFT,,CAR Regional RRP 2016,"Regional;Congo, The Democratic Republic of the;Congo;Chad;Cameroon",COD;COG;TCD;CMR
+DRC Regional RRP,Angola,AGO,RRP,2018,"19,323,945",,"65,821,742",29%,,UNHCR RFT,18,DRC Regional RRP 2018,Angola,AGO
+DRC Regional RRP,Burundi,BDI,RRP,2018,"19,005,225",,"40,688,797",47%,,UNHCR RFT,15,DRC Regional RRP 2018,Burundi;Angola,BDI;AGO
+DRC Regional RRP,Congo,COG,RRP,2018,"2,378,310",,"17,139,178",14%,,UNHCR RFT,8,DRC Regional RRP 2018,Congo;Burundi;Angola,COG;BDI;AGO
+DRC Regional RRP,Regional,,RRP,2018,"855,651",,,#N/A,,UNHCR RFT,1,DRC Regional RRP 2018,Regional;Congo;Burundi;Angola,COG;BDI;AGO
+DRC Regional RRP,Rwanda,RWA,RRP,2018,"15,614,974",,"57,384,701",27%,,UNHCR RFT,20,DRC Regional RRP 2018,Rwanda;Regional;Congo;Burundi;Angola,RWA;COG;BDI;AGO
+DRC Regional RRP,South Africa,ZAF,RRP,2018,,,"3,546,443",0%,,UNHCR RFT,1,DRC Regional RRP 2018,South Africa;Rwanda;Regional;Congo;Burundi;Angola,ZAF;RWA;COG;BDI;AGO
+DRC Regional RRP,"Tanzania, United Republic of",TZA,RRP,2018,"20,521,923",,"68,731,300",30%,,UNHCR RFT,28,DRC Regional RRP 2018,"Tanzania, United Republic of;South Africa;Rwanda;Regional;Congo;Burundi;Angola",TZA;ZAF;RWA;COG;BDI;AGO
+DRC Regional RRP,Uganda,UGA,RRP,2018,"86,040,203",,"219,491,751",39%,,UNHCR RFT,73,DRC Regional RRP 2018,"Uganda;Tanzania, United Republic of;South Africa;Rwanda;Regional;Congo;Burundi;Angola",UGA;TZA;ZAF;RWA;COG;BDI;AGO
+DRC Regional RRP,Angola,AGO,RRP,2019,"12,365,822",,"60,178,229",21%,,UNHCR RFT,13,DRC Regional RRP 2019,Angola,AGO
+DRC Regional RRP,Burundi,BDI,RRP,2019,"13,644,405",,"42,897,026",32%,,UNHCR RFT,9,DRC Regional RRP 2019,Burundi;Angola,BDI;AGO
+DRC Regional RRP,Congo,COG,RRP,2019,"5,034,528",,"21,960,701",23%,,UNHCR RFT,7,DRC Regional RRP 2019,Congo;Burundi;Angola,COG;BDI;AGO
+DRC Regional RRP,Regional,,RRP,2019,"1,507,862",,"1,944,799",78%,,UNHCR RFT,1,DRC Regional RRP 2019,Regional;Congo;Burundi;Angola,COG;BDI;AGO
+DRC Regional RRP,Rwanda,RWA,RRP,2019,"21,998,051",,"64,660,309",34%,,UNHCR RFT,13,DRC Regional RRP 2019,Rwanda;Regional;Congo;Burundi;Angola,RWA;COG;BDI;AGO
+DRC Regional RRP,"Tanzania, United Republic of",TZA,RRP,2019,"18,135,384",,"85,296,255",21%,,UNHCR RFT,18,DRC Regional RRP 2019,"Tanzania, United Republic of;Rwanda;Regional;Congo;Burundi;Angola",TZA;RWA;COG;BDI;AGO
+DRC Regional RRP,Uganda,UGA,RRP,2019,"36,043,808",,"365,954,127",10%,,UNHCR RFT,41,DRC Regional RRP 2019,"Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo;Burundi;Angola",UGA;TZA;RWA;COG;BDI;AGO
+DRC Regional RRP,Zambia,ZMB,RRP,2019,"13,304,996",,"76,819,768",17%,,UNHCR RFT,16,DRC Regional RRP 2019,"Zambia;Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo;Burundi;Angola",ZMB;UGA;TZA;RWA;COG;BDI;AGO
+DRC Regional RRP,Angola,AGO,RRP,2020,"9,865,725",,"29,413,011",34%,,UNHCR RFT,12,DRC Regional RRP 2020,Angola,AGO
+DRC Regional RRP,Burundi,BDI,RRP,2020,"12,428,599",,"51,321,440",24%,,UNHCR RFT,10,DRC Regional RRP 2020,Burundi;Angola,BDI;AGO
+DRC Regional RRP,Congo,COG,RRP,2020,"3,349,396",,"15,420,276",22%,,UNHCR RFT,6,DRC Regional RRP 2020,Congo;Burundi;Angola,COG;BDI;AGO
+DRC Regional RRP,Regional,,RRP,2020,,,"17,549,300",0%,,UNHCR RFT,,DRC Regional RRP 2020,Regional;Congo;Burundi;Angola,COG;BDI;AGO
+DRC Regional RRP,Rwanda,RWA,RRP,2020,"15,596,273",,"73,201,780",21%,,UNHCR RFT,14,DRC Regional RRP 2020,Rwanda;Regional;Congo;Burundi;Angola,RWA;COG;BDI;AGO
+DRC Regional RRP,South Africa,ZAF,RRP,2020,"315,743",,,#N/A,,UNHCR RFT,,DRC Regional RRP 2020,South Africa;Rwanda;Regional;Congo;Burundi;Angola,ZAF;RWA;COG;BDI;AGO
+DRC Regional RRP,"Tanzania, United Republic of",TZA,RRP,2020,"30,248,713",,"98,010,274",31%,,UNHCR RFT,18,DRC Regional RRP 2020,"Tanzania, United Republic of;South Africa;Rwanda;Regional;Congo;Burundi;Angola",TZA;ZAF;RWA;COG;BDI;AGO
+DRC Regional RRP,Uganda,UGA,RRP,2020,"60,002,688",,"278,960,687",22%,,UNHCR RFT,37,DRC Regional RRP 2020,"Uganda;Tanzania, United Republic of;South Africa;Rwanda;Regional;Congo;Burundi;Angola",UGA;TZA;ZAF;RWA;COG;BDI;AGO
+DRC Regional RRP,Zambia,ZMB,RRP,2020,"10,274,331",,"74,832,609",14%,,UNHCR RFT,16,DRC Regional RRP 2020,"Zambia;Uganda;Tanzania, United Republic of;South Africa;Rwanda;Regional;Congo;Burundi;Angola",ZMB;UGA;TZA;ZAF;RWA;COG;BDI;AGO
+DRC Regional RRP,Angola,AGO,RRP,2021,"8,987,202",,"23,099,697",39%,,UNHCR RFT,5,DRC Regional RRP 2021,Angola,AGO
+DRC Regional RRP,Burundi,BDI,RRP,2021,"18,581,254",,"50,795,995",37%,,UNHCR RFT,10,DRC Regional RRP 2021,Burundi;Angola,BDI;AGO
+DRC Regional RRP,Congo,COG,RRP,2021,"2,796,738",,"11,079,843",25%,,UNHCR RFT,5,DRC Regional RRP 2021,Congo;Burundi;Angola,COG;BDI;AGO
+DRC Regional RRP,Regional,,RRP,2021,,,0,#DIV/0!,,UNHCR RFT,,DRC Regional RRP 2021,Regional;Congo;Burundi;Angola,COG;BDI;AGO
+DRC Regional RRP,Rwanda,RWA,RRP,2021,"16,908,831",,"58,708,987",29%,,UNHCR RFT,13,DRC Regional RRP 2021,Rwanda;Regional;Congo;Burundi;Angola,RWA;COG;BDI;AGO
+DRC Regional RRP,"Tanzania, United Republic of",TZA,RRP,2021,"16,095,212",,"105,025,976",15%,,UNHCR RFT,15,DRC Regional RRP 2021,"Tanzania, United Republic of;Rwanda;Regional;Congo;Burundi;Angola",TZA;RWA;COG;BDI;AGO
+DRC Regional RRP,Uganda,UGA,RRP,2021,"52,603,141",,"261,723,478",20%,,UNHCR RFT,36,DRC Regional RRP 2021,"Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo;Burundi;Angola",UGA;TZA;RWA;COG;BDI;AGO
+DRC Regional RRP,Zambia,ZMB,RRP,2021,"12,888,063",,"74,681,142",17%,,UNHCR RFT,17,DRC Regional RRP 2021,"Zambia;Uganda;Tanzania, United Republic of;Rwanda;Regional;Congo;Burundi;Angola",ZMB;UGA;TZA;RWA;COG;BDI;AGO
+DRC Regional RRP,Angola,AGO,RRP,2022,"11,234,279",,"25,050,491",45%,,UNHCR RFT,7,DRC Regional RRP 2022,Angola,AGO
+DRC Regional RRP,Burundi,BDI,RRP,2022,"15,748,624",,"54,342,707",29%,,UNHCR RFT,11,DRC Regional RRP 2022,Burundi;Angola,BDI;AGO
+DRC Regional RRP,Congo,COG,RRP,2022,"14,381,550",,"15,470,197",93%,,UNHCR RFT,4,DRC Regional RRP 2022,Congo;Burundi;Angola,COG;BDI;AGO
+DRC Regional RRP,Rwanda,RWA,RRP,2022,"41,193,237",,"75,359,724",55%,,UNHCR RFT,17,DRC Regional RRP 2022,Rwanda;Congo;Burundi;Angola,RWA;COG;BDI;AGO
+DRC Regional RRP,"Tanzania, United Republic of",TZA,RRP,2022,"56,202,549",,"90,315,733",62%,,UNHCR RFT,10,DRC Regional RRP 2022,"Tanzania, United Republic of;Rwanda;Congo;Burundi;Angola",TZA;RWA;COG;BDI;AGO
+DRC Regional RRP,Uganda,UGA,RRP,2022,"84,785,604",,"325,355,306",26%,,UNHCR RFT,51,DRC Regional RRP 2022,"Uganda;Tanzania, United Republic of;Rwanda;Congo;Burundi;Angola",UGA;TZA;RWA;COG;BDI;AGO
+DRC Regional RRP,Zambia,ZMB,RRP,2022,"11,916,453",,"65,179,947",18%,,UNHCR RFT,17,DRC Regional RRP 2022,"Zambia;Uganda;Tanzania, United Republic of;Rwanda;Congo;Burundi;Angola",ZMB;UGA;TZA;RWA;COG;BDI;AGO
+Europe Regional RMRP,Croatia,HRV,RRP,2016,"1,010,634",,"7,444,775",14%,,UNHCR RFT,7,Europe Regional RMRP 2016,Croatia,HRV
+Europe Regional RMRP,Fyr Macedonia,MKD,RRP,2016,"38,984,973",,"26,014,080",150%,,UNHCR RFT,26,Europe Regional RMRP 2016,Fyr Macedonia;Croatia,MKD;HRV
+Europe Regional RMRP,Greece,GRC,RRP,2016,"357,647,443",,"466,836,326",77%,,UNHCR RFT,55,Europe Regional RMRP 2016,Greece;Fyr Macedonia;Croatia,GRC;MKD;HRV
+Europe Regional RMRP,Regional,,RRP,2016,"42,673,812",,"67,972,407",63%,,UNHCR RFT,8,Europe Regional RMRP 2016,Regional;Greece;Fyr Macedonia;Croatia,GRC;MKD;HRV
+Europe Regional RMRP,Serbia,SRB,RRP,2016,"16,788,496",,"20,729,867",81%,,UNHCR RFT,26,Europe Regional RMRP 2016,Serbia;Regional;Greece;Fyr Macedonia;Croatia,SRB;GRC;MKD;HRV
+Europe Regional RMRP,Slovenia,SVN,RRP,2016,"1,534,534",,"6,939,274",22%,,UNHCR RFT,8,Europe Regional RMRP 2016,Slovenia;Serbia;Regional;Greece;Fyr Macedonia;Croatia,SVN;SRB;GRC;MKD;HRV
+Europe Regional RMRP,Turkey,TUR,RRP,2016,"30,669,308",,"73,930,385",41%,,UNHCR RFT,7,Europe Regional RMRP 2016,Turkey;Slovenia;Serbia;Regional;Greece;Fyr Macedonia;Croatia,TUR;SVN;SRB;GRC;MKD;HRV
+Europe Regional RMRP,Fyr Macedonia,MKD,RRP,2017,"706,000",,"11,365,515",6%,,UNHCR RFT,11,Europe Regional RMRP 2017,Fyr Macedonia,MKD
+Europe Regional RMRP,Greece,GRC,RRP,2017,"303,296,571",,"525,904,019",58%,,UNHCR RFT,40,Europe Regional RMRP 2017,Greece;Fyr Macedonia,GRC;MKD
+Europe Regional RMRP,"Northern,Southern And Western Europe",,RRP,2017,"1,080,812",,,#N/A,,UNHCR RFT,,Europe Regional RMRP 2017,"Northern,Southern And Western Europe;Greece;Fyr Macedonia",GRC;MKD
+Europe Regional RMRP,Other Affected Countries Central And Southern-Eastern Europe,,RRP,2017,,,"21,185,843",0%,,UNHCR RFT,10,Europe Regional RMRP 2017,"Other Affected Countries Central And Southern-Eastern Europe;Northern,Southern And Western Europe;Greece;Fyr Macedonia",GRC;MKD
+Europe Regional RMRP,"Other Affected Countries Northern, Southern And Western Europe",,RRP,2017,,,"35,072,678",0%,,UNHCR RFT,14,Europe Regional RMRP 2017,"Other Affected Countries Northern, Southern And Western Europe;Other Affected Countries Central And Southern-Eastern Europe;Northern,Southern And Western Europe;Greece;Fyr Macedonia",GRC;MKD
+Europe Regional RMRP,Regional,,RRP,2017,"38,745,837",,"23,670,404",164%,,UNHCR RFT,2,Europe Regional RMRP 2017,"Regional;Other Affected Countries Northern, Southern And Western Europe;Other Affected Countries Central And Southern-Eastern Europe;Northern,Southern And Western Europe;Greece;Fyr Macedonia",GRC;MKD
+Europe Regional RMRP,Serbia,SRB,RRP,2017,"15,518,020",,"39,251,551",40%,,UNHCR RFT,24,Europe Regional RMRP 2017,"Serbia;Regional;Other Affected Countries Northern, Southern And Western Europe;Other Affected Countries Central And Southern-Eastern Europe;Northern,Southern And Western Europe;Greece;Fyr Macedonia",SRB;GRC;MKD
+Europe Regional RMRP,Turkey,TUR,RRP,2017,"1,437,239",,"34,485,668",4%,,UNHCR RFT,6,Europe Regional RMRP 2017,"Turkey;Serbia;Regional;Other Affected Countries Northern, Southern And Western Europe;Other Affected Countries Central And Southern-Eastern Europe;Northern,Southern And Western Europe;Greece;Fyr Macedonia",TUR;SRB;GRC;MKD
+Nigeria Regional RRP,Cameroon,CMR,RRP,2014,"2,200,000",,"15,849,601",14%,,UNHCR RFT,40,Nigeria Regional RRP 2014,Cameroon,CMR
+Nigeria Regional RRP,Chad,TCD,RRP,2014,"900,000",,"5,575,700",16%,,UNHCR RFT,13,Nigeria Regional RRP 2014,Chad;Cameroon,TCD;CMR
+Nigeria Regional RRP,Niger,NER,RRP,2014,"6,355,628",,"12,647,093",50%,,UNHCR RFT,45,Nigeria Regional RRP 2014,Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Cameroon,CMR,RRP,2015,"25,524,504",,"62,799,052",41%,,UNHCR RFT,11,Nigeria Regional RRP 2015,Cameroon,CMR
+Nigeria Regional RRP,Chad,TCD,RRP,2015,"12,602,179",,"30,180,208",42%,,UNHCR RFT,7,Nigeria Regional RRP 2015,Chad;Cameroon,TCD;CMR
+Nigeria Regional RRP,Niger,NER,RRP,2015,"59,375,163",,"81,430,664",73%,,UNHCR RFT,18,Nigeria Regional RRP 2015,Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Regional,,RRP,2015,"7,116,303",,,#N/A,,UNHCR RFT,,Nigeria Regional RRP 2015,Regional;Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Cameroon,CMR,RRP,2016,"18,412,686",,"56,361,252",33%,,UNHCR RFT,15,Nigeria Regional RRP 2016,Cameroon,CMR
+Nigeria Regional RRP,Chad,TCD,RRP,2016,"8,178,467",,"30,293,386",27%,,UNHCR RFT,8,Nigeria Regional RRP 2016,Chad;Cameroon,TCD;CMR
+Nigeria Regional RRP,Niger,NER,RRP,2016,"43,806,329",,"112,109,640",39%,,UNHCR RFT,22,Nigeria Regional RRP 2016,Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Regional,,RRP,2016,"17,637,275",,,#N/A,,UNHCR RFT,,Nigeria Regional RRP 2016,Regional;Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Cameroon,CMR,RRP,2017,"38,804,381",,"67,254,162",58%,,UNHCR RFT,17,Nigeria Regional RRP 2017,Cameroon,CMR
+Nigeria Regional RRP,Chad,TCD,RRP,2017,"28,288,029",,"19,610,356",144%,,UNHCR RFT,6,Nigeria Regional RRP 2017,Chad;Cameroon,TCD;CMR
+Nigeria Regional RRP,Niger,NER,RRP,2017,"56,963,664",,"154,292,688",37%,,UNHCR RFT,28,Nigeria Regional RRP 2017,Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Regional,,RRP,2017,"21,204,843",,,#N/A,,UNHCR RFT,,Nigeria Regional RRP 2017,Regional;Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Cameroon,CMR,RRP,2018,"28,208,478",,"72,102,004",39%,,UNHCR RFT,29,Nigeria Regional RRP 2018,Cameroon,CMR
+Nigeria Regional RRP,Chad,TCD,RRP,2018,"23,456,716",,"14,472,684",162%,,UNHCR RFT,5,Nigeria Regional RRP 2018,Chad;Cameroon,TCD;CMR
+Nigeria Regional RRP,Niger,NER,RRP,2018,"26,707,169",,"69,477,231",38%,,UNHCR RFT,24,Nigeria Regional RRP 2018,Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Regional,,RRP,2018,"46,340",,"534,782",9%,,UNHCR RFT,1,Nigeria Regional RRP 2018,Regional;Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Cameroon,CMR,RRP,2019,"18,471,358",,"65,109,469",28%,,UNHCR RFT,22,Nigeria Regional RRP 2019,Cameroon,CMR
+Nigeria Regional RRP,Chad,TCD,RRP,2019,"24,093,590",,"10,983,261",219%,,UNHCR RFT,6,Nigeria Regional RRP 2019,Chad;Cameroon,TCD;CMR
+Nigeria Regional RRP,Niger,NER,RRP,2019,"20,130,618",,"60,207,062",33%,,UNHCR RFT,26,Nigeria Regional RRP 2019,Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Regional,,RRP,2019,"55,089",,"245,362",22%,,UNHCR RFT,1,Nigeria Regional RRP 2019,Regional;Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Cameroon,CMR,RRP,2020,"28,292,794",,"60,902,178",46%,,UNHCR RFT,7,Nigeria Regional RRP 2020,Cameroon,CMR
+Nigeria Regional RRP,Chad,TCD,RRP,2020,"11,479,728",,"9,513,980",121%,,UNHCR RFT,5,Nigeria Regional RRP 2020,Chad;Cameroon,TCD;CMR
+Nigeria Regional RRP,Niger,NER,RRP,2020,"24,829,531",,"67,962,283",37%,,UNHCR RFT,8,Nigeria Regional RRP 2020,Niger;Chad;Cameroon,NER;TCD;CMR
+Nigeria Regional RRP,Regional,,RRP,2020,0,,,#N/A,,UNHCR RFT,,Nigeria Regional RRP 2020,Regional;Niger;Chad;Cameroon,NER;TCD;CMR
+South Sudan Regional RRP,Ethiopia,ETH,RRP,2014,"120,544,064",,"210,975,801",57%,,UNHCR RFT,19,South Sudan Regional RRP 2014,Ethiopia,ETH
+South Sudan Regional RRP,Kenya,KEN,RRP,2014,"55,731,089",,"108,824,008",51%,,UNHCR RFT,12,South Sudan Regional RRP 2014,Kenya;Ethiopia,KEN;ETH
+South Sudan Regional RRP,Regional,,RRP,2014,"39,640,036",,,#N/A,,UNHCR RFT,,South Sudan Regional RRP 2014,Regional;Kenya;Ethiopia,KEN;ETH
+South Sudan Regional RRP,Sudan,SDN,RRP,2014,"34,283,087",,"113,565,811",30%,,UNHCR RFT,17,South Sudan Regional RRP 2014,Sudan;Regional;Kenya;Ethiopia,SDN;KEN;ETH
+South Sudan Regional RRP,Uganda,UGA,RRP,2014,"106,961,549",,"224,303,989",48%,,UNHCR RFT,9,South Sudan Regional RRP 2014,Uganda;Sudan;Regional;Kenya;Ethiopia,UGA;SDN;KEN;ETH
+South Sudan Regional RRP,Ethiopia,ETH,RRP,2015,"84,602,742",,"344,980,121",25%,,UNHCR RFT,21,South Sudan Regional RRP 2015,Ethiopia,ETH
+South Sudan Regional RRP,Kenya,KEN,RRP,2015,"26,848,392",,"92,206,190",29%,,UNHCR RFT,16,South Sudan Regional RRP 2015,Kenya;Ethiopia,KEN;ETH
+South Sudan Regional RRP,Regional,,RRP,2015,"19,223,889",,,#N/A,,UNHCR RFT,,South Sudan Regional RRP 2015,Regional;Kenya;Ethiopia,KEN;ETH
+South Sudan Regional RRP,Sudan,SDN,RRP,2015,"52,101,741",,"152,119,709",34%,,UNHCR RFT,19,South Sudan Regional RRP 2015,Sudan;Regional;Kenya;Ethiopia,SDN;KEN;ETH
+South Sudan Regional RRP,Uganda,UGA,RRP,2015,"56,499,842",,"220,607,768",26%,,UNHCR RFT,9,South Sudan Regional RRP 2015,Uganda;Sudan;Regional;Kenya;Ethiopia,UGA;SDN;KEN;ETH
+South Sudan Regional RRP,Central African Republic,CAF,RRP,2016,"4,410,563",,"9,281,136",48%,,UNHCR RFT,3,South Sudan Regional RRP 2016,Central African Republic,CAF
+South Sudan Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2016,"9,333,640",,"14,750,559",63%,,UNHCR RFT,5,South Sudan Regional RRP 2016,"Congo, The Democratic Republic of the;Central African Republic",COD;CAF
+South Sudan Regional RRP,Ethiopia,ETH,RRP,2016,"85,808,552",,"276,379,510",31%,,UNHCR RFT,27,South Sudan Regional RRP 2016,"Ethiopia;Congo, The Democratic Republic of the;Central African Republic",ETH;COD;CAF
+South Sudan Regional RRP,Kenya,KEN,RRP,2016,"12,608,561",,"49,543,634",25%,,UNHCR RFT,8,South Sudan Regional RRP 2016,"Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Regional,,RRP,2016,"39,320,195",,,#N/A,,UNHCR RFT,,South Sudan Regional RRP 2016,"Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Sudan,SDN,RRP,2016,"82,950,910",,"158,448,491",52%,,UNHCR RFT,14,South Sudan Regional RRP 2016,"Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,Uganda,UGA,RRP,2016,"104,086,753",,"251,162,974",41%,,UNHCR RFT,29,South Sudan Regional RRP 2016,"Uganda;Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",UGA;SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,Central African Republic,CAF,RRP,2017,"400,000",,"13,834,819",3%,,UNHCR RFT,2,South Sudan Regional RRP 2017,Central African Republic,CAF
+South Sudan Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2017,"6,598,088",,"72,006,531",9%,,UNHCR RFT,4,South Sudan Regional RRP 2017,"Congo, The Democratic Republic of the;Central African Republic",COD;CAF
+South Sudan Regional RRP,Ethiopia,ETH,RRP,2017,"96,178,482",,"313,574,894",31%,,UNHCR RFT,23,South Sudan Regional RRP 2017,"Ethiopia;Congo, The Democratic Republic of the;Central African Republic",ETH;COD;CAF
+South Sudan Regional RRP,Kenya,KEN,RRP,2017,"27,889,775",,"88,625,895",31%,,UNHCR RFT,11,South Sudan Regional RRP 2017,"Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Regional,,RRP,2017,"30,052,553",,,#N/A,,UNHCR RFT,,South Sudan Regional RRP 2017,"Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Sudan,SDN,RRP,2017,"70,652,020",,"221,676,463",32%,,UNHCR RFT,19,South Sudan Regional RRP 2017,"Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,Uganda,UGA,RRP,2017,"231,666,493",,"673,190,970",34%,,UNHCR RFT,37,South Sudan Regional RRP 2017,"Uganda;Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",UGA;SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,Central African Republic,CAF,RRP,2018,"1,616,583",,"2,586,168",63%,,UNHCR RFT,1,South Sudan Regional RRP 2018,Central African Republic,CAF
+South Sudan Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2018,"9,634,206",,"54,790,001",18%,,UNHCR RFT,4,South Sudan Regional RRP 2018,"Congo, The Democratic Republic of the;Central African Republic",COD;CAF
+South Sudan Regional RRP,Ethiopia,ETH,RRP,2018,"158,113,873",,"342,109,266",46%,,UNHCR RFT,24,South Sudan Regional RRP 2018,"Ethiopia;Congo, The Democratic Republic of the;Central African Republic",ETH;COD;CAF
+South Sudan Regional RRP,Kenya,KEN,RRP,2018,"37,031,720",,"105,315,930",35%,,UNHCR RFT,16,South Sudan Regional RRP 2018,"Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Regional,,RRP,2018,"1,978,718",,"2,809,837",70%,,UNHCR RFT,1,South Sudan Regional RRP 2018,"Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Sudan,SDN,RRP,2018,"92,553,996",,"294,828,240",31%,,UNHCR RFT,25,South Sudan Regional RRP 2018,"Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,Uganda,UGA,RRP,2018,"393,677,824",,"576,976,515",68%,,UNHCR RFT,45,South Sudan Regional RRP 2018,"Uganda;Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",UGA;SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2019,"9,853,024",,"55,367,528",18%,,UNHCR RFT,7,South Sudan Regional RRP 2019,"Congo, The Democratic Republic of the",COD
+South Sudan Regional RRP,Ethiopia,ETH,RRP,2019,"190,289,461",,"342,195,880",56%,,UNHCR RFT,20,South Sudan Regional RRP 2019,"Ethiopia;Congo, The Democratic Republic of the",ETH;COD
+South Sudan Regional RRP,Kenya,KEN,RRP,2019,"45,003,447",,"105,374,640",43%,,UNHCR RFT,28,South Sudan Regional RRP 2019,"Kenya;Ethiopia;Congo, The Democratic Republic of the",KEN;ETH;COD
+South Sudan Regional RRP,Regional,,RRP,2019,"1,885,631",,"2,144,976",88%,,UNHCR RFT,1,South Sudan Regional RRP 2019,"Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the",KEN;ETH;COD
+South Sudan Regional RRP,Sudan,SDN,RRP,2019,"135,156,201",,"326,062,014",41%,,UNHCR RFT,26,South Sudan Regional RRP 2019,"Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the",SDN;KEN;ETH;COD
+South Sudan Regional RRP,Uganda,UGA,RRP,2019,"109,860,202",,"534,818,821",21%,,UNHCR RFT,63,South Sudan Regional RRP 2019,"Uganda;Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the",UGA;SDN;KEN;ETH;COD
+South Sudan Regional RRP,Central African Republic,CAF,RRP,2020,"1,361,619",,,#N/A,,UNHCR RFT,,South Sudan Regional RRP 2020,Central African Republic,CAF
+South Sudan Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2020,"14,997,942",,"47,223,454",32%,,UNHCR RFT,8,South Sudan Regional RRP 2020,"Congo, The Democratic Republic of the;Central African Republic",COD;CAF
+South Sudan Regional RRP,Ethiopia,ETH,RRP,2020,"39,135,493",,"374,917,926",10%,,UNHCR RFT,25,South Sudan Regional RRP 2020,"Ethiopia;Congo, The Democratic Republic of the;Central African Republic",ETH;COD;CAF
+South Sudan Regional RRP,Kenya,KEN,RRP,2020,"30,351,444",,"106,047,199",29%,,UNHCR RFT,26,South Sudan Regional RRP 2020,"Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Regional,,RRP,2020,0,,,#N/A,,UNHCR RFT,,South Sudan Regional RRP 2020,"Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Sudan,SDN,RRP,2020,"157,913,191",,"360,406,117",44%,,UNHCR RFT,26,South Sudan Regional RRP 2020,"Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,Uganda,UGA,RRP,2020,"117,194,806",,"541,313,611",22%,,UNHCR RFT,47,South Sudan Regional RRP 2020,"Uganda;Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",UGA;SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,Central African Republic,CAF,RRP,2021,"2,225,364",,,#N/A,,UNHCR RFT,,South Sudan Regional RRP 2021,Central African Republic,CAF
+South Sudan Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2021,"10,139,314",,"39,374,165",26%,,UNHCR RFT,4,South Sudan Regional RRP 2021,"Congo, The Democratic Republic of the;Central African Republic",COD;CAF
+South Sudan Regional RRP,Ethiopia,ETH,RRP,2021,"41,752,883",,"278,042,999",15%,,UNHCR RFT,22,South Sudan Regional RRP 2021,"Ethiopia;Congo, The Democratic Republic of the;Central African Republic",ETH;COD;CAF
+South Sudan Regional RRP,Kenya,KEN,RRP,2021,"23,397,325",,"110,470,849",21%,,UNHCR RFT,16,South Sudan Regional RRP 2021,"Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Regional,,RRP,2021,0,,,#N/A,,UNHCR RFT,,South Sudan Regional RRP 2021,"Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",KEN;ETH;COD;CAF
+South Sudan Regional RRP,Sudan,SDN,RRP,2021,"64,283,606",,"305,501,814",21%,,UNHCR RFT,33,South Sudan Regional RRP 2021,"Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,Uganda,UGA,RRP,2021,"100,195,169",,"478,394,321",21%,,UNHCR RFT,41,South Sudan Regional RRP 2021,"Uganda;Sudan;Regional;Kenya;Ethiopia;Congo, The Democratic Republic of the;Central African Republic",UGA;SDN;KEN;ETH;COD;CAF
+South Sudan Regional RRP,"Congo, The Democratic Republic of the",COD,RRP,2022,"8,985,703",,"28,015,855",32%,,UNHCR RFT,2,South Sudan Regional RRP 2022,"Congo, The Democratic Republic of the",COD
+South Sudan Regional RRP,Ethiopia,ETH,RRP,2022,"100,696,881",,"266,934,162",38%,,UNHCR RFT,33,South Sudan Regional RRP 2022,"Ethiopia;Congo, The Democratic Republic of the",ETH;COD
+South Sudan Regional RRP,Kenya,KEN,RRP,2022,"59,479,850",,"115,992,050",51%,,UNHCR RFT,22,South Sudan Regional RRP 2022,"Kenya;Ethiopia;Congo, The Democratic Republic of the",KEN;ETH;COD
+South Sudan Regional RRP,Sudan,SDN,RRP,2022,"50,059,027",,"285,923,160",18%,,UNHCR RFT,31,South Sudan Regional RRP 2022,"Sudan;Kenya;Ethiopia;Congo, The Democratic Republic of the",SDN;KEN;ETH;COD
+South Sudan Regional RRP,Uganda,UGA,RRP,2022,"145,854,785",,"491,176,914",30%,,UNHCR RFT,62,South Sudan Regional RRP 2022,"Uganda;Sudan;Kenya;Ethiopia;Congo, The Democratic Republic of the",UGA;SDN;KEN;ETH;COD
+Syria Regional 3RP,Egypt,EGY,RRP,2013,"36,373,552",,,#N/A,,UNHCR RFT,,Syria Regional 3RP 2013,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2013,"184,621,508",,,#N/A,,UNHCR RFT,,Syria Regional 3RP 2013,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2013,"773,308,888",,,#N/A,,UNHCR RFT,,Syria Regional 3RP 2013,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2013,"871,448,798",,,#N/A,,UNHCR RFT,,Syria Regional 3RP 2013,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,overall,,RRP,2013,,,"2,981,640,112",0%,,UNHCR RFT,,Syria Regional 3RP 2013,overall;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2013,"158,721,320",,,#N/A,,UNHCR RFT,,Syria Regional 3RP 2013,Regional;overall;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2013,"151,104,748",,,#N/A,,UNHCR RFT,,Syria Regional 3RP 2013,Turkey;Regional;overall;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Egypt,EGY,RRP,2014,"73,719,594",,"141,977,106",52%,,UNHCR RFT,10,Syria Regional 3RP 2014,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2014,"196,633,716",,"474,040,412",41%,,UNHCR RFT,30,Syria Regional 3RP 2014,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2014,"658,636,640",,"1,014,530,914",65%,,UNHCR RFT,49,Syria Regional 3RP 2014,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2014,"794,515,583",,"1,515,491,900",52%,,UNHCR RFT,46,Syria Regional 3RP 2014,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2014,"363,866,244",,"97,323,798",374%,,UNHCR RFT,6,Syria Regional 3RP 2014,Regional;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2014,"177,852,548",,"497,290,571",36%,,UNHCR RFT,8,Syria Regional 3RP 2014,Turkey;Regional;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Egypt,EGY,RRP,2015,,,"379,763,595",0%,,UNHCR RFT,11,Syria Regional 3RP 2015,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2015,"170,486,282",,"426,041,332",40%,,UNHCR RFT,26,Syria Regional 3RP 2015,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2015,"699,730,530",,"1,805,326,284",39%,,UNHCR RFT,49,Syria Regional 3RP 2015,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2015,"15,917,925",,"1,866,550,319",1%,,UNHCR RFT,49,Syria Regional 3RP 2015,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2015,,,"128,228,666",0%,,UNHCR RFT,3,Syria Regional 3RP 2015,Regional;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2015,"266,868,702",,"624,089,475",43%,,UNHCR RFT,10,Syria Regional 3RP 2015,Turkey;Regional;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Egypt,EGY,RRP,2016,"62,046,723",,"146,578,016",42%,,UNHCR RFT,12,Syria Regional 3RP 2016,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2016,"174,551,119",,"285,633,934",61%,,UNHCR RFT,27,Syria Regional 3RP 2016,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2016,,,"1,105,517,044",0%,,UNHCR RFT,48,Syria Regional 3RP 2016,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2016,"22,100",,"1,902,928,103",0%,,UNHCR RFT,42,Syria Regional 3RP 2016,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2016,,,"256,274,432",0%,,UNHCR RFT,7,Syria Regional 3RP 2016,Regional;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2016,"434,990,636",,"842,928,806",52%,,UNHCR RFT,10,Syria Regional 3RP 2016,Turkey;Regional;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Egypt,EGY,RRP,2017,"62,821,709",,"129,664,428",48%,,UNHCR RFT,11,Syria Regional 3RP 2017,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2017,"80,737,920",,"228,144,832",35%,,UNHCR RFT,23,Syria Regional 3RP 2017,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2017,"675,745,086",,"1,196,871,546",56%,,UNHCR RFT,48,Syria Regional 3RP 2017,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2017,"33,373,200",,"2,170,778,254",2%,,UNHCR RFT,72,Syria Regional 3RP 2017,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2017,"13,732,396",,"160,605,983",9%,,UNHCR RFT,6,Syria Regional 3RP 2017,Regional;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2017,,,"1,690,172,034",0%,,UNHCR RFT,11,Syria Regional 3RP 2017,Turkey;Regional;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Egypt,EGY,RRP,2018,"75,151,576",,"138,733,389",54%,,UNHCR RFT,9,Syria Regional 3RP 2018,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2018,"90,585,223",,"226,812,206",40%,,UNHCR RFT,26,Syria Regional 3RP 2018,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2018,"742,589,997",,"1,043,584,730",71%,,UNHCR RFT,49,Syria Regional 3RP 2018,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2018,"1,068,554,041",,"2,291,710,474",47%,,UNHCR RFT,78,Syria Regional 3RP 2018,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2018,,,"165,283,274",0%,,UNHCR RFT,4,Syria Regional 3RP 2018,Regional;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2018,"1,464,064,530",,"1,743,677,229",84%,,UNHCR RFT,11,Syria Regional 3RP 2018,Turkey;Regional;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Egypt,EGY,RRP,2019,"63,507,076",,"162,093,314",39%,,UNHCR RFT,12,Syria Regional 3RP 2019,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2019,"88,903,447",,"265,033,324",34%,,UNHCR RFT,21,Syria Regional 3RP 2019,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2019,"681,569,144",,"959,547,519",71%,,UNHCR RFT,29,Syria Regional 3RP 2019,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2019,"1,234,963,751",,"2,243,778,399",55%,,UNHCR RFT,89,Syria Regional 3RP 2019,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2019,"8,332,785",,"138,840,757",6%,,UNHCR RFT,3,Syria Regional 3RP 2019,Regional;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2019,"1,027,336,919",,"1,652,704,157",62%,,UNHCR RFT,26,Syria Regional 3RP 2019,Turkey;Regional;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Egypt,EGY,RRP,2020,"58,928,982",,"169,085,254",35%,,UNHCR RFT,13,Syria Regional 3RP 2020,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2020,"109,725,968",,"293,662,566",37%,,UNHCR RFT,20,Syria Regional 3RP 2020,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2020,"567,288,367",,"1,476,063,301",38%,,UNHCR RFT,47,Syria Regional 3RP 2020,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2020,"1,441,768,353",,"2,658,653,272",54%,,UNHCR RFT,77,Syria Regional 3RP 2020,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2020,"132,508,500",,"99,034,109",134%,,UNHCR RFT,4,Syria Regional 3RP 2020,Regional;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2020,"695,544,350",,"1,302,418,560",53%,,UNHCR RFT,23,Syria Regional 3RP 2020,Turkey;Regional;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Egypt,EGY,RRP,2021,"59,236,019",,"127,315,563",47%,,UNHCR RFT,12,Syria Regional 3RP 2021,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2021,"101,768,945",,"225,711,493",45%,,UNHCR RFT,19,Syria Regional 3RP 2021,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2021,"643,480,191",,"1,344,180,070",48%,,UNHCR RFT,43,Syria Regional 3RP 2021,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2021,"1,186,748,859",,"2,753,986,500",43%,,UNHCR RFT,76,Syria Regional 3RP 2021,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2021,"22,453,933",,"94,668,865",24%,,UNHCR RFT,3,Syria Regional 3RP 2021,Regional;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2021,"527,296,680",,"1,035,041,653",51%,,UNHCR RFT,23,Syria Regional 3RP 2021,Turkey;Regional;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Egypt,EGY,RRP,2022,"40,128,238",,"130,191,927",31%,,UNHCR RFT,13,Syria Regional 3RP 2022,Egypt,EGY
+Syria Regional 3RP,Iraq,IRQ,RRP,2022,"54,344,059",,"251,126,418",22%,,UNHCR RFT,24,Syria Regional 3RP 2022,Iraq;Egypt,IRQ;EGY
+Syria Regional 3RP,Jordan,JOR,RRP,2022,"447,614,411",,"1,300,000,000",34%,,UNHCR RFT,56,Syria Regional 3RP 2022,Jordan;Iraq;Egypt,JOR;IRQ;EGY
+Syria Regional 3RP,Lebanon,LBN,RRP,2022,"811,955,632",,"3,195,999,999",25%,,UNHCR RFT,125,Syria Regional 3RP 2022,Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Regional,,RRP,2022,"5,782,845",,"39,892,471",14%,,UNHCR RFT,3,Syria Regional 3RP 2022,Regional;Lebanon;Jordan;Iraq;Egypt,LBN;JOR;IRQ;EGY
+Syria Regional 3RP,Turkey,TUR,RRP,2022,"382,602,931",,"1,163,688,763",33%,,UNHCR RFT,22,Syria Regional 3RP 2022,Turkey;Regional;Lebanon;Jordan;Iraq;Egypt,TUR;LBN;JOR;IRQ;EGY
+Ukraine Regional RRP,Bulgaria,BGR,RRP,2022,"14,649,502",,"30,961,450",47%,,UNHCR RFT,4,Ukraine Regional RRP 2022,Bulgaria,BGR
+Ukraine Regional RRP,Czech Republic,CZE,RRP,2022,"8,213,352",,"42,648,580",19%,,UNHCR RFT,4,Ukraine Regional RRP 2022,Czech Republic;Bulgaria,CZE;BGR
+Ukraine Regional RRP,Hungary,HUN,RRP,2022,"43,292,139",,"75,297,944",57%,,UNHCR RFT,21,Ukraine Regional RRP 2022,Hungary;Czech Republic;Bulgaria,HUN;CZE;BGR
+Ukraine Regional RRP,Moldova,MDA,RRP,2022,"276,194,740",,"391,539,208",71%,,UNHCR RFT,42,Ukraine Regional RRP 2022,Moldova;Hungary;Czech Republic;Bulgaria,MDA;HUN;CZE;BGR
+Ukraine Regional RRP,Multiple Countries (Ukraine RRP),,RRP,2022,"50,952,012",,,#N/A,,UNHCR RFT,,Ukraine Regional RRP 2022,Multiple Countries (Ukraine RRP);Moldova;Hungary;Czech Republic;Bulgaria,MDA;HUN;CZE;BGR
+Ukraine Regional RRP,Poland,POL,RRP,2022,"430,949,194",,"777,764,695",55%,,UNHCR RFT,85,Ukraine Regional RRP 2022,Poland;Multiple Countries (Ukraine RRP);Moldova;Hungary;Czech Republic;Bulgaria,POL;MDA;HUN;CZE;BGR
+Ukraine Regional RRP,Regional and Other Countries,,RRP,2022,"184,842,375",,"157,662,042",117%,,UNHCR RFT,7,Ukraine Regional RRP 2022,Regional and Other Countries;Poland;Multiple Countries (Ukraine RRP);Moldova;Hungary;Czech Republic;Bulgaria,POL;MDA;HUN;CZE;BGR
+Ukraine Regional RRP,Romania,ROU,RRP,2022,"198,739,159",,"226,586,000",88%,,UNHCR RFT,22,Ukraine Regional RRP 2022,Romania;Regional and Other Countries;Poland;Multiple Countries (Ukraine RRP);Moldova;Hungary;Czech Republic;Bulgaria,ROU;POL;MDA;HUN;CZE;BGR
+Ukraine Regional RRP,Slovakia,SVK,RRP,2022,"90,483,335",,"87,477,072",103%,,UNHCR RFT,20,Ukraine Regional RRP 2022,Slovakia;Romania;Regional and Other Countries;Poland;Multiple Countries (Ukraine RRP);Moldova;Hungary;Czech Republic;Bulgaria,SVK;ROU;POL;MDA;HUN;CZE;BGR
+Ukraine Regional RRP,Moldova,MDA,RRP,2023,"8,735,228",,,#N/A,,UNHCR RFT,,Ukraine Regional RRP 2023,Moldova,MDA
+Ukraine Regional RRP,Regional and Other Countries,,RRP,2023,"529,000",,,#N/A,,UNHCR RFT,,Ukraine Regional RRP 2023,Regional and Other Countries;Moldova,MDA
+Ukraine Regional RRP,Romania,ROU,RRP,2023,"390,795",,,#N/A,,UNHCR RFT,,Ukraine Regional RRP 2023,Romania;Regional and Other Countries;Moldova,ROU;MDA
+Yemen Regional RMRP,Djibouti,DJI,RRP,2015,,,,,,UNHCR RFT,7,Yemen Regional RMRP 2015,Djibouti,DJI
+Yemen Regional RMRP,Ethiopia,ETH,RRP,2015,,,,,,UNHCR RFT,4,Yemen Regional RMRP 2015,Ethiopia;Djibouti,ETH;DJI
+Yemen Regional RMRP,Regional,,RRP,2015,,,,,,UNHCR RFT,2,Yemen Regional RMRP 2015,Regional;Ethiopia;Djibouti,ETH;DJI
+Yemen Regional RMRP,Somalia,SOM,RRP,2015,,,,,,UNHCR RFT,10,Yemen Regional RMRP 2015,Somalia;Regional;Ethiopia;Djibouti,SOM;ETH;DJI
+Yemen Regional RMRP,Sudan,SDN,RRP,2015,,,,,,UNHCR RFT,2,Yemen Regional RMRP 2015,Sudan;Somalia;Regional;Ethiopia;Djibouti,SDN;SOM;ETH;DJI
+Yemen Regional RMRP,Djibouti,DJI,RRP,2016,"9,693,455",,"29,014,224",33%,,UNHCR RFT,7,Yemen Regional RMRP 2016,Djibouti,DJI
+Yemen Regional RMRP,Ethiopia,ETH,RRP,2016,"4,000,000",,"20,050,572",20%,,UNHCR RFT,4,Yemen Regional RMRP 2016,Ethiopia;Djibouti,ETH;DJI
+Yemen Regional RMRP,Regional,,RRP,2016,"6,721,492",,"1,413,141",476%,,UNHCR RFT,2,Yemen Regional RMRP 2016,Regional;Ethiopia;Djibouti,ETH;DJI
+Yemen Regional RMRP,Somalia,SOM,RRP,2016,"14,052,576",,"39,311,585",36%,,UNHCR RFT,7,Yemen Regional RMRP 2016,Somalia;Regional;Ethiopia;Djibouti,SOM;ETH;DJI
+Yemen Regional RMRP,Sudan,SDN,RRP,2016,"350,000",,"4,341,210",8%,,UNHCR RFT,2,Yemen Regional RMRP 2016,Sudan;Somalia;Regional;Ethiopia;Djibouti,SDN;SOM;ETH;DJI
