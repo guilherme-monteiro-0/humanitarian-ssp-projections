@@ -252,3 +252,112 @@ ggplot(conflict_w_agg,aes(x=year,y=gdp,group=scenario,color=scenario)) +
     x="",
     color=""
   )
+
+conflict_w_agg2 = data.table(conflict_w)[,.(conflict=sum(conflict, na.rm=T)), by=.(scenario,year)]
+conflict_w_agg2 = subset(conflict_w_agg2, scenario=="ssp1" & year < 2014)
+
+ggplot(conflict_w_agg2,aes(x=year,y=conflict)) +
+  geom_line(size=1, color=reds[1]) +
+  scale_y_continuous(expand = c(0, 0)) + # Force y-grid to start at x-axis
+  expand_limits(y=c(0, max(conflict_w_agg2$conflict*1.1))) +
+  scale_x_continuous(n.breaks=7) +
+  di_style +
+  labs(
+    y="Count of global conflicts",
+    x="",
+    color=""
+  )
+
+
+wd_base = "~/git/"
+setwd(paste0(wd_base, "saint"))
+
+forecast = fread("outputs/binary_conflict_clim_bigram_forecast.csv")
+forecast$y_prob = forecast$y_hat
+forecast$y_hat = forecast$y_prob
+
+forecast$conflict[which(forecast$year>=2014)] = forecast$y_hat[which(forecast$year>=2014)]
+forecast$scenario = toupper(forecast$scenario)
+forecast$scenario[which(forecast$year < 2014 & forecast$scenario=="SSP1")] = "Historical"
+forecast = subset(forecast, year > 2013 | scenario=="Historical")
+forecast_agg = forecast[,.(
+  conflicts=sum(conflict, na.rm=T)
+), by=.(scenario, year)]
+
+ggplot(forecast_agg,aes(x=year,y=conflicts,group=scenario,color=scenario)) +
+  geom_line(size=1) +
+  scale_color_manual(values=c(
+    reds[1],
+    yellows[1],
+    greens[1],
+    blues[1],
+    purples[1]
+  )) + # Choose colour here
+  scale_y_continuous(expand = c(0, 0)) + # Force y-grid to start at x-axis
+  scale_x_continuous(n.breaks=7) +
+  expand_limits(y=c(0, max(forecast_agg$conflicts*1.1))) + # Start at 0 if wanted, add 10% padding to max
+  di_style +
+  labs(
+    y="Aggregate global conflict probabilities",
+    x="",
+    color=""
+  )
+
+forecast = fread("outputs/regression_displacement_worldclim_forecast.csv")
+forecast$displaced_persons[which(forecast$year>=1960)] = forecast$y_hat[which(forecast$year>=1960)]
+forecast$displaced_persons[which(forecast$displaced_persons<0)] = 0
+forecast$displaced_persons = forecast$displaced_persons / 1e6
+forecast$scenario = toupper(forecast$scenario)
+forecast$scenario[which(forecast$year < 2023 & forecast$scenario=="SSP1")] = "Historical"
+forecast = subset(forecast, year > 2022 | scenario=="Historical")
+forecast_agg = forecast[,.(
+  displaced_persons=sum(displaced_persons, na.rm=T)
+), by=.(scenario, year)]
+
+ggplot(forecast_agg,aes(x=year,y=displaced_persons,group=scenario,color=scenario)) +
+  geom_line(size=1) +
+  scale_color_manual(values=c(
+    reds[1],
+    yellows[1],
+    greens[1],
+    blues[1],
+    purples[1]
+  )) + # Choose colour here
+  scale_y_continuous(expand = c(0, 0)) + # Force y-grid to start at x-axis
+  scale_x_continuous(n.breaks=7) +
+  expand_limits(y=c(0, max(forecast_agg$displaced_persons*1.1))) + # Start at 0 if wanted, add 10% padding to max
+  di_style +
+  labs(
+    y="Displaced persons (millions)",
+    x="",
+    color=""
+  )
+
+forecast = fread("outputs/regression_climate_worldclim_forecast.csv")
+forecast$climate_disasters[which(forecast$year>=2023)] = forecast$y_hat[which(forecast$year>=2023)]
+forecast$climate_disasters[which(forecast$climate_disasters<0)] = 0
+forecast$scenario = toupper(forecast$scenario)
+forecast$scenario[which(forecast$year < 2023 & forecast$scenario=="SSP1")] = "Historical"
+forecast = subset(forecast, year > 2022 | scenario=="Historical")
+forecast_agg = forecast[,.(
+  climate_disasters=sum(climate_disasters, na.rm=T)
+), by=.(scenario, year)]
+
+ggplot(forecast_agg,aes(x=year,y=climate_disasters,group=scenario,color=scenario)) +
+  geom_line(size=1) +
+  scale_color_manual(values=c(
+    reds[1],
+    yellows[1],
+    greens[1],
+    blues[1],
+    purples[1]
+  )) + # Choose colour here
+  scale_y_continuous(expand = c(0, 0)) + # Force y-grid to start at x-axis
+  scale_x_continuous(n.breaks=7) +
+  expand_limits(y=c(0, max(forecast_agg$climate_disasters*1.1))) + # Start at 0 if wanted, add 10% padding to max
+  di_style +
+  labs(
+    y="Total global climate disasters",
+    x="",
+    color=""
+  )
