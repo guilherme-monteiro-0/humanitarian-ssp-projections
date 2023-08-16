@@ -177,7 +177,7 @@ ggplot(worldclim, aes(x=year, y=prec, group=scenario, fill=scenario)) +
   di_style +
   rotate_x_text_45 + # Or chose _90 or remove for horizontal
   labs(
-    y="Mean annual precipitation per 10 minute square (mm)",
+    y="Mean annual precipitation per 10' square (mm)",
     x="",
     fill=""
   )
