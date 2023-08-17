@@ -361,3 +361,57 @@ ggplot(forecast_agg,aes(x=year,y=climate_disasters,group=scenario,color=scenario
     x="",
     color=""
   )
+
+ols_data = fread("~/git/saint/data/tripartite_bigram.csv")
+ols = lm(humanitarian_needs~
+           displaced_persons+
+           climate_disasters+
+           conflict
+         , data=ols_data
+)
+summary(ols)
+forecast = fread("~/git/saint/data/tripartite_bigram_forecasting.csv")
+forecast$humanitarian_needs = predict.lm(ols, newdata=forecast)
+forecast$scenario = toupper(forecast$scenario)
+forecast_sub = subset(forecast, year %in% c(2020, 2050, 2100))
+forecast_agg = data.table(forecast_sub)[,.(
+  humanitarian_needs=sum(humanitarian_needs, na.rm=T),
+  displaced_persons=sum(displaced_persons, na.rm=T),
+  conflict=sum(conflict, na.rm=T)
+), by=.(scenario, year)]
+forecast_agg$year = factor(forecast_agg$year)
+pin_baseline = 300
+forecast_agg$humanitarian_needs = forecast_agg$humanitarian_needs - pin_baseline
+ggplot(forecast_agg, aes(x=scenario,y=humanitarian_needs,fill=year,group=year)) +
+  scale_y_continuous(expand = c(0, 0), labels = function(y) y + pin_baseline) +
+  scale_fill_manual(values = reds) +
+  geom_bar(stat="identity", position="dodge") +
+  di_style +
+  labs(x="", fill="", y="People in need (millions)")
+
+forecast_agg = data.table(forecast)[,.(
+  humanitarian_needs=sum(humanitarian_needs, na.rm=T),
+  displaced_persons=sum(displaced_persons, na.rm=T),
+  climate_disasters=sum(climate_disasters, na.rm=T),
+  conflict=sum(conflict, na.rm=T)
+), by=.(scenario, year)]
+forecast_agg_baseline = forecast_agg$humanitarian_needs[which.min(forecast_agg$humanitarian_needs)]
+forecast_agg$humanitarian_needs = forecast_agg$humanitarian_needs / forecast_agg_baseline
+
+ggplot(forecast_agg,aes(x=year,y=humanitarian_needs,group=scenario,color=scenario)) +
+  geom_line(linewidth=1) +
+  scale_color_manual(values=c(
+    reds[1],
+    yellows[1],
+    greens[1],
+    blues[1],
+    purples[1]
+  )) + # Choose colour here
+  scale_y_continuous(labels=percent) + # Force y-grid to start at x-axis
+  scale_x_continuous(n.breaks=7) +
+  di_style +
+  labs(
+    y="People in need (% of baseline)",
+    x="",
+    color=""
+  )
