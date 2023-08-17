@@ -235,7 +235,7 @@ conflict_w_agg = subset(conflict_w_agg,
 )
 conflict_w_agg$gdp = conflict_w_agg$gdp / 1e12
 ggplot(conflict_w_agg,aes(x=year,y=gdp,group=scenario,color=scenario)) +
-  geom_line(size=2) +
+  geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
     yellows[1],
@@ -257,7 +257,7 @@ conflict_w_agg2 = data.table(conflict_w)[,.(conflict=sum(conflict, na.rm=T)), by
 conflict_w_agg2 = subset(conflict_w_agg2, scenario=="ssp1" & year < 2014)
 
 ggplot(conflict_w_agg2,aes(x=year,y=conflict)) +
-  geom_line(size=1, color=reds[1]) +
+  geom_line(linewidth=1, color=reds[1]) +
   scale_y_continuous(expand = c(0, 0)) + # Force y-grid to start at x-axis
   expand_limits(y=c(0, max(conflict_w_agg2$conflict*1.1))) +
   scale_x_continuous(n.breaks=7) +
@@ -285,7 +285,7 @@ forecast_agg = forecast[,.(
 ), by=.(scenario, year)]
 
 ggplot(forecast_agg,aes(x=year,y=conflicts,group=scenario,color=scenario)) +
-  geom_line(size=1) +
+  geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
     yellows[1],
@@ -315,7 +315,7 @@ forecast_agg = forecast[,.(
 ), by=.(scenario, year)]
 
 ggplot(forecast_agg,aes(x=year,y=displaced_persons,group=scenario,color=scenario)) +
-  geom_line(size=1) +
+  geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
     yellows[1],
@@ -344,7 +344,7 @@ forecast_agg = forecast[,.(
 ), by=.(scenario, year)]
 
 ggplot(forecast_agg,aes(x=year,y=climate_disasters,group=scenario,color=scenario)) +
-  geom_line(size=1) +
+  geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
     yellows[1],
