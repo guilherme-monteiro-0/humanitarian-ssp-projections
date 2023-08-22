@@ -155,7 +155,7 @@ worldclim$year = factor(
   )
 )
 
-ggplot(worldclim, aes(x=year, y=tmax, group=scenario, fill=scenario)) +
+p1 = ggplot(worldclim, aes(x=year, y=tmax, group=scenario, fill=scenario)) +
   geom_bar(stat="identity", position="dodge") +
   scale_fill_manual(values=reds) +
   scale_y_continuous(expand = c(0, 0)) + # Force y-grid to start at x-axis
@@ -166,11 +166,14 @@ ggplot(worldclim, aes(x=year, y=tmax, group=scenario, fill=scenario)) +
     x="",
     fill=""
   )
+p1
+ggsave("outputs/p1_tmax.png", plot = p1, width = 12, height = 8)
+fwrite(worldclim, "outputs/p1_tmax_and_p2_prec.csv")
 
 prec_baseline = 1000
 worldclim$prec = worldclim$prec - prec_baseline
 
-ggplot(worldclim, aes(x=year, y=prec, group=scenario, fill=scenario)) +
+p2 = ggplot(worldclim, aes(x=year, y=prec, group=scenario, fill=scenario)) +
   geom_bar(stat="identity", position="dodge") +
   scale_fill_manual(values=purples) +
   scale_y_continuous(expand = c(0, 0), labels = function(y) y + prec_baseline) + # Force y-grid to start at x-axis
@@ -181,6 +184,8 @@ ggplot(worldclim, aes(x=year, y=prec, group=scenario, fill=scenario)) +
     x="",
     fill=""
   )
+p2 
+ggsave("outputs/p2_prec.png", plot = p2, width = 12, height = 8)
 
 
 load("./uppsala_replication/PredictionSSP_1.RData")
@@ -234,7 +239,7 @@ conflict_w_agg = subset(conflict_w_agg,
   year >= 2014 | scenario=="Historical"
 )
 conflict_w_agg$gdp = conflict_w_agg$gdp / 1e12
-ggplot(conflict_w_agg,aes(x=year,y=gdp,group=scenario,color=scenario)) +
+p3 = ggplot(conflict_w_agg,aes(x=year,y=gdp,group=scenario,color=scenario)) +
   geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
@@ -252,11 +257,14 @@ ggplot(conflict_w_agg,aes(x=year,y=gdp,group=scenario,color=scenario)) +
     x="",
     color=""
   )
+p3
+ggsave("outputs/p3_gdp.png", plot = p3, width = 12, height = 8)
+fwrite(conflict_w_agg, "outputs/p3_gdp.csv")
 
 conflict_w_agg2 = data.table(conflict_w)[,.(conflict=sum(conflict, na.rm=T)), by=.(scenario,year)]
 conflict_w_agg2 = subset(conflict_w_agg2, scenario=="ssp1" & year < 2014)
 
-ggplot(conflict_w_agg2,aes(x=year,y=conflict)) +
+p4 = ggplot(conflict_w_agg2,aes(x=year,y=conflict)) +
   geom_line(linewidth=1, color=reds[1]) +
   scale_y_continuous(expand = c(0, 0)) + # Force y-grid to start at x-axis
   expand_limits(y=c(0, max(conflict_w_agg2$conflict*1.1))) +
@@ -267,7 +275,9 @@ ggplot(conflict_w_agg2,aes(x=year,y=conflict)) +
     x="",
     color=""
   )
-
+p4
+ggsave("outputs/p4_conflict.png", plot = p4, width = 12, height = 8)
+fwrite(conflict_w_agg2, "outputs/p4_conflict.csv")
 
 wd_base = "~/git/"
 setwd(paste0(wd_base, "saint"))
@@ -284,7 +294,7 @@ forecast_agg = forecast[,.(
   conflicts=sum(conflict, na.rm=T)
 ), by=.(scenario, year)]
 
-ggplot(forecast_agg,aes(x=year,y=conflicts,group=scenario,color=scenario)) +
+p5 = ggplot(forecast_agg,aes(x=year,y=conflicts,group=scenario,color=scenario)) +
   geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
@@ -302,6 +312,9 @@ ggplot(forecast_agg,aes(x=year,y=conflicts,group=scenario,color=scenario)) +
     x="",
     color=""
   )
+p5
+ggsave("~/git/humanitarian-ssp-projections/outputs/p5_conflict_forecast.png", plot = p5, width = 12, height = 8)
+fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p5_conflict_forecast.csv")
 
 forecast = fread("outputs/regression_displacement_worldclim_forecast.csv")
 forecast$displaced_persons[which(forecast$year>=1960)] = forecast$y_hat[which(forecast$year>=1960)]
@@ -314,7 +327,7 @@ forecast_agg = forecast[,.(
   displaced_persons=sum(displaced_persons, na.rm=T)
 ), by=.(scenario, year)]
 
-ggplot(forecast_agg,aes(x=year,y=displaced_persons,group=scenario,color=scenario)) +
+p6 = ggplot(forecast_agg,aes(x=year,y=displaced_persons,group=scenario,color=scenario)) +
   geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
@@ -332,6 +345,10 @@ ggplot(forecast_agg,aes(x=year,y=displaced_persons,group=scenario,color=scenario
     x="",
     color=""
   )
+p6
+ggsave("~/git/humanitarian-ssp-projections/outputs/p6_displacement_forecast.png", plot = p6, width = 12, height = 8)
+fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p6_displacement_forecast.csv")
+
 
 forecast = fread("outputs/regression_climate_worldclim_forecast.csv")
 forecast$climate_disasters[which(forecast$year>=2023)] = forecast$y_hat[which(forecast$year>=2023)]
@@ -343,7 +360,7 @@ forecast_agg = forecast[,.(
   climate_disasters=sum(climate_disasters, na.rm=T)
 ), by=.(scenario, year)]
 
-ggplot(forecast_agg,aes(x=year,y=climate_disasters,group=scenario,color=scenario)) +
+p7 = ggplot(forecast_agg,aes(x=year,y=climate_disasters,group=scenario,color=scenario)) +
   geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
@@ -361,6 +378,10 @@ ggplot(forecast_agg,aes(x=year,y=climate_disasters,group=scenario,color=scenario
     x="",
     color=""
   )
+p7
+ggsave("~/git/humanitarian-ssp-projections/outputs/p7_climate_forecast.png", plot = p7, width = 12, height = 8)
+fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p7_climate_forecast.csv")
+
 
 ols_data = fread("~/git/saint/data/tripartite_bigram.csv")
 ols = lm(humanitarian_needs~
@@ -381,13 +402,17 @@ forecast_agg = data.table(forecast_sub)[,.(
 ), by=.(scenario, year)]
 forecast_agg$year = factor(forecast_agg$year)
 pin_baseline = 300
-forecast_agg$humanitarian_needs = forecast_agg$humanitarian_needs - pin_baseline
-ggplot(forecast_agg, aes(x=scenario,y=humanitarian_needs,fill=year,group=year)) +
+forecast_agg$humanitarian_needs_label = forecast_agg$humanitarian_needs - pin_baseline
+p8 = ggplot(forecast_agg, aes(x=scenario,y=humanitarian_needs_label,fill=year,group=year)) +
   scale_y_continuous(expand = c(0, 0), labels = function(y) y + pin_baseline) +
   scale_fill_manual(values = reds) +
   geom_bar(stat="identity", position="dodge") +
   di_style +
   labs(x="", fill="", y="People in need (millions)")
+p8
+ggsave("~/git/humanitarian-ssp-projections/outputs/p8_needs_bars.png", plot = p8, width = 12, height = 8)
+fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p8_needs_bars.csv")
+
 
 forecast_agg = data.table(forecast)[,.(
   humanitarian_needs=sum(humanitarian_needs, na.rm=T),
@@ -398,7 +423,7 @@ forecast_agg = data.table(forecast)[,.(
 forecast_agg_baseline = forecast_agg$humanitarian_needs[which.min(forecast_agg$humanitarian_needs)]
 forecast_agg$humanitarian_needs = forecast_agg$humanitarian_needs / forecast_agg_baseline
 
-ggplot(forecast_agg,aes(x=year,y=humanitarian_needs,group=scenario,color=scenario)) +
+p9 = ggplot(forecast_agg,aes(x=year,y=humanitarian_needs,group=scenario,color=scenario)) +
   geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
@@ -415,3 +440,6 @@ ggplot(forecast_agg,aes(x=year,y=humanitarian_needs,group=scenario,color=scenari
     x="",
     color=""
   )
+p9
+ggsave("~/git/humanitarian-ssp-projections/outputs/p9_needs_lines.png", plot = p9, width = 12, height = 8)
+fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p9_needs_lines.csv")
