@@ -391,7 +391,17 @@ ols = lm(humanitarian_needs~
          , data=ols_data
 )
 summary(ols)
+ols_intercept = summary(ols)$coefficients[[1]]
+ols_displaced = summary(ols)$coefficients[[2]]
+ols_climate = summary(ols)$coefficients[[3]]
+ols_conflict = summary(ols)$coefficients[[4]]
+
 forecast = fread("~/git/saint/data/tripartite_bigram_forecasting.csv")
+forecast$intercept = ols_intercept
+forecast$displacement_beta = forecast$displaced_persons * ols_displaced
+forecast$climate_beta = forecast$climate_disasters * ols_climate
+forecast$conflict_beta = forecast$conflict * ols_conflict
+forecast$historical_humanitarian_needs = forecast$humanitarian_needs
 forecast$humanitarian_needs = predict.lm(ols, newdata=forecast)
 forecast$scenario = toupper(forecast$scenario)
 forecast_sub = subset(forecast, year %in% c(2020, 2050, 2100))
@@ -415,15 +425,20 @@ fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p8_needs_bars.c
 
 
 forecast_agg = data.table(forecast)[,.(
+  historical_humanitarian_needs=sum(historical_humanitarian_needs, na.rm=T),
   humanitarian_needs=sum(humanitarian_needs, na.rm=T),
+  intercept=sum(intercept, na.rm=T),
   displaced_persons=sum(displaced_persons, na.rm=T),
+  displacement_beta=sum(displacement_beta, na.rm=T),
   climate_disasters=sum(climate_disasters, na.rm=T),
-  conflict=sum(conflict, na.rm=T)
+  climate_beta=sum(climate_beta, na.rm=T),
+  conflict=sum(conflict, na.rm=T),
+  conflict_beta=sum(conflict_beta, na.rm=T)
 ), by=.(scenario, year)]
 forecast_agg_baseline = forecast_agg$humanitarian_needs[which.min(forecast_agg$humanitarian_needs)]
-forecast_agg$humanitarian_needs = forecast_agg$humanitarian_needs / forecast_agg_baseline
+forecast_agg$humanitarian_needs_label = forecast_agg$humanitarian_needs / forecast_agg_baseline
 
-p9 = ggplot(forecast_agg,aes(x=year,y=humanitarian_needs,group=scenario,color=scenario)) +
+p9 = ggplot(forecast_agg,aes(x=year,y=humanitarian_needs_label,group=scenario,color=scenario)) +
   geom_line(linewidth=1) +
   scale_color_manual(values=c(
     reds[1],
@@ -443,3 +458,21 @@ p9 = ggplot(forecast_agg,aes(x=year,y=humanitarian_needs,group=scenario,color=sc
 p9
 ggsave("~/git/humanitarian-ssp-projections/outputs/p9_needs_lines.png", plot = p9, width = 12, height = 8)
 fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p9_needs_lines.csv")
+
+forecast_agg_l = melt(forecast_agg,
+                      id.vars=c("scenario", "year"),
+                      measure.vars = c("intercept","displacement_beta","climate_beta","conflict_beta"))
+
+p10 = ggplot(subset(forecast_agg_l, scenario=="SSP5"),aes(x=year,y=value,group=variable,fill=variable)) +
+  geom_area() +
+  scale_y_continuous(expand = c(0, 0)) +
+  # scale_fill_manual(values=reds) +
+  scale_x_continuous(n.breaks=7) +
+  di_style +
+  labs(
+    y="Contribution to SSP5 people in need (millions)",
+    x="",
+    fill=""
+  )
+p10
+ggsave("~/git/humanitarian-ssp-projections/outputs/p10_beta.png", plot = p10, width = 12, height = 8)
