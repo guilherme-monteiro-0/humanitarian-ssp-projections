@@ -13,44 +13,22 @@ worldclim$conflict = NULL
 emdat = fread("EM-DAT/emdat_110723.csv")
 setnames(
   emdat,
-  c("ISO","Year","Total Affected"),
-  c("iso3","year","affected_persons")
+  c("ISO","Year","Total Deaths","No Injured","No Affected","No Homeless","Total Affected"),
+  c("iso3","year","total_deaths","no_injured","no_affected","no_homeless","total_affected")
 )
-emdat_agg = emdat[,.(climate_disasters=.N),by=.(iso3, year, `Disaster Type`)]
-emdat_agg_m = melt(emdat_agg, id.vars=c("iso3", "year", "Disaster Type"))
-emdat_agg_w = dcast(emdat_agg_m, iso3+year~`Disaster Type`)
-emdat_agg_w[is.na(emdat_agg_w)] = 0
-names(emdat_agg_w) = make.names(names(emdat_agg_w))
-emdat_agg_w$climate_disasters = rowSums(
-  emdat_agg_w[,c(
-    "Drought",
-    "Epidemic",
-    "Extreme.temperature",
-    "Flood",
-    "Fog",
-    "Glacial.lake.outburst",
-    "Insect.infestation",
-    "Storm",
-    "Wildfire"
-  )]
-)
-keep = c(
-  "iso3",
-  "year",
-  "climate_disasters"
-)
-emdat_agg_w = emdat_agg_w[,keep]
-
-load("intermediate_data/land_and_sea.RData")
-area_list = list()
-for(iso3 in land_and_sea$ISO_A3){
-  poly = land_and_sea[which(land_and_sea$ISO_A3==iso3),]
-  area_sqkm = (areaPolygon(poly) / 1e6)
-  tmp = data.frame(iso3, area_sqkm)
-  area_list[[iso3]] = tmp
-}
-land_areas = rbindlist(area_list)
-emdat_agg_w = merge(emdat_agg_w, land_areas)
+emdat = emdat[,c("iso3","year","total_deaths","no_injured","no_affected","no_homeless","total_affected")]
+emdat$max_affected = 
+  pmax(
+    emdat$total_deaths,
+    emdat$no_injured,
+    emdat$no_affected,
+    emdat$no_homeless,
+    emdat$total_affected,
+    na.rm=T
+  )
+emdat = emdat[,c("iso3","year","max_affected")]
+emdat[is.na(emdat)] = 0
+emdat = data.table(emdat)[,.(max_affected=sum(max_affected)),by=.(iso3,year)]
 
 # Bigrams
 load(file="./intermediate_data/world_network.RData")
@@ -68,11 +46,11 @@ links = world_network[,c("from_iso3", "to_iso3", "mean_distance_km")]
 net <- graph_from_data_frame(d=links, vertices=nodes, directed=F) 
 link_weights <- E(net)$mean_distance_km
 
-missing_isos = setdiff(unique(emdat_agg_w$iso3), nodes)
-emdat_agg_w = subset(emdat_agg_w, !iso3 %in% missing_isos)
+missing_isos = setdiff(unique(emdat$iso3), nodes)
+emdat = subset(emdat, !iso3 %in% missing_isos)
 
 country_nodes = nodes[which(!startsWith(nodes, "WB"))]
-country_nodes = country_nodes[which(country_nodes %in% unique(emdat_agg_w$iso3))]
+country_nodes = country_nodes[which(country_nodes %in% unique(emdat$iso3))]
 all_combinations = combn(country_nodes, 2)
 country_bigrams_list = list()
 country_bigram_index = 1
@@ -92,11 +70,11 @@ close(pb)
 country_bigrams = rbindlist(country_bigrams_list)
 country_bigrams$iso3 = paste0(country_bigrams$from, "-", country_bigrams$to)
 
-bigram_grid = expand.grid(iso3=unique(country_bigrams$iso3), year=unique(emdat_agg_w$year))
+bigram_grid = expand.grid(iso3=unique(country_bigrams$iso3), year=unique(emdat$year))
 country_bigrams_emdat = merge(country_bigrams, bigram_grid, all=T)
 country_bigrams_emdat = merge(
   country_bigrams_emdat,
-  emdat_agg_w,
+  emdat,
   by.x=c("from", "year"),
   by.y=c("iso3", "year"),
   all.x=T
@@ -104,15 +82,15 @@ country_bigrams_emdat = merge(
 setnames(
   country_bigrams_emdat,
   c(
-    "climate_disasters", "area_sqkm"
+    "max_affected"
   ),
   c(
-    "climate_disasters.from", "area_sqkm.from"
+    "max_affected.from"
   )
 )
 country_bigrams_emdat = merge(
   country_bigrams_emdat,
-  emdat_agg_w,
+  emdat,
   by.x=c("to", "year"),
   by.y=c("iso3", "year"),
   all.x=T
@@ -120,35 +98,28 @@ country_bigrams_emdat = merge(
 setnames(
   country_bigrams_emdat,
   c(
-    "climate_disasters", "area_sqkm"
+    "max_affected"
   ),
   c(
-    "climate_disasters.to", "area_sqkm.to"
+    "max_affected.to"
   )
 )
 country_bigrams_emdat = country_bigrams_emdat[complete.cases(country_bigrams_emdat),]
-country_bigrams_emdat$climate_disasters = rowSums(
-  country_bigrams_emdat[,c("climate_disasters.from", "climate_disasters.to")],
-  na.rm=T
-)
-country_bigrams_emdat$area_sqkm = rowSums(
-  country_bigrams_emdat[,c("area_sqkm.from", "area_sqkm.to")],
+country_bigrams_emdat$max_affected = rowSums(
+  country_bigrams_emdat[,c("max_affected.from", "max_affected.to")],
   na.rm=T
 )
 
 country_bigrams_emdat[,c(
-  "climate_disasters.from", "climate_disasters.to", "from", "to",
-  "area_sqkm.from", "area_sqkm.to"
+  "max_affected.from", "max_affected.to", "from", "to"
 )] = NULL
-emdat_agg_w = rbindlist(list(emdat_agg_w, country_bigrams_emdat), fill=T)
+emdat = rbindlist(list(emdat, country_bigrams_emdat), fill=T)
 
-climate_worldclim = merge(emdat_agg_w, worldclim, all.y=T)
+climate_worldclim = merge(emdat, worldclim, all.y=T)
 climate_worldclim[is.na(climate_worldclim)] = 0
 climate_worldclim = climate_worldclim[,c(
-  "climate_disasters"
-  # ,"area_sqkm"
+  "max_affected"
   ,paste("prec",c(1:12),sep="_")
-  # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")
   ,"iso3"
   ,"year"
@@ -160,14 +131,12 @@ fwrite(climate_worldclim, "intermediate_data/climate_worldclim.csv")
 worldclim_forecasting = fread("intermediate_data/large/conflict_clim_forecasting.csv")
 worldclim_forecasting$conflict = NULL
 
-climate_worldclim_forecasting = merge(emdat_agg_w, worldclim_forecasting, all.y=T)
+climate_worldclim_forecasting = merge(emdat, worldclim_forecasting, all.y=T)
 climate_worldclim_forecasting[is.na(climate_worldclim_forecasting)] = 0
 climate_worldclim_forecasting = climate_worldclim_forecasting[,c(
-  "climate_disasters"
+  "max_affected"
   ,"scenario"
-  # ,"area_sqkm"
   ,paste("prec",c(1:12),sep="_")
-  # ,paste("tmin",c(1:12),sep="_")
   ,paste("tmax",c(1:12),sep="_")
   ,"iso3"
   ,"year"

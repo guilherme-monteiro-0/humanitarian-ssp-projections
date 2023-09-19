@@ -56,7 +56,7 @@ for(indicator in indicators){
             ))
         )
         if(sum(!is.na(inform$IndicatorScore[selection_criteria])) > 1){
-          inform$IndicatorScore[selection_criteria] = na.spline(inform$IndicatorScore[selection_criteria])
+          inform$IndicatorScore[selection_criteria] = na.approx(inform$IndicatorScore[selection_criteria],rule=2)
         }
       }
     }

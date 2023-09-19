@@ -41,16 +41,58 @@ iiasa = subset(iiasa, scenario=="ssp1")
 iiasa = iiasa[,c("iso3", "year", "pop")]
 training_set = merge(training_set, iiasa, by=c("iso3", "year"))
 
-climate = fread("~/git/saint/outputs/regression_climate_worldclim_forecast.csv")
-climate$climate_disasters[which(climate$year>=2014)] = climate$y_hat[which(climate$year>=2014)]
-climate = subset(climate, scenario=="ssp1")
-keep = c(
-  "climate_disasters",
-  "iso3",
-  "year"
+# climate = fread("~/git/saint/outputs/regression_climate_worldclim_forecast.csv")
+# climate$climate_disasters[which(climate$year>=2014)] = climate$y_hat[which(climate$year>=2014)]
+# climate = subset(climate, scenario=="ssp1")
+# keep = c(
+#   "climate_disasters",
+#   "iso3",
+#   "year"
+# )
+# climate = climate[,keep,with=F]
+# training_set = merge(training_set, climate, by=c("iso3", "year"))
+# load("INFORM/interpolated_inform.RData")
+# inform = subset(inform, IndicatorId=="AFF_DR" & Scenario=="Historical")
+# inform = inform[,c("Iso3", "Year", "IndicatorScore")]
+# names(inform) = c("iso3","year","drought")
+# training_set = merge(training_set, inform, by=c("iso3", "year"))
+worldclim = fread("./WorldClim/ACCESS-CM2/processed/historical.csv")
+worldclim = subset(worldclim, year<=2013)
+setnames(worldclim,"ISO_A3", "iso3")
+worldclim$prec = rowSums(
+  worldclim[,c(
+    "prec_1",
+    "prec_2",
+    "prec_3",
+    "prec_4",
+    "prec_5",
+    "prec_6",
+    "prec_7",
+    "prec_8",
+    "prec_9",
+    "prec_10",
+    "prec_11",
+    "prec_12"
+  )]
 )
-climate = climate[,keep,with=F]
-training_set = merge(training_set, climate, by=c("iso3", "year"))
+worldclim$tmax = rowMeans(
+  worldclim[,c(
+    "tmax_1",
+    "tmax_2",
+    "tmax_3",
+    "tmax_4",
+    "tmax_5",
+    "tmax_6",
+    "tmax_7",
+    "tmax_8",
+    "tmax_9",
+    "tmax_10",
+    "tmax_11",
+    "tmax_12"
+  )]
+)
+worldclim = worldclim[,c("iso3","year","tmax","prec")]
+training_set = merge(training_set, worldclim, by=c("iso3", "year"))
 
 conflict = fread("~/git/saint/outputs/binary_conflict_clim_bigram_forecast.csv")
 conflict$conflict[which(conflict$year>=2014)] = conflict$y_hat[which(conflict$year>=2014)]
@@ -96,17 +138,25 @@ training_set = merge(training_set, conflict, by=c("iso3", "year"))
 # training_set = merge(training_set, iati, by=c("iso3", "year"), all.x=T)
 # training_set$humanitarian_needs[which(is.na(training_set$humanitarian_needs))] = 0
 # training_set = subset(training_set, year > 1997 & year < 2023)
-pin = fread("intermediate_data/pin.csv")
-setnames(pin, "value", "humanitarian_needs")
-training_set = merge(training_set, pin, by=c("iso3", "year"), all.x=T)
+# pin = fread("intermediate_data/pin.csv")
+# setnames(pin, "value", "humanitarian_needs")
+# training_set = merge(training_set, pin, by=c("iso3", "year"), all.x=T)
+# training_set$humanitarian_needs[which(is.na(training_set$humanitarian_needs))] = 0
+# training_set = subset(training_set, year > 2017 & year < 2024)
+hum_spend = fread("supporting_data/hum_spend.csv", na.strings=c("","-"))
+hum_spend$humanitarian_needs = as.numeric(gsub(",","",hum_spend$hum_spend))
+hum_spend = hum_spend[,c("iso","year","humanitarian_needs")]
+setnames(hum_spend, "iso", "iso3")
+training_set = merge(training_set, hum_spend, by=c("iso3", "year"), all.x=T)
 training_set$humanitarian_needs[which(is.na(training_set$humanitarian_needs))] = 0
-training_set = subset(training_set, year > 2017 & year < 2024)
+training_set = subset(training_set, year >= 2013 & year <= 2022)
 
 training_set = training_set[,c(
   "humanitarian_needs",
   "pop",
   "displaced_persons",
-  "climate_disasters",
+  "tmax",
+  "prec",
   "conflict",
   "iso3",
   "lat",
@@ -167,13 +217,13 @@ setnames(
   country_bigrams_training_set,
   c(
     "humanitarian_needs", "displaced_persons", 
-    "climate_disasters",
+    "tmax","prec",
     "pop",
     "conflict", "lat", "lon"
   ),
   c(
     "humanitarian_needs.from", "displaced_persons.from",
-    "climate_disasters.from",
+    "tmax.from","prec.from",
     "pop.from",
     "conflict.from", "lat.from", "lon.from"
   )
@@ -189,13 +239,13 @@ setnames(
   country_bigrams_training_set,
   c(
     "humanitarian_needs", "displaced_persons", 
-    "climate_disasters",
+    "tmax","prec",
     "pop",
     "conflict", "lat", "lon"
   ),
   c(
     "humanitarian_needs.to", "displaced_persons.to", 
-    "climate_disasters.to",
+    "tmax.to","prec.to",
     "pop.to",
     "conflict.to", "lat.to", "lon.to"
   )
@@ -203,6 +253,10 @@ setnames(
 country_bigrams_training_set = country_bigrams_training_set[complete.cases(country_bigrams_training_set),]
 country_bigrams_training_set$pop = rowSums(
   country_bigrams_training_set[,c("pop.from", "pop.to")],
+  na.rm=T
+)
+country_bigrams_training_set$prec = rowSums(
+  country_bigrams_training_set[,c("prec.from", "prec.to")],
   na.rm=T
 )
 country_bigrams_training_set$humanitarian_needs = rowSums(
@@ -213,8 +267,8 @@ country_bigrams_training_set$displaced_persons = rowSums(
   country_bigrams_training_set[,c("displaced_persons.from", "displaced_persons.to")],
   na.rm=T
 )
-country_bigrams_training_set$climate_disasters = rowSums(
-  country_bigrams_training_set[,c("climate_disasters.from", "climate_disasters.to")],
+country_bigrams_training_set$tmax = rowMeans(
+  country_bigrams_training_set[,c("tmax.from", "tmax.to")],
   na.rm=T
 )
 country_bigrams_training_set$conflict = pmax(
@@ -235,7 +289,8 @@ country_bigrams_training_set[,c(
   "pop.from", "pop.to",
   "humanitarian_needs.from", "humanitarian_needs.to",
   "displaced_persons.from", "displaced_persons.to",
-  "climate_disasters.from", "climate_disasters.to",
+  "tmax.from", "tmax.to",
+  "prec.from", "prec.to",
   "conflict.from", "conflict.to",
   "lat.from", "lat.to",
   "lon.from", "lon.to"
@@ -253,9 +308,10 @@ training_set = training_set[order(training_set$iso3, training_set$year),]
 
 training_set = training_set[,c(
   "humanitarian_needs",
-  # "pop",
+  "pop",
   "displaced_persons",
-  "climate_disasters",
+  "tmax",
+  "prec",
   "conflict",
   "iso3",
   # "lat",

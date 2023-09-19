@@ -6,6 +6,21 @@ lapply(list.of.packages, require, character.only=T)
 wd_base = "~/git/"
 setwd(paste0(wd_base, "humanitarian-ssp-projections"))
 
+unhcr_pop = fread("./UNHCR/population.csv", skip=14, na.strings=c("","-"))
+keep = c(
+  "Year",
+  "Country of origin (ISO)",
+  "Refugees under UNHCR's mandate",
+  "Asylum-seekers",
+  "IDPs of concern to UNHCR"
+)
+unhcr_pop = unhcr_pop[,keep, with=F]
+names(unhcr_pop) = c("year", "iso3", "refugees", "asylum", "idps")
+unhcr_pop_l = melt(unhcr_pop, id.vars=c("year", "iso3"))
+unhcr_pop_l$iso3[which(unhcr_pop_l$iso3=="ESH")] = "MAR" # No Western Sahara in World network
+unhcr_pop_agg = data.table(unhcr_pop_l)[,.(displaced_persons=sum(value,na.rm=T)), by=.(year)]
+unhcr_pop_agg = subset(unhcr_pop_agg, year > 1992)
+
 worldclim_hist = fread("./WorldClim/ACCESS-CM2/processed/historical.csv")
 setnames(worldclim_hist,"ISO_A3", "iso3")
 
@@ -132,7 +147,7 @@ di_style = theme_bw() +
     ,panel.grid.major.y = element_line(colour = greys[2])
     ,panel.grid.minor.y = element_blank()
     ,panel.background = element_blank()
-    ,plot.background = element_blank()
+    # ,plot.background = element_blank()
     ,axis.line.x = element_line(colour = "black")
     ,axis.line.y = element_blank()
     ,axis.ticks = element_blank()
@@ -154,6 +169,26 @@ worldclim$year = factor(
     "2080-2100"
   )
 )
+
+unhcr_pop_agg$displaced_persons_mil = unhcr_pop_agg$displaced_persons / 1e6
+p0 = ggplot(unhcr_pop_agg, aes(x=year, y=displaced_persons_mil)) +
+  geom_bar(stat="identity", fill=reds[1]) +
+  scale_y_continuous(
+    expand = c(0, 0),
+    ) + # Force y-grid to start at x-axis
+  scale_x_continuous(n.breaks=7) +
+  expand_limits(y=c(0,105)) +
+  di_style +
+  rotate_x_text_45 + # Or chose _90 or remove for horizontal
+  labs(
+    y="Millions of displaced persons",
+    x="",
+    fill=""
+  )
+p0
+ggsave("outputs/p0_displacement.png", plot = p0, width = 5, height = 3)
+fwrite(unhcr_pop_agg, "outputs/p0_displacement.csv")
+
 
 p1 = ggplot(worldclim, aes(x=year, y=tmax, group=scenario, fill=scenario)) +
   geom_bar(stat="identity", position="dodge") +
@@ -350,6 +385,43 @@ ggsave("~/git/humanitarian-ssp-projections/outputs/p6_displacement_forecast.png"
 fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p6_displacement_forecast.csv")
 
 
+forecast = fread("outputs/regression_displacement_worldclim2_forecast.csv")
+forecast$displaced_persons[which(forecast$year>=2022)] = forecast$y_hat[which(forecast$year>=2022)]
+forecast$displaced_persons[which(forecast$displaced_persons<0)] = 0
+forecast$displaced_persons = forecast$displaced_persons / 1e6
+forecast$scenario = toupper(forecast$scenario)
+forecast$scenario[which(forecast$year < 2022 & forecast$scenario=="SSP1")] = "Historical"
+forecast = subset(forecast, year >= 2022 | scenario=="Historical")
+forecast_agg = forecast[,.(
+  displaced_persons=sum(displaced_persons, na.rm=T)
+), by=.(scenario, year)]
+max.hist = max(subset(forecast_agg, scenario=="Historical" & year==2021)$displaced_persons, na.rm=T)
+min.forecast = min(subset(forecast_agg, year==2022)$displaced_persons, na.rm=T)
+gap = max.hist - min.forecast
+forecast_agg$displaced_persons[which(forecast_agg$scenario!="Historical")] =
+  forecast_agg$displaced_persons[which(forecast_agg$scenario!="Historical")] +
+  gap
+p6b = ggplot(forecast_agg,aes(x=year,y=displaced_persons,group=scenario,color=scenario)) +
+  geom_line(linewidth=1) +
+  scale_color_manual(values=c(
+    "#000000",
+    reds[2:5]
+  )) + # Choose colour here
+  scale_y_continuous(expand = c(0, 0)) + # Force y-grid to start at x-axis
+  scale_x_continuous(n.breaks=7) +
+  expand_limits(y=c(0, max(forecast_agg$displaced_persons*1.1))) + # Start at 0 if wanted, add 10% padding to max
+  di_style +
+  labs(
+    y="Millions of displaced persons",
+    x="",
+    color=""
+  )
+p6b
+ggsave("~/git/humanitarian-ssp-projections/outputs/p6b_displacement_forecast.png", plot = p6b, width = 5.2, height = 3.2)
+fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p6b_displacement_forecast.csv")
+
+
+
 forecast = fread("outputs/regression_climate_worldclim_forecast.csv")
 forecast$climate_disasters[which(forecast$year>=2023)] = forecast$y_hat[which(forecast$year>=2023)]
 forecast$climate_disasters[which(forecast$climate_disasters<0)] = 0
@@ -383,23 +455,28 @@ ggsave("~/git/humanitarian-ssp-projections/outputs/p7_climate_forecast.png", plo
 fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p7_climate_forecast.csv")
 
 
-ols_data = fread("~/git/saint/data/tripartite_bigram.csv")
+ols_data = read.csv("~/git/saint/data/tripartite_bigram.csv")
+ols_data$displaced_persons = as.numeric(ols_data$displaced_persons)
+ols_data$conflict = as.numeric(ols_data$conflict)
 ols = lm(humanitarian_needs~
            displaced_persons+
-           climate_disasters+
+           tmax+
+           prec+
            conflict
          , data=ols_data
 )
 summary(ols)
 ols_intercept = summary(ols)$coefficients[[1]]
 ols_displaced = summary(ols)$coefficients[[2]]
-ols_climate = summary(ols)$coefficients[[3]]
-ols_conflict = summary(ols)$coefficients[[4]]
+ols_tmax = summary(ols)$coefficients[[3]]
+ols_prec = summary(ols)$coefficients[[4]]
+ols_conflict = summary(ols)$coefficients[[5]]
 
 forecast = fread("~/git/saint/data/tripartite_bigram_forecasting.csv")
 forecast$intercept = ols_intercept
 forecast$displacement_beta = forecast$displaced_persons * ols_displaced
-forecast$climate_beta = forecast$climate_disasters * ols_climate
+forecast$tmax_beta = forecast$tmax * ols_tmax
+forecast$prec_beta = forecast$prec * ols_prec
 forecast$conflict_beta = forecast$conflict * ols_conflict
 forecast$historical_humanitarian_needs = forecast$humanitarian_needs
 forecast$humanitarian_needs = predict.lm(ols, newdata=forecast)
@@ -407,18 +484,23 @@ forecast$scenario = toupper(forecast$scenario)
 forecast_sub = subset(forecast, year %in% c(2020, 2050, 2100))
 forecast_agg = data.table(forecast_sub)[,.(
   humanitarian_needs=sum(humanitarian_needs, na.rm=T),
+  historical_humanitarian_needs=sum(historical_humanitarian_needs, na.rm=T),
+  tmax=sum(tmax, na.rm=T),
+  prec=sum(prec, na.rm=T),
   displaced_persons=sum(displaced_persons, na.rm=T),
   conflict=sum(conflict, na.rm=T)
 ), by=.(scenario, year)]
 forecast_agg$year = factor(forecast_agg$year)
-pin_baseline = 300
+forecast_agg$humanitarian_needs = forecast_agg$humanitarian_needs / 1e9
+forecast_agg$historical_humanitarian_needs = forecast_agg$historical_humanitarian_needs / 1e9
+pin_baseline = 0
 forecast_agg$humanitarian_needs_label = forecast_agg$humanitarian_needs - pin_baseline
 p8 = ggplot(forecast_agg, aes(x=scenario,y=humanitarian_needs_label,fill=year,group=year)) +
   scale_y_continuous(expand = c(0, 0), labels = function(y) y + pin_baseline) +
   scale_fill_manual(values = reds) +
   geom_bar(stat="identity", position="dodge") +
   di_style +
-  labs(x="", fill="", y="People in need (millions)")
+  labs(x="", fill="", y="Humanitarian spend (USD$ billions)")
 p8
 ggsave("~/git/humanitarian-ssp-projections/outputs/p8_needs_bars.png", plot = p8, width = 12, height = 8)
 fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p8_needs_bars.csv")
@@ -430,11 +512,14 @@ forecast_agg = data.table(forecast)[,.(
   intercept=sum(intercept, na.rm=T),
   displaced_persons=sum(displaced_persons, na.rm=T),
   displacement_beta=sum(displacement_beta, na.rm=T),
-  climate_disasters=sum(climate_disasters, na.rm=T),
-  climate_beta=sum(climate_beta, na.rm=T),
+  tmax=sum(tmax, na.rm=T),
+  prec=sum(prec, na.rm=T),
+  tmax_beta=sum(tmax_beta, na.rm=T),
+  prec_beta=sum(prec_beta),
   conflict=sum(conflict, na.rm=T),
   conflict_beta=sum(conflict_beta, na.rm=T)
 ), by=.(scenario, year)]
+forecast_agg$humanitarian_needs = forecast_agg$humanitarian_needs / 1e9
 forecast_agg_baseline = forecast_agg$humanitarian_needs[which.min(forecast_agg$humanitarian_needs)]
 forecast_agg$humanitarian_needs_label = forecast_agg$humanitarian_needs / forecast_agg_baseline
 
@@ -451,7 +536,7 @@ p9 = ggplot(forecast_agg,aes(x=year,y=humanitarian_needs_label,group=scenario,co
   scale_x_continuous(n.breaks=7) +
   di_style +
   labs(
-    y="People in need (% of baseline)",
+    y="Humanitarian spend (% of baseline)",
     x="",
     color=""
   )
@@ -461,7 +546,8 @@ fwrite(forecast_agg, "~/git/humanitarian-ssp-projections/outputs/p9_needs_lines.
 
 forecast_agg_l = melt(forecast_agg,
                       id.vars=c("scenario", "year"),
-                      measure.vars = c("intercept","displacement_beta","climate_beta","conflict_beta"))
+                      measure.vars = c("intercept","displacement_beta","tmax_beta","prec_beta","conflict_beta"))
+forecast_agg_l$value = forecast_agg_l$value / 1e9
 
 p10 = ggplot(subset(forecast_agg_l, scenario=="SSP5"),aes(x=year,y=value,group=variable,fill=variable)) +
   geom_area() +
@@ -470,9 +556,40 @@ p10 = ggplot(subset(forecast_agg_l, scenario=="SSP5"),aes(x=year,y=value,group=v
   scale_x_continuous(n.breaks=7) +
   di_style +
   labs(
-    y="Contribution to SSP5 people in need (millions)",
+    y="Contribution to SSP5 humanitarian spend (USD $ billions)",
     x="",
     fill=""
   )
 p10
 ggsave("~/git/humanitarian-ssp-projections/outputs/p10_beta.png", plot = p10, width = 12, height = 8)
+fwrite(forecast_agg_l, "~/git/humanitarian-ssp-projections/outputs/p10_beta.csv")
+
+load("~/git/humanitarian-ssp-projections/intermediate_data/iiasa.RData")
+iiasa$Region = as.character(iiasa$Region)
+iiasa = subset(iiasa, Region == "World")
+iiasa_agg = data.table(iiasa)[,.(pop=sum(pop, na.rm=T)),by=.(Scenario,year)]
+iiasa_agg$Scenario = as.character(iiasa_agg$Scenario)
+iiasa_agg$Scenario[which(iiasa_agg$year <= 2010 & iiasa_agg$Scenario == "SSP1")] = "Historical"
+iiasa_agg = subset(iiasa_agg, year > 2010 | Scenario == "Historical")
+p11 = ggplot(iiasa_agg,aes(x=year,y=pop,group=Scenario,color=Scenario)) +
+  geom_line(linewidth=1) +
+  scale_color_manual(values=c(
+    reds
+  )) + # Choose colour here
+  scale_y_continuous(
+    expand = c(0, 0),
+    n.breaks=7,
+    labels = label_comma()
+    ) + # Force y-grid to start at x-axis
+  scale_x_continuous(n.breaks=7) +
+  expand_limits(y=c(0, max(iiasa_agg$pop*1.1))) + # Start at 0 if wanted, add 10% padding to max
+  di_style +
+  labs(
+    y="World population (millions)",
+    x="",
+    color=""
+  )
+p11
+ggsave("~/git/humanitarian-ssp-projections/outputs/p11_pop.png", plot = p11, width = 12, height = 8)
+fwrite(iiasa_agg, "~/git/humanitarian-ssp-projections/outputs/p11_pop.csv")
+
